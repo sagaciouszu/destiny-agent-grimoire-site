@@ -462,14 +462,6 @@ pre:hover .copy-button,
   margin-left: 0.35em;
 }
 
-.section-body {
-  padding: 0.5rem 0 1rem 1.8rem;
-}
-
-@media (max-width: 600px) {
-  .section-body { padding-left: 0; }
-}
-
 /* Install choices */
 
 .choices {
@@ -782,17 +774,6 @@ pre:hover .copy-button,
 .footer-links a:hover { color: var(--gold-bright); }
 
 /* Utility */
-
-.notice {
-  padding: 0.9rem 1rem;
-  margin: 1rem 0 1.4rem;
-  border: 1px solid var(--line);
-  border-left: 2px solid var(--gold-dim);
-  background: var(--surface);
-  border-radius: 0 6px 6px 0;
-}
-
-.notice p:last-child { margin-bottom: 0; }
 
 .muted { color: var(--muted); }
 
