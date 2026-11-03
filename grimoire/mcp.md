@@ -80,3 +80,9 @@ cannot fix or ingest anything; those steps stay in the repository.
 See [MCP tools do not appear]({{ '/troubleshooting/#mcp-tools' | url }}) for the
 usual causes: missing virtual environment, wrong path, or a client that cannot
 launch a local process.
+
+## Next
+
+- [Install the Grimoire]({{ '/grimoire/install/' | url }})
+- [Read the archive overview]({{ '/grimoire/' | url }})
+- [Deploy an agent]({{ '/agents/install/' | url }})

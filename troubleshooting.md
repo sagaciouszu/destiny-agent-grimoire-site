@@ -125,10 +125,12 @@ look like an agent.
 
 <pre><code>ls -la ~/.config/opencode/agents</code></pre>
 
-If `lore` appears there, move it outside:
+If `lore` appears there, move it outside. Remove the link if it is a symlink; move
+the folder if it is a real directory:
 
 <pre><code>rm ~/.config/opencode/agents/lore
-ln -s /path/to/destiny-agent-grimoire ~/.config/opencode/lore</code></pre>
+# or, when it is a real folder:
+mv ~/.config/opencode/agents/lore ~/.config/opencode/lore</code></pre>
 
 Then run the sync again and reload OpenCode. The sync also removes stray `lore`
 links and marks companion notes as inactive.
@@ -150,13 +152,18 @@ pass the question on. That is expected, not a bug.
 <details class="section">
 <summary><span class="section-title" role="heading" aria-level="2" id="mcp-tools">MCP tools do not appear <a class="heading-anchor" href="#mcp-tools" aria-label="Permalink to MCP tools do not appear">#</a></span></summary>
 
-Install the adapter, then register the path it prints:
+Install the adapter, then register the path it prints. In the Grimoire checkout:
 
 <pre><code>bash mcp-server/install.sh</code></pre>
 
-The client should start `mcp-server/run.sh`, not `server.py`. Use the absolute path
-when the client does not start in the repository folder. The server is stdio-only;
-a client that expects a URL cannot connect to it without a local bridge.
+From an agent repository, the same installer is under `lore/`:
+
+<pre><code>bash lore/mcp-server/install.sh</code></pre>
+
+The client should start `mcp-server/run.sh` (or `lore/mcp-server/run.sh` from an
+agent repository), not `server.py`. Use the absolute path when the client does not
+start in the repository folder. The server is stdio-only; a client that expects a
+URL cannot connect to it without a local bridge.
 
 </details>
 
@@ -226,3 +233,10 @@ That is the same order CI uses. If a suite still fails, run that suite directly;
 it prints the missing file or mismatched count instead of hiding it.
 
 </details>
+
+## Still stuck
+
+- [Install the Grimoire]({{ '/grimoire/install/' | url }})
+- [Deploy an agent]({{ '/agents/install/' | url }})
+- [Read the standards](https://github.com/sagaciouszu/destiny-agent-grimoire/blob/master/STANDARDS.md)
+- [Open an issue](https://github.com/sagaciouszu/destiny-agent-grimoire/issues)

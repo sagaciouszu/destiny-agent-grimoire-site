@@ -3,7 +3,7 @@ section: agents
 layout: page
 title: Platform Support
 category: Agents & Instructions · Platforms
-lede: OpenCode and OpenClaw get a one-command setup. Anything else can still use the same files, with a little manual wiring.
+lede: OpenCode and OpenClaw get scripted deployment. Anything else can still use the same files, with a little manual wiring.
 ---
 
 ## The basic idea
@@ -59,6 +59,11 @@ setup, and do not present guesses as verified lore.
 The deployment script does not install into arbitrary runtimes, edit another
 platform's configuration, or copy credentials. Those bindings are deliberately
 left in your hands.
+
+OpenClaw is one example of a difference worth knowing: its consult tools deny
+writes and shell access, but OpenClaw does not enforce path-level read isolation.
+The OpenCode deployment adds read denial between agent folders; elsewhere, keep
+private folders private by policy.
 
 ## Next
 

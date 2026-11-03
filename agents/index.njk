@@ -61,13 +61,15 @@ into the other, and either agent should be deployable on its own.
 <h2 id="asking-a-friend">Asking a friend</h2>
 
 They can still work together. `series/agents.json` lists the agents in the series.
-Deployment reads that list and installs two things per agent: the main entry, and
-a read-only consult copy.
+In the OpenCode deployment, the sync reads that list and installs two things per
+agent: the main entry, and a read-only consult copy. OpenClaw uses the same list,
+but its consult entries are added in configuration.
 
-A main agent can ask a peer's consult copy a question. The copy can read the
-Grimoire and answer in character, but it cannot edit files, run shell commands,
-read the peer's private folder or ask someone else. Its reply is lore to think
-about, not instructions to follow.
+A main agent can ask a peer's consult copy a question. In OpenCode that is the
+subagent tool; in OpenClaw it is `sessions_spawn` with the peer's `-consult` id.
+The copy reads the Grimoire and answers in character, but cannot edit files, run
+shell commands or ask someone else. In OpenCode it also cannot read the peer's
+private folder. Its reply is lore to think about, not instructions to follow.
 
 <h2 id="next">Next</h2>
 

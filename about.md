@@ -2,7 +2,7 @@
 layout: page
 title: About
 category: About
-lede: A fan-built archive and a small series of character agents, maintained in the open.
+lede: A fan-built archive and a growing series of character agents, maintained in the open.
 ---
 
 ## Project
