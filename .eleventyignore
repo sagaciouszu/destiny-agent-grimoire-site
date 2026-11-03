@@ -2,3 +2,4 @@ node_modules
 _site
 package.json
 package-lock.json
+README.md
