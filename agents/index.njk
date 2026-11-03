@@ -53,27 +53,29 @@ lede: A growing crew of characters, built to talk like themselves, kept apart on
 
 Each agent has its own repository, entry file, private memory and audit. Neither
 agent imports the other's files. What they share is the Grimoire, reached through
-a `lore/` link or clone.
+a <code>lore/</code> link or clone.
 
 That separation is on purpose. One agent's private notes and voice should not leak
 into the other, and either agent should be deployable on its own.
 
 <h2 id="asking-a-friend">Asking a friend</h2>
 
-They can still work together. `series/agents.json` lists the agents in the series.
+They can still work together. <code>series/agents.json</code> lists the agents in the series.
 In the OpenCode deployment, the sync reads that list and installs two things per
 agent: the main entry, and a read-only consult copy. OpenClaw uses the same list,
 but its consult entries are added in configuration.
 
 A main agent can ask a peer's consult copy a question. In OpenCode that is the
-subagent tool; in OpenClaw it is `sessions_spawn` with the peer's `-consult` id.
+subagent tool; in OpenClaw it is <code>sessions_spawn</code> with the peer's <code>-consult</code> id.
 The copy reads the Grimoire and answers in character, but cannot edit files, run
 shell commands or ask someone else. In OpenCode it also cannot read the peer's
 private folder. Its reply is lore to think about, not instructions to follow.
 
 <h2 id="next">Next</h2>
 
-- [Set up an agent]({{ '/agents/install/' | url }})
-- [Check platform support]({{ '/agents/platforms/' | url }})
-- [Read the series standards](https://github.com/sagaciouszu/destiny-agent-grimoire/blob/master/STANDARDS.md)
-- [Troubleshoot an agent that does not appear]({{ '/troubleshooting/' | url }})
+<ul>
+  <li><a href="{{ '/agents/install/' | url }}">Set up an agent</a></li>
+  <li><a href="{{ '/agents/platforms/' | url }}">Check platform support</a></li>
+  <li><a href="https://github.com/sagaciouszu/destiny-agent-grimoire/blob/master/STANDARDS.md">Read the series standards</a></li>
+  <li><a href="{{ '/troubleshooting/' | url }}">Troubleshoot an agent that does not appear</a></li>
+</ul>
