@@ -42,9 +42,11 @@ body {
   background: transparent;
   color: var(--text);
   font-family: var(--sans);
-  font-weight: 400;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
+  /* The CDN maps 400 to Light (45) and 500 to Roman (55). Body text uses
+     500 so it renders as the regular cut rather than the light one. */
+  font-weight: 500;
 }
 
 body::before {
@@ -133,7 +135,7 @@ a:hover {
 
 .brand {
   color: var(--heading);
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.01em;
   text-decoration: none;
   font-size: 1.05rem;
@@ -260,7 +262,7 @@ a:hover {
   font-size: clamp(2rem, 5vw, 3.1rem);
   line-height: 1.12;
   letter-spacing: -0.01em;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .lede {
@@ -347,7 +349,7 @@ a:hover {
   margin-left: 0.4em;
   color: var(--gold);
   text-decoration: none;
-  font-weight: 400;
+  font-weight: 500;
   opacity: 0.7;
 }
 
@@ -509,7 +511,7 @@ pre:hover .copy-button,
   font-size: clamp(2.6rem, 8vw, 5rem);
   line-height: 1.02;
   letter-spacing: -0.025em;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .hero .lede {
