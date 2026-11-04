@@ -7,7 +7,7 @@ lede: Set up one character in their own folder, or drop the whole series into Op
 ---
 
 <details class="section" open>
-<summary><span class="section-title" role="heading" aria-level="2" id="quick-start">Eyes up <a class="heading-anchor" href="#quick-start" aria-label="Permalink to Eyes up">#</a></span></summary>
+<summary><span class="section-title" role="heading" aria-level="2" id="quick-start">Quick start <a class="heading-anchor" href="#quick-start" aria-label="Permalink to Quick start">#</a></span></summary>
 
 The shortest path is one agent in its own repository. `setup.sh` links or clones
 the Grimoire, then grabs the database if it is missing.
@@ -73,7 +73,7 @@ list) if you want the main agents to call them.
 <p class="muted">Using a different runtime? See <a href="{{ '/agents/platforms/' | url }}">Platform support</a>.</p>
 
 <details class="section">
-<summary><span class="section-title" role="heading" aria-level="2" id="multiple-agents">The crew <a class="heading-anchor" href="#multiple-agents" aria-label="Permalink to The crew">#</a></span></summary>
+<summary><span class="section-title" role="heading" aria-level="2" id="multiple-agents">Running more than one agent <a class="heading-anchor" href="#multiple-agents" aria-label="Permalink to Running more than one agent">#</a></span></summary>
 
 The deployment is built for the series, not one character. You do not need a
 second install for Eris, and you are not stuck with one choice forever.
@@ -98,7 +98,7 @@ their own auth store, or a shared store they are allowed to inherit from.
 <pre><code>openclaw agents list
 openclaw agents list --bindings</code></pre>
 
-### Shared and separate
+### What is shared, and what is not
 
 The SQLite archive is opened read-only, so several agents can read it at the same
 time. Canon is shared. Runtime memory, private notes and voice files are not.
@@ -108,7 +108,7 @@ peer's folder.
 </details>
 
 <details class="section">
-<summary><span class="section-title" role="heading" aria-level="2" id="consult">The consult <a class="heading-anchor" href="#consult" aria-label="Permalink to The consult">#</a></span></summary>
+<summary><span class="section-title" role="heading" aria-level="2" id="consult">Asking another agent <a class="heading-anchor" href="#consult" aria-label="Permalink to Asking another agent">#</a></span></summary>
 
 A main agent asks a peer by calling the subagent tool with the peer's `-consult`
 id and a self-contained question. In OpenClaw the same call is `sessions_spawn`
@@ -128,7 +128,7 @@ still does not replace checking a quote.
 </details>
 
 <details class="section">
-<summary><span class="section-title" role="heading" aria-level="2" id="verify">The audit <a class="heading-anchor" href="#verify" aria-label="Permalink to The audit">#</a></span></summary>
+<summary><span class="section-title" role="heading" aria-level="2" id="verify">Check that it worked <a class="heading-anchor" href="#verify" aria-label="Permalink to Check that it worked">#</a></span></summary>
 
 Each agent repository owns its own tests. Run the main audit from the repository
 root:

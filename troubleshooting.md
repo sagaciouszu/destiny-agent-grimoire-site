@@ -13,7 +13,7 @@ lede: Find the symptom, check the likely cause, apply the fix. The commands are 
   <li><a href="#database-missing">The database is missing</a></li>
   <li><a href="#python-missing">Python is missing or too old</a></li>
   <li><a href="#checksum">The checksum does not match</a></li>
-  <li><a href="#lore-link">The lore link is broken</a></li>
+  <li><a href="#lore-link">The archive link is broken</a></li>
 </ul>
 
 <p class="toc-group">Agents</p>
@@ -28,7 +28,7 @@ lede: Find the symptom, check the likely cause, apply the fix. The commands are 
   <li><a href="#mcp-tools">MCP tools do not appear</a></li>
   <li><a href="#mcp-start">The MCP server will not start</a></li>
   <li><a href="#verify">A quote does not verify</a></li>
-  <li><a href="#no-lore">The agent answers without lore</a></li>
+  <li><a href="#no-lore">The agent has no archive access</a></li>
 </ul>
 
 <p class="toc-group">Maintenance</p>
@@ -87,7 +87,7 @@ is wrong.
 </details>
 
 <details class="section">
-<summary><span class="section-title" role="heading" aria-level="2" id="lore-link">The lore link is broken <a class="heading-anchor" href="#lore-link" aria-label="Permalink to The lore link is broken">#</a></span></summary>
+<summary><span class="section-title" role="heading" aria-level="2" id="lore-link">The archive link is broken <a class="heading-anchor" href="#lore-link" aria-label="Permalink to The archive link is broken">#</a></span></summary>
 
 An agent repository expects `lore/` to point at a Grimoire checkout, or to be a
 clone of it. If the link was moved or the folder renamed, recreate it:
@@ -206,7 +206,7 @@ If it still fails, do not quote the line as canon.
 </details>
 
 <details class="section">
-<summary><span class="section-title" role="heading" aria-level="2" id="no-lore">The agent answers without lore <a class="heading-anchor" href="#no-lore" aria-label="Permalink to The agent answers without lore">#</a></span></summary>
+<summary><span class="section-title" role="heading" aria-level="2" id="no-lore">The agent has no archive access <a class="heading-anchor" href="#no-lore" aria-label="Permalink to The agent has no archive access">#</a></span></summary>
 
 The character files can work without the archive, but canon lookup and quote
 checks cannot. If the agent suddenly stops citing anything:

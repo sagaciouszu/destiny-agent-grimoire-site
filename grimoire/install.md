@@ -7,7 +7,7 @@ lede: Get the archive working first, then poke at it. The quick start is at the 
 ---
 
 <details class="section" open>
-<summary><span class="section-title" role="heading" aria-level="2" id="quick-start">Eyes up <a class="heading-anchor" href="#quick-start" aria-label="Permalink to Eyes up">#</a></span></summary>
+<summary><span class="section-title" role="heading" aria-level="2" id="quick-start">Quick start <a class="heading-anchor" href="#quick-start" aria-label="Permalink to Quick start">#</a></span></summary>
 
 Pick one path. You do not need both.
 
@@ -52,7 +52,7 @@ The download path needs no build tools at all. The build path is pure Python.
 </details>
 
 <details class="section">
-<summary><span class="section-title" role="heading" aria-level="2" id="get-the-archive">The archive <a class="heading-anchor" href="#get-the-archive" aria-label="Permalink to The archive">#</a></span></summary>
+<summary><span class="section-title" role="heading" aria-level="2" id="get-the-archive">Get the archive <a class="heading-anchor" href="#get-the-archive" aria-label="Permalink to Get the archive">#</a></span></summary>
 
 The release asset is the official download. `SHA256SUMS` is attached to the same
 release, and the publish pipeline checks the digest before it goes out.
@@ -68,7 +68,7 @@ download again instead of opening it.
 </details>
 
 <details class="section">
-<summary><span class="section-title" role="heading" aria-level="2" id="query-the-archive">Look around <a class="heading-anchor" href="#query-the-archive" aria-label="Permalink to Look around">#</a></span></summary>
+<summary><span class="section-title" role="heading" aria-level="2" id="query-the-archive">Try the commands <a class="heading-anchor" href="#query-the-archive" aria-label="Permalink to Try the commands">#</a></span></summary>
 
 Search, character lines and quote checks are the everyday moves:
 
@@ -84,7 +84,7 @@ treated as plain text instead of an error.
 </details>
 
 <details class="section">
-<summary><span class="section-title" role="heading" aria-level="2" id="verify-a-quote">Check the quote <a class="heading-anchor" href="#verify-a-quote" aria-label="Permalink to Check the quote">#</a></span></summary>
+<summary><span class="section-title" role="heading" aria-level="2" id="verify-a-quote">Check a quote <a class="heading-anchor" href="#verify-a-quote" aria-label="Permalink to Check a quote">#</a></span></summary>
 
 This is the line between quoting canon and making something up that sounds close.
 Pass the speaker when attribution matters, and add `--exact` when you want the
@@ -100,7 +100,7 @@ something sticks.
 </details>
 
 <details class="section">
-<summary><span class="section-title" role="heading" aria-level="2" id="run-the-mcp-server">The toolbelt <a class="heading-anchor" href="#run-the-mcp-server" aria-label="Permalink to The toolbelt">#</a></span></summary>
+<summary><span class="section-title" role="heading" aria-level="2" id="run-the-mcp-server">Connect an MCP client <a class="heading-anchor" href="#run-the-mcp-server" aria-label="Permalink to Connect an MCP client">#</a></span></summary>
 
 MCP lets an AI client ask the archive questions as tools instead of typing shell
 commands. Install the adapter once:
@@ -114,7 +114,7 @@ for the twelve tools, client configuration and the safety limits.
 </details>
 
 <details class="section">
-<summary><span class="section-title" role="heading" aria-level="2" id="rebuild-and-ingest">Forge the archive <a class="heading-anchor" href="#rebuild-and-ingest" aria-label="Permalink to Forge the archive">#</a></span></summary>
+<summary><span class="section-title" role="heading" aria-level="2" id="rebuild-and-ingest">Rebuild and add lore <a class="heading-anchor" href="#rebuild-and-ingest" aria-label="Permalink to Rebuild and add lore">#</a></span></summary>
 
 Rebuild after changing sources or scraper output. The build reads `source/` and
 `archive/data/*.jsonl` and writes a fresh database.
@@ -128,7 +128,7 @@ migration is the only step that writes the database.
 </details>
 
 <details class="section">
-<summary><span class="section-title" role="heading" aria-level="2" id="run-the-gates">The audit <a class="heading-anchor" href="#run-the-gates" aria-label="Permalink to The audit">#</a></span></summary>
+<summary><span class="section-title" role="heading" aria-level="2" id="run-the-gates">Run the checks <a class="heading-anchor" href="#run-the-gates" aria-label="Permalink to Run the checks">#</a></span></summary>
 
 The archive audit covers database integrity, source conformance, retrieval,
 documentation and the MCP surface.

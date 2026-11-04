@@ -6,7 +6,7 @@ lede: MCP is the adapter that lets an AI client ask the archive questions as too
 section: grimoire
 ---
 
-## The adapter
+## What it is
 
 The MCP server wraps the same query layer as `db/query.py`. Your client gets a
 set of named tools — search, character lines, item lore, quote checks — and calls
@@ -16,7 +16,7 @@ It runs locally over stdio. There is no network service, no port and no account.
 The client starts the server, talks to it through a pipe, and stops it when the
 session ends.
 
-## Mount it
+## Set it up
 
 From the Grimoire checkout:
 
@@ -44,7 +44,7 @@ A typical local configuration looks like this:
 The exact shape depends on your client. If it only accepts remote servers, put a
 local bridge in front of the stdio process.
 
-## The toolbelt
+## The tools
 
 There are twelve, all read-only:
 
@@ -67,7 +67,7 @@ There are twelve, all read-only:
 The two verification tools are the important ones. A line that fails `verify` is
 not canon, even if it sounds right.
 
-## Read-only
+## Safety
 
 The database is opened read-only. There is no SQL tool, no write path and no
 network access. Limits are clamped, long text is trimmed, and queries are capped
@@ -76,7 +76,7 @@ before they reach SQLite.
 That makes the server safe to leave connected while you work. It also means it
 cannot fix or ingest anything; those steps stay in the repository.
 
-## When it won't connect
+## If it will not connect
 
 See [MCP tools do not appear]({{ '/troubleshooting/#mcp-tools' | url }}) for the
 usual causes: missing virtual environment, wrong path, or a client that cannot
