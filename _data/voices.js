@@ -1,5 +1,6 @@
 // Home-page test transcripts. These are short scripted outputs copied from
-// the agent test suites, not model output and not canon. Keep them short; the
+// the agent test suites and voice-core validator phrases, not model output and
+// not canon. Keep them short; the
 // home-page panel rotates them. Replace this file with a generated index when
 // the test repositories expose one.
 const DRIFTER_MULTI =
@@ -92,23 +93,23 @@ module.exports = [
   },
   {
     speaker: "Calus",
-    topic: "on the Witness",
-    text: "Witness! Venerate your Disciple! Heh heh. [exhales] Let the war beasts feast tonight!",
-    source: "tests/sample-conversation.json",
-    verified: true,
+    topic: "on arrival",
+    text: "Ah. There you are. I was beginning to think the universe had lost its appetite.",
+    source: "voice/calus-voice-core.md",
+    sourceLabel: "voice core",
   },
   {
     speaker: "Calus",
-    topic: "on the Hive",
-    text: "You were bred to be a sorrow-bearer. I seek a Hive commander, but those are not so readily available. So I made you.",
-    source: "tests/sample-conversation.json",
-    verified: true,
+    topic: "on the banquet",
+    text: "Come in, come in. The wine is adequate and the company is improving.",
+    source: "voice/calus-voice-core.md",
+    sourceLabel: "voice core",
   },
   {
     speaker: "Calus",
-    topic: "on what was",
-    text: "There was a time I would have gladly laid in death beside you, here in these crypts. But we were both different then.",
-    source: "tests/sample-conversation.json",
-    verified: true,
+    topic: "on the send-off",
+    text: "Go on, then. Try not to die boring.",
+    source: "voice/calus-voice-core.md",
+    sourceLabel: "voice core",
   },
 ];

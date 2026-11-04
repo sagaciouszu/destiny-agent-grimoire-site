@@ -25,7 +25,7 @@ description: A searchable Destiny lore archive and a growing number of character
       {% for voice in voices %}
       <div class="transmission-item{% if loop.first %} is-active{% endif %}" data-voice>
         <blockquote><p>{{ voice.text | escape }}</p></blockquote>
-        <p class="transmission-caption">{% if voice.url %}<a href="{{ voice.url | url }}">{{ voice.speaker | escape }}</a>{% else %}<span class="transmission-speaker">{{ voice.speaker | escape }}</span>{% endif %} <span class="transmission-topic">· {{ voice.topic | escape }}</span> <span aria-hidden="true">·</span> {% if voice.sourceUrl %}<a class="transmission-source" href="{{ voice.sourceUrl }}">source</a>{% elif voice.verified %}<span class="transmission-verified">verified canon</span>{% endif %}</p>
+        <p class="transmission-caption">{% if voice.url %}<a href="{{ voice.url | url }}">{{ voice.speaker | escape }}</a>{% else %}<span class="transmission-speaker">{{ voice.speaker | escape }}</span>{% endif %} <span class="transmission-topic">· {{ voice.topic | escape }}</span>{% if voice.sourceUrl %} <span aria-hidden="true">·</span> <a class="transmission-source" href="{{ voice.sourceUrl }}">source</a>{% elif voice.sourceLabel %} <span aria-hidden="true">·</span> <span class="transmission-source">{{ voice.sourceLabel | escape }}</span>{% elif voice.verified %} <span aria-hidden="true">·</span> <span class="transmission-verified">verified canon</span>{% endif %}</p>
       </div>
       {% endfor %}
     </div>
@@ -35,7 +35,7 @@ description: A searchable Destiny lore archive and a growing number of character
       <button type="button" data-rotator-next aria-label="Next test transcript">›</button>
       <span class="transmission-count" data-rotator-count aria-hidden="true">1 / {{ voices.length }}</span>
     </div>
-    <p class="transmission-note">Test output; verified lines are canon.</p>
+    <p class="transmission-note">Scripted test output. Not canon.</p>
   </aside>
 </section>
 
