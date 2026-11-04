@@ -1,8 +1,8 @@
 ---
-section: agents
+section: integration
 layout: page
 title: Add an Agent
-category: Agents · Build
+category: Agents & Integration · Add an Agent
 lede: A new agent is a repository, one registry row and one site row. The page, nav entry and sitemap entry follow from the data.
 ---
 

@@ -6,11 +6,11 @@ pagination:
 permalink: "/agents/{{ agent.id }}/"
 eleventyComputed:
   title: "{{ agent.name }}"
-  category: "Agents · {{ agent.name }}"
+  category: "Personas · {{ agent.name }}"
   lede: "{{ agent.role }}"
   updated: "{{ agent.updated }}"
 layout: page
-section: agents
+section: personas
 ---
 
 {% if agent.image %}

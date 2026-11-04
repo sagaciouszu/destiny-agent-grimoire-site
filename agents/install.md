@@ -1,8 +1,8 @@
 ---
-section: setup
+section: integration
 layout: page
 title: Deploy the Agents
-category: Setup · Install
+category: Agents & Integration · Install
 lede: Set up one character in their own folder, or drop the whole series into OpenCode or OpenClaw. The archive is shared; the memories are not.
 ---
 

@@ -1,6 +1,6 @@
 (() => {
   const hoverCapable = window.matchMedia("(hover: hover) and (pointer: fine)");
-  const compactNav = window.matchMedia("(max-width: 960px)");
+  const compactNav = window.matchMedia("(max-width: 1100px)");
   const menus = [...document.querySelectorAll(".nav-menu")];
 
   const closeMenus = (except) => {
