@@ -1366,6 +1366,16 @@ pre:hover .copy-button,
   line-height: 1.5;
 }
 
+.tile-grid .agent-role {
+  margin-top: 0.35rem;
+  font-size: 0.7rem;
+}
+
+.tile-grid .agent-more {
+  margin-top: 0.55rem;
+  color: var(--text);
+}
+
 .field-table {
   width: 100%;
   margin: 1rem 0 1.6rem;
