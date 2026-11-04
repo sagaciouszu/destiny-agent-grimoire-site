@@ -3,7 +3,7 @@ section: integration
 layout: page
 title: Deploy the Personas
 category: Agents & Integration · Install
-lede: You need Git, Bash and Python 3.8 or newer. Pick a persona, connect it to the shared archive, and start talking. The common setups are at the top; the file layout and how personas talk to each other are at the bottom.
+lede: Pick a persona, connect it to the shared archive, and start talking. The common setups are at the top; the file layout and how personas talk to each other are at the bottom.
 ---
 
 <nav class="setup-order setup-order--boxed" aria-label="Recommended setup order">
@@ -14,19 +14,6 @@ lede: You need Git, Bash and Python 3.8 or newer. Pick a persona, connect it to 
     <li><a href="{{ '/agents/install/' | url }}" aria-current="step">3. Personas</a></li>
   </ol>
 </nav>
-
-<details class="section" open>
-<summary><span class="section-title" role="heading" aria-level="2" id="prerequisites">Before you start <a class="heading-anchor" href="#prerequisites" aria-label="Permalink to Before you start">#</a></span></summary>
-
-<ul class="checklist">
-  <li>Git and Bash.</li>
-  <li>Python 3.8 or newer.</li>
-  <li>A runtime: OpenCode, OpenClaw, or anything that can read <code>AGENTS.md</code>.</li>
-  <li>Network access the first time, so the setup can clone or download the archive.</li>
-  <li>About 260 MB for the Grimoire and database.</li>
-</ul>
-
-</details>
 
 <details class="section" open>
 <summary><span class="section-title" role="heading" aria-level="2" id="quick-start">Start here <a class="heading-anchor" href="#quick-start" aria-label="Permalink to Start here">#</a></span></summary>
@@ -85,6 +72,18 @@ the MCP server is the optional bridge that makes lookup smoother.
 
 </details>
 
+<details class="section" open>
+<summary><span class="section-title" role="heading" aria-level="2" id="prerequisites">Before you start <a class="heading-anchor" href="#prerequisites" aria-label="Permalink to Before you start">#</a></span></summary>
+
+<ul class="checklist">
+  <li>Git and Bash.</li>
+  <li>Python 3.8 or newer.</li>
+  <li>A runtime: OpenCode, OpenClaw, or anything that can read <code>AGENTS.md</code>.</li>
+  <li>Network access the first time, so the setup can clone or download the archive.</li>
+  <li>About 260 MB for the Grimoire and database.</li>
+</ul>
+
+</details>
 
 <details class="section" open>
 <summary><span class="section-title" role="heading" aria-level="2" id="choose-a-persona">Choose a persona <a class="heading-anchor" href="#choose-a-persona" aria-label="Permalink to Choose a persona">#</a></span></summary>
