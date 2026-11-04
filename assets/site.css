@@ -279,6 +279,8 @@ a:hover {
   border: 1px solid var(--line-strong);
   border-radius: 6px;
   min-width: 13rem;
+  max-height: calc(100vh - 5rem);
+  overflow-y: auto;
 }
 
 .nav-submenu .nav-sep {
