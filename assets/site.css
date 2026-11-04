@@ -698,8 +698,15 @@ pre:hover .copy-button,
 
 .setup-order--boxed { margin: 0 0 1.4rem; }
 
+.setup-order--intro { margin: 1.4rem 0 0; }
+
+.has-setup-order .lore-head + .section {
+  border-top: 0;
+  padding-top: 0;
+  margin-top: 0;
+}
+
 .setup-order--inline + .section,
-.setup-order--boxed + .section,
 .lore-head + .section {
   border-top: 0;
   padding-top: 0;

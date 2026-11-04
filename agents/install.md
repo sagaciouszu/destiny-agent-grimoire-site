@@ -4,16 +4,9 @@ layout: page
 title: Deploy the Personas
 category: Agents & Integration · Install
 lede: Pick a persona, connect it to the shared archive, and start talking. The common setups are at the top; the file layout and how personas talk to each other are at the bottom.
+setupOrder: true
+setupStep: 3
 ---
-
-<nav class="setup-order setup-order--boxed" aria-label="Recommended setup order">
-  <span class="setup-order-label">Setup order</span>
-  <ol>
-    <li><a href="{{ '/grimoire/install/' | url }}">1. Grimoire</a></li>
-    <li><a href="{{ '/grimoire/mcp/' | url }}">2. MCP <span class="setup-optional">optional</span></a></li>
-    <li><a href="{{ '/agents/install/' | url }}" aria-current="step">3. Personas</a></li>
-  </ol>
-</nav>
 
 <details class="section" open>
 <summary><span class="section-title" role="heading" aria-level="2" id="quick-start">Start here <a class="heading-anchor" href="#quick-start" aria-label="Permalink to Start here">#</a></span></summary>
