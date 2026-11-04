@@ -21,9 +21,8 @@ The MCP server gives an AI client a small set of named tools: search, character
 lines, item lore and quote checks. The client calls those tools itself instead of
 asking you to run commands.
 
-It runs on your machine over stdio. There is no network service, no port and no
-account. Your client starts it, talks to it through a pipe, and stops it when the
-session ends.
+It runs on your machine. There is no network service, no port and no account.
+Your app starts it, talks to it directly, and stops it when the session ends.
 
 ## Why use it
 
@@ -34,8 +33,8 @@ session ends.
   <li><strong>It is safe to leave on</strong><p>The database is read-only, with no SQL tool, write path or network access.</p></li>
 </ul>
 
-You do not need MCP to use the Grimoire. It is the convenience layer for clients
-that can launch a local process.
+You don't need MCP to use the Grimoire. It is the convenience layer for apps that
+can launch a local process.
 
 ## Set it up
 
@@ -43,9 +42,8 @@ From the Grimoire checkout:
 
 <pre><code>bash mcp-server/install.sh</code></pre>
 
-The installer creates a small virtual environment, installs the locked
-dependencies, and prints a client snippet. Paste that into your client and
-restart it. If your client asks for a path, point it at `mcp-server/run.sh`; use
+The installer sets up a small local environment and prints a snippet to paste
+into your app. Restart the app after you add it. If your client asks for a path, point it at `mcp-server/run.sh`; use
 the absolute path if the client starts somewhere else.
 
 The installer needs Python 3.10 or newer for the MCP SDK. The query command line

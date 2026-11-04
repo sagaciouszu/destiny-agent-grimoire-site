@@ -2,7 +2,7 @@
 layout: page
 title: About
 category: About
-lede: A fan-built lore archive and a small series of character agents, maintained in the open.
+lede: A fan-built lore archive and a small cast of character personas, maintained in the open.
 ---
 
 ## What this is
@@ -16,9 +16,9 @@ parts:
   <li><strong>Character personas</strong><p>Read the same archive and answer in their own voice.</p></li>
 </ul>
 
-You can use any part on its own. The archive is useful without an agent. The MCP
-server is useful without a persona. The personas are useful if you want a
-character to talk to, not just a search box.
+You can use any part on its own. The archive is useful without a persona. The MCP
+server is useful without one too. The personas are for when you want a character
+to talk to, not just a search box.
 
 ## Why it exists
 

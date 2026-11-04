@@ -3,7 +3,7 @@ section: integration
 layout: page
 title: Integrations
 category: Agents & Integration · Integrations
-lede: Pick the app you use. OpenCode and OpenClaw get a scripted install; the rest load a project instruction file and, where supported, the Grimoire MCP server.
+lede: Pick the app you use. OpenCode and OpenClaw get a scripted install. Everything else loads a project instruction file and, where supported, the Grimoire MCP server.
 ---
 
 ## Scripted installs
@@ -18,7 +18,7 @@ bash scripts/sync-live-agents.sh
 bash scripts/sync-live-agents.sh --openclaw</code></pre>
 
 <p>Run those from the Grimoire checkout. The full walkthrough, including what
-lands on disk, is on <a href="{{ '/agents/install/' | url }}">Deploy the Agents</a>.</p>
+lands on disk, is on <a href="{{ '/agents/install/' | url }}">Deploy the Personas</a>.</p>
 
 ## Apps with project rules and MCP
 
@@ -80,4 +80,4 @@ folders private by policy there.
 
 - [Deploy into OpenCode or OpenClaw]({{ '/agents/install/' | url }})
 - [Install the MCP server]({{ '/grimoire/mcp/' | url }})
-- [Troubleshoot a missing agent or tool]({{ '/troubleshooting/' | url }})
+- [Troubleshoot a missing persona or tool]({{ '/troubleshooting/' | url }})

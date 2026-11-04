@@ -3,24 +3,20 @@ section: integration
 layout: page
 title: Add an Agent
 category: Agents & Integration · Add an Agent
-lede: "Adding a persona is three things: a repository, one registry row and one site row. The simple steps are first; the field reference is at the bottom."
+lede: "Adding a persona takes three things: a repository, one registry row and one site row. The simple steps come first; the field reference is at the bottom."
 ---
 
 <details class="section" open>
 <summary><span class="section-title" role="heading" aria-level="2" id="short-version">The short version <a class="heading-anchor" href="#short-version" aria-label="Permalink to The short version">#</a></span></summary>
 
 <ol>
-  <li><strong>Make the persona repository.</strong> Start from an existing agent repository. It needs an entry file, <code>AGENTS.md</code>, the voice and world material, <code>setup.sh</code> and an audit.</li>
+  <li><strong>Make the persona its own repository.</strong> Start from an existing persona repository. It needs an entry file, <code>AGENTS.md</code>, the voice and world material, <code>setup.sh</code> and an audit.</li>
   <li><strong>Add one row to the registry.</strong> Put the id, name, source repository, entry file and consult topics in <code>series/agents.json</code>.</li>
   <li><strong>Add one object to the site.</strong> Add the same id and the display fields to <code>_data/agents.js</code>.</li>
-  <li><strong>Run the gates.</strong> Audit the persona, install it, then run the site's link check.</li>
+  <li><strong>Run the checks.</strong> Audit the persona, install it, then run the site's link check.</li>
 </ol>
 
-<p>That is enough for a new page, nav entry and sitemap entry.</p>
-
-<p class="muted">A working page skeleton is at
-<a href="{{ '/agents/skeleton/' | url }}">Agent Page Skeleton</a>. It is hidden
-from the nav and sitemap; copy its structure when you start.</p>
+<p>That is enough to get a new page, nav entry and sitemap entry.</p>
 
 </details>
 
@@ -28,24 +24,24 @@ from the nav and sitemap; copy its structure when you start.</p>
 <summary><span class="section-title" role="heading" aria-level="2" id="why-add-one">Why add one <a class="heading-anchor" href="#why-add-one" aria-label="Permalink to Why add one">#</a></span></summary>
 
 <ul class="tile-grid">
-  <li><strong>The series grows without another archive</strong><p>Every persona reads the same Grimoire.</p></li>
-  <li><strong>The site is data-driven</strong><p>One site object produces the page, nav entry, sitemap entry and roster link.</p></li>
-  <li><strong>The pieces stay independent</strong><p>A persona can ship with its own repository, tests and release cycle.</p></li>
+  <li><strong>New personas share one archive</strong><p>Every persona reads the same Grimoire, so there is nothing new to fill.</p></li>
+  <li><strong>The site does the paperwork</strong><p>One site object produces the page, nav entry, sitemap entry and roster link.</p></li>
+  <li><strong>Each persona keeps its own pace</strong><p>A persona can ship with its own repository, tests and release cycle.</p></li>
 </ul>
 
 </details>
 
-<h2 id="for-experts">For experts <a class="heading-anchor" href="#for-experts" aria-label="Permalink to For experts">#</a></h2>
+<h2 id="for-experts">For Experts (or enthusiasts) <a class="heading-anchor" href="#for-experts" aria-label="Permalink to For Experts (or enthusiasts)">#</a></h2>
 
 <p class="muted">The repository contract, every registry and site field, and the
-gates to run before publishing.</p>
+checks to run before publishing.</p>
 
 <h3 id="the-shape">The shape</h3>
 
-A series agent is its own repository, not a folder inside the archive. The
+A series persona is its own repository, not a folder inside the archive. The
 reference implementations are [The Drifter](https://github.com/sagaciouszu/how-to-drift-for-agents)
-and [Eris Morn](https://github.com/sagaciouszu/eris-morn). Between them they show
-the contract:
+and [Eris Morn](https://github.com/sagaciouszu/eris-morn). Together they show
+what a persona needs:
 
 - an entry file, `<id>.md`, for OpenCode;
 - `AGENTS.md` for runtimes that read a single instruction file;
@@ -56,11 +52,11 @@ the contract:
 
 In the OpenCode deployment, a consult copy is generated from the entry, not
 written by hand. It reads the archive and cannot edit files, run shell commands
-or ask another agent.
+or ask another persona.
 
 <h3 id="the-registry">The registry</h3>
 
-Deployment reads `series/agents.json` in the Grimoire. Add one row:
+The deployment reads `series/agents.json` in the Grimoire. Add one row:
 
 <table class="field-table">
   <thead><tr><th>Field</th><th>What it does</th></tr></thead>
@@ -75,16 +71,16 @@ Deployment reads `series/agents.json` in the Grimoire. Add one row:
 </table>
 
 The `id` is the contract. It becomes the OpenCode agent id, the consult file
-name, the site URL and the nav item. Keep it stable once published.
+name, the site URL and the nav item. Keep it stable after publishing.
 
 [Open the registry](https://github.com/sagaciouszu/destiny-agent-grimoire/blob/master/series/agents.json)
 
 <h3 id="the-site">The site</h3>
 
-Add the agent to `_data/agents.js` in this repository. The site builds
-`/agents/<id>/`, a nav entry, a sitemap entry and the roster link from that
-object. Set `featured: true` for a summary at the top of the Agents page; leave
-it false for a roster entry.
+Add the persona to `_data/agents.js` in this repository. One object builds
+`/agents/<id>/`, the nav entry, the sitemap entry and the roster link. Set
+`featured: true` to show a summary at the top of the Agents page; leave it false
+for a roster entry only.
 
 The fields:
 
@@ -92,31 +88,31 @@ The fields:
   <thead><tr><th>Field</th><th>What it does</th></tr></thead>
   <tbody>
     <tr><td>id, name, role</td><td>Identity and the line under the name.</td></tr>
-    <tr><td>heading</td><td>The first section heading on the agent page.</td></tr>
+    <tr><td>heading</td><td>The first section heading on the persona page.</td></tr>
     <tr><td>short, paragraphs</td><td>Summary and full profile.</td></tr>
     <tr><td>consult, repo, repoName, entry, entryUrl</td><td>Links and canon surface.</td></tr>
     <tr><td>version, releaseUrl, updated</td><td>The record shown on the page.</td></tr>
     <tr><td>audit</td><td><code>{ passed, total }</code> from <code>tests/master-audit.sh</code>.</td></tr>
     <tr><td>samples</td><td>Verified lines with a context label.</td></tr>
-    <tr><td>limits</td><td>What the agent will not do.</td></tr>
+    <tr><td>limits</td><td>What the persona will not do.</td></tr>
   </tbody>
 </table>
 
-Every entry in `samples` must pass:
+Every line in `samples` has to pass:
 
 <pre><code>python3 lore/db/query.py verify "&lt;line&gt;" --speaker "&lt;name&gt;" --exact</code></pre>
 
 <h3 id="the-gates">The gates</h3>
 
-Run the agent audit from the agent repository:
+Run the persona's audit from its repository:
 
 <pre><code>bash tests/master-audit.sh</code></pre>
 
-Then install the series into OpenCode and check that the new agent appears:
+Then install the series into OpenCode and check that the new persona appears:
 
 <pre><code>bash scripts/sync-live-agents.sh</code></pre>
 
-Before pushing the site, run the link and metadata gate:
+Before pushing the site, run the link and metadata check:
 
 <pre><code>python3 scripts/check-links.py</code></pre>
 
@@ -126,5 +122,5 @@ duplicate title or stale sitemap fails the deploy.
 ## Next
 
 - [Meet the personas]({{ '/agents/' | url }})
-- [Deploy an agent]({{ '/agents/install/' | url }})
+- [Deploy the personas]({{ '/agents/install/' | url }})
 - [Read the series standards](https://github.com/sagaciouszu/destiny-agent-grimoire/blob/master/STANDARDS.md)

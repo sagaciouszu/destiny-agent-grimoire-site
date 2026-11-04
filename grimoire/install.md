@@ -38,12 +38,12 @@ python3 db/query.py stats</code></pre>
 
 <ul class="tile-grid">
   <li><strong>One place to look things up</strong><p>Search books, dialogue, cards, items and records without opening a dozen wiki tabs.</p></li>
-  <li><strong>A quote checker</strong><p>Paste a line and find out whether it is canon before you put it in a post, a video or an agent's mouth.</p></li>
-  <li><strong>A canon source for agents</strong><p>The Drifter and Eris read this same archive, so they answer from the same material you do.</p></li>
+  <li><strong>A quote checker</strong><p>Paste a line and find out whether it is real Destiny text before you put it in a post, a video or a persona's mouth.</p></li>
+  <li><strong>A shared source for personas</strong><p>The Drifter and Eris read this same archive, so they answer from the same material you do.</p></li>
   <li><strong>An optional tool server</strong><p>Connect an AI client through MCP and it can search the archive directly.</p></li>
 </ul>
 
-You do not need the agents or MCP to use the archive. They are separate pieces
+You don't need the personas or MCP to use the archive. They are separate pieces
 that become more useful together.
 
 </details>
@@ -148,8 +148,8 @@ documentation and the MCP surface.</p>
 bash tests/query-interface-test.sh
 python3 tests/conformance.py</code></pre>
 
-<p>Agent checks live with each agent repository and pull the shared gates through
-<code>lore/tests/</code>.</p>
+<p>Persona checks live in each persona repository and pull the shared gates
+through <code>lore/tests/</code>.</p>
 
 </details>
 

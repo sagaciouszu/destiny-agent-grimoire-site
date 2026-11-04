@@ -39,7 +39,6 @@ Output goes to `_site/`.
 - `agents/` — overview, install, integrations
 - `agents/agent.njk` — generates `/agents/<id>/` pages from the roster
 - `agents/build.md` — how to add a new series agent
-- `agents/skeleton.md` — hidden agent-page skeleton; not linked in nav or sitemap
 - `troubleshooting.md`
 - `about.md`
 - `404.md`
@@ -78,8 +77,8 @@ the last git commit date for their source file.
 ## Reading order
 
 The docs lead with the short path and the reason to use each piece. Deeper
-commands, file layouts and test gates sit under a `For experts` heading at the
-bottom. The home page, Grimoire install, MCP setup and Agent install all show the
+commands, file layouts and test gates sit under a `For Experts (or enthusiasts)`
+heading at the bottom. The home page, Grimoire install, MCP setup and Agent install all show the
 recommended order: Grimoire, then MCP, then personas.
 
 ## Checks

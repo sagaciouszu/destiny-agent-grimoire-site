@@ -8,19 +8,19 @@ lede: One searchable place for Destiny lore, built so you and an AI can read the
 
 ## What it is
 
-The Grimoire is a single local database of Destiny lore: books, dialogue,
-grimoire cards, item text, triumphs and a hand-picked character index. You search
-it from a terminal, or connect an AI to it through MCP.
+The Grimoire is one file on your computer. It holds Destiny's books, dialogue,
+grimoire cards, item text, triumphs and a short list of characters with their
+best lines. You can search it from a terminal, or let an AI search it through MCP.
 
-It does not scrape a website while you work. Once the database is on your disk,
-every lookup is a local read. No account, no API key, no network.
+Nothing is downloaded while you search. Once the file is on your computer, every
+lookup is local. No account, no API key, no network.
 
 ## Why it helps
 
 - **You stop tab-hopping.** Search one place instead of a dozen wiki pages.
 - **You can check a quote.** The archive ships a `verify` command, so you can
   find out whether a line is real before you repeat it.
-- **Your AI gets the same canon.** The Drifter and Eris read this archive. With
+- **Your AI sees the same text you do.** The Drifter and Eris read this archive. With
   MCP, any compatible client can read it too.
 - **The pieces stay separate.** The archive is useful on its own. The MCP server
   is optional. The personas are optional. Together they save you from copying
@@ -41,16 +41,16 @@ The current build has:
   <div><strong>20</strong><span>curated characters</span></div>
 </div>
 
-<p>The search index covers 124,484 rows.</p>
+<p>There are 124,484 searchable rows.</p>
 
-Those numbers are a map, not a citation. The row you quote is the citation.
+The numbers show the size of the archive. The row you quote is the proof.
 
 ## How the pieces fit
 
 <ul class="tile-grid">
   <li><strong>The Grimoire</strong><p>The archive. It is the part everything else reads.</p></li>
   <li><strong>The MCP server</strong><p>Turns the archive into read-only tools an AI can call, without giving it a shell.</p></li>
-  <li><strong>The personas</strong><p>Independent character agents with voice, guardrails and memory. They read the Grimoire for canon.</p></li>
+  <li><strong>The personas</strong><p>Independent characters with their own voice, guardrails and memory. They read the Grimoire for canon.</p></li>
 </ul>
 
 You can start with any one piece. Adding the others does not require a second
@@ -65,16 +65,16 @@ archive.
 - [Meet the personas]({{ '/agents/' | url }}) — useful if you want a character to
   talk to, not just a search box.
 
-<h2 id="for-experts">For experts <a class="heading-anchor" href="#for-experts" aria-label="Permalink to For experts">#</a></h2>
+<h2 id="for-experts">For Experts (or enthusiasts) <a class="heading-anchor" href="#for-experts" aria-label="Permalink to For Experts (or enthusiasts)">#</a></h2>
 
-<p class="muted">How the archive is built, the interfaces for tools, and the quote
-policy. You can skip this if you only want to read lore.</p>
+<p class="muted">How the archive is built, what tools can use it, and the quote
+rules. Skip this if you only want to read lore.</p>
 
 <h3 id="how-it-is-built">How it is built</h3>
 
-The database is built from committed source files, not fetched at runtime. Every
-content row records its source, and speaker names are normalised through aliases
-so one character does not split across several spellings.
+The database is built from files in the repository, not fetched while you search.
+Every row records where it came from. Speaker names are cleaned up so one
+character does not split across several spellings.
 
 Search uses SQLite FTS5. You get the passage back, not a list of files to open.
 
@@ -83,7 +83,7 @@ Search uses SQLite FTS5. You get the passage back, not a list of files to open.
 <ul class="tile-grid">
   <li><strong>Command line</strong><p>Search, character lines, items, books, transcripts, records and quote checks. JSON output for scripts.</p></li>
   <li><strong>MCP server</strong><p>Eighteen read-only tools over local stdio for AI clients.</p></li>
-  <li><strong>Agent skill</strong><p>A drop-in instruction file for runtimes that load skills instead of MCP servers.</p></li>
+  <li><strong>Skill file</strong><p>A drop-in skill for runtimes that load skills instead of MCP servers.</p></li>
   <li><strong><code>db/capabilities.json</code></strong><p>The machine-readable manifest of tables, views, commands and contracts.</p></li>
 </ul>
 

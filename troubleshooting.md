@@ -2,7 +2,7 @@
 layout: page
 title: Troubleshooting
 category: Diagnostics
-lede: Start with the short list. If your symptom is there, you are probably one command away from fixed. The deeper checks are grouped below.
+lede: Start with the short list. If your symptom is there, you are probably one command away from fixing it. The deeper checks are grouped below.
 ---
 
 <details class="section" open>
@@ -14,7 +14,7 @@ lede: Start with the short list. If your symptom is there, you are probably one 
   <li><strong>No database.</strong> Download the release copy or run <code>python3 db/migrate.py</code> from the repository root.</li>
   <li><strong>Wrong folder.</strong> Commands expect the repository root, not the <code>db/</code> or <code>agents/</code> folder.</li>
   <li><strong>MCP client points at the wrong file.</strong> It should start <code>mcp-server/run.sh</code>, not <code>server.py</code>.</li>
-  <li><strong>An agent cannot see canon.</strong> Check that <code>lore/</code> points at the Grimoire and that <code>lore/db/grimoire.db</code> exists.</li>
+  <li><strong>A persona cannot see the archive.</strong> Check that <code>lore/</code> points at the Grimoire and that <code>lore/db/grimoire.db</code> exists.</li>
 </ol>
 
 <p>If none of those fit, find your symptom below.</p>
@@ -38,9 +38,9 @@ lede: Start with the short list. If your symptom is there, you are probably one 
     </ul>
   </div>
   <div class="toc-card">
-    <p class="toc-group">Agents</p>
+    <p class="toc-group">Personas</p>
     <ul>
-      <li><a href="#agent-missing">An agent is not listed</a></li>
+      <li><a href="#agent-missing">A persona is not listed</a></li>
       <li><a href="#too-many-agents">OpenCode lists hundreds of agents</a></li>
       <li><a href="#consult">A peer cannot be consulted</a></li>
     </ul>
@@ -51,7 +51,7 @@ lede: Start with the short list. If your symptom is there, you are probably one 
       <li><a href="#mcp-tools">MCP tools do not appear</a></li>
       <li><a href="#mcp-start">The MCP server will not start</a></li>
       <li><a href="#verify">A quote does not verify</a></li>
-      <li><a href="#no-lore">The agent has no archive access</a></li>
+      <li><a href="#no-lore">The persona has no archive access</a></li>
     </ul>
   </div>
   <div class="toc-card">
@@ -66,7 +66,7 @@ lede: Start with the short list. If your symptom is there, you are probably one 
 <details class="section" open>
 <summary><span class="section-title" role="heading" aria-level="2" id="database-missing">The database is missing <a class="heading-anchor" href="#database-missing" aria-label="Permalink to The database is missing">#</a></span></summary>
 
-You will see `database not found`, or an agent will say it cannot read canon.
+You will see `database not found`, or a persona will say it cannot read the archive.
 
 The database is built, not committed. Download the release copy or build it:
 
@@ -85,7 +85,7 @@ Check what you have:
 
 <pre><code>python3 --version</code></pre>
 
-The archive needs 3.8 or newer. On Debian or Ubuntu, `sudo apt install python3`
+The archive needs Python 3.8 or newer. On Debian or Ubuntu, `sudo apt install python3`
 is usually enough. On macOS, use the python.org installer or Homebrew. On
 Windows, install from python.org and make sure the launcher adds Python to your
 PATH.
@@ -115,7 +115,7 @@ is wrong.
 <details class="section">
 <summary><span class="section-title" role="heading" aria-level="2" id="lore-link">The archive link is broken <a class="heading-anchor" href="#lore-link" aria-label="Permalink to The archive link is broken">#</a></span></summary>
 
-An agent repository expects `lore/` to point at a Grimoire checkout, or to be a
+A persona repository expects `lore/` to point at a Grimoire checkout, or to be a
 clone of it. If the link was moved or the folder renamed, recreate it:
 
 <pre><code>./setup.sh /path/to/destiny-agent-grimoire</code></pre>
@@ -138,7 +138,7 @@ You should see `drifter.md`, `eris.md`, `drifter-consult.md` and
 `eris-consult.md` in `~/.config/opencode/agents/`. The companion files should be
 inert, and the Grimoire should live outside that folder.
 
-If the agent appears but cannot be selected, check `default_agent` in
+If the persona appears but cannot be selected, check `default_agent` in
 `~/.config/opencode/opencode.json`. Use the id (`drifter` or `eris`), not the file
 name with `.md`.
 
@@ -235,11 +235,11 @@ If it still fails, do not quote the line as canon.
 <summary><span class="section-title" role="heading" aria-level="2" id="no-lore">The agent has no archive access <a class="heading-anchor" href="#no-lore" aria-label="Permalink to The agent has no archive access">#</a></span></summary>
 
 The character files can work without the archive, but canon lookup and quote
-checks cannot. If the agent suddenly stops citing anything:
+checks cannot. If a persona suddenly stops citing anything:
 
 - Check `lore/db/grimoire.db` exists.
 - Check `lore/` points at a real Grimoire checkout.
-- Run `./setup.sh` from the agent repository.
+- Run `./setup.sh` from the persona's repository.
 - Confirm the runtime is starting in the repository folder; the helper scripts
   resolve paths from their own location.
 
@@ -248,7 +248,7 @@ MCP is not connected, expect a shorter, less grounded answer.
 
 </details>
 
-<h2 id="for-experts">For experts <a class="heading-anchor" href="#for-experts" aria-label="Permalink to For experts">#</a></h2>
+<h2 id="for-experts">For Experts (or enthusiasts) <a class="heading-anchor" href="#for-experts" aria-label="Permalink to For Experts (or enthusiasts)">#</a></h2>
 
 <p class="muted">Repository-level checks and test failures.</p>
 

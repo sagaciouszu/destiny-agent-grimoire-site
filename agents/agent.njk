@@ -65,22 +65,22 @@ cd {{ agent.repoName }}
 
 <p>Use <code>BOOTSTRAP=1 ./setup.sh</code> to download the release database
 without a prompt. For OpenCode or OpenClaw, use the shared sync instead:
-<a href="{{ '/agents/install/' | url }}">Deploy the Agents</a>.</p>
+<a href="{{ '/agents/install/' | url }}">Deploy the personas</a>.</p>
 
-<h2 id="for-experts">For experts <a class="heading-anchor" href="#for-experts" aria-label="Permalink to For experts">#</a></h2>
+<h2 id="for-experts">For Experts (or enthusiasts) <a class="heading-anchor" href="#for-experts" aria-label="Permalink to For Experts (or enthusiasts)">#</a></h2>
 
-<p class="muted">The entry file, audit and repository links.</p>
+<p class="muted">The entry file, the audit and the repository links.</p>
 
 <h3 id="entry-file">The brain <a class="heading-anchor" href="#entry-file" aria-label="Permalink to The brain">#</a></h3>
 
-<p>In OpenCode, <code>{{ agent.entry }}</code> is the main agent entry. A generic
-runtime that reads <code>AGENTS.md</code> can use the repository directly. The
-file is where the voice, guardrails and canon pointers begin.</p>
+<p>In OpenCode, <code>{{ agent.entry }}</code> is the main entry file. Anything that
+reads <code>AGENTS.md</code> can use the repository directly. The file is where the
+voice, the guardrails and the archive pointers begin.</p>
 
 <p><a href="{{ agent.entryUrl or agent.repo }}">Read {{ agent.entry }} on GitHub</a>.</p>
 
 <p>Series deployment also installs a read-only consult copy,
-<code>{{ agent.id }}-consult.md</code>, so another agent can ask a question without
+<code>{{ agent.id }}-consult.md</code>, so another persona can ask a question without
 getting write access to this one's files.</p>
 
 <h3 id="checks">The audit <a class="heading-anchor" href="#checks" aria-label="Permalink to The audit">#</a></h3>
@@ -102,11 +102,11 @@ and the shared structure gates. It is the same suite CI runs.</p>
 <h2 id="next">Next <a class="heading-anchor" href="#next" aria-label="Permalink to Next">#</a></h2>
 
 <ul>
-  <li><a href="{{ '/agents/' | url }}">Back to the series</a></li>
+  <li><a href="{{ '/agents/' | url }}">Back to the personas</a></li>
   {% for other in agents %}{% if other.id != agent.id %}
   <li><a href="{{ ('/agents/' + other.id + '/') | url }}">Meet {{ other.name }}</a></li>
   {% endif %}{% endfor %}
-  <li><a href="{{ '/agents/build/' | url }}">Add another agent</a></li>
+  <li><a href="{{ '/agents/build/' | url }}">Add another persona</a></li>
   <li><a href="{{ '/agents/install/' | url }}">Deploy into OpenCode or OpenClaw</a></li>
   <li><a href="{{ '/agents/platforms/' | url }}">Integrations</a></li>
 </ul>

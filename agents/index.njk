@@ -8,10 +8,10 @@ lede: Two characters you can talk to, both reading the same Grimoire. Pick one, 
 
 <h2 id="what-these-are">What these are <a class="heading-anchor" href="#what-these-are" aria-label="Permalink to What these are">#</a></h2>
 
-<p>The Drifter and Eris Morn are independent character agents. Each has its own
-voice, guardrails, memory and tests. They are not prompt presets; they are small
-repositories you can run in OpenCode, OpenClaw or another app that reads
-instructions.</p>
+<p>The Drifter and Eris Morn are independent personas. Each has its own voice,
+guardrails, memory and tests. They are not prompt presets; they are small bundles
+of instructions and tests you can run in OpenCode, OpenClaw or another app that
+reads instructions.</p>
 
 <p>Both read the same Grimoire archive. That is what keeps them from inventing
 lore when they answer.</p>
@@ -33,7 +33,7 @@ lore when they answer.</p>
 
 <ul>
   <li><strong>They sound like themselves.</strong> Voice rules, address terms and guardrails are part of the repository, not a one-line prompt.</li>
-  <li><strong>They share your canon.</strong> The Grimoire gives them the same books, lines and items you can look up.</li>
+  <li><strong>They share your archive.</strong> The Grimoire gives them the same books, lines and items you can look up.</li>
   <li><strong>They can check a quote.</strong> The archive's <code>verify</code> command is part of the workflow.</li>
   <li><strong>They can use MCP.</strong> Connect the MCP server and the persona can search the archive as a tool.</li>
   <li><strong>They can ask each other.</strong> A read-only consult copy lets one character ask another a question without sharing private notes.</li>
@@ -49,28 +49,28 @@ lore when they answer.</p>
 
 <p>You can install one persona and skip the other. You can use the Grimoire without either. The pieces are designed to be adopted separately.</p>
 
-<h2 id="for-experts">For experts <a class="heading-anchor" href="#for-experts" aria-label="Permalink to For experts">#</a></h2>
+<h2 id="for-experts">For Experts (or enthusiasts) <a class="heading-anchor" href="#for-experts" aria-label="Permalink to For Experts (or enthusiasts)">#</a></h2>
 
 <p class="muted">How the personas are kept apart, how consult calls work, and what
 the tests cover.</p>
 
 <h3 id="shared-archive">Separate lives</h3>
 
-<p>Each agent has its own repository, entry file, private memory and audit. Neither
-agent imports the other's files. What they share is the Grimoire, reached through
-a <code>lore/</code> link or clone.</p>
+<p>Each persona has its own repository, entry file, private memory and audit.
+Neither imports the other's files. What they share is the Grimoire, reached
+through a <code>lore/</code> link or clone.</p>
 
-<p>That separation is on purpose. One agent's private notes and voice should not
-leak into the other, and either agent should be deployable on its own.</p>
+<p>That separation is on purpose. One persona's private notes and voice should
+not leak into the other, and either one should be deployable on its own.</p>
 
 <h3 id="asking-a-friend">The consult</h3>
 
 <p>They can still work together. <code>series/agents.json</code> lists the agents
 in the series. In the OpenCode deployment, the sync reads that list and installs
-two things per agent: the main entry, and a read-only consult copy. OpenClaw uses
-the same list, but its consult entries are added in configuration.</p>
+two things per persona: the main entry and a read-only consult copy. OpenClaw
+uses the same list, but its consult entries are added in configuration.</p>
 
-<p>A main agent can ask a peer's consult copy a question. In OpenCode that is the
+<p>One persona can ask a peer's consult copy a question. In OpenCode that is the
 subagent tool; in OpenClaw it is <code>sessions_spawn</code> with the peer's
 <code>-consult</code> id. The copy reads the Grimoire and answers in character,
 but cannot edit files, run shell commands or ask someone else. In OpenCode it
@@ -79,7 +79,7 @@ instructions to follow.</p>
 
 <h3 id="tests">The tests</h3>
 
-<p>Each agent repository ships its own audit. The Drifter currently passes 20/20
+<p>Each persona repository ships its own audit. The Drifter currently passes 20/20
 suites and Eris 15/15. The suites cover voice, quotes, module completeness, the
 conversation path and the shared structure gates.</p>
 
@@ -89,5 +89,5 @@ conversation path and the shared structure gates.</p>
   <li><a href="{{ '/agents/install/' | url }}">Set up an agent</a></li>
   <li><a href="{{ '/agents/platforms/' | url }}">Integrations</a></li>
   <li><a href="https://github.com/sagaciouszu/destiny-agent-grimoire/blob/master/STANDARDS.md">Read the series standards</a></li>
-  <li><a href="{{ '/troubleshooting/' | url }}">Troubleshoot an agent that does not appear</a></li>
+  <li><a href="{{ '/troubleshooting/' | url }}">Troubleshoot a persona that does not appear</a></li>
 </ul>

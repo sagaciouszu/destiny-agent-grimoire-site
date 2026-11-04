@@ -1,9 +1,9 @@
 ---
 section: integration
 layout: page
-title: Deploy the Agents
+title: Deploy the Personas
 category: Agents & Integration · Install
-lede: Pick a persona, connect it to the shared archive, and start talking. The common setups are at the top; the file layout and agent-to-agent details are at the bottom.
+lede: Pick a persona, connect it to the shared archive, and start talking. The common setups are at the top; the file layout and how personas talk to each other are at the bottom.
 ---
 
 <nav class="setup-order setup-order--inline" aria-label="Recommended setup order">
@@ -18,7 +18,7 @@ lede: Pick a persona, connect it to the shared archive, and start talking. The c
 <details class="section" open>
 <summary><span class="section-title" role="heading" aria-level="2" id="quick-start">Start here <a class="heading-anchor" href="#quick-start" aria-label="Permalink to Start here">#</a></span></summary>
 
-<p>Pick the app you already use. You do not need all three. If you already
+<p>Pick the app you already use. You don't need all three. If you already
 installed the Grimoire, skip the clone lines and run the sync from your checkout.</p>
 
 <div class="choices">
@@ -61,7 +61,7 @@ prompt.</p>
 
 <ul class="tile-grid">
   <li><strong>A character, not a prompt</strong><p>Each persona has a voice, guardrails, memory and a tested way of answering.</p></li>
-  <li><strong>The same canon you have</strong><p>The persona reads the Grimoire archive, so it can look things up instead of guessing.</p></li>
+  <li><strong>The same archive you have</strong><p>The persona reads the Grimoire, so it can look things up instead of guessing.</p></li>
   <li><strong>A quote check</strong><p>The material is tied to verified lines, and the archive ships a <code>verify</code> command.</p></li>
   <li><strong>Optional tools</strong><p>With MCP, the persona can search the archive directly.</p></li>
   <li><strong>A second opinion</strong><p>The Drifter and Eris can ask each other through read-only consult copies.</p></li>
@@ -177,7 +177,7 @@ still does not replace checking a quote.</p>
 
 <h3 id="verify">Check that it worked <a class="heading-anchor" href="#verify" aria-label="Permalink to Check that it worked">#</a></h3>
 
-<p>Each agent repository owns its own tests. Run the main audit from the
+<p>Each persona repository owns its own tests. Run the main audit from the
 repository root:</p>
 
 <pre><code>bash tests/master-audit.sh</code></pre>
@@ -192,7 +192,7 @@ does:</p>
 
 ## If something's off
 
-If an agent does not show up, or a consult call fails, see
+If a persona does not show up, or a consult call fails, see
 [Troubleshooting]({{ '/troubleshooting/' | url }}).
 
 ## Next
