@@ -21,6 +21,11 @@ lore when they answer.</p>
 <ul class="tile-grid tile-grid--personas">
   {% for agent in agents %}
   <li id="{{ agent.id }}">
+    {% if agent.image %}
+    <figure class="persona-thumb">
+      <img src="{{ agent.image | url }}" alt="{{ agent.imageAlt | escape }}" width="{{ agent.imageWidth }}" height="{{ agent.imageHeight }}" loading="lazy" decoding="async">
+    </figure>
+    {% endif %}
     <strong><a href="{{ ('/agents/' + agent.id + '/') | url }}">{{ agent.name }}</a></strong>
     <p class="agent-role">{{ agent.role }}</p>
     <p>{{ agent.short }}</p>
@@ -29,6 +34,11 @@ lore when they answer.</p>
   {% endfor %}
   {% for persona in placeholders %}
   <li class="persona-placeholder" id="{{ persona.id }}">
+    {% if persona.image %}
+    <figure class="persona-thumb">
+      <img src="{{ persona.image | url }}" alt="{{ persona.imageAlt | escape }}" width="{{ persona.imageWidth }}" height="{{ persona.imageHeight }}" loading="lazy" decoding="async">
+    </figure>
+    {% endif %}
     <strong>{{ persona.name }}</strong>
     <p class="agent-role">{{ persona.role }}</p>
     <p class="persona-status">{{ persona.note }}</p>

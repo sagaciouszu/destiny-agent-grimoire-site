@@ -1433,6 +1433,22 @@ pre:hover .copy-button,
   color: var(--text);
 }
 
+.persona-thumb {
+  margin: -0.85rem -1rem 0.8rem;
+  overflow: hidden;
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--line);
+  border-radius: 5px 5px 0 0;
+}
+
+.persona-thumb img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
 .tile-grid .persona-placeholder {
   background: transparent;
   border-style: dashed;
