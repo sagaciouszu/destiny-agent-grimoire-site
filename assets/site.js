@@ -45,7 +45,7 @@
     }
   });
 
-  const mobileNav = window.matchMedia("(max-width: 720px)");
+  const mobileNav = window.matchMedia("(max-width: 960px)");
   const header = document.querySelector(".site-header");
   const positionMobileMenu = () => {
     if (!header) return;
