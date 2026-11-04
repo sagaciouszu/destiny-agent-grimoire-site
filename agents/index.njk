@@ -18,13 +18,20 @@ lore when they answer.</p>
 
 <h2 id="meet-the-personas">Meet the personas <a class="heading-anchor" href="#meet-the-personas" aria-label="Permalink to Meet the personas">#</a></h2>
 
-<ul class="tile-grid">
+<ul class="tile-grid tile-grid--personas">
   {% for agent in agents %}
   <li id="{{ agent.id }}">
     <strong><a href="{{ ('/agents/' + agent.id + '/') | url }}">{{ agent.name }}</a></strong>
     <p class="agent-role">{{ agent.role }}</p>
     <p>{{ agent.short }}</p>
     <p class="agent-more"><a href="{{ ('/agents/' + agent.id + '/') | url }}">Read the full profile</a></p>
+  </li>
+  {% endfor %}
+  {% for persona in placeholders %}
+  <li class="persona-placeholder" id="{{ persona.id }}">
+    <strong>{{ persona.name }}</strong>
+    <p class="agent-role">{{ persona.role }}</p>
+    <p class="persona-status">{{ persona.note }}</p>
   </li>
   {% endfor %}
 </ul>

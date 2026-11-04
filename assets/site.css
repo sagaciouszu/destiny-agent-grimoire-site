@@ -302,6 +302,24 @@ a:hover {
   color: var(--gold-bright);
 }
 
+.nav-placeholder {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.6rem;
+  padding: 0.55rem 0.7rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.nav-status {
+  color: var(--gold-dim);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
 @media (min-width: 900px) {
   .nav-submenu {
     position: absolute;
@@ -1397,6 +1415,29 @@ pre:hover .copy-button,
 .tile-grid .agent-more {
   margin-top: 0.55rem;
   color: var(--text);
+}
+
+.tile-grid .persona-placeholder {
+  background: transparent;
+  border-style: dashed;
+}
+
+.tile-grid .persona-placeholder strong,
+.tile-grid .persona-placeholder .agent-role {
+  color: var(--muted);
+}
+
+@media (min-width: 1000px) {
+  .tile-grid--personas { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+.tile-grid .persona-status {
+  margin-top: 0.55rem;
+  color: var(--gold-dim);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .field-table {
