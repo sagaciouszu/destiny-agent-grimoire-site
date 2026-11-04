@@ -1462,11 +1462,14 @@ pre:hover .copy-button,
   border-radius: 6px;
 }
 
+.fit-node--client,
 .fit-node--archive {
-  width: min(100%, 26rem);
+  width: min(100%, 30rem);
   margin: 0 auto;
   border-color: var(--gold-dim);
 }
+
+.fit-node--archive { width: min(100%, 26rem); }
 
 .fit-kicker {
   margin: 0 0 0.2rem;
@@ -1490,21 +1493,66 @@ pre:hover .copy-button,
   line-height: 1.5;
 }
 
+/* Client to the two layers. */
+
+.fit-split,
 .fit-join {
   position: relative;
   height: 2.4rem;
 }
 
-.fit-join span {
+.fit-split::before {
+  content: "";
   position: absolute;
+  left: 50%;
   top: 0;
   width: 1px;
   height: 50%;
   background: var(--line-strong);
 }
 
+.fit-split::after,
+.fit-join::before {
+  content: "";
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  top: 50%;
+  height: 1px;
+  background: var(--line-strong);
+}
+
+.fit-split span,
+.fit-join span {
+  position: absolute;
+  top: 50%;
+  width: 1px;
+  height: 50%;
+  background: var(--line-strong);
+}
+
+.fit-split span:first-child,
 .fit-join span:first-child { left: 25%; }
-.fit-join span:last-child { right: 25%; }
+
+.fit-split span:last-child,
+.fit-join span:nth-child(2) { right: 25%; }
+
+.fit-split span::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: -3px;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-top: 5px solid var(--gold-dim);
+}
+
+/* The two layers read down from the archive. */
+
+.fit-join span {
+  top: 0;
+  height: 50%;
+}
 
 .fit-join span::before {
   content: "";
@@ -1514,16 +1562,6 @@ pre:hover .copy-button,
   border-left: 3px solid transparent;
   border-right: 3px solid transparent;
   border-bottom: 5px solid var(--gold-dim);
-}
-
-.fit-join::before {
-  content: "";
-  position: absolute;
-  left: 25%;
-  right: 25%;
-  top: 50%;
-  height: 1px;
-  background: var(--line-strong);
 }
 
 .fit-join::after {
