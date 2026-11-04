@@ -16,7 +16,7 @@ lede: Get the library onto your computer in a few minutes. Start with the simple
 </nav>
 
 <details class="section" open>
-<summary><span class="section-title" role="heading" aria-level="2" id="quick-start">Start here <a class="heading-anchor" href="#quick-start" aria-label="Permalink to Start here">#</a></span></summary>
+<summary><span class="section-title" role="heading" aria-level="2" id="quick-start">Start here</span></summary>
 
 Open a terminal in the folder where you want to keep the project. You need Git
 (to download the project), Python 3.8 or newer (to run the search
@@ -40,7 +40,7 @@ python3 db/query.py stats</code></pre>
 </details>
 
 <details class="section" open>
-<summary><span class="section-title" role="heading" aria-level="2" id="what-you-get">What this gives you <a class="heading-anchor" href="#what-you-get" aria-label="Permalink to What this gives you">#</a></span></summary>
+<summary><span class="section-title" role="heading" aria-level="2" id="what-you-get">What this gives you</span></summary>
 
 <ul class="tile-grid">
   <li><strong>One place to look things up</strong><p>Search books, dialogue, cards, items and records without opening a dozen wiki tabs.</p></li>
@@ -55,7 +55,7 @@ separate pieces that become more useful together.
 </details>
 
 <details class="section" open>
-<summary><span class="section-title" role="heading" aria-level="2" id="prerequisites">Before you start <a class="heading-anchor" href="#prerequisites" aria-label="Permalink to Before you start">#</a></span></summary>
+<summary><span class="section-title" role="heading" aria-level="2" id="prerequisites">Before you start</span></summary>
 
 <ul class="checklist">
   <li>Python 3.8 or newer. No extra Python packages are needed.</li>
@@ -70,7 +70,7 @@ The download needs no build tools. Building from source only needs Python.
 
 
 <details class="section">
-<summary><span class="section-title" role="heading" aria-level="2" id="everyday-commands">Everyday commands <a class="heading-anchor" href="#everyday-commands" aria-label="Permalink to Everyday commands">#</a></span></summary>
+<summary><span class="section-title" role="heading" aria-level="2" id="everyday-commands">Everyday commands</span></summary>
 
 <pre><code>python3 db/query.py stats
 python3 db/query.py search "Crota" --limit 5
@@ -84,7 +84,7 @@ reword it until it passes.</p>
 </details>
 
 <details class="section">
-<summary><span class="section-title" role="heading" aria-level="2" id="connect-an-ai">Connect an AI <a class="heading-anchor" href="#connect-an-ai" aria-label="Permalink to Connect an AI">#</a></span></summary>
+<summary><span class="section-title" role="heading" aria-level="2" id="connect-an-ai">Connect an AI</span></summary>
 
 The optional connector lets an AI app ask the library questions as tools. Install
 it once:
@@ -99,7 +99,7 @@ setup and the full tool list.</p>
 </details>
 
 <details class="section experts">
-<summary><span class="section-title" role="heading" aria-level="2" id="for-experts">For Experts (or enthusiasts) <a class="heading-anchor" href="#for-experts" aria-label="Permalink to For Experts (or enthusiasts)">#</a></span></summary>
+<summary><span class="section-title" role="heading" aria-level="2" id="for-experts">For Experts (or enthusiasts)</span></summary>
 
 <p class="muted">The release details, rebuild path and test gates. You can ignore
 this section if the short version worked.</p>

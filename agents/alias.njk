@@ -13,7 +13,7 @@ permalink: "/personas/{{ entry.slug }}/"
 <meta name="robots" content="noindex">
 <title>{{ entry.name }} (alias) | {{ site.title }}</title>
 <meta name="description" content="Alias redirect for {{ entry.name }}.">
-<link rel="canonical" href="{{ site.origin }}{{ page.url | url }}">
+<link rel="canonical" href="{{ site.origin }}{{ ('/personas/' + entry.target + '/') | url }}">
 <meta http-equiv="refresh" content="0; url={{ ('/personas/' + entry.target + '/') | url }}">
 </head>
 <body>

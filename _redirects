@@ -1,0 +1,5 @@
+# True 301s for hosts that support the Netlify/Cloudflare _redirects format.
+# GitHub Pages ignores this file; it keeps the noindex meta-refresh pages instead.
+/agents/ /personas/ 301
+/agents /personas/ 301
+/agents/* /personas/:splat 301

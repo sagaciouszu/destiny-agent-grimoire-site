@@ -38,6 +38,10 @@ for path in files:
     expected = ORIGIN + rel
     if rel == "/getting-started/":
         expected = ORIGIN + "/grimoire/install/"
+    if 'http-equiv="refresh"' in text:
+        target = re.search(r'url=([^"]+)"', text)
+        if target:
+            expected = ORIGIN + target.group(1).replace("/grimoire-site", "")
     if canonical != expected:
         errors.append(f"{rel}: canonical {canonical!r} != {expected!r}")
 

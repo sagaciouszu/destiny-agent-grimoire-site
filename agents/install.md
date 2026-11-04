@@ -10,7 +10,7 @@ permalink: /personas/install/
 ---
 
 <details class="section" open>
-<summary><span class="section-title" role="heading" aria-level="2" id="quick-start">Start here <a class="heading-anchor" href="#quick-start" aria-label="Permalink to Start here">#</a></span></summary>
+<summary><span class="section-title" role="heading" aria-level="2" id="quick-start">Start here</span></summary>
 
 <p>Open a terminal in the folder where you want the project. Pick the app you
 already use; you don't need all three. Copy one block at a time. If you already
@@ -52,7 +52,7 @@ download the library without questions.</p>
 </details>
 
 <details class="section" open>
-<summary><span class="section-title" role="heading" aria-level="2" id="what-you-get">What this gives you <a class="heading-anchor" href="#what-you-get" aria-label="Permalink to What this gives you">#</a></span></summary>
+<summary><span class="section-title" role="heading" aria-level="2" id="what-you-get">What this gives you</span></summary>
 
 <ul class="tile-grid">
   <li><strong>A character, not a one-liner</strong><p>Each character has a voice, rules, memory and a tested way of answering.</p></li>
@@ -68,7 +68,7 @@ and the AI connection is optional.
 </details>
 
 <details class="section" open>
-<summary><span class="section-title" role="heading" aria-level="2" id="prerequisites">Before you start <a class="heading-anchor" href="#prerequisites" aria-label="Permalink to Before you start">#</a></span></summary>
+<summary><span class="section-title" role="heading" aria-level="2" id="prerequisites">Before you start</span></summary>
 
 <ul class="checklist">
   <li>Git and a terminal.</li>
@@ -81,7 +81,7 @@ and the AI connection is optional.
 </details>
 
 <details class="section" open>
-<summary><span class="section-title" role="heading" aria-level="2" id="choose-a-persona">Choose a character <a class="heading-anchor" href="#choose-a-persona" aria-label="Permalink to Choose a persona">#</a></span></summary>
+<summary><span class="section-title" role="heading" aria-level="2" id="choose-a-persona">Choose a character</span></summary>
 
 <p>Each character has a different voice and a different corner of the lore. All
 read the same library; none share private notes.</p>
@@ -97,7 +97,7 @@ read the same library; none share private notes.</p>
 </details>
 
 <details class="section experts">
-<summary><span class="section-title" role="heading" aria-level="2" id="for-experts">For Experts (or enthusiasts) <a class="heading-anchor" href="#for-experts" aria-label="Permalink to For Experts (or enthusiasts)">#</a></span></summary>
+<summary><span class="section-title" role="heading" aria-level="2" id="for-experts">For Experts (or enthusiasts)</span></summary>
 
 <p class="muted">Where the files land, how the personas talk to each other, and
 how to run the audit. You can ignore this section if the simple setup worked.</p>

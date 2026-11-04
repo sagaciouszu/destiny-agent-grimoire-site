@@ -8,7 +8,7 @@ permalink: /personas/build/
 ---
 
 <details class="section" open>
-<summary><span class="section-title" role="heading" aria-level="2" id="short-version">The short version <a class="heading-anchor" href="#short-version" aria-label="Permalink to The short version">#</a></span></summary>
+<summary><span class="section-title" role="heading" aria-level="2" id="short-version">The short version</span></summary>
 
 <ol>
   <li><strong>Make the character its own project.</strong> Start from an existing one. It needs an instructions file, the voice and world material, a setup script and tests.</li>
@@ -22,7 +22,7 @@ permalink: /personas/build/
 </details>
 
 <details class="section" open>
-<summary><span class="section-title" role="heading" aria-level="2" id="why-add-one">Why add one <a class="heading-anchor" href="#why-add-one" aria-label="Permalink to Why add one">#</a></span></summary>
+<summary><span class="section-title" role="heading" aria-level="2" id="why-add-one">Why add one</span></summary>
 
 <ul class="tile-grid">
   <li><strong>New characters share one library</strong><p>Every character reads the same Grimoire, so there is nothing new to fill.</p></li>

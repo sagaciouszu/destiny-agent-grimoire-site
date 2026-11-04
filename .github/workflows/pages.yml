@@ -35,6 +35,10 @@ jobs:
 
       - run: python3 scripts/check-a11y.py _site
 
+      - run: npx playwright install --with-deps chromium
+
+      - run: node scripts/check-axe.mjs
+
       - uses: actions/configure-pages@v6
         with:
           enablement: true

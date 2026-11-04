@@ -51,7 +51,8 @@ Output goes to `_site/`.
 - `assets/social.svg`, `assets/social.png` — default link preview card
 - `scripts/check-links.py` — build-time link, metadata and sitemap gate
 - `scripts/check-a11y.py` — basic static accessibility gate
-- `scripts/check-external.py` — weekly external-link check
+- `scripts/check-external.py` — external-link check
+- `scripts/check-axe.mjs` — full axe-core scan in Chromium
 
 ## Deploy
 
@@ -88,8 +89,10 @@ show the recommended order: Grimoire, then AI access, then personas.
 
 `python3 scripts/check-links.py` validates the built site: internal links,
 fragments, canonical URLs, duplicate titles and descriptions, the sitemap and
-robots.txt. The Pages workflow runs it and the accessibility check after every
-build. A separate weekly workflow checks external links.
+robots.txt. The Pages workflow runs it, the static accessibility check and the
+axe-core scan after every build. A separate daily workflow checks external links
+on PRs and after deploys. `_redirects` holds true 301s for hosts that support
+the Netlify/Cloudflare format; GitHub Pages uses noindex meta-refresh pages.
 
 ## Theme
 

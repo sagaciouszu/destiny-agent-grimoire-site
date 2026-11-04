@@ -6,7 +6,7 @@ lede: Start with the short list. If your symptom is there, the fix is probably o
 ---
 
 <details class="section" open>
-<summary><span class="section-title" role="heading" aria-level="2" id="first-checks">Try this first <a class="heading-anchor" href="#first-checks" aria-label="Permalink to Try this first">#</a></span></summary>
+<summary><span class="section-title" role="heading" aria-level="2" id="first-checks">Try this first</span></summary>
 
 <p class="muted">A quick map: the <strong>library</strong> is the Grimoire file; your
 <strong>app</strong> is the AI tool you use; the <strong>connector</strong> is the
@@ -68,7 +68,7 @@ optional bridge between them.</p>
 </nav>
 
 <details class="section" open>
-<summary><span class="section-title" role="heading" aria-level="2" id="database-missing">The library file is missing <a class="heading-anchor" href="#database-missing" aria-label="Permalink to The library file is missing">#</a></span></summary>
+<summary><span class="section-title" role="heading" aria-level="2" id="database-missing">The library file is missing</span></summary>
 
 You will see `database not found`, or a character will say it cannot read the
 library.
@@ -85,7 +85,7 @@ Do one or the other. If an earlier download left a partial file, delete
 </details>
 
 <details class="section">
-<summary><span class="section-title" role="heading" aria-level="2" id="python-missing">Python is missing or too old <a class="heading-anchor" href="#python-missing" aria-label="Permalink to Python is missing or too old">#</a></span></summary>
+<summary><span class="section-title" role="heading" aria-level="2" id="python-missing">Python is missing or too old</span></summary>
 
 Check what you have:
 
@@ -102,7 +102,7 @@ run the commands with the newer Python explicitly, for example `python3.12 db/qu
 </details>
 
 <details class="section">
-<summary><span class="section-title" role="heading" aria-level="2" id="checksum">The download is incomplete <a class="heading-anchor" href="#checksum" aria-label="Permalink to The download is incomplete">#</a></span></summary>
+<summary><span class="section-title" role="heading" aria-level="2" id="checksum">The download is incomplete</span></summary>
 
 The download was cut short or changed on the way. Delete it and try again; do not
 open or migrate a file that failed the check.
@@ -119,7 +119,7 @@ is wrong.
 </details>
 
 <details class="section">
-<summary><span class="section-title" role="heading" aria-level="2" id="lore-link">A character cannot find the library <a class="heading-anchor" href="#lore-link" aria-label="Permalink to A character cannot find the library">#</a></span></summary>
+<summary><span class="section-title" role="heading" aria-level="2" id="lore-link">A character cannot find the library</span></summary>
 
 A character project expects `lore/` to point at a Grimoire folder, or to be a
 copy of it. If the link was moved or the folder renamed, recreate it:
@@ -133,7 +133,7 @@ agent.
 </details>
 
 <details class="section">
-<summary><span class="section-title" role="heading" aria-level="2" id="agent-missing">A character is not listed <a class="heading-anchor" href="#agent-missing" aria-label="Permalink to An agent is not listed">#</a></span></summary>
+<summary><span class="section-title" role="heading" aria-level="2" id="agent-missing">A character is not listed</span></summary>
 
 Run the sync again and look at what landed:
 
@@ -151,7 +151,7 @@ name with `.md`.
 </details>
 
 <details class="section">
-<summary><span class="section-title" role="heading" aria-level="2" id="too-many-agents">OpenCode lists too many characters <a class="heading-anchor" href="#too-many-agents" aria-label="Permalink to OpenCode lists hundreds of agents">#</a></span></summary>
+<summary><span class="section-title" role="heading" aria-level="2" id="too-many-agents">OpenCode lists too many characters</span></summary>
 
 OpenCode treats every Markdown file under `agents/` as a character, including
 files inside a linked folder. A Grimoire link inside that folder makes every lore
@@ -172,7 +172,7 @@ links and marks companion notes as inactive.
 </details>
 
 <details class="section">
-<summary><span class="section-title" role="heading" aria-level="2" id="consult">One character cannot ask another <a class="heading-anchor" href="#consult" aria-label="Permalink to A peer cannot be consulted">#</a></span></summary>
+<summary><span class="section-title" role="heading" aria-level="2" id="consult">One character cannot ask another</span></summary>
 
 A character asks another through a read-only helper copy, not through the main
 character. Main characters cannot be started as helpers.
@@ -184,7 +184,7 @@ pass the question on. That is expected, not a bug.
 </details>
 
 <details class="section">
-<summary><span class="section-title" role="heading" aria-level="2" id="mcp-tools">The AI connection is not showing up <a class="heading-anchor" href="#mcp-tools" aria-label="Permalink to The AI connection is not showing up">#</a></span></summary>
+<summary><span class="section-title" role="heading" aria-level="2" id="mcp-tools">The AI connection is not showing up</span></summary>
 
 Install the connector, then register the path it prints. In the Grimoire folder:
 
@@ -202,7 +202,7 @@ expects a web address needs a local bridge.
 </details>
 
 <details class="section">
-<summary><span class="section-title" role="heading" aria-level="2" id="mcp-start">The AI connection will not start <a class="heading-anchor" href="#mcp-start" aria-label="Permalink to The AI connection will not start">#</a></span></summary>
+<summary><span class="section-title" role="heading" aria-level="2" id="mcp-start">The AI connection will not start</span></summary>
 
 Most of these are setup problems, not library problems.
 
@@ -222,7 +222,7 @@ You can test the connector by hand from the main project folder:
 </details>
 
 <details class="section">
-<summary><span class="section-title" role="heading" aria-level="2" id="verify">The quote checker says no <a class="heading-anchor" href="#verify" aria-label="Permalink to A quote does not verify">#</a></span></summary>
+<summary><span class="section-title" role="heading" aria-level="2" id="verify">The quote checker says no</span></summary>
 
 The quote checker is strict about what counts as official text. Common causes:
 
@@ -237,7 +237,7 @@ If it still fails, do not quote the line as official text.
 </details>
 
 <details class="section">
-<summary><span class="section-title" role="heading" aria-level="2" id="no-lore">A character cannot read the library <a class="heading-anchor" href="#no-lore" aria-label="Permalink to A character cannot read the library">#</a></span></summary>
+<summary><span class="section-title" role="heading" aria-level="2" id="no-lore">A character cannot read the library</span></summary>
 
 The character files can work without the library, but lookup and quote checks
 cannot. If a character suddenly stops citing anything:
@@ -258,7 +258,7 @@ lookup; without it, expect a shorter, less grounded answer.
 <p class="muted">Repository-level checks and test failures.</p>
 
 <details class="section">
-<summary><span class="section-title" role="heading" aria-level="2" id="tests">The project checks fail after downloading <a class="heading-anchor" href="#tests" aria-label="Permalink to The project checks fail after downloading">#</a></span></summary>
+<summary><span class="section-title" role="heading" aria-level="2" id="tests">The project checks fail after downloading</span></summary>
 
 A fresh download has no setup files yet. Run the first-run setup before the
 checks:

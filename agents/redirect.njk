@@ -13,7 +13,7 @@ permalink: "/agents/{{ entry.slug }}"
 <meta name="robots" content="noindex">
 <title>{{ entry.title }} ({{ entry.slug or 'old address' }}) has moved | {{ site.title }}</title>
 <meta name="description" content="The old {{ entry.slug or 'agents' }} address has moved to {{ entry.target }}.">
-<link rel="canonical" href="{{ site.origin }}{{ page.url | url }}">
+<link rel="canonical" href="{{ site.origin }}{{ entry.target | url }}">
 <meta http-equiv="refresh" content="0; url={{ entry.target | url }}">
 </head>
 <body>

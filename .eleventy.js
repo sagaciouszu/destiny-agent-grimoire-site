@@ -6,6 +6,7 @@ const markdownItAnchor = require("markdown-it-anchor");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("assets");
+  eleventyConfig.addPassthroughCopy("_redirects");
 
   eleventyConfig.addFilter("split", (value, separator) => String(value).split(separator));
 

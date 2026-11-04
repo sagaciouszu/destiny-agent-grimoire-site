@@ -63,7 +63,7 @@ If the app lists the Grimoire tools but answers from memory anyway, ask it to
 use the search or quote-checking tool directly.
 
 <details class="section experts">
-<summary><span class="section-title" role="heading" aria-level="2" id="for-experts">For Experts (or enthusiasts) <a class="heading-anchor" href="#for-experts" aria-label="Permalink to For Experts (or enthusiasts)">#</a></span></summary>
+<summary><span class="section-title" role="heading" aria-level="2" id="for-experts">For Experts (or enthusiasts)</span></summary>
 
 <p class="muted">The client configuration, all eighteen tools, and the safety limits.</p>
 
