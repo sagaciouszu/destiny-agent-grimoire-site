@@ -1,5 +1,6 @@
 (() => {
   const hoverCapable = window.matchMedia("(hover: hover) and (pointer: fine)");
+  const compactNav = window.matchMedia("(max-width: 960px)");
   const menus = [...document.querySelectorAll(".nav-menu")];
 
   const closeMenus = (except) => {
@@ -12,23 +13,27 @@
     let closeTimer;
 
     menu.addEventListener("pointerenter", () => {
-      if (!hoverCapable.matches) return;
+      if (!hoverCapable.matches || compactNav.matches) return;
       window.clearTimeout(closeTimer);
       closeMenus(menu);
       menu.open = true;
     });
 
+    menu.querySelector(".nav-submenu")?.addEventListener("pointerenter", () => {
+      window.clearTimeout(closeTimer);
+    });
+
     menu.addEventListener("pointerleave", () => {
-      if (!hoverCapable.matches) return;
+      if (!hoverCapable.matches || compactNav.matches) return;
       window.clearTimeout(closeTimer);
       closeTimer = window.setTimeout(() => {
         menu.open = false;
-      }, 140);
+      }, 300);
     });
   });
 
   document.addEventListener("pointermove", (event) => {
-    if (!hoverCapable.matches) return;
+    if (!hoverCapable.matches || compactNav.matches) return;
     menus.forEach((menu) => {
       if (menu.open && !menu.contains(event.target)) menu.open = false;
     });
@@ -45,7 +50,6 @@
     }
   });
 
-  const mobileNav = window.matchMedia("(max-width: 960px)");
   const header = document.querySelector(".site-header");
   const positionMobileMenu = () => {
     if (!header) return;
@@ -57,7 +61,7 @@
 
   menus.forEach((menu) => {
     menu.addEventListener("toggle", () => {
-      if (!mobileNav.matches || !menu.open) return;
+      if (!compactNav.matches || !menu.open) return;
       positionMobileMenu();
       menus.forEach((other) => {
         if (other !== menu) other.open = false;
@@ -67,7 +71,7 @@
 
   window.addEventListener("resize", positionMobileMenu);
   window.addEventListener("scroll", () => {
-    if (mobileNav.matches) positionMobileMenu();
+    if (compactNav.matches) positionMobileMenu();
   }, { passive: true });
 
   document.querySelectorAll(".heading-anchor").forEach((link) => {
