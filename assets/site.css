@@ -608,6 +608,21 @@ pre:hover .copy-button,
   border-radius: 6px;
 }
 
+.choice-icon {
+  display: inline-block;
+  margin-right: 0.45rem;
+  color: var(--gold);
+  font-size: 1.15em;
+  line-height: 1;
+  vertical-align: -0.12em;
+}
+
+.choice-icon.choice-logo {
+  width: auto;
+  height: 1.3em;
+  vertical-align: -0.25em;
+}
+
 .choice-label {
   margin: 0 0 0.35rem;
   color: var(--gold);
@@ -801,6 +816,31 @@ pre:hover .copy-button,
 .transmission-speaker {
   color: var(--gold);
   font-weight: 600;
+}
+
+.transmission-filter {
+  display: block;
+  margin: 0 0 0.55rem;
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.transmission-filter select {
+  display: block;
+  width: 100%;
+  margin-top: 0.3rem;
+  padding: 0.45rem 0.55rem;
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--line-strong);
+  border-radius: 4px;
+  font: inherit;
+  font-size: 0.82rem;
+  letter-spacing: normal;
+  text-transform: none;
 }
 
 .transmission-controls {

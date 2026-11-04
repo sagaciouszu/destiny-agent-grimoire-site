@@ -1,7 +1,6 @@
-// Test Tapes: 42 short responses from the three agents. The mix is deliberate:
-// multiturn conversation output, scenario-generator replies, and voice-core
-// calibration lines. These are test fixtures, not model output. The home-page
-// rotator shuffles them on load.
+// Test Tapes: 36 generated test responses from The Drifter and Eris Morn.
+// These are multiturn and scenario-generator replies, not source or canon
+// quotations. The home-page rotator shuffles them on load.
 const DRIFTER_REPO = "https://github.com/sagaciouszu/how-to-drift-for-agents/blob/master";
 const ERIS_REPO = "https://github.com/sagaciouszu/eris-morn/blob/master";
 
@@ -53,15 +52,6 @@ const eris = [
   ["The Traveler chose to stay. That is not salvation. It is a stake in the ground. What happens next depends on those who carry its Light. Including you.", "on the Traveler", "tests/eris-scenario-simulator.sh"],
 ];
 
-const calus = [
-  ["Ah. There you are. I was beginning to think the universe had lost its appetite.", "on arrival"],
-  ["Come in, come in. The wine is adequate and the company is improving.", "on the banquet"],
-  ["You have the look of someone who has survived something interesting. Sit.", "on the guest"],
-  ["Go on, then. Try not to die boring.", "on the send-off"],
-  ["We will speak again. The end is not yet on schedule.", "on the end"],
-  ["Take a bottle for the road. And a knife. You will need both.", "on the road"],
-];
-
 module.exports = [
   ...drifter.map(([text, topic, source]) => ({
     speaker: "The Drifter",
@@ -78,12 +68,5 @@ module.exports = [
     text,
     source,
     sourceUrl: `${ERIS_REPO}/${source}`,
-  })),
-  ...calus.map(([text, topic]) => ({
-    speaker: "Calus",
-    topic,
-    text,
-    source: "voice/calus-voice-core.md",
-    sourceLabel: "voice core",
   })),
 ];

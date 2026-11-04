@@ -9,6 +9,10 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("split", (value, separator) => String(value).split(separator));
 
+  eleventyConfig.addFilter("uniqueTopics", (voices) =>
+    [...new Set(voices.map((voice) => voice.topic))].sort((a, b) => a.localeCompare(b)),
+  );
+
   eleventyConfig.addFilter("assetHash", (urlPath) => {
     try {
       const file = urlPath.replace(/^\//, "");

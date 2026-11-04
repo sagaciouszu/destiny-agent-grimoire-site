@@ -169,6 +169,21 @@
     prev?.addEventListener("click", () => { show(index - 1); start(); });
     next?.addEventListener("click", () => { show(index + 1); start(); });
 
+    const topicSelect = rotator.querySelector("[data-rotator-topic]");
+    const shuffleButton = rotator.querySelector("[data-rotator-shuffle]");
+    const randomTape = () => {
+      const available = items.filter(
+        (item) => !topicSelect?.value || item.dataset.topic === topicSelect.value,
+      );
+      if (!available.length) return;
+      const pick = available[Math.floor(Math.random() * available.length)];
+      show(items.indexOf(pick));
+      start();
+    };
+
+    shuffleButton?.addEventListener("click", randomTape);
+    topicSelect?.addEventListener("change", randomTape);
+
     rotator.addEventListener("mouseenter", stop);
     rotator.addEventListener("mouseleave", start);
     rotator.addEventListener("focusin", stop);
