@@ -696,7 +696,10 @@ pre:hover .copy-button,
   border-radius: 0;
 }
 
+.setup-order--boxed { margin: 0 0 1.4rem; }
+
 .setup-order--inline + .section,
+.setup-order--boxed + .section,
 .lore-head + .section {
   border-top: 0;
   padding-top: 0;
