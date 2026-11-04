@@ -35,20 +35,23 @@ Output goes to `_site/`.
 ## Content
 
 - `index.njk` — home, including the rotating test transcripts
-- `grimoire/` — archive overview, install, MCP server
-- `agents/` — overview, install, integrations
-- `agents/agent.njk` — generates `/agents/<id>/` pages from the roster
-- `agents/build.md` — how to add a new series agent
+- `grimoire/` — library overview, install, AI connection
+- `agents/` — source for the personas overview, install, integrations and old-URL redirects
+- `agents/agent.njk` — generates `/personas/<id>/` pages from the roster
+- `agents/build.md` — how to build a new persona
 - `troubleshooting.md`
 - `about.md`
 - `404.md`
 - `getting-started.md` — legacy redirect kept for old links
 - `_data/agents.js` — the agent roster; add new agents there
-- `_data/voices.js` — short test transcript excerpts for the home panel
+- `_data/voices.js` — 50 test dialogues for the home panel
 - `_data/sitemap.js`, `sitemap.njk`, `robots.txt.njk` — crawler metadata
 - `assets/site.css`, `assets/site.js`, `assets/starmap.svg`
-- `assets/social.svg`, `assets/social.png` — link preview card
+- `assets/fonts/` — self-hosted Neue Haas Grotesk Display Pro and Geist Mono
+- `assets/social.svg`, `assets/social.png` — default link preview card
 - `scripts/check-links.py` — build-time link, metadata and sitemap gate
+- `scripts/check-a11y.py` — basic static accessibility gate
+- `scripts/check-external.py` — weekly external-link check
 
 ## Deploy
 
@@ -61,14 +64,14 @@ MIT. See [LICENSE](LICENSE). Destiny and its content belong to Bungie.
 
 ## Agent pages
 
-Each entry in `_data/agents.js` produces an agent page at `/agents/<id>/`,
+Each entry in `_data/agents.js` produces a persona page at `/personas/<id>/`,
 plus a nav item and a sitemap entry. The same id drives the consult copy name
 (`<id>-consult.md`), so keep it aligned with the deploy registry.
 
-The home-page panel reads from `_data/voices.js`. Those are short excerpts from
-the agent test suites, not model output and not canon. Replace that file with a
-generated index when the test repositories expose one. Each excerpt links to the
-agent page and to its source test.
+The home-page panel reads from `_data/voices.js`. Drifter and Eris use their
+ten-turn test scripts; Zavala, Calus and Ghost were captured from their consult
+agents. None of the tapes are canon quotations. Drifter/Eris entries link to
+their source tests.
 
 Agent pages carry the release version, audit result, last-updated date, verified
 sample lines and a short limits list. `updated` is set per agent; other pages use
@@ -78,14 +81,15 @@ the last git commit date for their source file.
 
 The docs lead with the short path and the reason to use each piece. Deeper
 commands, file layouts and test gates sit under a `For Experts (or enthusiasts)`
-heading at the bottom. The home page, Grimoire install, MCP setup and Agent install all show the
-recommended order: Grimoire, then MCP, then personas.
+heading at the bottom. The home page, Grimoire install, AI connection page and Personas install all
+show the recommended order: Grimoire, then AI access, then personas.
 
 ## Checks
 
 `python3 scripts/check-links.py` validates the built site: internal links,
 fragments, canonical URLs, duplicate titles and descriptions, the sitemap and
-robots.txt. The Pages workflow runs it after every build.
+robots.txt. The Pages workflow runs it and the accessibility check after every
+build. A separate weekly workflow checks external links.
 
 ## Theme
 
