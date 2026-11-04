@@ -3,27 +3,28 @@ section: integration
 layout: page
 title: Agents & Integration
 category: Agents & Integration · Overview
-lede: Two characters you can talk to, both reading the same Grimoire. Pick one, or run both side by side.
+lede: Five characters you can talk to today, with more on the way. All read the same Grimoire; pick one, or run several side by side.
 ---
 
 <h2 id="what-these-are">What these are <a class="heading-anchor" href="#what-these-are" aria-label="Permalink to What these are">#</a></h2>
 
-<p>The Drifter and Eris Morn are independent personas. Each has its own voice,
-guardrails, memory and tests. They are not prompt presets; they are small bundles
-of instructions and tests you can run in OpenCode, OpenClaw or another app that
-reads instructions.</p>
+<p>The Drifter, Eris Morn, Zavala, Calus and Ghost are independent personas.
+Each has its own voice, guardrails, memory and tests. They are not prompt presets;
+they are small bundles of instructions and tests you can run in OpenCode,
+OpenClaw or another app that reads instructions.</p>
 
-<p>Both read the same Grimoire archive. That is what keeps them from inventing
-lore when they answer.</p>
+<p>All of them read the same Grimoire archive. That is what keeps them from
+inventing lore when they answer.</p>
 
 <h2 id="meet-the-personas">Meet the personas <a class="heading-anchor" href="#meet-the-personas" aria-label="Permalink to Meet the personas">#</a></h2>
 
-<ul class="tile-grid">
+<ul class="tile-grid tile-grid--personas">
   {% for agent in agents %}
   <li id="{{ agent.id }}">
     {% if agent.image %}
     <figure class="persona-thumb">
-      <img src="{{ agent.image | url }}" alt="{{ agent.imageAlt | escape }}" width="{{ agent.imageWidth }}" height="{{ agent.imageHeight }}" loading="lazy" decoding="async">
+      {% set cardSrc = agent.cardImage or agent.image %}
+      <img src="{{ cardSrc | url }}"{% if agent.cardImage %} srcset="{{ agent.cardImage | url }} 640w, {{ agent.image | url }} 960w" sizes="(min-width: 700px) 50vw, 90vw"{% endif %} alt="{{ agent.imageAlt | escape }}" width="{{ agent.imageWidth }}" height="{{ agent.imageHeight }}" loading="lazy" decoding="async">
     </figure>
     {% endif %}
     <strong><a href="{{ ('/agents/' + agent.id + '/') | url }}">{{ agent.name }}</a></strong>
@@ -32,19 +33,17 @@ lore when they answer.</p>
     <p class="agent-more"><a href="{{ ('/agents/' + agent.id + '/') | url }}">Read the full profile</a></p>
   </li>
   {% endfor %}
-  {% for persona in placeholders %}
-  <li class="persona-placeholder" id="{{ persona.id }}">
-    {% if persona.image %}
-    <figure class="persona-thumb">
-      <img src="{{ persona.image | url }}" alt="{{ persona.imageAlt | escape }}" width="{{ persona.imageWidth }}" height="{{ persona.imageHeight }}" loading="lazy" decoding="async">
-    </figure>
-    {% endif %}
-    <strong>{{ persona.name }}</strong>
-    <p class="agent-role">{{ persona.role }}</p>
-    <p class="persona-status">{{ persona.note }}</p>
-  </li>
-  {% endfor %}
 </ul>
+
+{% set development = placeholders | byStatus("development") %}
+{% set planned = placeholders | byStatus("planned") %}
+<div class="persona-tally" id="more-personas">
+  {% if development | length %}
+  <span><strong>{{ development | length }}</strong> in development</span>
+  <span aria-hidden="true">·</span>
+  {% endif %}
+  <span><strong>{{ planned | length }}</strong> planned</span>
+</div>
 
 <h2 id="why-use-them">Why use them <a class="heading-anchor" href="#why-use-them" aria-label="Permalink to Why use them">#</a></h2>
 
@@ -70,7 +69,7 @@ lore when they answer.</p>
     <div class="fit-node">
       <p class="fit-kicker">Voice layer</p>
       <strong>Personas</strong>
-      <p>The Drifter and Eris read the archive and answer in character.</p>
+      <p>Every persona reads the archive and answers in character.</p>
     </div>
     <div class="fit-node">
       <p class="fit-kicker">Optional bridge</p>
@@ -118,9 +117,9 @@ instructions to follow.</p>
 
 <h3 id="tests">The tests</h3>
 
-<p>Each persona repository ships its own audit. The Drifter currently passes 20/20
-suites and Eris 15/15. The suites cover voice, quotes, module completeness, the
-conversation path and the shared structure gates.</p>
+<p>Each persona repository ships its own audit. The Drifter passes 20/20; Eris,
+Zavala, Calus and Ghost pass 15/15. The suites cover voice, quotes, module
+completeness, the conversation path and the shared structure gates.</p>
 
 <h2 id="next">Next</h2>
 

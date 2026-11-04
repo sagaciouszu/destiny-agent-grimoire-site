@@ -7,7 +7,7 @@ permalink: "/agents/{{ agent.id }}/"
 eleventyComputed:
   title: "{{ agent.name }}"
   category: "Personas · {{ agent.name }}"
-  lede: "{{ agent.role }}"
+  lede: "{{ agent.role | safe }}"
   updated: "{{ agent.updated }}"
 layout: page
 section: personas

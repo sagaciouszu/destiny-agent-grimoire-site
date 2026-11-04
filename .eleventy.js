@@ -9,6 +9,10 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("split", (value, separator) => String(value).split(separator));
 
+  eleventyConfig.addFilter("byStatus", (items, status) =>
+    items.filter((item) => item.status === status),
+  );
+
   eleventyConfig.addFilter("popularTopics", (voices) => {
     const priority = [
       "on the Hive",
