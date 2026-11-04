@@ -2,4 +2,9 @@
 # GitHub Pages ignores this file; it keeps the noindex meta-refresh pages instead.
 /agents/ /personas/ 301
 /agents /personas/ 301
+/agents/the-drifter/ /personas/drifter/ 301
+/agents/eris-morn/ /personas/eris/ 301
+/agents/commander-zavala/ /personas/zavala/ 301
+/agents/emperor-calus/ /personas/calus/ 301
+/agents/the-ghost/ /personas/ghost/ 301
 /agents/* /personas/:splat 301
