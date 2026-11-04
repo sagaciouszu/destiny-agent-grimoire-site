@@ -102,7 +102,7 @@ run the commands with the newer Python explicitly, for example `python3.12 db/qu
 </details>
 
 <details class="section">
-<summary><span class="section-title" role="heading" aria-level="2" id="checksum">The download is incomplete <a class="heading-anchor" href="#checksum" aria-label="Permalink to The checksum does not match">#</a></span></summary>
+<summary><span class="section-title" role="heading" aria-level="2" id="checksum">The download is incomplete <a class="heading-anchor" href="#checksum" aria-label="Permalink to The download is incomplete">#</a></span></summary>
 
 The download was cut short or changed on the way. Delete it and try again; do not
 open or migrate a file that failed the check.

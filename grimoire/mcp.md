@@ -124,7 +124,7 @@ cannot fix or ingest anything; those steps stay in the repository.
 
 <h3 id="troubleshooting">If it will not connect</h3>
 
-See [MCP tools do not appear]({{ '/troubleshooting/#mcp-tools' | url }}) for the
+See [the AI connection troubleshooting]({{ '/troubleshooting/#mcp-tools' | url }}) for the
 usual causes: missing virtual environment, wrong path, or a client that cannot
 launch a local process.
 

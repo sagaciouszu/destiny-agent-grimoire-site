@@ -54,7 +54,7 @@ download the library without questions.</p>
 <summary><span class="section-title" role="heading" aria-level="2" id="what-you-get">What this gives you <a class="heading-anchor" href="#what-you-get" aria-label="Permalink to What this gives you">#</a></span></summary>
 
 <ul class="tile-grid">
-  <li><strong>A character, not a prompt</strong><p>Each character has a voice, rules, memory and a tested way of answering.</p></li>
+  <li><strong>A character, not a one-liner</strong><p>Each character has a voice, rules, memory and a tested way of answering.</p></li>
   <li><strong>The same library you have</strong><p>The character reads the Grimoire, so it can look things up instead of guessing.</p></li>
   <li><strong>A quote checker</strong><p>The material is tied to verified lines, and the library has a built-in checker.</p></li>
   <li><strong>Optional AI connection</strong><p>With the connector, the character can search the library directly.</p></li>
