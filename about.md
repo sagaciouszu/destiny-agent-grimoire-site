@@ -10,9 +10,11 @@ lede: A fan-built lore archive and a small series of character agents, maintaine
 The Destiny Agent Grimoire is a fan-made, non-commercial project. It has three
 parts:
 
-- **A local archive** of Destiny lore you can search and quote-check.
-- **An optional MCP server** that lets an AI client search the archive as a tool.
-- **Character personas** that read the same archive and answer in their own voice.
+<ul class="tile-grid">
+  <li><strong>A local archive</strong><p>Destiny lore you can search and quote-check.</p></li>
+  <li><strong>An optional MCP server</strong><p>Lets an AI client search the archive as a tool.</p></li>
+  <li><strong>Character personas</strong><p>Read the same archive and answer in their own voice.</p></li>
+</ul>
 
 You can use any part on its own. The archive is useful without an agent. The MCP
 server is useful without a persona. The personas are useful if you want a

@@ -24,7 +24,7 @@ lore when they answer.</p>
   <p class="agent-role">{{ agent.role }}</p>
   <h2 id="{{ agent.id }}">{{ agent.name }} <a class="heading-anchor" href="#{{ agent.id }}" aria-label="Permalink to {{ agent.name }}">#</a></h2>
   <p>{{ agent.short }}</p>
-  <p class="agent-ask"><strong>Ask about:</strong> {{ agent.consult }}</p>
+  <p class="agent-ask"><strong>Knowledgeable in:</strong> {{ agent.consult }}</p>
   <p class="agent-source">
     <a href="{{ agent.repo }}">{{ agent.repoName }}</a>
     <span aria-hidden="true">·</span>
@@ -50,7 +50,7 @@ lore when they answer.</p>
       <p class="agent-role">{{ agent.role }}</p>
       <h3>{{ agent.name }} <a class="heading-anchor" href="#{{ agent.id }}" aria-label="Permalink to {{ agent.name }}">#</a></h3>
       <p>{{ agent.short or agent.paragraphs[0] }}</p>
-      <p class="agent-ask"><strong>Ask about:</strong> {{ agent.consult }}</p>
+      <p class="agent-ask"><strong>Knowledgeable in:</strong> {{ agent.consult }}</p>
       <p class="agent-source">
         <a href="{{ agent.repo }}">{{ agent.repoName }}</a>
         {% if agent.entry %}<span aria-hidden="true">·</span>
@@ -80,10 +80,10 @@ lore when they answer.</p>
 
 <h2 id="how-they-fit">How they fit together <a class="heading-anchor" href="#how-they-fit" aria-label="Permalink to How they fit together">#</a></h2>
 
-<ul>
-  <li><strong>Grimoire</strong> — the archive both personas read.</li>
-  <li><strong>MCP server</strong> — the optional tool bridge that lets a client search it directly.</li>
-  <li><strong>Personas</strong> — the voice and behaviour layer on top.</li>
+<ul class="tile-grid">
+  <li><strong>Grimoire</strong><p>The archive both personas read.</p></li>
+  <li><strong>MCP server</strong><p>The optional tool bridge that lets a client search it directly.</p></li>
+  <li><strong>Personas</strong><p>The voice and behaviour layer on top.</p></li>
 </ul>
 
 <p>You can install one persona and skip the other. You can use the Grimoire without either. The pieces are designed to be adopted separately.</p>

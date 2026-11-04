@@ -12,6 +12,7 @@ errors = []
 files = sorted(glob.glob(os.path.join(ROOT, "**", "*.html"), recursive=True))
 titles = {}
 descriptions = {}
+noindex_pages = set()
 
 for path in files:
     text = open(path, encoding="utf-8").read()
@@ -57,6 +58,9 @@ for path in files:
         if fragment not in ids:
             errors.append(f"{rel}: missing fragment #{fragment}")
 
+    if 'name="robots" content="noindex"' in text:
+        noindex_pages.add(rel)
+
     if "`" in text:
         errors.append(f"{rel}: literal backtick")
     if "&amp;amp;" in text:
@@ -86,7 +90,7 @@ else:
         rel = "/" + os.path.relpath(path, ROOT)
         if rel.endswith("/index.html"):
             rel = rel[: -len("index.html")]
-        if rel not in ("/404.html", "/getting-started/"):
+        if rel not in ("/404.html", "/getting-started/") and rel not in noindex_pages:
             pages.add(rel)
     if set(locs) != pages:
         errors.append(f"sitemap mismatch: missing={sorted(pages - set(locs))} extra={sorted(set(locs) - pages)}")

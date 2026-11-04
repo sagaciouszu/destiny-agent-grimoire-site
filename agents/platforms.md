@@ -61,10 +61,10 @@ The MCP server setup itself is the same for every client:
 
 ## Other connection styles
 
-- **Skill-based runtimes** load `lore/skills/destiny-grimoire/SKILL.md` instead of
-  MCP. The skill explains the query commands and quote policy.
-- **No file access** means pasting `AGENTS.md` into a chat prompt. The persona
-  keeps its voice, but loses canon lookup and quote checking.
+<ul class="tile-grid">
+  <li><strong>Skill-based runtimes</strong><p>Load <code>lore/skills/destiny-grimoire/SKILL.md</code> instead of MCP. The skill explains the query commands and quote policy.</p></li>
+  <li><strong>No file access</strong><p>Paste <code>AGENTS.md</code> into a chat prompt. The persona keeps its voice, but loses canon lookup and quote checking.</p></li>
+</ul>
 
 ## What the sync does not automate
 

@@ -36,14 +36,12 @@ python3 db/query.py stats</code></pre>
 <details class="section" open>
 <summary><span class="section-title" role="heading" aria-level="2" id="what-you-get">What this gives you <a class="heading-anchor" href="#what-you-get" aria-label="Permalink to What this gives you">#</a></span></summary>
 
-- **One place to look things up.** Search books, dialogue, cards, items and
-  records without opening a dozen wiki tabs.
-- **A quote checker.** Paste a line and find out whether it is canon before you
-  put it in a post, a video or an agent's mouth.
-- **A canon source for agents.** The Drifter and Eris read this same archive, so
-  they answer from the same material you do.
-- **An optional tool server.** Connect an AI client through MCP and it can search
-  the archive directly instead of asking you to run commands.
+<ul class="tile-grid">
+  <li><strong>One place to look things up</strong><p>Search books, dialogue, cards, items and records without opening a dozen wiki tabs.</p></li>
+  <li><strong>A quote checker</strong><p>Paste a line and find out whether it is canon before you put it in a post, a video or an agent's mouth.</p></li>
+  <li><strong>A canon source for agents</strong><p>The Drifter and Eris read this same archive, so they answer from the same material you do.</p></li>
+  <li><strong>An optional tool server</strong><p>Connect an AI client through MCP and it can search the archive directly.</p></li>
+</ul>
 
 You do not need the agents or MCP to use the archive. They are separate pieces
 that become more useful together.
@@ -53,11 +51,12 @@ that become more useful together.
 <details class="section" open>
 <summary><span class="section-title" role="heading" aria-level="2" id="prerequisites">Before you start <a class="heading-anchor" href="#prerequisites" aria-label="Permalink to Before you start">#</a></span></summary>
 
-- Python 3.8 or newer. The standard library is enough.
-- Git, to clone the archive.
-- About 260 MB of free space for the sources and database. The database itself
-  is about 170 MB.
-- Roughly the same space again if you build from source.
+<ul class="checklist">
+  <li>Python 3.8 or newer. The standard library is enough.</li>
+  <li>Git, to clone the archive.</li>
+  <li>About 260 MB of free space. The database itself is about 170 MB.</li>
+  <li>Roughly the same space again if you build from source.</li>
+</ul>
 
 The download needs no build tools at all. The source build is pure Python.
 
@@ -109,13 +108,13 @@ full tool list.</p>
 
 </details>
 
-<h2 id="for-experts">For experts <a class="heading-anchor" href="#for-experts" aria-label="Permalink to For experts">#</a></h2>
+<details class="section experts">
+<summary><span class="section-title" role="heading" aria-level="2" id="for-experts">For Experts (or enthusiasts) <a class="heading-anchor" href="#for-experts" aria-label="Permalink to For Experts (or enthusiasts)">#</a></span></summary>
 
 <p class="muted">The release details, rebuild path and test gates. You can ignore
 this section if the short version worked.</p>
 
-<details class="section">
-<summary><span class="section-title" role="heading" aria-level="2" id="release-details">The release, step by step <a class="heading-anchor" href="#release-details" aria-label="Permalink to The release, step by step">#</a></span></summary>
+<h3 id="release-details">The release, step by step <a class="heading-anchor" href="#release-details" aria-label="Permalink to The release, step by step">#</a></h3>
 
 <p>The release asset is the official download. <code>SHA256SUMS</code> is attached
 to the same release, and the publish pipeline checks the digest before it goes
@@ -129,10 +128,7 @@ mv grimoire.db db/grimoire.db</code></pre>
 <p>A mismatch means the file was cut short or changed in transit. Delete it and
 download again instead of opening it.</p>
 
-</details>
-
-<details class="section">
-<summary><span class="section-title" role="heading" aria-level="2" id="rebuild-and-ingest">Rebuild and add lore <a class="heading-anchor" href="#rebuild-and-ingest" aria-label="Permalink to Rebuild and add lore">#</a></span></summary>
+<h3 id="rebuild-and-ingest">Rebuild and add lore <a class="heading-anchor" href="#rebuild-and-ingest" aria-label="Permalink to Rebuild and add lore">#</a></h3>
 
 <p>Rebuild after changing sources or scraper output. The migration is the only
 step that writes the database.</p>
@@ -143,10 +139,7 @@ python3 tests/sync-doc-counts.py</code></pre>
 <p>The helpers under <code>archive/</code> and <code>scripts/</code> collect and
 format the inputs.</p>
 
-</details>
-
-<details class="section">
-<summary><span class="section-title" role="heading" aria-level="2" id="run-the-gates">Run the checks <a class="heading-anchor" href="#run-the-gates" aria-label="Permalink to Run the checks">#</a></span></summary>
+<h3 id="run-the-gates">Run the checks <a class="heading-anchor" href="#run-the-gates" aria-label="Permalink to Run the checks">#</a></h3>
 
 <p>The archive audit covers database integrity, source conformance, retrieval,
 documentation and the MCP surface.</p>
@@ -162,6 +155,6 @@ python3 tests/conformance.py</code></pre>
 
 ## Next
 
-- [Connect an MCP client]({{ '/grimoire/mcp/' | url }})
-- [Set up an agent]({{ '/agents/install/' | url }})
-- [Fix something that isn't working]({{ '/troubleshooting/' | url }})
+- [Try the commands](#everyday-commands)
+- [Connect an AI with MCP]({{ '/grimoire/mcp/' | url }})
+- [Assemble your fireteam]({{ '/agents/install/' | url }})

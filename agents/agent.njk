@@ -19,19 +19,19 @@ section: personas
 </figure>
 {% endif %}
 
+<dl class="agent-facts" id="record" aria-label="At a glance">
+  <div><dt>Version</dt><dd><a href="{{ agent.releaseUrl }}">{{ agent.version }}</a></dd></div>
+  <div><dt>Audit</dt><dd>{{ agent.audit.passed }}/{{ agent.audit.total }} suites</dd></div>
+  <div><dt>Updated</dt><dd><time datetime="{{ agent.updated }}">{{ agent.updated }}</time></dd></div>
+</dl>
+
 <h2 id="who">{{ agent.heading }} <a class="heading-anchor" href="#who" aria-label="Permalink to {{ agent.heading }}">#</a></h2>
 
 {% for paragraph in agent.paragraphs %}
 <p>{{ paragraph }}</p>
 {% endfor %}
 
-<p class="agent-ask"><strong>Ask about:</strong> {{ agent.consult }}</p>
-
-<dl class="agent-facts" id="record" aria-label="At a glance">
-  <div><dt>Version</dt><dd><a href="{{ agent.releaseUrl }}">{{ agent.version }}</a></dd></div>
-  <div><dt>Audit</dt><dd>{{ agent.audit.passed }}/{{ agent.audit.total }} suites</dd></div>
-  <div><dt>Updated</dt><dd><time datetime="{{ agent.updated }}">{{ agent.updated }}</time></dd></div>
-</dl>
+<p class="agent-ask"><strong>Knowledgeable in:</strong> {{ agent.consult }}</p>
 
 <h2 id="words">In their own words <a class="heading-anchor" href="#words" aria-label="Permalink to In their own words">#</a></h2>
 

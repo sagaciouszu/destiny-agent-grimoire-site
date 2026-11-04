@@ -1,10 +1,8 @@
 <header class="site-header">
   <div class="wrap header-inner">
-    <a class="brand" href="{{ '/' | url }}">{{ site.title }}</a>
+    <a class="brand" href="{{ '/' | url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>{{ site.title }}</a>
     <div class="header-end">
     <nav class="site-nav" aria-label="Primary">
-      <a href="{{ '/' | url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a>
-
       <details class="nav-menu"{% if section == 'grimoire' %} data-active="true"{% endif %}>
         <summary>The Grimoire</summary>
         <ul class="nav-submenu">

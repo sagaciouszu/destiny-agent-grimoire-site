@@ -47,11 +47,11 @@ Those numbers are a map, not a citation. The row you quote is the citation.
 
 ## How the pieces fit
 
-- **The Grimoire** is the archive. It is the part everything else reads.
-- **The MCP server** turns the archive into read-only tools an AI can call. It is
-  the easiest way to let an assistant look things up without giving it a shell.
-- **The personas** are independent character agents. They bring voice, guardrails
-  and memory, and they read the Grimoire for canon.
+<ul class="tile-grid">
+  <li><strong>The Grimoire</strong><p>The archive. It is the part everything else reads.</p></li>
+  <li><strong>The MCP server</strong><p>Turns the archive into read-only tools an AI can call, without giving it a shell.</p></li>
+  <li><strong>The personas</strong><p>Independent character agents with voice, guardrails and memory. They read the Grimoire for canon.</p></li>
+</ul>
 
 You can start with any one piece. Adding the others does not require a second
 archive.
@@ -80,14 +80,12 @@ Search uses SQLite FTS5. You get the passage back, not a list of files to open.
 
 <h3 id="ways-to-read-it">Ways to read it</h3>
 
-- **The command line** is the reference tool: search, character lines, items,
-  books, transcripts, records and quote checks, with JSON output for scripts.
-- **The MCP server** exposes twelve read-only tools over local stdio for AI
-  clients.
-- **The agent skill** is a drop-in instruction file for runtimes that load skills
-  instead of MCP servers.
-- **`db/capabilities.json`** is the machine-readable manifest of tables, views,
-  commands and contracts.
+<ul class="tile-grid">
+  <li><strong>Command line</strong><p>Search, character lines, items, books, transcripts, records and quote checks. JSON output for scripts.</p></li>
+  <li><strong>MCP server</strong><p>Twelve read-only tools over local stdio for AI clients.</p></li>
+  <li><strong>Agent skill</strong><p>A drop-in instruction file for runtimes that load skills instead of MCP servers.</p></li>
+  <li><strong><code>db/capabilities.json</code></strong><p>The machine-readable manifest of tables, views, commands and contracts.</p></li>
+</ul>
 
 The command line and MCP server call the same Python layer. Fix a query once and
 both get it.
@@ -102,11 +100,10 @@ canonical row, not a fragment.
 
 That is the check to run before putting words in a character's mouth.
 
+<div class="callout">
 <h3 id="not-canon">Not canon</h3>
-
-This is a fan-built, non-commercial project. Destiny, its text, characters and art
-belong to Bungie. The database is a reading and checking aid, not a substitute
-for the source material or Bungie's own published lore.
+<p>This is a fan-built, non-commercial project. Destiny, its text, characters and art belong to Bungie. The database is a reading and checking aid, not a substitute for the source material or Bungie's own published lore.</p>
+</div>
 
 ## Next
 

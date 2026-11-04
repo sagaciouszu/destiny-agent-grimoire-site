@@ -18,14 +18,20 @@ lede: "Adding a persona is three things: a repository, one registry row and one 
 
 <p>That is enough for a new page, nav entry and sitemap entry.</p>
 
+<p class="muted">A working page skeleton is at
+<a href="{{ '/agents/skeleton/' | url }}">Agent Page Skeleton</a>. It is hidden
+from the nav and sitemap; copy its structure when you start.</p>
+
 </details>
 
 <details class="section" open>
 <summary><span class="section-title" role="heading" aria-level="2" id="why-add-one">Why add one <a class="heading-anchor" href="#why-add-one" aria-label="Permalink to Why add one">#</a></span></summary>
 
-- **The series grows without another archive.** Every persona reads the same Grimoire.
-- **The site is data-driven.** One site object produces the page, nav entry, sitemap entry and roster link.
-- **The pieces stay independent.** A persona can ship with its own repository, tests and release cycle.
+<ul class="tile-grid">
+  <li><strong>The series grows without another archive</strong><p>Every persona reads the same Grimoire.</p></li>
+  <li><strong>The site is data-driven</strong><p>One site object produces the page, nav entry, sitemap entry and roster link.</p></li>
+  <li><strong>The pieces stay independent</strong><p>A persona can ship with its own repository, tests and release cycle.</p></li>
+</ul>
 
 </details>
 

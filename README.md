@@ -39,6 +39,7 @@ Output goes to `_site/`.
 - `agents/` — overview, install, integrations
 - `agents/agent.njk` — generates `/agents/<id>/` pages from the roster
 - `agents/build.md` — how to add a new series agent
+- `agents/skeleton.md` — hidden agent-page skeleton; not linked in nav or sitemap
 - `troubleshooting.md`
 - `about.md`
 - `404.md`

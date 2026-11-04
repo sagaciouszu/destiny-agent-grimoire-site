@@ -27,14 +27,12 @@ session ends.
 
 ## Why use it
 
-- **The model stops guessing.** It can search the archive and read the passage
-  before it answers.
-- **Quotes can be checked.** `verify` is one of the tools, so the client can ask
-  whether a line is canon.
-- **Your personas get sharper.** The Drifter and Eris use the same archive. MCP
-  gives them a direct lookup path instead of relying on memory.
-- **It is safe to leave on.** The database is opened read-only and there is no SQL
-  tool, write path or network access.
+<ul class="tile-grid">
+  <li><strong>The model stops guessing</strong><p>It can search the archive and read the passage before it answers.</p></li>
+  <li><strong>Quotes can be checked</strong><p><code>verify</code> is one of the tools, so the client can ask whether a line is canon.</p></li>
+  <li><strong>Your personas get sharper</strong><p>The Drifter and Eris use the same archive. MCP gives them a direct lookup path.</p></li>
+  <li><strong>It is safe to leave on</strong><p>The database is read-only, with no SQL tool, write path or network access.</p></li>
+</ul>
 
 You do not need MCP to use the Grimoire. It is the convenience layer for clients
 that can launch a local process.
@@ -65,7 +63,8 @@ Once the client is connected, ask it for something that needs a lookup:
 If the client lists the Grimoire tools but answers from memory anyway, ask it
 directly to use the `search` or `verify` tool.
 
-<h2 id="for-experts">For experts <a class="heading-anchor" href="#for-experts" aria-label="Permalink to For experts">#</a></h2>
+<details class="section experts">
+<summary><span class="section-title" role="heading" aria-level="2" id="for-experts">For Experts (or enthusiasts) <a class="heading-anchor" href="#for-experts" aria-label="Permalink to For Experts (or enthusiasts)">#</a></span></summary>
 
 <p class="muted">The client configuration, all twelve tools, and the safety limits.</p>
 
@@ -124,8 +123,10 @@ See [MCP tools do not appear]({{ '/troubleshooting/#mcp-tools' | url }}) for the
 usual causes: missing virtual environment, wrong path, or a client that cannot
 launch a local process.
 
+</details>
+
 ## Next
 
+- [Meet the personas]({{ '/agents/' | url }})
+- [Use another app]({{ '/agents/platforms/' | url }})
 - [Install the Grimoire]({{ '/grimoire/install/' | url }})
-- [Read the archive overview]({{ '/grimoire/' | url }})
-- [Deploy an agent]({{ '/agents/install/' | url }})

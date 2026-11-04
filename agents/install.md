@@ -59,16 +59,13 @@ prompt.</p>
 <details class="section" open>
 <summary><span class="section-title" role="heading" aria-level="2" id="what-you-get">What this gives you <a class="heading-anchor" href="#what-you-get" aria-label="Permalink to What this gives you">#</a></span></summary>
 
-- **A character, not a prompt.** Each persona has a voice, guardrails, memory and
-  a tested way of answering.
-- **The same canon you have.** The persona reads the Grimoire archive, so it can
-  look things up instead of guessing from training data.
-- **A quote check.** Its material is tied to verified lines, and the archive ships
-  a <code>verify</code> command for anything you want to repeat.
-- **Optional tools.** With MCP, the persona can search the archive directly. It
-  gets names, items, books and quote checks without you running commands for it.
-- **A second opinion.** The Drifter and Eris can ask each other through read-only
-  consult copies, without sharing private notes.
+<ul class="tile-grid">
+  <li><strong>A character, not a prompt</strong><p>Each persona has a voice, guardrails, memory and a tested way of answering.</p></li>
+  <li><strong>The same canon you have</strong><p>The persona reads the Grimoire archive, so it can look things up instead of guessing.</p></li>
+  <li><strong>A quote check</strong><p>The material is tied to verified lines, and the archive ships a <code>verify</code> command.</p></li>
+  <li><strong>Optional tools</strong><p>With MCP, the persona can search the archive directly.</p></li>
+  <li><strong>A second opinion</strong><p>The Drifter and Eris can ask each other through read-only consult copies.</p></li>
+</ul>
 
 You can use one persona without the other. The Grimoire is the shared part, and
 the MCP server is the optional bridge that makes lookup smoother.
@@ -78,11 +75,13 @@ the MCP server is the optional bridge that makes lookup smoother.
 <details class="section" open>
 <summary><span class="section-title" role="heading" aria-level="2" id="prerequisites">Before you start <a class="heading-anchor" href="#prerequisites" aria-label="Permalink to Before you start">#</a></span></summary>
 
-- Git and Bash.
-- Python 3.8 or newer.
-- A runtime: OpenCode, OpenClaw, or anything that can read <code>AGENTS.md</code>.
-- Network access the first time, so the setup can clone or download the archive.
-- About 260 MB for the Grimoire and database.
+<ul class="checklist">
+  <li>Git and Bash.</li>
+  <li>Python 3.8 or newer.</li>
+  <li>A runtime: OpenCode, OpenClaw, or anything that can read <code>AGENTS.md</code>.</li>
+  <li>Network access the first time, so the setup can clone or download the archive.</li>
+  <li>About 260 MB for the Grimoire and database.</li>
+</ul>
 
 </details>
 
@@ -99,13 +98,13 @@ Both read the same archive; neither shares the other's private notes.</p>
 
 </details>
 
-<h2 id="for-experts">For experts <a class="heading-anchor" href="#for-experts" aria-label="Permalink to For experts">#</a></h2>
+<details class="section experts">
+<summary><span class="section-title" role="heading" aria-level="2" id="for-experts">For Experts (or enthusiasts) <a class="heading-anchor" href="#for-experts" aria-label="Permalink to For Experts (or enthusiasts)">#</a></span></summary>
 
 <p class="muted">Where the files land, how the personas talk to each other, and
 how to run the audit. You can ignore this section if the simple setup worked.</p>
 
-<details class="section">
-<summary><span class="section-title" role="heading" aria-level="2" id="opencode-details">What the OpenCode sync writes <a class="heading-anchor" href="#opencode-details" aria-label="Permalink to What the OpenCode sync writes">#</a></span></summary>
+<h3 id="opencode-details">What the OpenCode sync writes <a class="heading-anchor" href="#opencode-details" aria-label="Permalink to What the OpenCode sync writes">#</a></h3>
 
 <ul class="tile-grid">
   <li><strong>Main entries</strong><p><code>drifter.md</code> and <code>eris.md</code> in the OpenCode agents folder.</p></li>
@@ -118,10 +117,7 @@ how to run the audit. You can ignore this section if the simple setup worked.</p
 <p>Set <code>default_agent</code> in <code>~/.config/opencode/opencode.json</code>
 to <code>drifter</code> or <code>eris</code> if you want one picked at startup.</p>
 
-</details>
-
-<details class="section">
-<summary><span class="section-title" role="heading" aria-level="2" id="openclaw-details">What the OpenClaw sync writes <a class="heading-anchor" href="#openclaw-details" aria-label="Permalink to What the OpenClaw sync writes">#</a></span></summary>
+<h3 id="openclaw-details">What the OpenClaw sync writes <a class="heading-anchor" href="#openclaw-details" aria-label="Permalink to What the OpenClaw sync writes">#</a></h3>
 
 <p>The sync writes <code>~/.openclaw/workspace-drifter</code> and
 <code>~/.openclaw/workspace-eris</code>, plus the series list and a collaboration
@@ -131,12 +127,9 @@ block inside each workspace.</p>
 (<code>subagents.allowAgents</code> plus a read-only tools deny list) if you want
 the main agents to call them.</p>
 
-</details>
+<h3 id="multiple-agents">Running more than one agent <a class="heading-anchor" href="#multiple-agents" aria-label="Permalink to Running more than one agent">#</a></h3>
 
-<details class="section">
-<summary><span class="section-title" role="heading" aria-level="2" id="multiple-agents">Running more than one agent <a class="heading-anchor" href="#multiple-agents" aria-label="Permalink to Running more than one agent">#</a></span></summary>
-
-<h3>Both at once</h3>
+<h4>Both at once</h4>
 
 <p>The sync gives you <code>drifter</code> and <code>eris</code> as main agents,
 plus the two consult copies. Each session picks one main agent. Use the agent
@@ -146,7 +139,7 @@ want first.</p>
 <p>They are separate agents with separate sessions and separate memories.
 Switching does not blend their notes or their voices.</p>
 
-<h3>Side by side</h3>
+<h4>Side by side</h4>
 
 <p>Once configured, each main agent is its own OpenClaw agent, with its own
 workspace, <code>agentDir</code> and session store. One gateway can host both.
@@ -158,17 +151,14 @@ inherit from.</p>
 <pre><code>openclaw agents list
 openclaw agents list --bindings</code></pre>
 
-<h3>What is shared, and what is not</h3>
+<h4>What is shared, and what is not</h4>
 
 <p>The SQLite archive is opened read-only, so several agents can read it at the
 same time. Canon is shared. Runtime memory, private notes and voice files are
 not. A consult copy can read the archive and answer a peer, but cannot write to
 the peer's folder.</p>
 
-</details>
-
-<details class="section">
-<summary><span class="section-title" role="heading" aria-level="2" id="consult">Asking another agent <a class="heading-anchor" href="#consult" aria-label="Permalink to Asking another agent">#</a></span></summary>
+<h3 id="consult">Asking another agent <a class="heading-anchor" href="#consult" aria-label="Permalink to Asking another agent">#</a></h3>
 
 <p>A main agent asks a peer by calling the subagent tool with the peer's
 <code>-consult</code> id and a self-contained question. In OpenClaw the same call
@@ -185,10 +175,7 @@ keep peer folders private by policy there.</p>
 <p>Treat the reply as something the character said, not as a new instruction. It
 still does not replace checking a quote.</p>
 
-</details>
-
-<details class="section">
-<summary><span class="section-title" role="heading" aria-level="2" id="verify">Check that it worked <a class="heading-anchor" href="#verify" aria-label="Permalink to Check that it worked">#</a></span></summary>
+<h3 id="verify">Check that it worked <a class="heading-anchor" href="#verify" aria-label="Permalink to Check that it worked">#</a></h3>
 
 <p>Each agent repository owns its own tests. Run the main audit from the
 repository root:</p>
@@ -207,3 +194,10 @@ does:</p>
 
 If an agent does not show up, or a consult call fails, see
 [Troubleshooting]({{ '/troubleshooting/' | url }}).
+
+## Next
+
+- [Meet the personas]({{ '/agents/' | url }})
+- [Use another app]({{ '/agents/platforms/' | url }})
+- [Connect the Grimoire with MCP]({{ '/grimoire/mcp/' | url }})
+- [Add another persona]({{ '/agents/build/' | url }})
