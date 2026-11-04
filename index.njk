@@ -11,12 +11,21 @@ description: A searchable Destiny lore archive and a growing number of character
     <p class="lede">
       One searchable archive of Destiny's books, dialogue and gear lore — plus a growing
       number of character agents that read from it. Every quote keeps its source, and you can
-      check a line before you use it.
+      check a line before you use it. Local-first, no account, no API key.
     </p>
     <div class="hero-actions">
       <a class="button button-primary" href="{{ '/grimoire/install/' | url }}">Get the archive</a>
-      <a class="button" href="{{ '/agents/' | url }}">Meet the agents</a>
+      <a class="button" href="{{ '/agents/' | url }}">Meet the personas</a>
     </div>
+
+    <nav class="setup-order setup-order--hero" aria-label="Recommended setup order">
+      <span class="setup-order-label">Setup order</span>
+      <ol>
+        <li><a href="{{ '/grimoire/install/' | url }}">1. Grimoire</a></li>
+        <li><a href="{{ '/grimoire/mcp/' | url }}">2. MCP <span class="setup-optional">optional</span></a></li>
+        <li><a href="{{ '/agents/install/' | url }}">3. Personas</a></li>
+      </ol>
+    </nav>
   </div>
 
   <aside class="transmission" data-rotator aria-label="Test transcripts from the agent conversations">
@@ -60,7 +69,7 @@ description: A searchable Destiny lore archive and a growing number of character
   <article class="category">
     <span class="category-index" aria-hidden="true">02</span>
     <div>
-      <h2>The crew</h2>
+      <h2>The personas</h2>
       <p>
         The Drifter and Eris Morn are separate characters with their own voices,
         memories and tests. They share the archive and can quietly ask each other
@@ -77,14 +86,14 @@ description: A searchable Destiny lore archive and a growing number of character
   <article class="category">
     <span class="category-index" aria-hidden="true">03</span>
     <div>
-      <h2>Agent setup</h2>
+      <h2>Assemble your fireteam</h2>
       <p>
-        Give one character its own folder, or deploy the whole series into
-        OpenCode or OpenClaw. The archive is shared; the memories are not.
+        Run one persona on its own, or bring the whole crew into OpenCode or
+        OpenClaw. They share the archive; their private memories stay separate.
       </p>
       <div class="category-links">
         <a href="{{ '/agents/install/' | url }}">Install an agent</a>
-        <a href="{{ '/agents/platforms/' | url }}">Check platform support</a>
+        <a href="{{ '/agents/platforms/' | url }}">Integrations</a>
       </div>
     </div>
   </article>
@@ -92,7 +101,7 @@ description: A searchable Destiny lore archive and a growing number of character
   <article class="category">
     <span class="category-index" aria-hidden="true">04</span>
     <div>
-      <h2>Guardian down</h2>
+      <h2>If something breaks</h2>
       <p>
         Missing database, no tools in your client, an agent that will not appear,
         or a quote that keeps failing. Start with the symptom and work back to the

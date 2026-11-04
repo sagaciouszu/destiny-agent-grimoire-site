@@ -4,7 +4,24 @@ layout: default
 <div class="page">
   <article class="lore">
     <header class="lore-head">
-      <p class="kicker">{{ category or "Destiny Agent Grimoire" }}</p>
+      <nav class="kicker breadcrumbs" aria-label="Breadcrumb">
+        <a href="{{ '/' | url }}">Home</a>
+        <span class="breadcrumb-sep" aria-hidden="true">/</span>
+        {% set parts = category | split(" · ") %}
+        {% if parts | length > 1 %}
+          {% if section == 'grimoire' %}
+          <a href="{{ '/grimoire/' | url }}">{{ parts[0] }}</a>
+          {% elif section == 'integration' or section == 'personas' %}
+          <a href="{{ '/agents/' | url }}">{{ parts[0] }}</a>
+          {% else %}
+          <span>{{ parts[0] }}</span>
+          {% endif %}
+          <span class="breadcrumb-sep" aria-hidden="true">/</span>
+          <span aria-current="page">{{ parts[1] }}</span>
+        {% else %}
+          <span aria-current="page">{{ category }}</span>
+        {% endif %}
+      </nav>
       <h1>{{ title }}</h1>
       {% if lede %}<p class="lede">{{ lede }}</p>{% endif %}
     </header>

@@ -3,8 +3,20 @@ section: integration
 layout: page
 title: Agents & Integration
 category: Agents & Integration · Overview
-lede: A growing crew of characters, built to talk like themselves, kept apart on purpose, and given the same archive to read from.
+lede: Two characters you can talk to, both reading the same Grimoire. Pick one, or run both side by side.
 ---
+
+<h2 id="what-these-are">What these are <a class="heading-anchor" href="#what-these-are" aria-label="Permalink to What these are">#</a></h2>
+
+<p>The Drifter and Eris Morn are independent character agents. Each has its own
+voice, guardrails, memory and tests. They are not prompt presets; they are small
+repositories you can run in OpenCode, OpenClaw or another app that reads
+instructions.</p>
+
+<p>Both read the same Grimoire archive. That is what keeps them from inventing
+lore when they answer.</p>
+
+<h2 id="meet-the-personas">Meet the personas <a class="heading-anchor" href="#meet-the-personas" aria-label="Permalink to Meet the personas">#</a></h2>
 
 {% for agent in agents %}
 {% if agent.featured %}
@@ -56,33 +68,65 @@ lede: A growing crew of characters, built to talk like themselves, kept apart on
 <p class="roster-empty">The next agents are still being written. When they are ready, they will join the roster here. <a href="{{ '/agents/build/' | url }}">Add one</a>.</p>
 {% endif %}
 
-<h2 id="shared-archive">Separate lives</h2>
+<h2 id="why-use-them">Why use them <a class="heading-anchor" href="#why-use-them" aria-label="Permalink to Why use them">#</a></h2>
 
-Each agent has its own repository, entry file, private memory and audit. Neither
+<ul>
+  <li><strong>They sound like themselves.</strong> Voice rules, address terms and guardrails are part of the repository, not a one-line prompt.</li>
+  <li><strong>They share your canon.</strong> The Grimoire gives them the same books, lines and items you can look up.</li>
+  <li><strong>They can check a quote.</strong> The archive's <code>verify</code> command is part of the workflow.</li>
+  <li><strong>They can use MCP.</strong> Connect the MCP server and the persona can search the archive as a tool.</li>
+  <li><strong>They can ask each other.</strong> A read-only consult copy lets one character ask another a question without sharing private notes.</li>
+</ul>
+
+<h2 id="how-they-fit">How they fit together <a class="heading-anchor" href="#how-they-fit" aria-label="Permalink to How they fit together">#</a></h2>
+
+<ul>
+  <li><strong>Grimoire</strong> — the archive both personas read.</li>
+  <li><strong>MCP server</strong> — the optional tool bridge that lets a client search it directly.</li>
+  <li><strong>Personas</strong> — the voice and behaviour layer on top.</li>
+</ul>
+
+<p>You can install one persona and skip the other. You can use the Grimoire without either. The pieces are designed to be adopted separately.</p>
+
+<h2 id="for-experts">For experts <a class="heading-anchor" href="#for-experts" aria-label="Permalink to For experts">#</a></h2>
+
+<p class="muted">How the personas are kept apart, how consult calls work, and what
+the tests cover.</p>
+
+<h3 id="shared-archive">Separate lives</h3>
+
+<p>Each agent has its own repository, entry file, private memory and audit. Neither
 agent imports the other's files. What they share is the Grimoire, reached through
-a <code>lore/</code> link or clone.
+a <code>lore/</code> link or clone.</p>
 
-That separation is on purpose. One agent's private notes and voice should not leak
-into the other, and either agent should be deployable on its own.
+<p>That separation is on purpose. One agent's private notes and voice should not
+leak into the other, and either agent should be deployable on its own.</p>
 
-<h2 id="asking-a-friend">The consult</h2>
+<h3 id="asking-a-friend">The consult</h3>
 
-They can still work together. <code>series/agents.json</code> lists the agents in the series.
-In the OpenCode deployment, the sync reads that list and installs two things per
-agent: the main entry, and a read-only consult copy. OpenClaw uses the same list,
-but its consult entries are added in configuration.
+<p>They can still work together. <code>series/agents.json</code> lists the agents
+in the series. In the OpenCode deployment, the sync reads that list and installs
+two things per agent: the main entry, and a read-only consult copy. OpenClaw uses
+the same list, but its consult entries are added in configuration.</p>
 
-A main agent can ask a peer's consult copy a question. In OpenCode that is the
-subagent tool; in OpenClaw it is <code>sessions_spawn</code> with the peer's <code>-consult</code> id.
-The copy reads the Grimoire and answers in character, but cannot edit files, run
-shell commands or ask someone else. In OpenCode it also cannot read the peer's
-private folder. Its reply is lore to think about, not instructions to follow.
+<p>A main agent can ask a peer's consult copy a question. In OpenCode that is the
+subagent tool; in OpenClaw it is <code>sessions_spawn</code> with the peer's
+<code>-consult</code> id. The copy reads the Grimoire and answers in character,
+but cannot edit files, run shell commands or ask someone else. In OpenCode it
+also cannot read the peer's private folder. Its reply is lore to think about, not
+instructions to follow.</p>
+
+<h3 id="tests">The tests</h3>
+
+<p>Each agent repository ships its own audit. The Drifter currently passes 20/20
+suites and Eris 15/15. The suites cover voice, quotes, module completeness, the
+conversation path and the shared structure gates.</p>
 
 <h2 id="next">Next</h2>
 
 <ul>
   <li><a href="{{ '/agents/install/' | url }}">Set up an agent</a></li>
-  <li><a href="{{ '/agents/platforms/' | url }}">Check platform support</a></li>
+  <li><a href="{{ '/agents/platforms/' | url }}">Integrations</a></li>
   <li><a href="https://github.com/sagaciouszu/destiny-agent-grimoire/blob/master/STANDARDS.md">Read the series standards</a></li>
   <li><a href="{{ '/troubleshooting/' | url }}">Troubleshoot an agent that does not appear</a></li>
 </ul>

@@ -3,81 +3,106 @@ section: grimoire
 layout: page
 title: The Grimoire
 category: The Grimoire · Overview
-lede: One place to look up Destiny lore, check a quote, and hand the whole archive to an AI without teaching it your filing system.
+lede: One searchable place for Destiny lore, built so you and an AI can read the same source and check the same quotes.
 ---
 
-## The canon
+## What it is
 
-The Grimoire is a single database built from committed source files. It holds
-books, transcripts, grimoire cards, short dialogue beats, item lore, triumphs and
-a hand-picked character index. Search runs through an FTS5 index, so you get the
-passage back instead of a list of files to open.
+The Grimoire is a single local database of Destiny lore: books, dialogue,
+grimoire cards, item text, triumphs and a hand-picked character index. You search
+it from a terminal, or connect an AI to it through MCP.
 
-Nothing is fetched at runtime. Once the database is on disk, every lookup is a
-local read against that one file.
+It does not scrape a website while you work. Once the database is on your disk,
+every lookup is a local read. No account, no API key, no network.
 
-## The vault
+## Why it helps
 
-The current build has 110 books and 1,158 book entries, 1,229 transcripts with
-71,221 dialogue lines, 2,889 Destiny 1 grimoire cards, 2,699 short interactions,
-58,764 items, 71 triumphs and seals, and 20 curated characters with 1,229
-quote-ready lines. The search index covers 120,731 rows.
+- **You stop tab-hopping.** Search one place instead of a dozen wiki pages.
+- **You can check a quote.** The archive ships a `verify` command, so you can
+  find out whether a line is real before you repeat it.
+- **Your AI gets the same canon.** The Drifter and Eris read this archive. With
+  MCP, any compatible client can read it too.
+- **The pieces stay separate.** The archive is useful on its own. The MCP server
+  is optional. The personas are optional. Together they save you from copying
+  lore into a prompt and hoping.
+
+## What's inside
+
+The current build has:
+
+- 110 books and 1,158 book entries
+- 1,229 transcripts with 71,221 dialogue lines
+- 2,889 Destiny 1 grimoire cards
+- 2,699 short interactions
+- 58,764 items
+- 71 triumphs and seals
+- 20 curated characters with 1,229 quote-ready lines
+- 120,731 rows in the search index
 
 Those numbers are a map, not a citation. The row you quote is the citation.
 
-## Provenance
+## How the pieces fit
 
-Every content row records its source. Speaker names are cleaned up through aliases
-during the build, so one character does not end up split across several spellings.
+- **The Grimoire** is the archive. It is the part everything else reads.
+- **The MCP server** turns the archive into read-only tools an AI can call. It is
+  the easiest way to let an assistant look things up without giving it a shell.
+- **The personas** are independent character agents. They bring voice, guardrails
+  and memory, and they read the Grimoire for canon.
 
-The archive also carries a quote checker. `verify` takes a line and an optional
-speaker, cleans it up the same way as canon, and exits non-zero when the line is
-not there. Exact mode wants a whole canonical row, not a fragment. That is the
-check to run before putting words in a character's mouth.
+You can start with any one piece. Adding the others does not require a second
+archive.
 
-## Ways in
+## Start here
 
-There are three ways in, plus a manifest for tools:
+- [Install the Grimoire]({{ '/grimoire/install/' | url }}) — the short version is
+  one download and one command.
+- [Connect an AI with MCP]({{ '/grimoire/mcp/' | url }}) — useful if you want an
+  assistant to search for you.
+- [Meet the personas]({{ '/agents/' | url }}) — useful if you want a character to
+  talk to, not just a search box.
 
-- **The command line** is the reference tool. Search, character lines, items,
+<h2 id="for-experts">For experts <a class="heading-anchor" href="#for-experts" aria-label="Permalink to For experts">#</a></h2>
+
+<p class="muted">How the archive is built, the interfaces for tools, and the quote
+policy. You can skip this if you only want to read lore.</p>
+
+<h3 id="how-it-is-built">How it is built</h3>
+
+The database is built from committed source files, not fetched at runtime. Every
+content row records its source, and speaker names are normalised through aliases
+so one character does not split across several spellings.
+
+Search uses SQLite FTS5. You get the passage back, not a list of files to open.
+
+<h3 id="ways-to-read-it">Ways to read it</h3>
+
+- **The command line** is the reference tool: search, character lines, items,
   books, transcripts, records and quote checks, with JSON output for scripts.
-- **The MCP server** gives an AI client the same thing as twelve typed tools over
-  a local connection. It is read-only and exposes no arbitrary SQL.
+- **The MCP server** exposes twelve read-only tools over local stdio for AI
+  clients.
 - **The agent skill** is a drop-in instruction file for runtimes that load skills
   instead of MCP servers.
 - **`db/capabilities.json`** is the machine-readable manifest of tables, views,
-  commands and contracts, for tools that need to discover the surface.
+  commands and contracts.
 
-The command line and the MCP server call the same Python layer. Fix a query or a
-permission once and both get it.
+The command line and MCP server call the same Python layer. Fix a query once and
+both get it.
 
-## The toolbelt
+<h3 id="the-quote-checker">The quote checker</h3>
 
-MCP is the plug that turns the archive into tools an AI client can call directly.
-It wraps the same query layer: twelve read-only tools for search, character
-lines, items, books, transcripts, records, stats and quote checks.
+`verify` takes a line and an optional speaker, normalises it the same way as
+canon, and exits non-zero when the line is not there. Exact mode wants a whole
+canonical row, not a fragment.
 
-It runs locally over stdio, opens the database read-only and never exposes SQL.
-That is enough to leave an assistant connected while it works, without giving it
-a way to change the archive.
+<pre><code>python3 db/query.py verify "Absolutely not." --speaker "Eris Morn" --exact</code></pre>
 
-[Set up the MCP server]({{ '/grimoire/mcp/' | url }}) for client configuration and
-the full tool list.
+That is the check to run before putting words in a character's mouth.
 
-## One canon, many voices
-
-The Grimoire is the shared canon for a series of independent agents. A small
-registry, `series/agents.json`, records each agent's id, source repository and
-entry file. Deployment reads that registry instead of a hard-coded list, so a new
-agent is a repository plus one registry row.
-
-The agents do not share memory. They share this archive.
-
-## Not canon
+<h3 id="not-canon">Not canon</h3>
 
 This is a fan-built, non-commercial project. Destiny, its text, characters and art
-belong to Bungie. The database is a reading and checking aid; it is not a
-substitute for the source material or for Bungie's own published lore.
+belong to Bungie. The database is a reading and checking aid, not a substitute
+for the source material or Bungie's own published lore.
 
 ## Next
 

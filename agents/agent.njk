@@ -27,17 +27,6 @@ section: personas
 
 <p class="agent-ask"><strong>Ask about:</strong> {{ agent.consult }}</p>
 
-<h2 id="record">The record <a class="heading-anchor" href="#record" aria-label="Permalink to The record">#</a></h2>
-
-<dl class="agent-record">
-  <dt>Version</dt>
-  <dd><a href="{{ agent.releaseUrl }}">{{ agent.version }}</a></dd>
-  <dt>Audit</dt>
-  <dd>{{ agent.audit.passed }}/{{ agent.audit.total }} suites</dd>
-  <dt>Updated</dt>
-  <dd><time datetime="{{ agent.updated }}">{{ agent.updated }}</time></dd>
-</dl>
-
 <h2 id="words">In their own words <a class="heading-anchor" href="#words" aria-label="Permalink to In their own words">#</a></h2>
 
 <p class="muted">Every line below passes <code>verify --exact</code> against the archive.</p>
@@ -49,7 +38,43 @@ section: personas
 </figure>
 {% endfor %}
 
-<h2 id="entry-file">The brain <a class="heading-anchor" href="#entry-file" aria-label="Permalink to The brain">#</a></h2>
+<h2 id="limits">What they won't do <a class="heading-anchor" href="#limits" aria-label="Permalink to What they won't do">#</a></h2>
+
+<ul>
+  {% for limit in agent.limits %}
+  <li>{{ limit | escape }}</li>
+  {% endfor %}
+</ul>
+
+<h2 id="setup">Eyes up <a class="heading-anchor" href="#setup" aria-label="Permalink to Eyes up">#</a></h2>
+
+<p>Clone the persona, then let its setup script link the Grimoire and get the
+database:</p>
+
+<pre><code>git clone {{ agent.repo }}.git
+cd {{ agent.repoName }}
+./setup.sh</code></pre>
+
+<p>Use <code>BOOTSTRAP=1 ./setup.sh</code> to download the release database
+without a prompt. For OpenCode or OpenClaw, use the shared sync instead:
+<a href="{{ '/agents/install/' | url }}">Deploy the Agents</a>.</p>
+
+<h2 id="for-experts">For experts <a class="heading-anchor" href="#for-experts" aria-label="Permalink to For experts">#</a></h2>
+
+<p class="muted">The release record, entry file, audit and repository links.</p>
+
+<h3 id="record">The record <a class="heading-anchor" href="#record" aria-label="Permalink to The record">#</a></h3>
+
+<dl class="agent-record">
+  <dt>Version</dt>
+  <dd><a href="{{ agent.releaseUrl }}">{{ agent.version }}</a></dd>
+  <dt>Audit</dt>
+  <dd>{{ agent.audit.passed }}/{{ agent.audit.total }} suites</dd>
+  <dt>Updated</dt>
+  <dd><time datetime="{{ agent.updated }}">{{ agent.updated }}</time></dd>
+</dl>
+
+<h3 id="entry-file">The brain <a class="heading-anchor" href="#entry-file" aria-label="Permalink to The brain">#</a></h3>
 
 <p>In OpenCode, <code>{{ agent.entry }}</code> is the main agent entry. A generic
 runtime that reads <code>AGENTS.md</code> can use the repository directly. The
@@ -61,20 +86,7 @@ file is where the voice, guardrails and canon pointers begin.</p>
 <code>{{ agent.id }}-consult.md</code>, so another agent can ask a question without
 getting write access to this one's files.</p>
 
-<h2 id="setup">Eyes up <a class="heading-anchor" href="#setup" aria-label="Permalink to Eyes up">#</a></h2>
-
-<pre><code>git clone {{ agent.repo }}.git
-cd {{ agent.repoName }}
-./setup.sh</code></pre>
-
-<p><code>./setup.sh</code> links or clones the Grimoire, then fetches or builds
-the database. Use <code>BOOTSTRAP=1 ./setup.sh</code> for the prebuilt database
-without a prompt.</p>
-
-<p>For OpenCode or OpenClaw deployment from the archive, see
-<a href="{{ '/agents/install/' | url }}">Deploy the Agents</a>.</p>
-
-<h2 id="checks">The audit <a class="heading-anchor" href="#checks" aria-label="Permalink to The audit">#</a></h2>
+<h3 id="checks">The audit <a class="heading-anchor" href="#checks" aria-label="Permalink to The audit">#</a></h3>
 
 <pre><code>bash tests/master-audit.sh</code></pre>
 
@@ -82,15 +94,7 @@ without a prompt.</p>
 release. The audit checks voice, quotes, module coverage, the conversation path
 and the shared structure gates. It is the same suite CI runs.</p>
 
-<h2 id="limits">What they won't do <a class="heading-anchor" href="#limits" aria-label="Permalink to What they won't do">#</a></h2>
-
-<ul>
-  {% for limit in agent.limits %}
-  <li>{{ limit | escape }}</li>
-  {% endfor %}
-</ul>
-
-<h2 id="repository">The source <a class="heading-anchor" href="#repository" aria-label="Permalink to The source">#</a></h2>
+<h3 id="repository">The source <a class="heading-anchor" href="#repository" aria-label="Permalink to The source">#</a></h3>
 
 <ul>
   <li><a href="{{ agent.repo }}">{{ agent.repoName }}</a></li>
@@ -107,5 +111,5 @@ and the shared structure gates. It is the same suite CI runs.</p>
   {% endif %}{% endfor %}
   <li><a href="{{ '/agents/build/' | url }}">Add another agent</a></li>
   <li><a href="{{ '/agents/install/' | url }}">Deploy into OpenCode or OpenClaw</a></li>
-  <li><a href="{{ '/agents/platforms/' | url }}">Check platform support</a></li>
+  <li><a href="{{ '/agents/platforms/' | url }}">Integrations</a></li>
 </ul>

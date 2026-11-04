@@ -195,7 +195,7 @@
       const label = light ? "Switch to dark theme" : "Switch to light theme";
       themeToggle.setAttribute("aria-label", label);
       themeToggle.setAttribute("title", label);
-      if (themeMeta) themeMeta.setAttribute("content", light ? "#e2d6bf" : "#0b0b0c");
+      if (themeMeta) themeMeta.setAttribute("content", light ? "#e7eaee" : "#080c12");
     };
 
     syncTheme();

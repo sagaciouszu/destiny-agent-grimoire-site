@@ -2,27 +2,45 @@
 layout: page
 title: About
 category: About
-lede: A fan-built archive and a growing series of character agents, maintained in the open.
+lede: A fan-built lore archive and a small series of character agents, maintained in the open.
 ---
 
-## The project
+## What this is
 
-The Destiny Agent Grimoire is a fan-made, non-commercial project. It exists to
-make Destiny lore readable and verifiable by both people and software: one
-archive, one quote policy, and agents that must check a line before speaking it.
+The Destiny Agent Grimoire is a fan-made, non-commercial project. It has three
+parts:
+
+- **A local archive** of Destiny lore you can search and quote-check.
+- **An optional MCP server** that lets an AI client search the archive as a tool.
+- **Character personas** that read the same archive and answer in their own voice.
+
+You can use any part on its own. The archive is useful without an agent. The MCP
+server is useful without a persona. The personas are useful if you want a
+character to talk to, not just a search box.
+
+## Why it exists
+
+Destiny lore is spread across books, transcripts, item text and old grimoire
+cards. Looking things up is slow, and it is easy to repeat a line that sounds
+right but is not real.
+
+This project keeps one searchable copy and one quote policy. The archive records
+where each row came from. The `verify` command tells you whether a line is in
+canon. The personas use the same archive, so they have something to check against
+instead of guessing.
 
 The code, tests and documentation are MIT licensed. Destiny, its text, characters
 and art belong to Bungie. This project is not affiliated with or endorsed by
 Bungie.
 
-## For every Guardian
+## Accessibility
 
-The site aims to be readable and operable without a mouse:
+The site aims to be readable and usable without a mouse:
 
 - semantic landmarks, one main region and a skip link;
 - visible focus styles and full keyboard access to navigation and collapsible
   sections;
-- text and interface colours chosen for contrast on the dark background;
+- text and interface colours chosen for contrast in both themes;
 - reduced motion respected through the system preference;
 - headings that carry stable, linkable anchors;
 - tables and code blocks that remain readable when the viewport is narrow.
@@ -30,13 +48,13 @@ The site aims to be readable and operable without a mouse:
 If something is difficult to read or operate, open an issue with the page and the
 assistive technology or browser you used.
 
-## The keeper
+## Who runs it
 
 Maintained by [sagacious zu](https://github.com/sagaciouszu). The archive,
 standards and release history live in the
 [Grimoire repository](https://github.com/sagaciouszu/destiny-agent-grimoire).
 
-## Elsewhere
+## Links
 
 - [Site source](https://github.com/sagaciouszu/grimoire-site)
 - [Repository](https://github.com/sagaciouszu/destiny-agent-grimoire)

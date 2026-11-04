@@ -2,25 +2,25 @@
   <defs>
     <linearGradient id="space" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#08080a"/>
-      <stop offset="55%" stop-color="#0b0b0c"/>
+      <stop offset="55%" stop-color="#080c12"/>
       <stop offset="100%" stop-color="#15120c"/>
     </linearGradient>
     <radialGradient id="goldglow" cx="0.78" cy="0.48" r="0.42">
-      <stop offset="0%" stop-color="#d8b45a" stop-opacity="0.24"/>
+      <stop offset="0%" stop-color="#c9a94f" stop-opacity="0.24"/>
       <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="warmglow" cx="0.12" cy="0.08" r="0.55">
-      <stop offset="0%" stop-color="#d97945" stop-opacity="0.12"/>
+      <stop offset="0%" stop-color="#3d7fb5" stop-opacity="0.12"/>
       <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
     </radialGradient>
     <linearGradient id="star" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#f0d38a"/>
-      <stop offset="100%" stop-color="#a9853c"/>
+      <stop offset="0%" stop-color="#e8cd83"/>
+      <stop offset="100%" stop-color="#8a7135"/>
     </linearGradient>
     <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#d8b45a" stop-opacity="0.9"/>
-      <stop offset="70%" stop-color="#f0d38a" stop-opacity="0.45"/>
-      <stop offset="100%" stop-color="#f0d38a" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#c9a94f" stop-opacity="0.9"/>
+      <stop offset="70%" stop-color="#e8cd83" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#e8cd83" stop-opacity="0"/>
     </linearGradient>
     <radialGradient id="vig" cx="0.5" cy="0.5" r="0.85">
       <stop offset="55%" stop-color="#000000" stop-opacity="0"/>
@@ -35,7 +35,7 @@
   <rect width="1280" height="640" fill="url(#goldglow)"/>
   <rect width="1280" height="640" fill="url(#warmglow)"/>
 
-  <g stroke="#d8b45a" stroke-width="0.6" opacity="0.07">
+  <g stroke="#c9a94f" stroke-width="0.6" opacity="0.07">
     <line x1="0" y1="160" x2="1280" y2="160"/>
     <line x1="0" y1="320" x2="1280" y2="320"/>
     <line x1="0" y1="480" x2="1280" y2="480"/>
@@ -47,18 +47,18 @@
   <!-- Starmap emblem -->
   <g transform="translate(1010,320)">
     <g filter="url(#soft)" opacity="0.5">
-      <circle r="130" fill="none" stroke="#d8b45a" stroke-width="8"/>
+      <circle r="130" fill="none" stroke="#c9a94f" stroke-width="8"/>
     </g>
-    <circle r="128" fill="none" stroke="#d8b45a" stroke-width="1.2" opacity="0.55"/>
-    <circle r="166" fill="none" stroke="#d8b45a" stroke-width="0.8" stroke-dasharray="2 10" opacity="0.4"/>
-    <circle r="214" fill="none" stroke="#f0d38a" stroke-width="0.6" opacity="0.18"/>
-    <ellipse rx="238" ry="88" transform="rotate(-18)" fill="none" stroke="#d8b45a" stroke-width="0.8" stroke-dasharray="3 10" opacity="0.22"/>
+    <circle r="128" fill="none" stroke="#c9a94f" stroke-width="1.2" opacity="0.55"/>
+    <circle r="166" fill="none" stroke="#c9a94f" stroke-width="0.8" stroke-dasharray="2 10" opacity="0.4"/>
+    <circle r="214" fill="none" stroke="#e8cd83" stroke-width="0.6" opacity="0.18"/>
+    <ellipse rx="238" ry="88" transform="rotate(-18)" fill="none" stroke="#c9a94f" stroke-width="0.8" stroke-dasharray="3 10" opacity="0.22"/>
 
     <path d="M0 -156 L20 -20 L156 0 L20 20 L0 156 L-20 20 L-156 0 L-20 -20 Z" fill="url(#star)" opacity="0.92"/>
-    <path d="M0 -104 L13 -13 L104 0 L13 13 L0 104 L-13 13 L-104 0 L-13 -13 Z" transform="rotate(45)" fill="#d8b45a" opacity="0.38"/>
-    <circle r="10" fill="#0b0b0c" stroke="#f0d38a" stroke-width="2"/>
+    <path d="M0 -104 L13 -13 L104 0 L13 13 L0 104 L-13 13 L-104 0 L-13 -13 Z" transform="rotate(45)" fill="#c9a94f" opacity="0.38"/>
+    <circle r="10" fill="#080c12" stroke="#e8cd83" stroke-width="2"/>
 
-    <g fill="#f0d38a" opacity="0.85">
+    <g fill="#e8cd83" opacity="0.85">
       <circle cx="0" cy="-128" r="2.4"/>
       <circle cx="128" cy="0" r="2.4"/>
       <circle cx="0" cy="128" r="2.4"/>
@@ -72,21 +72,21 @@
 
   <!-- Title block -->
   <g font-family="'Haas Grot Disp Trial', 'Haas Grot Text Trial', sans-serif">
-    <text x="72" y="182" font-size="24" font-weight="500" fill="#d8b45a" letter-spacing="10">[ DESTINY  ·  ARCHIVE  ·  AGENTS ]</text>
+    <text x="72" y="182" font-size="24" font-weight="500" fill="#c9a94f" letter-spacing="10">[ DESTINY  ·  ARCHIVE  ·  AGENTS ]</text>
     <text x="72" y="304" font-size="82" font-weight="700" fill="#fffdf8" letter-spacing="2">AGENT GRIMOIRE</text>
     <text x="72" y="390" font-size="26" font-weight="500" fill="#e8e3d9" letter-spacing="5">CANONICAL LORE  ·  CHARACTER VOICES</text>
-    <text x="72" y="448" font-size="20" font-weight="400" fill="#a9a396" letter-spacing="5">EVERY QUOTE KEEPS ITS<tspan fill="#f0d38a" dx="9">SOURCE.</tspan></text>
+    <text x="72" y="448" font-size="20" font-weight="400" fill="#a9a396" letter-spacing="5">EVERY QUOTE KEEPS ITS<tspan fill="#e8cd83" dx="9">SOURCE.</tspan></text>
   </g>
 
   <rect x="72" y="344" width="560" height="2" fill="url(#accent)"/>
 
   <!-- Corner brackets -->
   <g fill="none" stroke-width="2" opacity="0.45">
-    <path d="M 36 70 L 36 34 L 72 34" stroke="#d8b45a"/>
-    <path d="M 1244 570 L 1244 606 L 1208 606" stroke="#f0d38a"/>
+    <path d="M 36 70 L 36 34 L 72 34" stroke="#c9a94f"/>
+    <path d="M 1244 570 L 1244 606 L 1208 606" stroke="#e8cd83"/>
   </g>
 
-  <text transform="translate(1258, 470) rotate(-90)" font-family="'Haas Grot Disp Trial', 'Haas Grot Text Trial', sans-serif" font-size="12" font-weight="500" letter-spacing="3" fill="#d8b45a" opacity="0.3">ARCHIVE  ·  110 BOOKS  ·  58,764 ITEMS</text>
+  <text transform="translate(1258, 470) rotate(-90)" font-family="'Haas Grot Disp Trial', 'Haas Grot Text Trial', sans-serif" font-size="12" font-weight="500" letter-spacing="3" fill="#c9a94f" opacity="0.3">ARCHIVE  ·  110 BOOKS  ·  58,764 ITEMS</text>
 
   <rect width="1280" height="640" fill="url(#vig)" pointer-events="none"/>
 </svg>

@@ -36,7 +36,7 @@ Output goes to `_site/`.
 
 - `index.njk` — home, including the rotating test transcripts
 - `grimoire/` — archive overview, install, MCP server
-- `agents/` — overview, install, platform support
+- `agents/` — overview, install, integrations
 - `agents/agent.njk` — generates `/agents/<id>/` pages from the roster
 - `agents/build.md` — how to add a new series agent
 - `troubleshooting.md`
@@ -74,6 +74,13 @@ Agent pages carry the release version, audit result, last-updated date, verified
 sample lines and a short limits list. `updated` is set per agent; other pages use
 the last git commit date for their source file.
 
+## Reading order
+
+The docs lead with the short path and the reason to use each piece. Deeper
+commands, file layouts and test gates sit under a `For experts` heading at the
+bottom. The home page, Grimoire install, MCP setup and Agent install all show the
+recommended order: Grimoire, then MCP, then personas.
+
 ## Checks
 
 `python3 scripts/check-links.py` validates the built site: internal links,
@@ -82,7 +89,9 @@ robots.txt. The Pages workflow runs it after every build.
 
 ## Theme
 
-The topbar toggle switches between the warm dark theme and a paper light theme.
+The palette is Destiny 2 UI-inspired: charcoal, bone, Vanguard gold and a muted
+ember accent. No cyan. The topbar toggle switches between the dark theme and a
+warm paper light theme.
 The choice is stored in `localStorage`; without a stored choice the site follows
 `prefers-color-scheme`. The theme is applied before paint by the inline script in
 `_includes/head.njk`.

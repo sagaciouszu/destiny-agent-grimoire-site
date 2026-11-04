@@ -2,8 +2,24 @@
 layout: page
 title: Troubleshooting
 category: Diagnostics
-lede: Find the symptom, check the likely cause, apply the fix. The commands are safe to run as written.
+lede: Start with the short list. If your symptom is there, you are probably one command away from fixed. The deeper checks are grouped below.
 ---
+
+<details class="section" open>
+<summary><span class="section-title" role="heading" aria-level="2" id="first-checks">Try this first <a class="heading-anchor" href="#first-checks" aria-label="Permalink to Try this first">#</a></span></summary>
+
+<p>Most first-run problems are one of these:</p>
+
+<ol>
+  <li><strong>No database.</strong> Download the release copy or run <code>python3 db/migrate.py</code> from the repository root.</li>
+  <li><strong>Wrong folder.</strong> Commands expect the repository root, not the <code>db/</code> or <code>agents/</code> folder.</li>
+  <li><strong>MCP client points at the wrong file.</strong> It should start <code>mcp-server/run.sh</code>, not <code>server.py</code>.</li>
+  <li><strong>An agent cannot see canon.</strong> Check that <code>lore/</code> points at the Grimoire and that <code>lore/db/grimoire.db</code> exists.</li>
+</ol>
+
+<p>If none of those fit, find your symptom below.</p>
+
+</details>
 
 <nav class="toc" aria-labelledby="toc-title">
 <p class="toc-title" id="toc-title">On this page</p>
@@ -221,6 +237,10 @@ A consult copy has no shell on purpose. It relies on the MCP server for canon; i
 MCP is not connected, expect a shorter, less grounded answer.
 
 </details>
+
+<h2 id="for-experts">For experts <a class="heading-anchor" href="#for-experts" aria-label="Permalink to For experts">#</a></h2>
+
+<p class="muted">Repository-level checks and test failures.</p>
 
 <details class="section">
 <summary><span class="section-title" role="heading" aria-level="2" id="tests">Tests fail after cloning <a class="heading-anchor" href="#tests" aria-label="Permalink to Tests fail after cloning">#</a></span></summary>

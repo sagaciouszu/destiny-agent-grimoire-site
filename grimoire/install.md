@@ -3,142 +3,160 @@ section: grimoire
 layout: page
 title: Install the Grimoire
 category: The Grimoire · Install
-lede: Get the archive working first, then poke at it. The quick start is at the top; the rest is grouped by what you are trying to do, so you can open only the bit you need.
+lede: Get the archive on your machine in a minute or two. The easy path is first; the full command reference is at the bottom.
 ---
 
+<nav class="setup-order" aria-label="Recommended setup order">
+  <span class="setup-order-label">Setup order</span>
+  <ol>
+    <li><a href="{{ '/grimoire/install/' | url }}" aria-current="step">1. Grimoire</a></li>
+    <li><a href="{{ '/grimoire/mcp/' | url }}">2. MCP <span class="setup-optional">optional</span></a></li>
+    <li><a href="{{ '/agents/install/' | url }}">3. Personas</a></li>
+  </ol>
+</nav>
+
 <details class="section" open>
-<summary><span class="section-title" role="heading" aria-level="2" id="quick-start">Quick start <a class="heading-anchor" href="#quick-start" aria-label="Permalink to Quick start">#</a></span></summary>
+<summary><span class="section-title" role="heading" aria-level="2" id="quick-start">Start here <a class="heading-anchor" href="#quick-start" aria-label="Permalink to Start here">#</a></span></summary>
 
-Pick one path. You do not need both.
+You need Git, Python 3.8 or newer, and about 260 MB of free space. No account,
+API key or build tools.
 
-<div class="choices">
-  <div class="choice">
-    <p class="choice-label">Easiest</p>
-    <h3>Download the ready-made archive</h3>
-    <p class="muted">Grab the database and its checksum. No build, no waiting.</p>
-    <pre><code>git clone https://github.com/sagaciouszu/destiny-agent-grimoire.git
+<pre><code>git clone https://github.com/sagaciouszu/destiny-agent-grimoire.git
 cd destiny-agent-grimoire
 curl -fsSL https://github.com/sagaciouszu/destiny-agent-grimoire/releases/latest/download/grimoire.db -o grimoire.db
 curl -fsSL https://github.com/sagaciouszu/destiny-agent-grimoire/releases/latest/download/SHA256SUMS -o SHA256SUMS
 sha256sum -c SHA256SUMS
-mv grimoire.db db/grimoire.db</code></pre>
-  </div>
-  <div class="choice">
-    <p class="choice-label">From scratch</p>
-    <h3>Build it yourself</h3>
-    <p class="muted">Reproducible and offline. Slower, but you get the whole kitchen.</p>
-    <pre><code>git clone https://github.com/sagaciouszu/destiny-agent-grimoire.git
-cd destiny-agent-grimoire
-python3 db/migrate.py</code></pre>
-  </div>
-</div>
+mv grimoire.db db/grimoire.db
+python3 db/query.py stats</code></pre>
 
-<p>Then make sure it opens:</p>
-
-<pre><code>python3 db/query.py stats</code></pre>
+<p>If the last command prints counts, you are done.</p>
 
 </details>
 
 <details class="section" open>
-<summary><span class="section-title" role="heading" aria-level="2" id="prerequisites">What you need <a class="heading-anchor" href="#prerequisites" aria-label="Permalink to What you need">#</a></span></summary>
+<summary><span class="section-title" role="heading" aria-level="2" id="what-you-get">What this gives you <a class="heading-anchor" href="#what-you-get" aria-label="Permalink to What this gives you">#</a></span></summary>
+
+- **One place to look things up.** Search books, dialogue, cards, items and
+  records without opening a dozen wiki tabs.
+- **A quote checker.** Paste a line and find out whether it is canon before you
+  put it in a post, a video or an agent's mouth.
+- **A canon source for agents.** The Drifter and Eris read this same archive, so
+  they answer from the same material you do.
+- **An optional tool server.** Connect an AI client through MCP and it can search
+  the archive directly instead of asking you to run commands.
+
+You do not need the agents or MCP to use the archive. They are separate pieces
+that become more useful together.
+
+</details>
+
+<details class="section" open>
+<summary><span class="section-title" role="heading" aria-level="2" id="prerequisites">Before you start <a class="heading-anchor" href="#prerequisites" aria-label="Permalink to Before you start">#</a></span></summary>
 
 - Python 3.8 or newer. The standard library is enough.
 - Git, to clone the archive.
-- About 260 MB of free space for the sources and database (the database itself is
-  about 170 MB), and roughly the same again while a build runs.
+- About 260 MB of free space for the sources and database. The database itself
+  is about 170 MB.
+- Roughly the same space again if you build from source.
 
-The download path needs no build tools at all. The build path is pure Python.
+The download needs no build tools at all. The source build is pure Python.
 
 </details>
 
 <details class="section">
-<summary><span class="section-title" role="heading" aria-level="2" id="get-the-archive">Get the archive <a class="heading-anchor" href="#get-the-archive" aria-label="Permalink to Get the archive">#</a></span></summary>
+<summary><span class="section-title" role="heading" aria-level="2" id="build-it">Prefer to build it yourself? <a class="heading-anchor" href="#build-it" aria-label="Permalink to Prefer to build it yourself?">#</a></span></summary>
 
-The release asset is the official download. `SHA256SUMS` is attached to the same
-release, and the publish pipeline checks the digest before it goes out.
+This is slower and uses more disk, but it is reproducible and works offline once
+the sources are present.
+
+<pre><code>git clone https://github.com/sagaciouszu/destiny-agent-grimoire.git
+cd destiny-agent-grimoire
+python3 db/migrate.py</code></pre>
+
+<p>The build reads <code>source/</code> and <code>archive/data/*.jsonl</code> and writes
+<code>db/grimoire.db</code>.</p>
+
+</details>
+
+<details class="section">
+<summary><span class="section-title" role="heading" aria-level="2" id="everyday-commands">Everyday commands <a class="heading-anchor" href="#everyday-commands" aria-label="Permalink to Everyday commands">#</a></span></summary>
+
+<pre><code>python3 db/query.py stats
+python3 db/query.py search "Crota" --limit 5
+python3 db/query.py character "eris" --limit 20
+python3 db/query.py verify "Absolutely not." --speaker "Eris Morn" --exact</code></pre>
+
+<p>Every command accepts <code>--json</code>. Read commands accept <code>--limit</code>
+and <code>--offset</code>. Search treats punctuation as text instead of throwing
+an error.</p>
+
+<p>A failed <code>verify</code> exits with status 1 and prints <code>NOT FOUND</code>.
+Treat that as a stop sign, not a puzzle to reword until it passes.</p>
+
+</details>
+
+<details class="section">
+<summary><span class="section-title" role="heading" aria-level="2" id="connect-an-ai">Connect an AI <a class="heading-anchor" href="#connect-an-ai" aria-label="Permalink to Connect an AI">#</a></span></summary>
+
+MCP lets a client ask the archive questions as tools. Install the adapter once:
+
+<pre><code>bash mcp-server/install.sh</code></pre>
+
+<p>The installer prints a client snippet pointing at <code>mcp-server/run.sh</code>.
+It runs locally, over stdio, and only reads the database. See
+<a href="{{ '/grimoire/mcp/' | url }}">MCP server</a> for the client setup and the
+full tool list.</p>
+
+</details>
+
+<h2 id="for-experts">For experts <a class="heading-anchor" href="#for-experts" aria-label="Permalink to For experts">#</a></h2>
+
+<p class="muted">The release details, rebuild path and test gates. You can ignore
+this section if the short version worked.</p>
+
+<details class="section">
+<summary><span class="section-title" role="heading" aria-level="2" id="release-details">The release, step by step <a class="heading-anchor" href="#release-details" aria-label="Permalink to The release, step by step">#</a></span></summary>
+
+<p>The release asset is the official download. <code>SHA256SUMS</code> is attached
+to the same release, and the publish pipeline checks the digest before it goes
+out.</p>
 
 <pre><code>curl -fsSL https://github.com/sagaciouszu/destiny-agent-grimoire/releases/latest/download/grimoire.db -o grimoire.db
 curl -fsSL https://github.com/sagaciouszu/destiny-agent-grimoire/releases/latest/download/SHA256SUMS -o SHA256SUMS
 sha256sum -c SHA256SUMS
 mv grimoire.db db/grimoire.db</code></pre>
 
-A mismatch means the file was cut short or changed on the way. Delete it and
-download again instead of opening it.
-
-</details>
-
-<details class="section">
-<summary><span class="section-title" role="heading" aria-level="2" id="query-the-archive">Try the commands <a class="heading-anchor" href="#query-the-archive" aria-label="Permalink to Try the commands">#</a></span></summary>
-
-Search, character lines and quote checks are the everyday moves:
-
-<pre><code>python3 db/query.py stats
-python3 db/query.py search "Crota" --limit 5
-python3 db/query.py character "eris" --limit 20
-python3 db/query.py verify "I am Eris Morn." --speaker "Eris Morn" --exact</code></pre>
-
-Every command accepts `--json`, and read commands accept `--limit` and `--offset`.
-Search takes unquoted words; punctuation that would confuse the search engine is
-treated as plain text instead of an error.
-
-</details>
-
-<details class="section">
-<summary><span class="section-title" role="heading" aria-level="2" id="verify-a-quote">Check a quote <a class="heading-anchor" href="#verify-a-quote" aria-label="Permalink to Check a quote">#</a></span></summary>
-
-This is the line between quoting canon and making something up that sounds close.
-Pass the speaker when attribution matters, and add `--exact` when you want the
-whole line, not a piece of it.
-
-<pre><code>python3 db/query.py verify "Absolutely not." --speaker "Eris Morn" --exact
-python3 db/query.py verify "not a canon line"</code></pre>
-
-The first exits 0 and lists the matching sources. The second exits 1 and prints
-`NOT FOUND`. A failed check is a stop sign, not a hint to keep rewording until
-something sticks.
-
-</details>
-
-<details class="section">
-<summary><span class="section-title" role="heading" aria-level="2" id="run-the-mcp-server">Connect an MCP client <a class="heading-anchor" href="#run-the-mcp-server" aria-label="Permalink to Connect an MCP client">#</a></span></summary>
-
-MCP lets an AI client ask the archive questions as tools instead of typing shell
-commands. Install the adapter once:
-
-<pre><code>bash mcp-server/install.sh</code></pre>
-
-The installer prints a client snippet pointing at `mcp-server/run.sh`. It is
-local, stdio-only and read-only. See [MCP server]({{ '/grimoire/mcp/' | url }})
-for the twelve tools, client configuration and the safety limits.
+<p>A mismatch means the file was cut short or changed in transit. Delete it and
+download again instead of opening it.</p>
 
 </details>
 
 <details class="section">
 <summary><span class="section-title" role="heading" aria-level="2" id="rebuild-and-ingest">Rebuild and add lore <a class="heading-anchor" href="#rebuild-and-ingest" aria-label="Permalink to Rebuild and add lore">#</a></span></summary>
 
-Rebuild after changing sources or scraper output. The build reads `source/` and
-`archive/data/*.jsonl` and writes a fresh database.
+<p>Rebuild after changing sources or scraper output. The migration is the only
+step that writes the database.</p>
 
 <pre><code>python3 db/migrate.py
 python3 tests/sync-doc-counts.py</code></pre>
 
-The helpers under `archive/` and `scripts/` collect and format the inputs. The
-migration is the only step that writes the database.
+<p>The helpers under <code>archive/</code> and <code>scripts/</code> collect and
+format the inputs.</p>
 
 </details>
 
 <details class="section">
 <summary><span class="section-title" role="heading" aria-level="2" id="run-the-gates">Run the checks <a class="heading-anchor" href="#run-the-gates" aria-label="Permalink to Run the checks">#</a></span></summary>
 
-The archive audit covers database integrity, source conformance, retrieval,
-documentation and the MCP surface.
+<p>The archive audit covers database integrity, source conformance, retrieval,
+documentation and the MCP surface.</p>
 
 <pre><code>bash grimoire-master-audit.sh
 bash tests/query-interface-test.sh
 python3 tests/conformance.py</code></pre>
 
-Agent checks live with each agent repository and pull the shared gates through
-`lore/tests/`.
+<p>Agent checks live with each agent repository and pull the shared gates through
+<code>lore/tests/</code>.</p>
 
 </details>
 
