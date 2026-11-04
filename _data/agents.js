@@ -9,6 +9,10 @@ module.exports = [
     name: "The Drifter",
     role: "Gambler · Gambit handler · Dark Age survivor",
     heading: "The gambler",
+    image: "/assets/agents/drifter.jpg",
+    imageAlt: "The Drifter stands in the Annex, one hand raised.",
+    imageWidth: 960,
+    imageHeight: 540,
     featured: true,
     short:
       "A Dark Age survivor, the proprietor of Gambit, and a man who treats every alliance as a wager.",
@@ -50,6 +54,10 @@ module.exports = [
     name: "Eris Morn",
     role: "Hive expert · Survivor of the Hellmouth · The Witch",
     heading: "The Witch",
+    image: "/assets/agents/eris.jpg",
+    imageAlt: "Eris Morn stands on the Moon, a green orb of Hive light in her hand.",
+    imageWidth: 960,
+    imageHeight: 540,
     featured: true,
     short:
       "The only survivor of a fireteam lost in the Hellmouth, and the Tower's closest thing to a Hive expert.",
