@@ -41,7 +41,7 @@ description: A searchable Destiny lore archive and a growing number of character
     <label class="transmission-filter">Topic
       <select data-rotator-topic>
         <option value="">All topics</option>
-        {% for topic in voices | uniqueTopics %}
+        {% for topic in voices | popularTopics %}
         <option value="{{ topic | escape }}">{{ topic | escape }}</option>
         {% endfor %}
       </select>

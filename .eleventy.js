@@ -9,9 +9,39 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("split", (value, separator) => String(value).split(separator));
 
-  eleventyConfig.addFilter("uniqueTopics", (voices) =>
-    [...new Set(voices.map((voice) => voice.topic))].sort((a, b) => a.localeCompare(b)),
-  );
+  eleventyConfig.addFilter("popularTopics", (voices) => {
+    const priority = [
+      "on the Hive",
+      "on the Witness",
+      "on the Pyramids",
+      "on the Traveler",
+      "on Crota",
+      "on Oryx",
+      "on Savathûn",
+      "on the Moon",
+      "on the Vanguard",
+      "on the Nine",
+      "on the Darkness",
+      "on Gambit",
+      "on grief",
+    ];
+    const counts = new Map();
+    voices.forEach((voice) => {
+      counts.set(voice.topic, (counts.get(voice.topic) || 0) + 1);
+    });
+    return [...counts.entries()]
+      .sort((a, b) => {
+        if (b[1] !== a[1]) return b[1] - a[1];
+        const ai = priority.indexOf(a[0]);
+        const bi = priority.indexOf(b[0]);
+        if (ai !== -1 || bi !== -1) {
+          return (ai === -1 ? 999 : ai) - (bi === -1 ? 999 : bi);
+        }
+        return a[0].localeCompare(b[0]);
+      })
+      .slice(0, 6)
+      .map(([topic]) => topic);
+  });
 
   eleventyConfig.addFilter("assetHash", (urlPath) => {
     try {
