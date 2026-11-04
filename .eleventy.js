@@ -15,19 +15,19 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("popularTopics", (voices) => {
     const priority = [
-      "on the Hive",
-      "on the Witness",
-      "on the Pyramids",
-      "on the Traveler",
-      "on Crota",
-      "on Oryx",
-      "on Savathûn",
-      "on the Moon",
-      "on the Vanguard",
-      "on the Nine",
-      "on the Darkness",
-      "on Gambit",
       "on grief",
+      "on the Hive",
+      "on the Traveler",
+      "on the Vanguard",
+      "on the Guardian",
+      "on hope",
+      "on the Witness",
+      "on the Darkness",
+      "on the Light",
+      "on the Cabal",
+      "on the City",
+      "on Gambit",
+      "on the Nine",
     ];
     const counts = new Map();
     voices.forEach((voice) => {
