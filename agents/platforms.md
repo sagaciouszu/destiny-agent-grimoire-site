@@ -4,6 +4,7 @@ layout: page
 title: Use Another App
 category: Personas · Use Another App
 lede: Pick the AI app you use. If you are not sure, start with OpenCode or OpenClaw; both get a scripted setup. Everything else can load a character instructions file and, where supported, the library connector.
+permalink: /personas/platforms/
 ---
 
 ## OpenCode and OpenClaw
@@ -18,7 +19,7 @@ bash scripts/sync-live-agents.sh
 bash scripts/sync-live-agents.sh --openclaw</code></pre>
 
 <p>Run these from the Grimoire folder. The full walkthrough, including what gets
-written where, is on <a href="{{ '/agents/install/' | url }}">Install the characters</a>.</p>
+written where, is on <a href="{{ '/personas/install/' | url }}">Install the characters</a>.</p>
 
 ## Other apps
 
@@ -76,6 +77,6 @@ commands, but they can still read other folders. Keep private folders private.
 
 ## Next
 
-- [Install the characters]({{ '/agents/install/' | url }})
+- [Install the characters]({{ '/personas/install/' | url }})
 - [Connect an AI]({{ '/grimoire/mcp/' | url }})
 - [Troubleshoot a missing character or connection]({{ '/troubleshooting/' | url }})

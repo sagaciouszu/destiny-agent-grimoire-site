@@ -15,7 +15,7 @@ description: A searchable Destiny lore library and character personas that read 
     </p>
     <div class="hero-actions">
       <a class="button button-primary" href="{{ '/grimoire/install/' | url }}">Get the Grimoire</a>
-      <a class="button" href="{{ '/agents/' | url }}">Meet the characters</a>
+      <a class="button" href="{{ '/personas/' | url }}">Meet the characters</a>
     </div>
 
     <nav class="setup-order setup-order--hero" aria-label="Recommended setup order">
@@ -23,7 +23,7 @@ description: A searchable Destiny lore library and character personas that read 
       <ol>
         <li><a href="{{ '/grimoire/install/' | url }}">1. Grimoire</a></li>
         <li><a href="{{ '/grimoire/mcp/' | url }}">2. AI access <span class="setup-optional">optional</span></a></li>
-        <li><a href="{{ '/agents/install/' | url }}">3. Characters</a></li>
+        <li><a href="{{ '/personas/install/' | url }}">3. Characters</a></li>
       </ol>
     </nav>
   </div>
@@ -32,21 +32,31 @@ description: A searchable Destiny lore library and character personas that read 
     <p class="transmission-label">Test tapes</p>
     <div class="transmission-window">
       {% for voice in voices %}
-      <div class="transmission-item{% if loop.first %} is-active{% endif %}" data-voice data-topic="{{ voice.topic | escape }}">
+      <div class="transmission-item{% if loop.first %} is-active{% endif %}" data-voice data-speaker="{{ voice.speaker | escape }}" data-topic="{{ voice.topic | escape }}">
         <p class="transmission-prompt">{{ voice.prompt | escape }}</p>
         <blockquote><p>{{ voice.text | escape }}</p></blockquote>
         <p class="transmission-caption">{% if voice.url %}<a href="{{ voice.url | url }}">{{ voice.speaker | escape }}</a>{% else %}<span class="transmission-speaker">{{ voice.speaker | escape }}</span>{% endif %} <span class="transmission-topic">· {{ voice.topic | escape }}</span>{% if voice.sourceUrl %} <span aria-hidden="true">·</span> <a class="transmission-source" href="{{ voice.sourceUrl }}">source</a>{% elif voice.sourceLabel %} <span aria-hidden="true">·</span> <span class="transmission-source">{{ voice.sourceLabel | escape }}</span>{% elif voice.verified %} <span aria-hidden="true">·</span> <span class="transmission-verified">verified canon</span>{% endif %}</p>
       </div>
       {% endfor %}
     </div>
-    <label class="transmission-filter">Topic
-      <select data-rotator-topic>
-        <option value="">All topics</option>
-        {% for topic in voices | popularTopics %}
-        <option value="{{ topic | escape }}">{{ topic | escape }}</option>
-        {% endfor %}
-      </select>
-    </label>
+    <div class="transmission-filters">
+      <label class="transmission-filter">Character
+        <select data-rotator-speaker>
+          <option value="">All characters</option>
+          {% for speaker in voices | uniqueSpeakers %}
+          <option value="{{ speaker | escape }}">{{ speaker | escape }}</option>
+          {% endfor %}
+        </select>
+      </label>
+      <label class="transmission-filter">Topic
+        <select data-rotator-topic>
+          <option value="">All topics</option>
+          {% for topic in voices | popularTopics %}
+          <option value="{{ topic | escape }}">{{ topic | escape }}</option>
+          {% endfor %}
+        </select>
+      </label>
+    </div>
     <div class="transmission-controls" data-rotator-controls hidden>
       <button type="button" data-rotator-shuffle>Random</button>
       <button type="button" data-rotator-prev aria-label="Previous test transcript">‹</button>
@@ -94,9 +104,9 @@ description: A searchable Destiny lore library and character personas that read 
         other for help, without sharing private notes.
       </p>
       <div class="category-links">
-        <a href="{{ '/agents/' | url }}">Meet them</a>
-        <a href="{{ '/agents/drifter/' | url }}">The Drifter</a>
-        <a href="{{ '/agents/eris/' | url }}">Eris Morn</a>
+        <a href="{{ '/personas/' | url }}">Meet them</a>
+        <a href="{{ '/personas/drifter/' | url }}">The Drifter</a>
+        <a href="{{ '/personas/eris/' | url }}">Eris Morn</a>
       </div>
     </div>
   </article>
@@ -115,8 +125,8 @@ description: A searchable Destiny lore library and character personas that read 
         stay separate.
       </p>
       <div class="category-links">
-        <a href="{{ '/agents/install/' | url }}">Install a character</a>
-        <a href="{{ '/agents/platforms/' | url }}">Use another app</a>
+        <a href="{{ '/personas/install/' | url }}">Install a character</a>
+        <a href="{{ '/personas/platforms/' | url }}">Use another app</a>
       </div>
     </div>
   </article>

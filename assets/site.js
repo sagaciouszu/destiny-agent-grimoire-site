@@ -170,11 +170,13 @@
     next?.addEventListener("click", () => { show(index + 1); start(); });
 
     const topicSelect = rotator.querySelector("[data-rotator-topic]");
+    const speakerSelect = rotator.querySelector("[data-rotator-speaker]");
     const shuffleButton = rotator.querySelector("[data-rotator-shuffle]");
+    const matchesFilters = (item) =>
+      (!topicSelect?.value || item.dataset.topic === topicSelect.value) &&
+      (!speakerSelect?.value || item.dataset.speaker === speakerSelect.value);
     const randomTape = () => {
-      const available = items.filter(
-        (item) => !topicSelect?.value || item.dataset.topic === topicSelect.value,
-      );
+      const available = items.filter(matchesFilters);
       if (!available.length) return;
       const pick = available[Math.floor(Math.random() * available.length)];
       show(items.indexOf(pick));
@@ -183,6 +185,7 @@
 
     shuffleButton?.addEventListener("click", randomTape);
     topicSelect?.addEventListener("change", randomTape);
+    speakerSelect?.addEventListener("change", randomTape);
 
     rotator.addEventListener("mouseenter", stop);
     rotator.addEventListener("mouseleave", start);

@@ -274,6 +274,6 @@ it prints the missing file or mismatched count instead of hiding it.
 ## Still stuck
 
 - [Install the Grimoire]({{ '/grimoire/install/' | url }})
-- [Deploy an agent]({{ '/agents/install/' | url }})
+- [Deploy an agent]({{ '/personas/install/' | url }})
 - [Read the standards](https://github.com/sagaciouszu/destiny-agent-grimoire/blob/master/STANDARDS.md)
 - [Open an issue](https://github.com/sagaciouszu/destiny-agent-grimoire/issues)

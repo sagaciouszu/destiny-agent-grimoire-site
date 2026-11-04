@@ -1,3 +1,35 @@
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("fonts/neue-haas-roman.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("fonts/neue-haas-medium.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: url("fonts/neue-haas-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist Mono";
+  src: url("fonts/geist-mono.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* Vanguard-inspired UI palette: deep navy, bone, Vanguard gold,
      muted blue. Deliberately no cyan. */
@@ -592,7 +624,6 @@ pre:hover .copy-button,
   flex: none;
   width: 1.1rem;
   color: var(--gold);
-  font-family: var(--mono);
   font-weight: 600;
 }
 
@@ -773,7 +804,7 @@ pre:hover .copy-button,
 .setup-optional {
   color: var(--muted);
   font-size: 0.72rem;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 @media (min-width: 900px) {
@@ -826,6 +857,7 @@ pre:hover .copy-button,
   font-size: 0.82rem;
   font-weight: 600;
   line-height: 1.45;
+  text-wrap: balance;
 }
 
 .transmission-prompt::before {
@@ -841,6 +873,7 @@ pre:hover .copy-button,
   max-width: none;
   font-size: 1.02rem;
   line-height: 1.55;
+  text-wrap: pretty;
 }
 
 .transmission-caption {
@@ -880,9 +913,20 @@ pre:hover .copy-button,
   font-weight: 600;
 }
 
+.transmission-filters {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.55rem;
+  margin: 0 0 0.55rem;
+}
+
+@media (max-width: 430px) {
+  .transmission-filters { grid-template-columns: 1fr; }
+}
+
 .transmission-filter {
   display: block;
-  margin: 0 0 0.55rem;
+  margin: 0;
   color: var(--muted);
   font-size: 0.68rem;
   font-weight: 700;
@@ -935,8 +979,9 @@ pre:hover .copy-button,
 .transmission-count {
   margin-left: auto;
   color: var(--muted);
-  font-family: var(--mono);
   font-size: 0.75rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
 }
 
 .transmission-note {
@@ -1019,8 +1064,9 @@ pre:hover .copy-button,
 
 .category-index {
   color: var(--gold);
-  font-family: var(--mono);
   font-size: 0.85rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
   padding-top: 0.35rem;
 }
 
@@ -1029,6 +1075,7 @@ pre:hover .copy-button,
   color: var(--heading);
   font-size: 1.5rem;
   line-height: 1.25;
+  font-weight: 700;
 }
 
 .category p {
@@ -1085,6 +1132,8 @@ pre:hover .copy-button,
   color: var(--heading);
   font-size: 1.35rem;
   line-height: 1.1;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
 }
 
 .stat-grid span {
@@ -1436,6 +1485,7 @@ pre:hover .copy-button,
   margin-bottom: 0.25rem;
   color: var(--heading);
   font-size: 0.95rem;
+  font-weight: 700;
 }
 
 .tile-grid p {
@@ -1498,6 +1548,7 @@ pre:hover .copy-button,
   display: block;
   color: var(--heading);
   font-size: 1rem;
+  font-weight: 700;
 }
 
 .fit-node p:last-child {
@@ -1999,4 +2050,25 @@ pre:hover .copy-button,
   --veil-top: rgba(233, 240, 244, 0.4);
   --veil-mid: rgba(233, 240, 244, 0.66);
   --shadow: rgba(20, 45, 60, 0.16);
+}
+
+
+/* Typographic balance for prose and headings. */
+.lore h1,
+.lore h2,
+.lore h3,
+.hero h1,
+.category h2 {
+  text-wrap: balance;
+}
+
+.lore p,
+.lore li,
+.category p {
+  text-wrap: pretty;
+}
+
+strong,
+b {
+  font-weight: 700;
 }

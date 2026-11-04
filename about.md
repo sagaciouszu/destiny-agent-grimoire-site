@@ -62,4 +62,4 @@ standards and release history live in the
 - [Project](https://github.com/sagaciouszu/destiny-agent-grimoire)
 - [Standards](https://github.com/sagaciouszu/destiny-agent-grimoire/blob/master/STANDARDS.md)
 - [Releases](https://github.com/sagaciouszu/destiny-agent-grimoire/releases)
-- [Personas]({{ '/agents/' | url }})
+- [Personas]({{ '/personas/' | url }})

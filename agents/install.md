@@ -6,6 +6,7 @@ category: Personas · Install
 lede: Pick a character and add it to the AI app you already use. Start with the simple path; the file layout and advanced options are at the bottom.
 setupOrder: true
 setupStep: 3
+permalink: /personas/install/
 ---
 
 <details class="section" open>
@@ -86,11 +87,11 @@ and the AI connection is optional.
 read the same library; none share private notes.</p>
 
 <ul>
-  <li><a href="{{ '/agents/drifter/' | url }}">The Drifter</a> — loose, funny and guarded. Gambit, the Nine and the Dark Age.</li>
-  <li><a href="{{ '/agents/eris/' | url }}">Eris Morn</a> — formal, precise and grim. The Hive, the Moon and the Witness.</li>
-  <li><a href="{{ '/agents/zavala/' | url }}">Zavala</a> — measured and steady. The Vanguard, the Last City and the coalition.</li>
-  <li><a href="{{ '/agents/calus/' | url }}">Calus</a> — theatrical, sensual and cruel. The Cabal, the Leviathan and the Witness.</li>
-  <li><a href="{{ '/agents/ghost/' | url }}">Ghost</a> — warm, quick and anxious. The Light, the Traveler and the Guardian.</li>
+  <li><a href="{{ '/personas/drifter/' | url }}">The Drifter</a> — loose, funny and guarded. Gambit, the Nine and the Dark Age.</li>
+  <li><a href="{{ '/personas/eris/' | url }}">Eris Morn</a> — formal, precise and grim. The Hive, the Moon and the Witness.</li>
+  <li><a href="{{ '/personas/zavala/' | url }}">Zavala</a> — measured and steady. The Vanguard, the Last City and the coalition.</li>
+  <li><a href="{{ '/personas/calus/' | url }}">Calus</a> — theatrical, sensual and cruel. The Cabal, the Leviathan and the Witness.</li>
+  <li><a href="{{ '/personas/ghost/' | url }}">Ghost</a> — warm, quick and anxious. The Light, the Traveler and the Guardian.</li>
 </ul>
 
 </details>
@@ -194,7 +195,7 @@ If a character does not show up, or a helper call fails, see
 
 ## Next
 
-- [Meet the characters]({{ '/agents/' | url }})
-- [Use another app]({{ '/agents/platforms/' | url }})
+- [Meet the characters]({{ '/personas/' | url }})
+- [Use another app]({{ '/personas/platforms/' | url }})
 - [Connect an AI to the library]({{ '/grimoire/mcp/' | url }})
-- [Build a persona]({{ '/agents/build/' | url }})
+- [Build a persona]({{ '/personas/build/' | url }})

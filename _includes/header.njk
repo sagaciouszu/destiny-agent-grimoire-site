@@ -15,15 +15,15 @@
       <details class="nav-menu"{% if section == 'personas' %} data-active="true"{% endif %}>
         <summary>Personas</summary>
         <ul class="nav-submenu">
-          <li><a href="{{ '/agents/' | url }}"{% if page.url == '/agents/' %} aria-current="page"{% endif %}>Overview</a></li>
-          <li><a href="{{ '/agents/install/' | url }}"{% if page.url == '/agents/install/' %} aria-current="page"{% endif %}>Install</a></li>
-          <li><a href="{{ '/agents/platforms/' | url }}"{% if page.url == '/agents/platforms/' %} aria-current="page"{% endif %}>Use another app</a></li>
+          <li><a href="{{ '/personas/' | url }}"{% if page.url == '/personas/' %} aria-current="page"{% endif %}>Overview</a></li>
+          <li><a href="{{ '/personas/install/' | url }}"{% if page.url == '/personas/install/' %} aria-current="page"{% endif %}>Install</a></li>
+          <li><a href="{{ '/personas/platforms/' | url }}"{% if page.url == '/personas/platforms/' %} aria-current="page"{% endif %}>Use another app</a></li>
           <li class="nav-sep" aria-hidden="true"></li>
           {% for agent in agents %}
-          <li><a href="{{ ('/agents/' + agent.id + '/') | url }}"{% if page.url == ('/agents/' + agent.id + '/') %} aria-current="page"{% endif %}>{{ agent.name }}</a></li>
+          <li><a href="{{ ('/personas/' + agent.id + '/') | url }}"{% if page.url == ('/personas/' + agent.id + '/') %} aria-current="page"{% endif %}>{{ agent.name }}</a></li>
           {% endfor %}
           <li class="nav-sep" aria-hidden="true"></li>
-          <li><a href="{{ '/agents/#more-personas' | url }}">More personas ({{ placeholders | length }})</a></li>
+          <li><a href="{{ '/personas/#more-personas' | url }}">More personas ({{ placeholders | length }})</a></li>
         </ul>
       </details>
 

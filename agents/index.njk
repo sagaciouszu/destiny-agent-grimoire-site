@@ -4,6 +4,7 @@ layout: page
 title: Personas
 category: Personas · Overview
 lede: Five characters you can talk to today, with more on the way. Each reads the same library, so they answer from the same lore.
+permalink: /personas/
 ---
 
 <h2 id="what-these-are">What these are <a class="heading-anchor" href="#what-these-are" aria-label="Permalink to What these are">#</a></h2>
@@ -26,10 +27,10 @@ library. That is what keeps them from making up lore when they answer.</p>
       <img src="{{ cardSrc | url }}"{% if agent.cardImage %} srcset="{{ agent.cardImage | url }} 640w, {{ agent.image | url }} 960w" sizes="(min-width: 700px) 50vw, 90vw"{% endif %} alt="{{ agent.imageAlt | escape }}" width="{{ agent.imageWidth }}" height="{{ agent.imageHeight }}" loading="lazy" decoding="async">
     </figure>
     {% endif %}
-    <strong><a href="{{ ('/agents/' + agent.id + '/') | url }}">{{ agent.name }}</a></strong>
+    <strong><a href="{{ ('/personas/' + agent.id + '/') | url }}">{{ agent.name }}</a></strong>
     <p class="agent-role">{{ agent.role }}</p>
     <p>{{ agent.short }}</p>
-    <p class="agent-more"><a href="{{ ('/agents/' + agent.id + '/') | url }}">Read the full profile</a></p>
+    <p class="agent-more"><a href="{{ ('/personas/' + agent.id + '/') | url }}">Read the full profile</a></p>
   </li>
   {% endfor %}
 </ul>
@@ -120,9 +121,9 @@ completeness, the conversation path and the shared structure gates.</p>
 <h2 id="next">Next</h2>
 
 <ul>
-  <li><a href="{{ '/agents/install/' | url }}">Set up a character</a></li>
-  <li><a href="{{ '/agents/platforms/' | url }}">Use another app</a></li>
+  <li><a href="{{ '/personas/install/' | url }}">Set up a character</a></li>
+  <li><a href="{{ '/personas/platforms/' | url }}">Use another app</a></li>
   <li><a href="https://github.com/sagaciouszu/destiny-agent-grimoire/blob/master/STANDARDS.md">Read the series standards</a></li>
   <li><a href="{{ '/troubleshooting/' | url }}">Troubleshoot a character that does not appear</a></li>
-  <li><a href="{{ '/agents/build/' | url }}">Build your own persona</a></li>
+  <li><a href="{{ '/personas/build/' | url }}">Build your own persona</a></li>
 </ul>

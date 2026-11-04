@@ -11,7 +11,7 @@ lede: Get the library onto your computer in a few minutes. Start with the simple
   <ol>
     <li><a href="{{ '/grimoire/install/' | url }}" aria-current="step">1. Grimoire</a></li>
     <li><a href="{{ '/grimoire/mcp/' | url }}">2. AI access <span class="setup-optional">optional</span></a></li>
-    <li><a href="{{ '/agents/install/' | url }}">3. Characters</a></li>
+    <li><a href="{{ '/personas/install/' | url }}">3. Characters</a></li>
   </ol>
 </nav>
 
@@ -163,4 +163,4 @@ through <code>lore/tests/</code>.</p>
 
 - [Try the commands](#everyday-commands)
 - [Connect an AI]({{ '/grimoire/mcp/' | url }})
-- [Assemble your fireteam]({{ '/agents/install/' | url }})
+- [Assemble your fireteam]({{ '/personas/install/' | url }})

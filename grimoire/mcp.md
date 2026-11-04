@@ -11,7 +11,7 @@ section: grimoire
   <ol>
     <li><a href="{{ '/grimoire/install/' | url }}">1. Grimoire</a></li>
     <li><a href="{{ '/grimoire/mcp/' | url }}" aria-current="step">2. AI access <span class="setup-optional">optional</span></a></li>
-    <li><a href="{{ '/agents/install/' | url }}">3. Characters</a></li>
+    <li><a href="{{ '/personas/install/' | url }}">3. Characters</a></li>
   </ol>
 </nav>
 
@@ -132,6 +132,6 @@ launch a local process.
 
 ## Next
 
-- [Meet the characters]({{ '/agents/' | url }})
-- [Use another app]({{ '/agents/platforms/' | url }})
+- [Meet the characters]({{ '/personas/' | url }})
+- [Use another app]({{ '/personas/platforms/' | url }})
 - [Install the Grimoire]({{ '/grimoire/install/' | url }})

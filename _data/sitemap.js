@@ -9,10 +9,10 @@ const pages = [
   "/grimoire/",
   "/grimoire/install/",
   "/grimoire/mcp/",
-  "/agents/",
-  "/agents/install/",
-  "/agents/platforms/",
-  "/agents/build/",
+  "/personas/",
+  "/personas/install/",
+  "/personas/platforms/",
+  "/personas/build/",
 ];
 
-module.exports = pages.concat(agents.map((agent) => `/agents/${agent.id}/`));
+module.exports = pages.concat(agents.map((agent) => `/personas/${agent.id}/`));

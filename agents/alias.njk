@@ -4,7 +4,7 @@ pagination:
   data: agentAliases
   size: 1
   alias: entry
-permalink: "/agents/{{ entry.slug }}/"
+permalink: "/personas/{{ entry.slug }}/"
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -14,12 +14,12 @@ permalink: "/agents/{{ entry.slug }}/"
 <title>{{ entry.name }} (alias) | {{ site.title }}</title>
 <meta name="description" content="Alias redirect for {{ entry.name }}.">
 <link rel="canonical" href="{{ site.origin }}{{ page.url | url }}">
-<meta http-equiv="refresh" content="0; url={{ ('/agents/' + entry.target + '/') | url }}">
+<meta http-equiv="refresh" content="0; url={{ ('/personas/' + entry.target + '/') | url }}">
 </head>
 <body>
 <main>
 <h1>{{ entry.name }}</h1>
-<p>This page has moved to <a href="{{ ('/agents/' + entry.target + '/') | url }}">the {{ entry.name }} page</a>.</p>
+<p>This page has moved to <a href="{{ ('/personas/' + entry.target + '/') | url }}">the {{ entry.name }} page</a>.</p>
 </main>
 </body>
 </html>

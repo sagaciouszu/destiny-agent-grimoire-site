@@ -4,6 +4,7 @@ layout: page
 title: Build a Persona
 category: Personas · Build a Persona
 lede: "Building a persona is a bigger project: its own project folder, one line in the series list and one entry in the site roster. This page is for people comfortable with Git and the project layout."
+permalink: /personas/build/
 ---
 
 <details class="section" open>
@@ -121,6 +122,6 @@ duplicate title or stale sitemap fails the deploy.
 
 ## Next
 
-- [Meet the characters]({{ '/agents/' | url }})
-- [Install the characters]({{ '/agents/install/' | url }})
+- [Meet the characters]({{ '/personas/' | url }})
+- [Install the characters]({{ '/personas/install/' | url }})
 - [Read the series standards](https://github.com/sagaciouszu/destiny-agent-grimoire/blob/master/STANDARDS.md)
