@@ -78,4 +78,69 @@
     });
     pre.appendChild(button);
   });
+
+  const rotator = document.querySelector("[data-rotator]");
+  if (rotator) {
+    const items = [...rotator.querySelectorAll("[data-voice]")];
+    const controls = rotator.querySelector("[data-rotator-controls]");
+    const toggle = rotator.querySelector("[data-rotator-toggle]");
+    const prev = rotator.querySelector("[data-rotator-prev]");
+    const next = rotator.querySelector("[data-rotator-next]");
+    const counter = rotator.querySelector("[data-rotator-count]");
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const interval = 7000;
+    let index = 0;
+    let timer = null;
+    let paused = reduce.matches;
+
+    const show = (nextIndex) => {
+      index = (nextIndex + items.length) % items.length;
+      items.forEach((item, i) => item.classList.toggle("is-active", i === index));
+      if (counter) counter.textContent = `${index + 1} / ${items.length}`;
+    };
+
+    const stop = () => {
+      window.clearInterval(timer);
+      timer = null;
+    };
+
+    const start = () => {
+      stop();
+      if (paused || reduce.matches || document.hidden) return;
+      timer = window.setInterval(() => show(index + 1), interval);
+    };
+
+    const updateToggle = () => {
+      if (toggle) toggle.textContent = paused ? "Play" : "Pause";
+    };
+
+    if (controls) controls.hidden = false;
+    updateToggle();
+    start();
+
+    toggle?.addEventListener("click", () => {
+      paused = !paused;
+      updateToggle();
+      if (paused) stop();
+      else start();
+    });
+
+    prev?.addEventListener("click", () => { show(index - 1); start(); });
+    next?.addEventListener("click", () => { show(index + 1); start(); });
+
+    rotator.addEventListener("mouseenter", stop);
+    rotator.addEventListener("mouseleave", start);
+    rotator.addEventListener("focusin", stop);
+    rotator.addEventListener("focusout", (event) => {
+      if (!rotator.contains(event.relatedTarget)) start();
+    });
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) stop();
+      else start();
+    });
+    reduce.addEventListener("change", () => {
+      if (reduce.matches) { paused = true; updateToggle(); }
+      start();
+    });
+  }
 })();

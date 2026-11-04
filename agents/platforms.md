@@ -1,12 +1,12 @@
 ---
-section: agents
+section: instructions
 layout: page
 title: Platform Support
-category: Agents & Instructions · Platforms
+category: Instructions · Platforms
 lede: OpenCode and OpenClaw get scripted deployment. Anything else can still use the same files, with a little manual wiring.
 ---
 
-## The basic idea
+## Portable by design
 
 An agent repository is portable. It contains an entry file, `AGENTS.md`,
 `INDEX.md`, `TOOLS.md`, voice and world notes, guardrails and `setup.sh`. Your
@@ -54,7 +54,7 @@ You can paste `AGENTS.md` and the relevant `core/` files into a system prompt, b
 the agent then has no canon lookup and no quote checking. Treat that as a limited
 setup, and do not present guesses as verified lore.
 
-## What sync does not do
+## What sync leaves to you
 
 The deployment script does not install into arbitrary runtimes, edit another
 platform's configuration, or copy credentials. Those bindings are deliberately

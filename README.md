@@ -34,14 +34,17 @@ Output goes to `_site/`.
 
 ## Content
 
-- `index.md` — home
+- `index.md` — home, including the rotating test transcripts
 - `grimoire/` — archive overview, install, MCP server
-- `agents/` — roster, install, platform support
+- `agents/` — overview, install and platform support
+- `agents/agent.njk` — generates `/agents/<id>/` pages from the roster
 - `troubleshooting.md`
 - `about.md`
 - `404.md`
 - `getting-started.md` — legacy redirect kept for old links
 - `_data/agents.js` — the agent roster; add new agents there
+- `_data/voices.js` — short test transcript excerpts for the home panel
+- `_data/sitemap.js`, `sitemap.njk`, `robots.txt.njk` — crawler metadata
 - `assets/site.css`, `assets/site.js`, `assets/starmap.svg`
 
 ## Deploy
@@ -52,3 +55,13 @@ GitHub Pages.
 ## License
 
 MIT. See [LICENSE](LICENSE). Destiny and its content belong to Bungie.
+
+## Agent pages
+
+Each entry in `_data/agents.js` produces an agent page at `/agents/<id>/`,
+plus a nav item and a sitemap entry. The same id drives the consult copy name
+(`<id>-consult.md`), so keep it aligned with the deploy registry.
+
+The home-page panel reads from `_data/voices.js`. Those are short excerpts from
+the agent test suites, not model output and not canon. Replace that file with a
+generated index when the test repositories expose one.

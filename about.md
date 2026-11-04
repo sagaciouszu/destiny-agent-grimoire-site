@@ -5,7 +5,7 @@ category: About
 lede: A fan-built archive and a growing series of character agents, maintained in the open.
 ---
 
-## Project
+## The project
 
 The Destiny Agent Grimoire is a fan-made, non-commercial project. It exists to
 make Destiny lore readable and verifiable by both people and software: one
@@ -15,7 +15,7 @@ The code, tests and documentation are MIT licensed. Destiny, its text, character
 and art belong to Bungie. This project is not affiliated with or endorsed by
 Bungie.
 
-## Accessibility
+## For every Guardian
 
 The site aims to be readable and operable without a mouse:
 
@@ -30,13 +30,13 @@ The site aims to be readable and operable without a mouse:
 If something is difficult to read or operate, open an issue with the page and the
 assistive technology or browser you used.
 
-## Maintainer
+## The keeper
 
 Maintained by [sagacious zu](https://github.com/sagaciouszu). The archive,
 standards and release history live in the
 [Grimoire repository](https://github.com/sagaciouszu/destiny-agent-grimoire).
 
-## Links
+## Elsewhere
 
 - [Site source](https://github.com/sagaciouszu/grimoire-site)
 - [Repository](https://github.com/sagaciouszu/destiny-agent-grimoire)

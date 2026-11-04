@@ -5,17 +5,38 @@ description: A searchable Destiny lore archive and a growing number of character
 ---
 
 <section class="hero">
-  <p class="kicker">Destiny lore · for people and their agents</p>
-  <h1>Destiny Agent Grimoire</h1>
-  <p class="lede">
-    One searchable archive of Destiny's books, dialogue and gear lore — plus a growing
-    number of character agents that read from it. Every quote keeps its source, and you can
-    check a line before you use it.
-  </p>
-  <div class="hero-actions">
-    <a class="button button-primary" href="{{ '/grimoire/install/' | url }}">Get the archive</a>
-    <a class="button" href="{{ '/agents/' | url }}">Meet the agents</a>
+  <div class="hero-copy">
+    <p class="kicker">Destiny lore · for people and their agents</p>
+    <h1>Destiny Agent Grimoire</h1>
+    <p class="lede">
+      One searchable archive of Destiny's books, dialogue and gear lore — plus a growing
+      number of character agents that read from it. Every quote keeps its source, and you can
+      check a line before you use it.
+    </p>
+    <div class="hero-actions">
+      <a class="button button-primary" href="{{ '/grimoire/install/' | url }}">Get the archive</a>
+      <a class="button" href="{{ '/agents/' | url }}">Meet the agents</a>
+    </div>
   </div>
+
+  <aside class="transmission" data-rotator aria-label="Test transcripts from the agent conversations">
+    <p class="transmission-label">Test tapes</p>
+    <div class="transmission-window">
+      {% for voice in voices %}
+      <figure class="transmission-item{% if forloop.first %} is-active{% endif %}" data-voice>
+        <blockquote><p>{{ voice.text | escape }}</p></blockquote>
+        <figcaption>{{ voice.speaker | escape }} <span class="transmission-topic">· {{ voice.topic | escape }}</span></figcaption>
+      </figure>
+      {% endfor %}
+    </div>
+    <div class="transmission-controls" data-rotator-controls hidden>
+      <button type="button" data-rotator-prev aria-label="Previous test transcript">‹</button>
+      <button type="button" data-rotator-toggle>Pause</button>
+      <button type="button" data-rotator-next aria-label="Next test transcript">›</button>
+      <span class="transmission-count" data-rotator-count aria-hidden="true">1 / {{ voices.size }}</span>
+    </div>
+    <p class="transmission-note">Scripted output from the agent test suites.</p>
+  </aside>
 </section>
 
 <section class="categories" aria-label="Explore the project">
@@ -39,7 +60,7 @@ description: A searchable Destiny lore archive and a growing number of character
   <article class="category">
     <span class="category-index" aria-hidden="true">02</span>
     <div>
-      <h2>Agents &amp; Instructions</h2>
+      <h2>The crew</h2>
       <p>
         The Drifter and Eris Morn are separate characters with their own voices,
         memories and tests. They share the archive and can quietly ask each other
@@ -47,8 +68,6 @@ description: A searchable Destiny lore archive and a growing number of character
       </p>
       <div class="category-links">
         <a href="{{ '/agents/' | url }}">Meet the series</a>
-        <a href="{{ '/agents/install/' | url }}">Set one up</a>
-        <a href="{{ '/agents/platforms/' | url }}">Other platforms</a>
       </div>
     </div>
   </article>
@@ -56,7 +75,22 @@ description: A searchable Destiny lore archive and a growing number of character
   <article class="category">
     <span class="category-index" aria-hidden="true">03</span>
     <div>
-      <h2>Troubleshooting</h2>
+      <h2>The loadout</h2>
+      <p>
+        Give one character its own folder, or deploy the whole series into
+        OpenCode or OpenClaw. The archive is shared; the memories are not.
+      </p>
+      <div class="category-links">
+        <a href="{{ '/agents/install/' | url }}">Install an agent</a>
+        <a href="{{ '/agents/platforms/' | url }}">Check platform support</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="category">
+    <span class="category-index" aria-hidden="true">04</span>
+    <div>
+      <h2>Guardian down</h2>
       <p>
         Missing database, no tools in your client, an agent that will not appear,
         or a quote that keeps failing. Start with the symptom and work back to the
