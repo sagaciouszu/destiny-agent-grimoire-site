@@ -139,6 +139,18 @@
       if (toggle) toggle.textContent = paused ? "Play" : "Pause";
     };
 
+    const shuffle = (list) => {
+      for (let i = list.length - 1; i > 0; i -= 1) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [list[i], list[j]] = [list[j], list[i]];
+      }
+      return list;
+    };
+
+    shuffle(items);
+    items.forEach((item) => item.parentNode.appendChild(item));
+    show(0);
+
     if (controls) controls.hidden = false;
     updateToggle();
     start();
