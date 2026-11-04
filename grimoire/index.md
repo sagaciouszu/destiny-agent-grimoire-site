@@ -49,6 +49,10 @@ The current build has:
   <div><strong>73,012</strong><span>dialogue lines</span></div>
   <div><strong>2,889</strong><span>grimoire cards</span></div>
   <div><strong>58,764</strong><span>items</span></div>
+  <div><strong>18</strong><span>expansions</span></div>
+  <div><strong>28</strong><span>seasons</span></div>
+  <div><strong>9</strong><span>events</span></div>
+  <div><strong>67</strong><span>activities</span></div>
   <div><strong>71</strong><span>triumphs and seals</span></div>
   <div><strong>20</strong><span>curated characters</span></div>
 </div>

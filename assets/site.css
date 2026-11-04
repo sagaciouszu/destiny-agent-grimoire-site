@@ -1050,9 +1050,17 @@ pre:hover .copy-button,
 
 .stat-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.7rem;
   margin: 1rem 0 1.2rem;
+}
+
+@media (min-width: 700px) {
+  .stat-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1000px) {
+  .stat-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
 
 .stat-grid div {
