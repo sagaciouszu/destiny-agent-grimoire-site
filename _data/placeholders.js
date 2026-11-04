@@ -21,4 +21,14 @@ module.exports = [
     imageHeight: 540,
     note: "Planned",
   },
+  {
+    id: "ghost",
+    name: "Ghost",
+    role: "The Guardian's companion · Lightbearer",
+    image: "/assets/agents/ghost.jpg",
+    imageAlt: "A Ghost floats with its shell open and its blue eye lit.",
+    imageWidth: 960,
+    imageHeight: 540,
+    note: "Planned",
+  },
 ];

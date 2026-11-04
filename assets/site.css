@@ -1554,10 +1554,6 @@ pre:hover .copy-button,
   color: var(--muted);
 }
 
-@media (min-width: 1000px) {
-  .tile-grid--personas { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-}
-
 .tile-grid .persona-status {
   margin-top: 0.55rem;
   color: var(--gold-dim);
