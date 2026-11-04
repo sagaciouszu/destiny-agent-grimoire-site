@@ -1112,7 +1112,7 @@ pre:hover .copy-button,
 }
 
 .agent-portrait {
-  margin: 0 0 2rem;
+  margin: 0 0 0.7rem;
   overflow: hidden;
   background: var(--surface);
   border: 1px solid var(--line);
@@ -1218,7 +1218,7 @@ pre:hover .copy-button,
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.6rem;
-  margin: 1rem 0 1.6rem;
+  margin: 0 0 1.6rem;
 }
 
 .agent-facts div {
@@ -1400,23 +1400,47 @@ pre:hover .copy-button,
 
 .agent-record dd { margin: 0; }
 
-.agent-quote {
-  margin: 1.2rem 0;
-  padding-left: 1.1rem;
-  border-left: 2px solid var(--gold-dim);
+.quote-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 0.8rem;
+  margin: 1rem 0 1.6rem;
 }
 
-.agent-quote blockquote { margin: 0; }
+.agent-quote {
+  position: relative;
+  margin: 0;
+  padding: 1.15rem 1rem 0.9rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+.agent-quote::before {
+  content: "“";
+  position: absolute;
+  top: 0.15rem;
+  left: 0.7rem;
+  color: var(--gold-dim);
+  font-size: 2.4rem;
+  line-height: 1;
+  opacity: 0.65;
+}
+
+.agent-quote blockquote {
+  margin: 0;
+  padding-top: 0.55rem;
+}
 
 .agent-quote blockquote p {
   margin: 0;
-  font-size: 1.05rem;
+  font-size: 1rem;
 }
 
 .agent-quote figcaption {
-  margin-top: 0.5rem;
+  margin-top: 0.8rem;
   color: var(--muted);
-  font-size: 0.86rem;
+  font-size: 0.82rem;
 }
 
 .agent-roster-section {

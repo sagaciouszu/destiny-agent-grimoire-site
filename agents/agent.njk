@@ -37,12 +37,14 @@ section: personas
 
 <p class="muted">Every line below passes <code>verify --exact</code> against the archive.</p>
 
+<div class="quote-grid">
 {% for sample in agent.samples %}
 <figure class="agent-quote">
   <blockquote><p>{{ sample.text | escape }}</p></blockquote>
   <figcaption>{{ agent.name }}, {{ sample.context | escape }}</figcaption>
 </figure>
 {% endfor %}
+</div>
 
 <h2 id="limits">What they won't do <a class="heading-anchor" href="#limits" aria-label="Permalink to What they won't do">#</a></h2>
 
