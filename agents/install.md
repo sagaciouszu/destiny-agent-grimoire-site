@@ -11,9 +11,10 @@ setupStep: 3
 <details class="section" open>
 <summary><span class="section-title" role="heading" aria-level="2" id="quick-start">Start here <a class="heading-anchor" href="#quick-start" aria-label="Permalink to Start here">#</a></span></summary>
 
-<p>Pick the app you already use. You don't need all three. The commands go in a
-terminal; copy one block at a time. If you already installed the Grimoire, skip
-the download lines and run the setup from that folder.</p>
+<p>Open a terminal in the folder where you want the project. Pick the app you
+already use; you don't need all three. Copy one block at a time. If you already
+installed the Grimoire, skip the download lines and run the setup from that
+folder.</p>
 
 <div class="choices">
   <div class="choice">

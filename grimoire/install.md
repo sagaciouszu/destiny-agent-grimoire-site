@@ -18,8 +18,9 @@ lede: Get the library onto your computer in a few minutes. Start with the simple
 <details class="section" open>
 <summary><span class="section-title" role="heading" aria-level="2" id="quick-start">Start here <a class="heading-anchor" href="#quick-start" aria-label="Permalink to Start here">#</a></span></summary>
 
-You need Git (to download the project), Python 3.8 or newer (to run the search
-tool), and about 260 MB of free space. No account, API key or build tools.
+Open a terminal in the folder where you want to keep the project. You need Git
+(to download the project), Python 3.8 or newer (to run the search
+tool), and about 260 MB of free space. No account, no key, no build tools.
 
 The commands below download the project, download the library file, check the
 download, put the file in the right folder, and print the library counts. Paste

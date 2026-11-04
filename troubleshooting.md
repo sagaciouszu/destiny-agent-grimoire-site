@@ -13,7 +13,7 @@ lede: Start with the short list. If your symptom is there, the fix is probably o
 <ol>
   <li><strong>The library file is missing.</strong> Download it from the releases page, or rebuild it from the project files.</li>
   <li><strong>You are in the wrong folder.</strong> Run commands from the main project folder, not <code>db/</code> or <code>agents/</code>.</li>
-  <li><strong>Your AI app points at the wrong file.</strong> It should start <code>mcp-server/run.sh</code>, not <code>server.py</code>.</li>
+  <li><strong>Your AI app points at the wrong file.</strong> It should start the connector's launcher, <code>mcp-server/run.sh</code>, not the Python file.</li>
   <li><strong>A character cannot find the library.</strong> Check the <code>lore/</code> link and that <code>lore/db/grimoire.db</code> exists.</li>
 </ol>
 
