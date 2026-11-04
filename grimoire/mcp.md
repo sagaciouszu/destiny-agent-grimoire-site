@@ -66,7 +66,7 @@ directly to use the `search` or `verify` tool.
 <details class="section experts">
 <summary><span class="section-title" role="heading" aria-level="2" id="for-experts">For Experts (or enthusiasts) <a class="heading-anchor" href="#for-experts" aria-label="Permalink to For Experts (or enthusiasts)">#</a></span></summary>
 
-<p class="muted">The client configuration, all twelve tools, and the safety limits.</p>
+<p class="muted">The client configuration, all eighteen tools, and the safety limits.</p>
 
 <h3 id="client-config">Client configuration</h3>
 
@@ -86,7 +86,7 @@ A typical local configuration looks like this:
 The exact shape depends on your client. If it only accepts remote servers, put a
 local bridge in front of the stdio process.
 
-<h3 id="the-tools">The twelve tools</h3>
+<h3 id="the-tools">The eighteen tools</h3>
 
 All read-only:
 
@@ -103,6 +103,12 @@ All read-only:
   <li><code>stats</code><p>Row counts, top item types and top speakers.</p></li>
   <li><code>verify</code><p>Check one quote, optionally with a speaker and exact mode.</p></li>
   <li><code>verify_many</code><p>Check up to twenty quotes in one call.</p></li>
+  <li><code>activities</code><p>List raids, dungeons, seasonal activities and other content with coverage.</p></li>
+  <li><code>activity</code><p>Activity details, coverage, speakers and classified transcripts.</p></li>
+  <li><code>seasons</code><p>Every season and episode with its official number and coverage.</p></li>
+  <li><code>events</code><p>Every rotating event with coverage and occurrence count.</p></li>
+  <li><code>event</code><p>Event details, yearly occurrences and classified transcripts.</p></li>
+  <li><code>coverage</code><p>Coverage summary for activities, seasons and events, including gaps.</p></li>
 </ul>
 
 The two verification tools are the important ones. A line that fails `verify` is

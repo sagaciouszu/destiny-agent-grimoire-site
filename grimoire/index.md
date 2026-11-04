@@ -33,15 +33,15 @@ The current build has:
 <div class="stat-grid">
   <div><strong>110</strong><span>books</span></div>
   <div><strong>1,158</strong><span>book entries</span></div>
-  <div><strong>1,229</strong><span>transcripts</span></div>
-  <div><strong>71,221</strong><span>dialogue lines</span></div>
+  <div><strong>1,294</strong><span>transcripts</span></div>
+  <div><strong>73,012</strong><span>dialogue lines</span></div>
   <div><strong>2,889</strong><span>grimoire cards</span></div>
   <div><strong>58,764</strong><span>items</span></div>
   <div><strong>71</strong><span>triumphs and seals</span></div>
   <div><strong>20</strong><span>curated characters</span></div>
 </div>
 
-<p>The search index covers 120,731 rows.</p>
+<p>The search index covers 124,484 rows.</p>
 
 Those numbers are a map, not a citation. The row you quote is the citation.
 
@@ -82,7 +82,7 @@ Search uses SQLite FTS5. You get the passage back, not a list of files to open.
 
 <ul class="tile-grid">
   <li><strong>Command line</strong><p>Search, character lines, items, books, transcripts, records and quote checks. JSON output for scripts.</p></li>
-  <li><strong>MCP server</strong><p>Twelve read-only tools over local stdio for AI clients.</p></li>
+  <li><strong>MCP server</strong><p>Eighteen read-only tools over local stdio for AI clients.</p></li>
   <li><strong>Agent skill</strong><p>A drop-in instruction file for runtimes that load skills instead of MCP servers.</p></li>
   <li><strong><code>db/capabilities.json</code></strong><p>The machine-readable manifest of tables, views, commands and contracts.</p></li>
 </ul>
