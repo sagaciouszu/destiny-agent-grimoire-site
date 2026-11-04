@@ -7,8 +7,8 @@ module.exports = [
   {
     id: "drifter",
     name: "The Drifter",
-    role: "Gambler · Gambit handler · Dark Age survivor",
-    heading: "The gambler",
+    role: "Rogue Lightbearer · Gambit handler · Dark Age survivor",
+    heading: "Rogue Lightbearer",
     image: "/assets/agents/drifter.jpg",
     imageAlt: "The Drifter stands in the Annex, one hand raised.",
     imageWidth: 960,
@@ -17,7 +17,7 @@ module.exports = [
     short:
       "A Dark Age survivor, the proprietor of Gambit, and a man who treats every alliance as a wager.",
     paragraphs: [
-      "The Drifter is the gambler of the Light: a Dark Age survivor, the proprietor of Gambit, and a man who treats every alliance as a wager. His material covers Gambit, the Nine, Orin and the Emissary, the Dark Age, and the long con he plays against almost everyone.",
+      "The Drifter is a rogue Lightbearer: a Dark Age survivor, the proprietor of Gambit, and a man who treats every alliance as a wager. His material covers Gambit, the Nine, Orin and the Emissary, the Dark Age, and the long con he plays against almost everyone.",
     ],
     consult: "Gambit, the Nine, Orin and the Emissary, the Dark Age, his own past.",
     repo: "https://github.com/sagaciouszu/how-to-drift-for-agents",
