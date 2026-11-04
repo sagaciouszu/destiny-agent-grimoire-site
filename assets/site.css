@@ -518,6 +518,7 @@ samp {
 pre code {
   display: block;
   color: #ddd8cd;
+  font-size: 0.79em;
 }
 
 .copy-button {
@@ -602,6 +603,8 @@ pre:hover .copy-button,
 }
 
 .choice {
+  display: flex;
+  flex-direction: column;
   padding: 1rem 1.1rem;
   background: var(--surface);
   border: 1px solid var(--line);
@@ -640,6 +643,12 @@ pre:hover .copy-button,
 }
 
 .choice p { margin-bottom: 0.6rem; }
+
+@media (min-width: 700px) {
+  .choice .choice-desc { min-height: 5.2rem; }
+}
+
+.choice pre { margin-top: 0; }
 
 /* Home */
 
