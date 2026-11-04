@@ -698,6 +698,14 @@ pre:hover .copy-button,
 
 .agent-source span { margin-inline: 0.45rem; }
 
+.agent-source a code {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font-size: 0.95em;
+}
+
 .agent-roster-section {
   margin-top: 3rem;
   padding-top: 1.8rem;

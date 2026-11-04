@@ -18,7 +18,7 @@ lede: A growing crew of characters, built to talk like themselves, kept apart on
   <p class="agent-source">
     <a href="{{ agent.repo }}">{{ agent.repoName }}</a>
     <span aria-hidden="true">·</span>
-    entry <code>{{ agent.entry }}</code>
+    entry <a href="{{ agent.entryUrl }}"><code>{{ agent.entry }}</code></a>
   </p>
 </article>
 {% endif %}
@@ -38,7 +38,11 @@ lede: A growing crew of characters, built to talk like themselves, kept apart on
       <h3>{{ agent.name }} <a class="heading-anchor" href="#{{ agent.id }}" aria-label="Permalink to {{ agent.name }}">#</a></h3>
       <p>{{ agent.short or agent.paragraphs[0] }}</p>
       <p class="agent-ask"><strong>Ask about:</strong> {{ agent.consult }}</p>
-      <p class="agent-source"><a href="{{ agent.repo }}">{{ agent.repoName }}</a></p>
+      <p class="agent-source">
+        <a href="{{ agent.repo }}">{{ agent.repoName }}</a>
+        {% if agent.entryUrl %}<span aria-hidden="true">·</span>
+        entry <a href="{{ agent.entryUrl }}"><code>{{ agent.entry }}</code></a>{% endif %}
+      </p>
     </article>
     {% endif %}
     {% endfor %}

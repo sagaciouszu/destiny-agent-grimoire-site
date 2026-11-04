@@ -15,6 +15,7 @@ module.exports = [
     repo: "https://github.com/sagaciouszu/how-to-drift-for-agents",
     repoName: "how-to-drift-for-agents",
     entry: "drifter.md",
+    entryUrl: "https://github.com/sagaciouszu/how-to-drift-for-agents/blob/master/drifter.md",
   },
   {
     id: "eris-morn",
@@ -29,5 +30,6 @@ module.exports = [
     repo: "https://github.com/sagaciouszu/eris-morn",
     repoName: "eris-morn",
     entry: "eris.md",
+    entryUrl: "https://github.com/sagaciouszu/eris-morn/blob/master/eris.md",
   },
 ];
