@@ -1,12 +1,16 @@
 ---
 layout: page
 title: Troubleshooting
-category: Diagnostics
+category: Help
 lede: Start with the short list. If your symptom is there, the fix is probably one step away. The deeper checks are grouped below.
 ---
 
 <details class="section" open>
 <summary><span class="section-title" role="heading" aria-level="2" id="first-checks">Try this first <a class="heading-anchor" href="#first-checks" aria-label="Permalink to Try this first">#</a></span></summary>
+
+<p class="muted">A quick map: the <strong>library</strong> is the Grimoire file; your
+<strong>app</strong> is the AI tool you use; the <strong>connector</strong> is the
+optional bridge between them.</p>
 
 <p>Most first-run problems are one of these:</p>
 

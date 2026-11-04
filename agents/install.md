@@ -41,7 +41,7 @@ bash scripts/sync-live-agents.sh --openclaw</code></pre>
     <pre><code>git clone https://github.com/sagaciouszu/how-to-drift-for-agents.git
 cd how-to-drift-for-agents
 ./setup.sh</code></pre>
-    <p class="muted">Swap in <code>eris-morn</code> for Eris. Point your app at the instructions file, <code>AGENTS.md</code>.</p>
+    <p class="muted">Swap in another character&#39;s project name for a different character. Point your app at the instructions file, <code>AGENTS.md</code>.</p>
   </div>
 </div>
 

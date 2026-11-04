@@ -1354,6 +1354,10 @@ pre:hover .copy-button,
   font-weight: 600;
 }
 
+@media (max-width: 520px) {
+  .agent-facts { grid-template-columns: 1fr; }
+}
+
 .lore .checklist {
   display: grid;
   gap: 0.5rem;
