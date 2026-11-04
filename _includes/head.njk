@@ -14,7 +14,7 @@
         : (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
       document.documentElement.dataset.theme = theme;
       var meta = document.querySelector('meta[name="theme-color"]');
-      if (meta) meta.setAttribute("content", theme === "light" ? "#f7f2e7" : "#0b0b0c");
+      if (meta) meta.setAttribute("content", theme === "light" ? "#e2d6bf" : "#0b0b0c");
     } catch (error) {}
   })();
 </script>

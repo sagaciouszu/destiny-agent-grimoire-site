@@ -1027,23 +1027,27 @@ pre:hover .copy-button,
 
 :root[data-theme="light"] {
   color-scheme: light;
-  --bg: #f7f2e7;
-  --surface: #fffaf0;
-  --surface-2: #efe5d2;
-  --text: #26221b;
-  --muted: #5d564a;
-  --heading: #14120e;
-  --gold: #86661c;
-  --gold-bright: #6b4f12;
-  --gold-dim: #a9853c;
+  --bg: #e2d6bf;
+  --surface: #f1e8d7;
+  --surface-2: #d8cab1;
+  --text: #241f18;
+  --muted: #575043;
+  --heading: #12100c;
+  --gold: #6f5215;
+  --gold-bright: #5c430c;
+  --gold-dim: #9c7a34;
   --line: rgba(30, 25, 15, 0.14);
   --line-strong: rgba(30, 25, 15, 0.28);
 }
 
 :root[data-theme="light"] body::before {
   background-image:
-    radial-gradient(70rem 38rem at 50% -8%, rgba(217, 121, 69, 0.14), transparent 62%),
-    linear-gradient(to bottom, rgba(247, 242, 231, 0.96), rgba(247, 242, 231, 0.99) 58%, var(--bg) 100%);
+    radial-gradient(70rem 38rem at 50% -8%, rgba(217, 121, 69, 0.20), transparent 62%),
+    linear-gradient(to bottom, rgba(226, 214, 191, 0.55), rgba(226, 214, 191, 0.76) 58%, var(--bg) 100%),
+    url("starmap.svg");
+  background-position: center top, center, center top;
+  background-size: auto, auto, cover;
+  background-repeat: no-repeat;
 }
 
 :root[data-theme="light"] ::selection {
@@ -1052,7 +1056,7 @@ pre:hover .copy-button,
 }
 
 :root[data-theme="light"] .site-header {
-  background: rgba(247, 242, 231, 0.94);
+  background: rgba(226, 214, 191, 0.94);
 }
 
 :root[data-theme="light"] .nav-submenu {
@@ -1060,7 +1064,7 @@ pre:hover .copy-button,
 }
 
 :root[data-theme="light"] pre {
-  background: #f1e9d9;
+  background: #dccfb7;
 }
 
 :root[data-theme="light"] pre code {
@@ -1068,5 +1072,5 @@ pre:hover .copy-button,
 }
 
 :root[data-theme="light"] .transmission {
-  background: rgba(255, 250, 240, 0.86);
+  background: rgba(241, 232, 215, 0.88);
 }
