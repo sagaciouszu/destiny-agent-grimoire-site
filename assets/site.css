@@ -624,6 +624,8 @@ pre:hover .copy-button,
 }
 
 .choice-label {
+  display: flex;
+  align-items: center;
   margin: 0 0 0.35rem;
   color: var(--gold);
   font-size: 0.72rem;

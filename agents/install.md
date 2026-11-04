@@ -23,8 +23,8 @@ installed the Grimoire, skip the clone lines and run the sync from your checkout
 
 <div class="choices">
   <div class="choice">
-    <p class="choice-label">OpenCode</p>
-    <h3><svg class="choice-icon choice-logo" viewBox="0 0 24 36" aria-hidden="true" focusable="false"><path fill="currentColor" opacity="0.55" d="M18 30H6V18H18V30Z"/><path fill="currentColor" d="M18 12H6V30H18V12ZM24 36H0V6H24V36Z"/></svg>Install both personas</h3>
+    <p class="choice-label"><svg class="choice-icon choice-logo" viewBox="0 0 24 36" aria-hidden="true" focusable="false"><path fill="currentColor" opacity="0.55" d="M18 30H6V18H18V30Z"/><path fill="currentColor" d="M18 12H6V30H18V12ZM24 36H0V6H24V36Z"/></svg>OpenCode</p>
+    <h3>Install both personas</h3>
     <p class="muted">One command installs The Drifter and Eris, plus their read-only consult copies.</p>
     <pre><code>git clone https://github.com/sagaciouszu/destiny-agent-grimoire.git
 cd destiny-agent-grimoire
@@ -32,16 +32,16 @@ bash scripts/sync-live-agents.sh</code></pre>
     <p class="muted">Restart OpenCode, then pick The Drifter or Eris.</p>
   </div>
   <div class="choice">
-    <p class="choice-label">OpenClaw</p>
-    <h3><span class="choice-icon" aria-hidden="true">🦀</span>One workspace per persona</h3>
+    <p class="choice-label"><span class="choice-icon" aria-hidden="true">🦀</span>OpenClaw</p>
+    <h3>One workspace per persona</h3>
     <p class="muted">The sync writes a workspace for each character. Add channel bindings only if you want routed messages.</p>
     <pre><code>git clone https://github.com/sagaciouszu/destiny-agent-grimoire.git
 cd destiny-agent-grimoire
 bash scripts/sync-live-agents.sh --openclaw</code></pre>
   </div>
   <div class="choice">
-    <p class="choice-label">Anything else</p>
-    <h3><span class="choice-icon" aria-hidden="true">🧩</span>One persona, one folder</h3>
+    <p class="choice-label"><span class="choice-icon" aria-hidden="true">🧩</span>Anything else</p>
+    <h3>One persona, one folder</h3>
     <p class="muted">For a runtime that reads <code>AGENTS.md</code> or a Markdown instruction file.</p>
     <pre><code>git clone https://github.com/sagaciouszu/how-to-drift-for-agents.git
 cd how-to-drift-for-agents
