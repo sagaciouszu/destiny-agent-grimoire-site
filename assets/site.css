@@ -1203,6 +1203,22 @@ pre:hover .copy-button,
   margin: 0.7rem 0 0;
 }
 
+.page-hero {
+  margin: 0 0 2rem;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.page-hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
 .agent-portrait {
   margin: 0 0 0.7rem;
   overflow: hidden;
