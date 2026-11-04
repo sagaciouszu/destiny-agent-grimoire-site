@@ -1,6 +1,7 @@
 <footer class="site-footer">
   <div class="wrap footer-inner">
-    <p>Fan-made. Destiny belongs to Bungie. Code and documentation are MIT licensed.</p>
+    {% set updated = page.updated or (page.inputPath | gitDate) %}
+    <p>Fan-made. Destiny belongs to Bungie. Code and documentation are MIT licensed.{% if updated %}<span class="footer-sep" aria-hidden="true"> · </span><span class="footer-updated">Last updated <time datetime="{{ updated }}">{{ updated }}</time></span>{% endif %}</p>
     <div class="footer-links">
       <a href="{{ '/about/' | url }}">About</a>
       <a href="https://github.com/sagaciouszu/destiny-agent-grimoire">Grimoire</a>

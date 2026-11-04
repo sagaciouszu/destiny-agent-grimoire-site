@@ -34,10 +34,11 @@ Output goes to `_site/`.
 
 ## Content
 
-- `index.md` — home, including the rotating test transcripts
+- `index.njk` — home, including the rotating test transcripts
 - `grimoire/` — archive overview, install, MCP server
-- `agents/` — overview, install and platform support
+- `agents/` — overview, install, platform support
 - `agents/agent.njk` — generates `/agents/<id>/` pages from the roster
+- `agents/build.md` — how to add a new series agent
 - `troubleshooting.md`
 - `about.md`
 - `404.md`
@@ -46,6 +47,8 @@ Output goes to `_site/`.
 - `_data/voices.js` — short test transcript excerpts for the home panel
 - `_data/sitemap.js`, `sitemap.njk`, `robots.txt.njk` — crawler metadata
 - `assets/site.css`, `assets/site.js`, `assets/starmap.svg`
+- `assets/social.svg`, `assets/social.png` — link preview card
+- `scripts/check-links.py` — build-time link, metadata and sitemap gate
 
 ## Deploy
 
@@ -64,4 +67,22 @@ plus a nav item and a sitemap entry. The same id drives the consult copy name
 
 The home-page panel reads from `_data/voices.js`. Those are short excerpts from
 the agent test suites, not model output and not canon. Replace that file with a
-generated index when the test repositories expose one.
+generated index when the test repositories expose one. Each excerpt links to the
+agent page and to its source test.
+
+Agent pages carry the release version, audit result, last-updated date, verified
+sample lines and a short limits list. `updated` is set per agent; other pages use
+the last git commit date for their source file.
+
+## Checks
+
+`python3 scripts/check-links.py` validates the built site: internal links,
+fragments, canonical URLs, duplicate titles and descriptions, the sitemap and
+robots.txt. The Pages workflow runs it after every build.
+
+## Theme
+
+The topbar toggle switches between the warm dark theme and a paper light theme.
+The choice is stored in `localStorage`; without a stored choice the site follows
+`prefers-color-scheme`. The theme is applied before paint by the inline script in
+`_includes/head.njk`.

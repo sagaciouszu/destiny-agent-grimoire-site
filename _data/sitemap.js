@@ -12,6 +12,7 @@ const pages = [
   "/agents/",
   "/agents/install/",
   "/agents/platforms/",
+  "/agents/build/",
 ];
 
 module.exports = pages.concat(agents.map((agent) => `/agents/${agent.id}/`));

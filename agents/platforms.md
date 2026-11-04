@@ -1,8 +1,8 @@
 ---
-section: instructions
+section: setup
 layout: page
 title: Platform Support
-category: Instructions · Platforms
+category: Setup · Platforms
 lede: OpenCode and OpenClaw get scripted deployment. Anything else can still use the same files, with a little manual wiring.
 ---
 

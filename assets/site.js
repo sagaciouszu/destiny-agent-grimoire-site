@@ -143,4 +143,26 @@
       start();
     });
   }
+
+  const themeToggle = document.querySelector("[data-theme-toggle]");
+  if (themeToggle) {
+    const root = document.documentElement;
+    const themeMeta = document.querySelector('meta[name="theme-color"]');
+
+    const syncTheme = () => {
+      const light = root.dataset.theme === "light";
+      const label = light ? "Switch to dark theme" : "Switch to light theme";
+      themeToggle.setAttribute("aria-label", label);
+      themeToggle.setAttribute("title", label);
+      if (themeMeta) themeMeta.setAttribute("content", light ? "#f7f2e7" : "#0b0b0c");
+    };
+
+    syncTheme();
+    themeToggle.addEventListener("click", () => {
+      const next = root.dataset.theme === "light" ? "dark" : "light";
+      root.dataset.theme = next;
+      try { localStorage.setItem("grimoire-theme", next); } catch (error) {}
+      syncTheme();
+    });
+  }
 })();

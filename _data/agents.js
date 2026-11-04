@@ -20,6 +20,30 @@ module.exports = [
     repoName: "how-to-drift-for-agents",
     entry: "drifter.md",
     entryUrl: "https://github.com/sagaciouszu/how-to-drift-for-agents/blob/master/drifter.md",
+    version: "0.11.0",
+    releaseUrl: "https://github.com/sagaciouszu/how-to-drift-for-agents/releases/tag/v0.11.0",
+    updated: "2026-11-03",
+    audit: { passed: 20, total: 20 },
+    samples: [
+      {
+        text: "World's just bones on bones. Been like that forever.",
+        context: "on the Dark Age",
+      },
+      {
+        text: "Clean up and move out.",
+        context: "on the job",
+      },
+      {
+        text: "Sounds peachy.",
+        context: "on a plan",
+      },
+    ],
+    limits: [
+      "Quote a line the archive cannot verify.",
+      "Present a guess as canon.",
+      "Share another agent's private memory.",
+      "Run shell commands from a consult copy.",
+    ],
   },
   {
     id: "eris",
@@ -37,5 +61,29 @@ module.exports = [
     repoName: "eris-morn",
     entry: "eris.md",
     entryUrl: "https://github.com/sagaciouszu/eris-morn/blob/master/eris.md",
+    version: "0.11.0",
+    releaseUrl: "https://github.com/sagaciouszu/eris-morn/releases/tag/v0.11.0",
+    updated: "2026-11-03",
+    audit: { passed: 15, total: 15 },
+    samples: [
+      {
+        text: "Absolutely not.",
+        context: "on a hard line",
+      },
+      {
+        text: "The Darkness changes its environment as the Traveler did.",
+        context: "on the Darkness",
+      },
+      {
+        text: "Guardian, you are not alone. Our foes seek to claim power from the Darkness.",
+        context: "on the fight",
+      },
+    ],
+    limits: [
+      "Quote a line the archive cannot verify.",
+      "Present a guess as canon.",
+      "Share another agent's private memory.",
+      "Run shell commands from a consult copy.",
+    ],
   },
 ];

@@ -1,6 +1,7 @@
 <header class="site-header">
   <div class="wrap header-inner">
     <a class="brand" href="{{ '/' | url }}">{{ site.title }}</a>
+    <div class="header-end">
     <nav class="site-nav" aria-label="Primary">
       <a href="{{ '/' | url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a>
 
@@ -20,11 +21,12 @@
           {% for agent in agents %}
           <li><a href="{{ ('/agents/' + agent.id + '/') | url }}"{% if page.url == ('/agents/' + agent.id + '/') %} aria-current="page"{% endif %}>{{ agent.name }}</a></li>
           {% endfor %}
+          <li><a href="{{ '/agents/build/' | url }}"{% if page.url == '/agents/build/' %} aria-current="page"{% endif %}>Add an agent</a></li>
         </ul>
       </details>
 
-      <details class="nav-menu"{% if section == 'instructions' %} data-active="true"{% endif %}>
-        <summary>Instructions</summary>
+      <details class="nav-menu"{% if section == 'setup' %} data-active="true"{% endif %}>
+        <summary>Setup</summary>
         <ul class="nav-submenu">
           <li><a href="{{ '/agents/install/' | url }}"{% if page.url == '/agents/install/' %} aria-current="page"{% endif %}>Install</a></li>
           <li><a href="{{ '/agents/platforms/' | url }}"{% if page.url == '/agents/platforms/' %} aria-current="page"{% endif %}>Platforms</a></li>
@@ -34,5 +36,16 @@
       <a href="{{ '/troubleshooting/' | url }}"{% if page.url == '/troubleshooting/' %} aria-current="page"{% endif %}>Troubleshooting</a>
       <a href="https://github.com/sagaciouszu/destiny-agent-grimoire">GitHub</a>
     </nav>
+
+    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light theme" title="Switch to light theme">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" focusable="false">
+        <circle cx="12" cy="12" r="4"/>
+        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+      </svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+        <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>
+      </svg>
+    </button>
+    </div>
   </div>
 </header>

@@ -8,11 +8,12 @@ eleventyComputed:
   title: "{{ agent.name }}"
   category: "Agents · {{ agent.name }}"
   lede: "{{ agent.role }}"
+  updated: "{{ agent.updated }}"
 layout: page
 section: agents
 ---
 
-<h2 id="who">{{ agent.heading }} <a class="heading-anchor" href="#who" aria-label="Permalink to Who they are">#</a></h2>
+<h2 id="who">{{ agent.heading }} <a class="heading-anchor" href="#who" aria-label="Permalink to {{ agent.heading }}">#</a></h2>
 
 {% for paragraph in agent.paragraphs %}
 <p>{{ paragraph }}</p>
@@ -20,7 +21,29 @@ section: agents
 
 <p class="agent-ask"><strong>Ask about:</strong> {{ agent.consult }}</p>
 
-<h2 id="entry-file">The brain <a class="heading-anchor" href="#entry-file" aria-label="Permalink to The entry file">#</a></h2>
+<h2 id="record">The record <a class="heading-anchor" href="#record" aria-label="Permalink to The record">#</a></h2>
+
+<dl class="agent-record">
+  <dt>Version</dt>
+  <dd><a href="{{ agent.releaseUrl }}">{{ agent.version }}</a></dd>
+  <dt>Audit</dt>
+  <dd>{{ agent.audit.passed }}/{{ agent.audit.total }} suites</dd>
+  <dt>Updated</dt>
+  <dd><time datetime="{{ agent.updated }}">{{ agent.updated }}</time></dd>
+</dl>
+
+<h2 id="words">In their own words <a class="heading-anchor" href="#words" aria-label="Permalink to In their own words">#</a></h2>
+
+<p class="muted">Every line below passes <code>verify --exact</code> against the archive.</p>
+
+{% for sample in agent.samples %}
+<figure class="agent-quote">
+  <blockquote><p>{{ sample.text | escape }}</p></blockquote>
+  <figcaption>{{ agent.name }}, {{ sample.context | escape }}</figcaption>
+</figure>
+{% endfor %}
+
+<h2 id="entry-file">The brain <a class="heading-anchor" href="#entry-file" aria-label="Permalink to The brain">#</a></h2>
 
 <p>In OpenCode, <code>{{ agent.entry }}</code> is the main agent entry. A generic
 runtime that reads <code>AGENTS.md</code> can use the repository directly. The
@@ -29,10 +52,10 @@ file is where the voice, guardrails and canon pointers begin.</p>
 <p><a href="{{ agent.entryUrl or agent.repo }}">Read {{ agent.entry }} on GitHub</a>.</p>
 
 <p>Series deployment also installs a read-only consult copy,
-<code>{{ agent.deployId }}-consult.md</code>, so another agent can ask a question without
+<code>{{ agent.id }}-consult.md</code>, so another agent can ask a question without
 getting write access to this one's files.</p>
 
-<h2 id="setup">Eyes up <a class="heading-anchor" href="#setup" aria-label="Permalink to Set it up">#</a></h2>
+<h2 id="setup">Eyes up <a class="heading-anchor" href="#setup" aria-label="Permalink to Eyes up">#</a></h2>
 
 <pre><code>git clone {{ agent.repo }}.git
 cd {{ agent.repoName }}
@@ -45,14 +68,23 @@ without a prompt.</p>
 <p>For OpenCode or OpenClaw deployment from the archive, see
 <a href="{{ '/agents/install/' | url }}">Deploy the Agents</a>.</p>
 
-<h2 id="checks">The audit <a class="heading-anchor" href="#checks" aria-label="Permalink to Run the checks">#</a></h2>
+<h2 id="checks">The audit <a class="heading-anchor" href="#checks" aria-label="Permalink to The audit">#</a></h2>
 
 <pre><code>bash tests/master-audit.sh</code></pre>
 
-<p>The audit checks voice, quotes, module coverage, the conversation path and the
-shared structure gates. It is the same suite CI runs.</p>
+<p>{{ agent.audit.passed }}/{{ agent.audit.total }} suites pass on the current
+release. The audit checks voice, quotes, module coverage, the conversation path
+and the shared structure gates. It is the same suite CI runs.</p>
 
-<h2 id="repository">The source <a class="heading-anchor" href="#repository" aria-label="Permalink to Repository">#</a></h2>
+<h2 id="limits">What they won't do <a class="heading-anchor" href="#limits" aria-label="Permalink to What they won't do">#</a></h2>
+
+<ul>
+  {% for limit in agent.limits %}
+  <li>{{ limit | escape }}</li>
+  {% endfor %}
+</ul>
+
+<h2 id="repository">The source <a class="heading-anchor" href="#repository" aria-label="Permalink to The source">#</a></h2>
 
 <ul>
   <li><a href="{{ agent.repo }}">{{ agent.repoName }}</a></li>
@@ -67,6 +99,7 @@ shared structure gates. It is the same suite CI runs.</p>
   {% for other in agents %}{% if other.id != agent.id %}
   <li><a href="{{ ('/agents/' + other.id + '/') | url }}">Meet {{ other.name }}</a></li>
   {% endif %}{% endfor %}
+  <li><a href="{{ '/agents/build/' | url }}">Add another agent</a></li>
   <li><a href="{{ '/agents/install/' | url }}">Deploy into OpenCode or OpenClaw</a></li>
   <li><a href="{{ '/agents/platforms/' | url }}">Check platform support</a></li>
 </ul>

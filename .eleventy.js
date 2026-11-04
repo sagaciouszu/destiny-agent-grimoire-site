@@ -1,8 +1,30 @@
+const fs = require("fs");
+const crypto = require("crypto");
+const { execFileSync } = require("child_process");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("assets");
+
+  eleventyConfig.addFilter("assetHash", (urlPath) => {
+    try {
+      const file = urlPath.replace(/^\//, "");
+      return crypto.createHash("sha256").update(fs.readFileSync(file)).digest("hex").slice(0, 8);
+    } catch (error) {
+      return "dev";
+    }
+  });
+
+  eleventyConfig.addFilter("gitDate", (inputPath) => {
+    try {
+      return execFileSync("git", ["log", "-1", "--format=%cs", "--", inputPath], {
+        encoding: "utf8",
+      }).trim();
+    } catch (error) {
+      return "";
+    }
+  });
 
   const md = markdownIt({ html: true, linkify: true }).use(markdownItAnchor, {
     slugify: (value) => value
