@@ -26,20 +26,23 @@ These apps read project instructions in their own file or settings screen. The
 persona content is the same `AGENTS.md`; only the place you put it changes. The
 MCP column goes to that app's own guide for adding a local server.
 
-| App | Rules | MCP |
-|---|---|---|
-| [Claude Code](https://docs.anthropic.com/en/docs/claude-code/memory) | `CLAUDE.md` | [MCP guide](https://docs.anthropic.com/en/docs/claude-code/mcp) |
-| [Codex CLI](https://developers.openai.com/codex/guides/agents-md) | `AGENTS.md` | [MCP guide](https://developers.openai.com/codex/mcp) |
-| [Gemini CLI](https://geminicli.com/docs) | `GEMINI.md` | [MCP guide](https://github.com/google-gemini/gemini-cli/blob/main/docs/tools/mcp-server.md) |
-| [Cursor](https://docs.cursor.com/context/rules) | Rules | [MCP guide](https://docs.cursor.com/context/mcp) |
-| [Windsurf](https://docs.windsurf.com/windsurf/cascade/memories) | Memories | [MCP guide](https://docs.windsurf.com/windsurf/cascade/mcp) |
-| [Cline](https://docs.cline.bot/features/cline-rules) | Rules | [MCP guide](https://docs.cline.bot/mcp/mcp-overview) |
-| [Continue](https://docs.continue.dev/customize/rules) | Rules | [MCP guide](https://docs.continue.dev/customize/mcp-tools) |
-| [GitHub Copilot](https://docs.github.com/en/copilot/how-tos/configure-custom-instructions/add-repository-instructions) | Repository instructions | [MCP guide](https://docs.github.com/en/copilot/how-tos/context/model-context-protocol) |
-| [Roo Code](https://docs.roocode.com/features/custom-instructions) | Custom instructions | [MCP guide](https://docs.roocode.com/features/mcp/using-mcp-in-roo) |
-| [Kilo Code](https://kilocode.ai/docs) | Rules | [MCP guide](https://kilocode.ai/docs/features/mcp/using-mcp-in-kilo-code) |
-| [Zed](https://zed.dev/docs/ai/overview) | Rules | [MCP guide](https://zed.dev/docs/ai/mcp) |
-| [Aider](https://aider.chat/docs/usage/conventions.html) | `CONVENTIONS.md` | — |
+<table class="integration-table">
+  <thead><tr><th>App</th><th>Rules</th><th>MCP</th></tr></thead>
+  <tbody>
+    <tr><td><a href="https://docs.anthropic.com/en/docs/claude-code/memory">Claude Code</a></td><td><code>CLAUDE.md</code></td><td><a href="https://docs.anthropic.com/en/docs/claude-code/mcp">MCP guide</a></td></tr>
+    <tr><td><a href="https://developers.openai.com/codex/guides/agents-md">Codex CLI</a></td><td><code>AGENTS.md</code></td><td><a href="https://developers.openai.com/codex/mcp">MCP guide</a></td></tr>
+    <tr><td><a href="https://geminicli.com/docs">Gemini CLI</a></td><td><code>GEMINI.md</code></td><td><a href="https://github.com/google-gemini/gemini-cli/blob/main/docs/tools/mcp-server.md">MCP guide</a></td></tr>
+    <tr><td><a href="https://docs.cursor.com/context/rules">Cursor</a></td><td>Rules</td><td><a href="https://docs.cursor.com/context/mcp">MCP guide</a></td></tr>
+    <tr><td><a href="https://docs.windsurf.com/windsurf/cascade/memories">Windsurf</a></td><td>Memories</td><td><a href="https://docs.windsurf.com/windsurf/cascade/mcp">MCP guide</a></td></tr>
+    <tr><td><a href="https://docs.cline.bot/features/cline-rules">Cline</a></td><td>Rules</td><td><a href="https://docs.cline.bot/mcp/mcp-overview">MCP guide</a></td></tr>
+    <tr><td><a href="https://docs.continue.dev/customize/rules">Continue</a></td><td>Rules</td><td><a href="https://docs.continue.dev/customize/mcp-tools">MCP guide</a></td></tr>
+    <tr><td><a href="https://docs.github.com/en/copilot/how-tos/configure-custom-instructions/add-repository-instructions">GitHub Copilot</a></td><td>Repository instructions</td><td><a href="https://docs.github.com/en/copilot/how-tos/context/model-context-protocol">MCP guide</a></td></tr>
+    <tr><td><a href="https://docs.roocode.com/features/custom-instructions">Roo Code</a></td><td>Custom instructions</td><td><a href="https://docs.roocode.com/features/mcp/using-mcp-in-roo">MCP guide</a></td></tr>
+    <tr><td><a href="https://kilocode.ai/docs">Kilo Code</a></td><td>Rules</td><td><a href="https://kilocode.ai/docs/features/mcp/using-mcp-in-kilo-code">MCP guide</a></td></tr>
+    <tr><td><a href="https://zed.dev/docs/ai/overview">Zed</a></td><td>Rules</td><td><a href="https://zed.dev/docs/ai/mcp">MCP guide</a></td></tr>
+    <tr><td><a href="https://aider.chat/docs/usage/conventions.html">Aider</a></td><td><code>CONVENTIONS.md</code></td><td>—</td></tr>
+  </tbody>
+</table>
 
 <p class="muted">File names and menus change between app versions. Use the linked
 guide for the app you have; the persona text you paste does not change.</p>

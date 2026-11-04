@@ -206,4 +206,32 @@
       syncTheme();
     });
   }
+
+  const symptomFilter = document.querySelector("[data-symptom-filter]");
+  if (symptomFilter) {
+    const cards = [...document.querySelectorAll(".toc-card")];
+    const empty = document.querySelector("[data-filter-empty]");
+
+    symptomFilter.addEventListener("input", () => {
+      const query = symptomFilter.value.trim().toLowerCase();
+      let visible = 0;
+
+      cards.forEach((card) => {
+        const group = card.querySelector(".toc-group")?.textContent.toLowerCase() || "";
+        const groupMatch = Boolean(query) && group.includes(query);
+        let cardVisible = false;
+
+        card.querySelectorAll("li").forEach((item) => {
+          const match = !query || groupMatch || item.textContent.toLowerCase().includes(query);
+          item.hidden = !match;
+          if (match) cardVisible = true;
+        });
+
+        card.hidden = !cardVisible;
+        if (cardVisible) visible += 1;
+      });
+
+      if (empty) empty.hidden = visible > 0;
+    });
+  }
 })();

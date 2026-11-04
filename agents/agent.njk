@@ -27,6 +27,12 @@ section: personas
 
 <p class="agent-ask"><strong>Ask about:</strong> {{ agent.consult }}</p>
 
+<dl class="agent-facts" id="record" aria-label="At a glance">
+  <div><dt>Version</dt><dd><a href="{{ agent.releaseUrl }}">{{ agent.version }}</a></dd></div>
+  <div><dt>Audit</dt><dd>{{ agent.audit.passed }}/{{ agent.audit.total }} suites</dd></div>
+  <div><dt>Updated</dt><dd><time datetime="{{ agent.updated }}">{{ agent.updated }}</time></dd></div>
+</dl>
+
 <h2 id="words">In their own words <a class="heading-anchor" href="#words" aria-label="Permalink to In their own words">#</a></h2>
 
 <p class="muted">Every line below passes <code>verify --exact</code> against the archive.</p>
@@ -61,18 +67,7 @@ without a prompt. For OpenCode or OpenClaw, use the shared sync instead:
 
 <h2 id="for-experts">For experts <a class="heading-anchor" href="#for-experts" aria-label="Permalink to For experts">#</a></h2>
 
-<p class="muted">The release record, entry file, audit and repository links.</p>
-
-<h3 id="record">The record <a class="heading-anchor" href="#record" aria-label="Permalink to The record">#</a></h3>
-
-<dl class="agent-record">
-  <dt>Version</dt>
-  <dd><a href="{{ agent.releaseUrl }}">{{ agent.version }}</a></dd>
-  <dt>Audit</dt>
-  <dd>{{ agent.audit.passed }}/{{ agent.audit.total }} suites</dd>
-  <dt>Updated</dt>
-  <dd><time datetime="{{ agent.updated }}">{{ agent.updated }}</time></dd>
-</dl>
+<p class="muted">The entry file, audit and repository links.</p>
 
 <h3 id="entry-file">The brain <a class="heading-anchor" href="#entry-file" aria-label="Permalink to The brain">#</a></h3>
 

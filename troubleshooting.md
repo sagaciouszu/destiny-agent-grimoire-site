@@ -23,6 +23,10 @@ lede: Start with the short list. If your symptom is there, you are probably one 
 
 <nav class="toc toc-tiles" aria-labelledby="toc-title">
 <p class="toc-title" id="toc-title">Jump to a symptom</p>
+<label class="toc-filter" for="symptom-filter">Filter symptoms
+  <input id="symptom-filter" type="search" placeholder="database, MCP, agent…" data-symptom-filter>
+</label>
+<p class="toc-filter-empty" data-filter-empty hidden>No matching symptoms.</p>
 <div class="toc-grid">
   <div class="toc-card">
     <p class="toc-group">First run</p>
