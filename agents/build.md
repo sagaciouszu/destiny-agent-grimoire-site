@@ -1,22 +1,22 @@
 ---
-section: integration
+section: personas
 layout: page
-title: Add an Agent
-category: Agents & Integration · Add an Agent
-lede: "Adding a persona takes three things: a repository, one registry row and one site row. The simple steps come first; the field reference is at the bottom."
+title: Build a Persona
+category: Personas · Build a Persona
+lede: "Building a persona is a bigger project: its own project folder, one line in the series list and one entry in the site roster. This page is for people comfortable with Git and the project layout."
 ---
 
 <details class="section" open>
 <summary><span class="section-title" role="heading" aria-level="2" id="short-version">The short version <a class="heading-anchor" href="#short-version" aria-label="Permalink to The short version">#</a></span></summary>
 
 <ol>
-  <li><strong>Make the persona its own repository.</strong> Start from an existing persona repository. It needs an entry file, <code>AGENTS.md</code>, the voice and world material, <code>setup.sh</code> and an audit.</li>
-  <li><strong>Add one row to the registry.</strong> Put the id, name, source repository, entry file and consult topics in <code>series/agents.json</code>.</li>
-  <li><strong>Add one object to the site.</strong> Add the same id and the display fields to <code>_data/agents.js</code>.</li>
-  <li><strong>Run the checks.</strong> Audit the persona, install it, then run the site's link check.</li>
+  <li><strong>Make the character its own project.</strong> Start from an existing one. It needs an instructions file, the voice and world material, a setup script and tests.</li>
+  <li><strong>Add one line to the series list.</strong> Put the id, name, source project, entry file and topics in <code>series/agents.json</code>.</li>
+  <li><strong>Add one entry to the site.</strong> Add the same id and the display fields to <code>_data/agents.js</code>.</li>
+  <li><strong>Run the checks.</strong> Test the character, install it, then run the site's link check.</li>
 </ol>
 
-<p>That is enough to get a new page, nav entry and sitemap entry.</p>
+<p>That is enough to get a new page, a menu entry and a search-engine entry.</p>
 
 </details>
 
@@ -24,9 +24,9 @@ lede: "Adding a persona takes three things: a repository, one registry row and o
 <summary><span class="section-title" role="heading" aria-level="2" id="why-add-one">Why add one <a class="heading-anchor" href="#why-add-one" aria-label="Permalink to Why add one">#</a></span></summary>
 
 <ul class="tile-grid">
-  <li><strong>New personas share one archive</strong><p>Every persona reads the same Grimoire, so there is nothing new to fill.</p></li>
-  <li><strong>The site does the paperwork</strong><p>One site object produces the page, nav entry, sitemap entry and roster link.</p></li>
-  <li><strong>Each persona keeps its own pace</strong><p>A persona can ship with its own repository, tests and release cycle.</p></li>
+  <li><strong>New characters share one library</strong><p>Every character reads the same Grimoire, so there is nothing new to fill.</p></li>
+  <li><strong>The site does the paperwork</strong><p>One site entry produces the page, menu entry, search-engine entry and roster link.</p></li>
+  <li><strong>Each character keeps its own pace</strong><p>A character can ship with its own project, tests and release schedule.</p></li>
 </ul>
 
 </details>
@@ -38,7 +38,7 @@ checks to run before publishing.</p>
 
 <h3 id="the-shape">The shape</h3>
 
-A series persona is its own repository, not a folder inside the archive. The
+A series persona is its own project, not a folder inside the library. The
 reference implementations are [The Drifter](https://github.com/sagaciouszu/how-to-drift-for-agents)
 and [Eris Morn](https://github.com/sagaciouszu/eris-morn). Together they show
 what a persona needs:
@@ -56,7 +56,7 @@ or ask another persona.
 
 <h3 id="the-registry">The registry</h3>
 
-The deployment reads `series/agents.json` in the Grimoire. Add one row:
+The deployment reads `series/agents.json` in the Grimoire. Add one entry:
 
 <table class="field-table">
   <thead><tr><th>Field</th><th>What it does</th></tr></thead>
@@ -77,7 +77,7 @@ name, the site URL and the nav item. Keep it stable after publishing.
 
 <h3 id="the-site">The site</h3>
 
-Add the persona to `_data/agents.js` in this repository. One object builds
+Add the persona to `_data/agents.js` in the site project. One entry builds
 `/agents/<id>/`, the nav entry, the sitemap entry and the roster link. Set
 `featured: true` to show a summary at the top of the Agents page; leave it false
 for a roster entry only.
@@ -121,6 +121,6 @@ duplicate title or stale sitemap fails the deploy.
 
 ## Next
 
-- [Meet the personas]({{ '/agents/' | url }})
-- [Deploy the personas]({{ '/agents/install/' | url }})
+- [Meet the characters]({{ '/agents/' | url }})
+- [Install the characters]({{ '/agents/install/' | url }})
 - [Read the series standards](https://github.com/sagaciouszu/destiny-agent-grimoire/blob/master/STANDARDS.md)

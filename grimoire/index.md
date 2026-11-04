@@ -8,35 +8,35 @@ lede: One searchable place for Destiny lore, built so you and an AI can read the
 
 ## What it is
 
-The Grimoire is a single SQLite database file that lives in the project folder on
-your computer. It is a local library in one file: Destiny's books and their
-entries, dialogue from missions, raids, seasons and events, grimoire cards, item
-lore, triumphs and seals, plus a curated index of characters and the lines they
-speak. The dialogue is not a sampler of famous quotes; it is the conversations
-themselves, with the speaker and source kept alongside.
+The Grimoire is one database file in a folder on your computer. Think of it as a
+local library in a single file: Destiny's books and their entries, dialogue from
+missions, raids, seasons and events, grimoire cards, item lore, triumphs and
+seals, plus a hand-picked list of characters and the lines they speak. The
+dialogue is not a sampler of famous quotes; it is the conversations themselves,
+with the speaker and source kept alongside.
 
-You get the file by downloading it from the project's releases, or by building it
-from the source files in the repository. It is not an app and it does not install
-a service. Once it is on your computer, every lookup is local: nothing runs in
-the background, nothing is downloaded while you search, and nothing is sent
-anywhere. No account, no API key, no network.
+You get the file from the project's download page, or by building it from the
+source files yourself. It is not an app and it does not install a service. Once
+it is on your computer, every lookup is local: nothing runs in the background,
+nothing is downloaded while you search, and nothing is sent anywhere. No account,
+no key, no network.
 
 Because everything sits in one place, a single search can cross all of it at
 once. You can follow a character through a storyline, find the exact exchange
 behind a half-remembered quote, read the lore attached to a weapon or a piece of
 armor, or compare how different factions describe the same event. You can browse
-it yourself, or let an AI query it through the MCP server.
+it yourself, or let an AI look things up through the optional connector.
 
 ## Why it helps
 
 - **You stop tab-hopping.** Search one place instead of a dozen wiki pages.
-- **You can check a quote.** The archive ships a `verify` command, so you can
-  find out whether a line is real before you repeat it.
-- **Your AI sees the same text you do.** The Drifter and Eris read this archive. With
-  MCP, any compatible client can read it too.
-- **The pieces stay separate.** The archive is useful on its own. The MCP server
-  is optional. The personas are optional. Together they save you from copying
-  lore into a prompt and hoping.
+- **You can check a quote.** A built-in checker tells you whether a line is
+  real before you repeat it.
+- **Your AI sees the same text you do.** All five characters read this library.
+  With the optional connector, a compatible AI app can read it too.
+- **The pieces stay separate.** The library is useful on its own. The AI
+  connection is optional. The characters are optional. Together they save you
+  from copying lore into a chat and hoping.
 
 ## What's inside
 
@@ -57,28 +57,28 @@ The current build has:
   <div><strong>20</strong><span>curated characters</span></div>
 </div>
 
-<p>There are 124,484 searchable rows.</p>
+<p>There are 124,484 searchable entries.</p>
 
-The numbers show the size of the archive. The row you quote is the proof.
+The numbers show the size of the library. The line you quote is the proof.
 
 ## How the pieces fit
 
 <ul class="tile-grid">
-  <li><strong>The Grimoire</strong><p>The archive. It is the part everything else reads.</p></li>
-  <li><strong>The MCP server</strong><p>Turns the archive into read-only tools an AI can call, without giving it a shell.</p></li>
-  <li><strong>The personas</strong><p>Independent characters with their own voice, guardrails and memory. They read the Grimoire for canon.</p></li>
+  <li><strong>The Grimoire</strong><p>The library. It is the part everything else reads.</p></li>
+  <li><strong>The AI connection</strong><p>Optional lookup tools an AI app can use, without giving it a command line.</p></li>
+  <li><strong>The characters</strong><p>Independent voices with their own rules and memory. They read the Grimoire for the official text.</p></li>
 </ul>
 
 You can start with any one piece. Adding the others does not require a second
-archive.
+copy.
 
 ## Start here
 
 - [Install the Grimoire]({{ '/grimoire/install/' | url }}) — the short version is
-  one download and one command.
-- [Connect an AI with MCP]({{ '/grimoire/mcp/' | url }}) — useful if you want an
-  assistant to search for you.
-- [Meet the personas]({{ '/agents/' | url }}) — useful if you want a character to
+  one download and one check.
+- [Connect an AI]({{ '/grimoire/mcp/' | url }}) — useful if you want an assistant
+  to search for you.
+- [Meet the characters]({{ '/agents/' | url }}) — useful if you want a character to
   talk to, not just a search box.
 
 <h2 id="for-experts">For Experts (or enthusiasts) <a class="heading-anchor" href="#for-experts" aria-label="Permalink to For Experts (or enthusiasts)">#</a></h2>
@@ -118,12 +118,12 @@ That is the check to run before putting words in a character's mouth.
 
 <div class="callout">
 <h3 id="not-canon">Not canon</h3>
-<p>This is a fan-built, non-commercial project. Destiny, its text, characters and art belong to Bungie. The database is a reading and checking aid, not a substitute for the source material or Bungie's own published lore.</p>
+<p>This is a fan-built, non-commercial project. Destiny, its text, characters and art belong to Bungie. The library is a reading and checking aid, not a substitute for the source material or Bungie's own published lore.</p>
 </div>
 
 ## Next
 
-- [Install and query the Grimoire]({{ '/grimoire/install/' | url }})
-- [Set up the MCP server]({{ '/grimoire/mcp/' | url }})
-- [Troubleshoot a missing database or tool]({{ '/troubleshooting/' | url }})
+- [Install and search the Grimoire]({{ '/grimoire/install/' | url }})
+- [Connect an AI]({{ '/grimoire/mcp/' | url }})
+- [Troubleshoot a missing library or connection]({{ '/troubleshooting/' | url }})
 - [Read the standards](https://github.com/sagaciouszu/destiny-agent-grimoire/blob/master/STANDARDS.md)

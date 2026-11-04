@@ -351,6 +351,16 @@ a:hover {
   padding-block: clamp(2.1rem, 5.1vw, 4.25rem);
 }
 
+/* Destiny 2 UI weights: 400 Light, 500 Roman, 600 Medium, 700 Bold.
+   Body copy uses 500, labels 600 and headings 700. */
+.category-icon {
+  display: block;
+  width: 1.65rem;
+  height: 1.65rem;
+  margin: 0 0 0.55rem;
+  color: var(--gold);
+}
+
 .lore {
   width: min(100% - 2.5rem, 54rem);
   margin-inline: auto;
@@ -526,6 +536,8 @@ samp {
 pre code {
   display: block;
   color: var(--code-text);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
 }
 
 .copy-button {
@@ -1606,21 +1618,25 @@ pre:hover .copy-button,
 }
 
 .persona-tally {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 0.35rem 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   margin: 0 0 1.6rem;
-  padding: 0.9rem 1rem;
+  overflow: hidden;
   color: var(--muted);
   background: var(--surface);
   border: 1px dashed var(--line-strong);
   border-radius: 6px;
   font-size: 0.9rem;
+  text-align: center;
 }
 
-.persona-tally span:last-child { margin-left: auto; }
+.persona-tally span {
+  padding: 0.9rem 1rem;
+}
+
+.persona-tally span + span {
+  border-left: 1px solid var(--line);
+}
 
 .persona-tally strong {
   color: var(--heading);

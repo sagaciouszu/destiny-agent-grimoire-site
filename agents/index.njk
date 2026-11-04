@@ -1,22 +1,21 @@
 ---
-section: integration
+section: personas
 layout: page
-title: Agents & Integration
-category: Agents & Integration · Overview
-lede: Five characters you can talk to today, with more on the way. All read the same Grimoire; pick one, or run several side by side.
+title: Personas
+category: Personas · Overview
+lede: Five characters you can talk to today, with more on the way. Each reads the same library, so they answer from the same lore.
 ---
 
 <h2 id="what-these-are">What these are <a class="heading-anchor" href="#what-these-are" aria-label="Permalink to What these are">#</a></h2>
 
-<p>The Drifter, Eris Morn, Zavala, Calus and Ghost are independent personas.
-Each has its own voice, guardrails, memory and tests. They are not prompt presets;
-they are small bundles of instructions and tests you can run in OpenCode,
-OpenClaw or another app that reads instructions.</p>
+<p>A persona is the character: its voice, rules and memory. An agent is the
+runnable package you add to an AI app. Ours are small folders of instructions and
+tests, not one-line prompts.</p>
 
-<p>All of them read the same Grimoire archive. That is what keeps them from
-inventing lore when they answer.</p>
+<p>The Drifter, Eris Morn, Zavala, Calus and Ghost all read the same Grimoire
+library. That is what keeps them from making up lore when they answer.</p>
 
-<h2 id="meet-the-personas">Meet the personas <a class="heading-anchor" href="#meet-the-personas" aria-label="Permalink to Meet the personas">#</a></h2>
+<h2 id="meet-the-personas">Meet the characters <a class="heading-anchor" href="#meet-the-personas" aria-label="Permalink to Meet the characters">#</a></h2>
 
 <ul class="tile-grid tile-grid--personas">
   {% for agent in agents %}
@@ -45,44 +44,44 @@ inventing lore when they answer.</p>
 <h2 id="why-use-them">Why use them <a class="heading-anchor" href="#why-use-them" aria-label="Permalink to Why use them">#</a></h2>
 
 <ul>
-  <li><strong>They sound like themselves.</strong> Voice rules, address terms and guardrails are part of the repository, not a one-line prompt.</li>
-  <li><strong>They share your archive.</strong> The Grimoire gives them the same books, lines and items you can look up.</li>
-  <li><strong>They can check a quote.</strong> The archive's <code>verify</code> command is part of the workflow.</li>
-  <li><strong>They can use MCP.</strong> Connect the MCP server and the persona can search the archive as a tool.</li>
-  <li><strong>They can ask each other.</strong> A read-only consult copy lets one character ask another a question without sharing private notes.</li>
+  <li><strong>They sound like themselves.</strong> Their voice, the way they address you and their rules are written down, not squeezed into a one-line prompt.</li>
+  <li><strong>They share your library.</strong> The Grimoire gives them the same books, lines and items you can look up.</li>
+  <li><strong>They can check a quote.</strong> The built-in checker is part of how they work.</li>
+  <li><strong>They can look things up.</strong> With the optional AI connection, a character can search the library as a tool.</li>
+  <li><strong>They can ask each other.</strong> A read-only helper copy lets one character ask another a question without sharing private notes.</li>
 </ul>
 
 <h2 id="how-they-fit">How they fit together <a class="heading-anchor" href="#how-they-fit" aria-label="Permalink to How they fit together">#</a></h2>
 
 <figure class="fit-map">
-  <figcaption class="visually-hidden">Your AI client runs a persona, calls MCP tools, or both. The personas and the MCP server both read the Grimoire.</figcaption>
+  <figcaption class="visually-hidden">Your AI app runs a character, uses the AI connection, or both. Both paths read the Grimoire library.</figcaption>
   <div class="fit-node fit-node--client">
-    <p class="fit-kicker">Runtime</p>
-    <strong>Your AI client</strong>
-    <p>OpenCode, OpenClaw or another app that can run a persona or call a local tool.</p>
+    <p class="fit-kicker">Your app</p>
+    <strong>Your AI app</strong>
+    <p>OpenCode, OpenClaw or another app that can run a character or use a local tool.</p>
   </div>
   <div class="fit-split" aria-hidden="true"><span></span><span></span></div>
   <div class="fit-pair">
     <div class="fit-node">
-      <p class="fit-kicker">Voice layer</p>
-      <strong>Personas</strong>
-      <p>Every persona reads the archive and answers in character.</p>
+      <p class="fit-kicker">Characters</p>
+      <strong>Characters</strong>
+      <p>Each character reads the library and answers in its own voice.</p>
     </div>
     <div class="fit-node">
-      <p class="fit-kicker">Optional bridge</p>
-      <strong>MCP server</strong>
-      <p>Read-only tools that let the client search the same archive.</p>
+      <p class="fit-kicker">Optional</p>
+      <strong>AI connection</strong>
+      <p>Lookup tools that let the app search the same library.</p>
     </div>
   </div>
   <div class="fit-join" aria-hidden="true"><span></span><span></span></div>
   <div class="fit-node fit-node--archive">
-    <p class="fit-kicker">One archive</p>
+    <p class="fit-kicker">The library</p>
     <strong>The Grimoire</strong>
     <p>Books, dialogue, cards, items and records. The part everything else reads.</p>
   </div>
 </figure>
 
-<p>Run a persona, call MCP tools, or both. Every path ends at the same archive. You can install one persona and skip the other; the pieces are designed to be adopted separately.</p>
+<p>Use a character, connect an AI to the library, or both. Every path ends at the same library. You can install one character and skip the others; the pieces are designed to be adopted separately.</p>
 
 <h2 id="for-experts">For Experts (or enthusiasts) <a class="heading-anchor" href="#for-experts" aria-label="Permalink to For Experts (or enthusiasts)">#</a></h2>
 
@@ -121,8 +120,9 @@ completeness, the conversation path and the shared structure gates.</p>
 <h2 id="next">Next</h2>
 
 <ul>
-  <li><a href="{{ '/agents/install/' | url }}">Set up an agent</a></li>
-  <li><a href="{{ '/agents/platforms/' | url }}">Integrations</a></li>
+  <li><a href="{{ '/agents/install/' | url }}">Set up a character</a></li>
+  <li><a href="{{ '/agents/platforms/' | url }}">Use another app</a></li>
   <li><a href="https://github.com/sagaciouszu/destiny-agent-grimoire/blob/master/STANDARDS.md">Read the series standards</a></li>
-  <li><a href="{{ '/troubleshooting/' | url }}">Troubleshoot a persona that does not appear</a></li>
+  <li><a href="{{ '/troubleshooting/' | url }}">Troubleshoot a character that does not appear</a></li>
+  <li><a href="{{ '/agents/build/' | url }}">Build your own persona</a></li>
 </ul>

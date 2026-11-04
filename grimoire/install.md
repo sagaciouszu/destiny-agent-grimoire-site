@@ -3,33 +3,38 @@ section: grimoire
 layout: page
 title: Install the Grimoire
 category: The Grimoire · Install
-lede: Get the archive on your machine in a minute or two. The easy path is first; the full command reference is at the bottom.
+lede: Get the library onto your computer in a few minutes. Start with the simple download; the full command reference is at the bottom.
 ---
 
 <nav class="setup-order setup-order--inline" aria-label="Recommended setup order">
   <span class="setup-order-label">Setup order</span>
   <ol>
     <li><a href="{{ '/grimoire/install/' | url }}" aria-current="step">1. Grimoire</a></li>
-    <li><a href="{{ '/grimoire/mcp/' | url }}">2. MCP <span class="setup-optional">optional</span></a></li>
-    <li><a href="{{ '/agents/install/' | url }}">3. Personas</a></li>
+    <li><a href="{{ '/grimoire/mcp/' | url }}">2. AI access <span class="setup-optional">optional</span></a></li>
+    <li><a href="{{ '/agents/install/' | url }}">3. Characters</a></li>
   </ol>
 </nav>
 
 <details class="section" open>
 <summary><span class="section-title" role="heading" aria-level="2" id="quick-start">Start here <a class="heading-anchor" href="#quick-start" aria-label="Permalink to Start here">#</a></span></summary>
 
-You need Git, Python 3.8 or newer, and about 260 MB of free space. No account,
-API key or build tools.
+You need Git (to download the project), Python 3.8 or newer (to run the search
+tool), and about 260 MB of free space. No account, API key or build tools.
+
+The commands below download the project, download the library file, check the
+download, put the file in the right folder, and print the library counts. Paste
+the block into a terminal.
 
 <pre><code>git clone https://github.com/sagaciouszu/destiny-agent-grimoire.git
 cd destiny-agent-grimoire
-curl -fsSL https://github.com/sagaciouszu/destiny-agent-grimoire/releases/latest/download/grimoire.db -o grimoire.db
-curl -fsSL https://github.com/sagaciouszu/destiny-agent-grimoire/releases/latest/download/SHA256SUMS -o SHA256SUMS
+base=https://github.com/sagaciouszu/destiny-agent-grimoire
+curl -fsSL "$base/releases/latest/download/grimoire.db" -o grimoire.db
+curl -fsSL "$base/releases/latest/download/SHA256SUMS" -o SHA256SUMS
 sha256sum -c SHA256SUMS
 mv grimoire.db db/grimoire.db
 python3 db/query.py stats</code></pre>
 
-<p>If the last command prints counts, you are done.</p>
+<p>If the last command prints counts, you are ready to search.</p>
 
 </details>
 
@@ -38,13 +43,13 @@ python3 db/query.py stats</code></pre>
 
 <ul class="tile-grid">
   <li><strong>One place to look things up</strong><p>Search books, dialogue, cards, items and records without opening a dozen wiki tabs.</p></li>
-  <li><strong>A quote checker</strong><p>Paste a line and find out whether it is real Destiny text before you put it in a post, a video or a persona's mouth.</p></li>
-  <li><strong>A shared source for personas</strong><p>The Drifter and Eris read this same archive, so they answer from the same material you do.</p></li>
-  <li><strong>An optional tool server</strong><p>Connect an AI client through MCP and it can search the archive directly.</p></li>
+  <li><strong>A quote checker</strong><p>Paste a line and find out whether it is real Destiny text before you put it in a post, a video or a character's mouth.</p></li>
+  <li><strong>A shared source for characters</strong><p>All five characters read this same library, so they answer from the same material you do.</p></li>
+  <li><strong>An optional AI connection</strong><p>Connect an AI app and it can search the library directly.</p></li>
 </ul>
 
-You don't need the personas or MCP to use the archive. They are separate pieces
-that become more useful together.
+You don't need the characters or the AI connection to use the library. They are
+separate pieces that become more useful together.
 
 </details>
 
@@ -52,30 +57,16 @@ that become more useful together.
 <summary><span class="section-title" role="heading" aria-level="2" id="prerequisites">Before you start <a class="heading-anchor" href="#prerequisites" aria-label="Permalink to Before you start">#</a></span></summary>
 
 <ul class="checklist">
-  <li>Python 3.8 or newer. The standard library is enough.</li>
-  <li>Git, to clone the archive.</li>
-  <li>About 260 MB of free space. The database itself is about 170 MB.</li>
+  <li>Python 3.8 or newer. No extra Python packages are needed.</li>
+  <li>Git, to download the project.</li>
+  <li>About 260 MB of free space. The library file itself is about 170 MB.</li>
   <li>Roughly the same space again if you build from source.</li>
 </ul>
 
-The download needs no build tools at all. The source build is pure Python.
+The download needs no build tools. Building from source only needs Python.
 
 </details>
 
-<details class="section">
-<summary><span class="section-title" role="heading" aria-level="2" id="build-it">Prefer to build it yourself? <a class="heading-anchor" href="#build-it" aria-label="Permalink to Prefer to build it yourself?">#</a></span></summary>
-
-This is slower and uses more disk, but it is reproducible and works offline once
-the sources are present.
-
-<pre><code>git clone https://github.com/sagaciouszu/destiny-agent-grimoire.git
-cd destiny-agent-grimoire
-python3 db/migrate.py</code></pre>
-
-<p>The build reads <code>source/</code> and <code>archive/data/*.jsonl</code> and writes
-<code>db/grimoire.db</code>.</p>
-
-</details>
 
 <details class="section">
 <summary><span class="section-title" role="heading" aria-level="2" id="everyday-commands">Everyday commands <a class="heading-anchor" href="#everyday-commands" aria-label="Permalink to Everyday commands">#</a></span></summary>
@@ -85,26 +76,24 @@ python3 db/query.py search "Crota" --limit 5
 python3 db/query.py character "eris" --limit 20
 python3 db/query.py verify "Absolutely not." --speaker "Eris Morn" --exact</code></pre>
 
-<p>Every command accepts <code>--json</code>. Read commands accept <code>--limit</code>
-and <code>--offset</code>. Search treats punctuation as text instead of throwing
-an error.</p>
-
-<p>A failed <code>verify</code> exits with status 1 and prints <code>NOT FOUND</code>.
-Treat that as a stop sign, not a puzzle to reword until it passes.</p>
+<p>Search treats punctuation as text instead of throwing an error. If the quote
+checker prints <code>NOT FOUND</code>, stop: the line is not in the library. Do not
+reword it until it passes.</p>
 
 </details>
 
 <details class="section">
 <summary><span class="section-title" role="heading" aria-level="2" id="connect-an-ai">Connect an AI <a class="heading-anchor" href="#connect-an-ai" aria-label="Permalink to Connect an AI">#</a></span></summary>
 
-MCP lets a client ask the archive questions as tools. Install the adapter once:
+The optional connector lets an AI app ask the library questions as tools. Install
+it once:
 
 <pre><code>bash mcp-server/install.sh</code></pre>
 
-<p>The installer prints a client snippet pointing at <code>mcp-server/run.sh</code>.
-It runs locally, over stdio, and only reads the database. See
-<a href="{{ '/grimoire/mcp/' | url }}">MCP server</a> for the client setup and the
-full tool list.</p>
+<p>The installer prints a configuration block pointing at
+<code>mcp-server/run.sh</code>. It runs on your computer and only reads the
+library. See <a href="{{ '/grimoire/mcp/' | url }}">Connect an AI</a> for the app
+setup and the full tool list.</p>
 
 </details>
 
@@ -114,11 +103,27 @@ full tool list.</p>
 <p class="muted">The release details, rebuild path and test gates. You can ignore
 this section if the short version worked.</p>
 
+<h3 id="build-it">Build it yourself <a class="heading-anchor" href="#build-it" aria-label="Permalink to Build it yourself">#</a></h3>
+
+This is slower and uses more disk, but it is repeatable and works offline once
+the project files are present.
+
+<pre><code>git clone https://github.com/sagaciouszu/destiny-agent-grimoire.git
+cd destiny-agent-grimoire
+python3 db/migrate.py</code></pre>
+
+<p>The build reads <code>source/</code> and <code>archive/data/*.jsonl</code> and writes
+<code>db/grimoire.db</code>.</p>
+
 <h3 id="release-details">The release, step by step <a class="heading-anchor" href="#release-details" aria-label="Permalink to The release, step by step">#</a></h3>
 
-<p>The release asset is the official download. <code>SHA256SUMS</code> is attached
-to the same release, and the publish pipeline checks the digest before it goes
-out.</p>
+<h3 id="command-details">Command details <a class="heading-anchor" href="#command-details" aria-label="Permalink to Command details">#</a></h3>
+
+<p>Every command accepts <code>--json</code> for scripts. Read commands accept
+<code>--limit</code> and <code>--offset</code>.</p>
+
+<p>The release file is the official download. <code>SHA256SUMS</code> is attached
+to the same release, and the publish pipeline checks it before release.</p>
 
 <pre><code>curl -fsSL https://github.com/sagaciouszu/destiny-agent-grimoire/releases/latest/download/grimoire.db -o grimoire.db
 curl -fsSL https://github.com/sagaciouszu/destiny-agent-grimoire/releases/latest/download/SHA256SUMS -o SHA256SUMS
@@ -156,5 +161,5 @@ through <code>lore/tests/</code>.</p>
 ## Next
 
 - [Try the commands](#everyday-commands)
-- [Connect an AI with MCP]({{ '/grimoire/mcp/' | url }})
+- [Connect an AI]({{ '/grimoire/mcp/' | url }})
 - [Assemble your fireteam]({{ '/agents/install/' | url }})

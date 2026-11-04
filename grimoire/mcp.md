@@ -1,8 +1,8 @@
 ---
 layout: page
-title: MCP Server
-category: The Grimoire · MCP
-lede: MCP is the bridge that lets an AI client search the Grimoire directly. Install it once, point your client at it, and the model can look things up instead of guessing.
+title: Connect an AI
+category: The Grimoire · Connect an AI
+lede: MCP is a small connector that lets an AI app look things up in the Grimoire instead of guessing. Set it up once, then ask the app questions.
 section: grimoire
 ---
 
@@ -10,56 +10,57 @@ section: grimoire
   <span class="setup-order-label">Setup order</span>
   <ol>
     <li><a href="{{ '/grimoire/install/' | url }}">1. Grimoire</a></li>
-    <li><a href="{{ '/grimoire/mcp/' | url }}" aria-current="step">2. MCP <span class="setup-optional">optional</span></a></li>
-    <li><a href="{{ '/agents/install/' | url }}">3. Personas</a></li>
+    <li><a href="{{ '/grimoire/mcp/' | url }}" aria-current="step">2. AI access <span class="setup-optional">optional</span></a></li>
+    <li><a href="{{ '/agents/install/' | url }}">3. Characters</a></li>
   </ol>
 </nav>
 
 ## What it does
 
-The MCP server gives an AI client a small set of named tools: search, character
-lines, item lore and quote checks. The client calls those tools itself instead of
-asking you to run commands.
+The connector gives an AI app a handful of lookup tools: search the library,
+pull a character's lines, read item lore and check a quote. The app calls those
+tools itself instead of asking you to run commands.
 
-It runs on your machine. There is no network service, no port and no account.
-Your app starts it, talks to it directly, and stops it when the session ends.
+It runs on your computer. There is no website to sign into and no account. Your
+app starts it when needed and stops it when you are done.
 
 ## Why use it
 
 <ul class="tile-grid">
-  <li><strong>The model stops guessing</strong><p>It can search the archive and read the passage before it answers.</p></li>
-  <li><strong>Quotes can be checked</strong><p><code>verify</code> is one of the tools, so the client can ask whether a line is canon.</p></li>
-  <li><strong>Your personas get sharper</strong><p>The Drifter and Eris use the same archive. MCP gives them a direct lookup path.</p></li>
-  <li><strong>It is safe to leave on</strong><p>The database is read-only, with no SQL tool, write path or network access.</p></li>
+  <li><strong>The AI stops guessing</strong><p>It can search the library and read the passage before it answers.</p></li>
+  <li><strong>Quotes can be checked</strong><p>The quote checker is one of the tools, so the app can ask whether a line is real.</p></li>
+  <li><strong>Your characters get sharper</strong><p>All five characters use the same library. The connector gives them a direct lookup path.</p></li>
+  <li><strong>It is safe to leave on</strong><p>The library is read-only: the connector cannot change it, run commands or reach the network.</p></li>
 </ul>
 
-You don't need MCP to use the Grimoire. It is the convenience layer for apps that
-can launch a local process.
+You don't need this to use the Grimoire. It is for AI apps that can start a
+local helper.
 
 ## Set it up
 
-From the Grimoire checkout:
+In the Grimoire folder:
 
 <pre><code>bash mcp-server/install.sh</code></pre>
 
-The installer sets up a small local environment and prints a snippet to paste
-into your app. Restart the app after you add it. If your client asks for a path, point it at `mcp-server/run.sh`; use
-the absolute path if the client starts somewhere else.
+The installer creates a small local setup and prints a configuration block to
+paste into your app. Restart the app after you add it. If your app asks for a
+path, point it at `mcp-server/run.sh`; use the full path if the app starts
+somewhere else.
 
-The installer needs Python 3.10 or newer for the MCP SDK. The query command line
-still runs on 3.8+.
+The connector needs Python 3.10 or newer. The search tool still runs on 3.8 or
+newer.
 
 ## Try it
 
-Once the client is connected, ask it for something that needs a lookup:
+Once the app is connected, ask it for something that needs a lookup:
 
 - “Find Eris lines about the Hive.”
-- “What does the archive say about the Leviathan?”
+- “What does the library say about the Leviathan?”
 - “Verify ‘Absolutely not.’ as an Eris Morn quote.”
 - “Show me items with lore about the Moon.”
 
-If the client lists the Grimoire tools but answers from memory anyway, ask it
-directly to use the `search` or `verify` tool.
+If the app lists the Grimoire tools but answers from memory anyway, ask it to
+use the search or quote-checking tool directly.
 
 <details class="section experts">
 <summary><span class="section-title" role="heading" aria-level="2" id="for-experts">For Experts (or enthusiasts) <a class="heading-anchor" href="#for-experts" aria-label="Permalink to For Experts (or enthusiasts)">#</a></span></summary>
@@ -131,6 +132,6 @@ launch a local process.
 
 ## Next
 
-- [Meet the personas]({{ '/agents/' | url }})
+- [Meet the characters]({{ '/agents/' | url }})
 - [Use another app]({{ '/agents/platforms/' | url }})
 - [Install the Grimoire]({{ '/grimoire/install/' | url }})

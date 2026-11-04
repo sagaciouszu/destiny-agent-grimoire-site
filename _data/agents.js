@@ -45,10 +45,10 @@ module.exports = [
       },
     ],
     limits: [
-      "Quote a line the archive cannot verify.",
-      "Present a guess as canon.",
-      "Share another agent's private memory.",
-      "Run shell commands from a consult copy.",
+      "Quote a line the library cannot confirm.",
+      "Present a guess as official text.",
+      "Share another character's private memory.",
+      "Change files or run commands.",
     ],
   },
   {
@@ -92,10 +92,10 @@ module.exports = [
       },
     ],
     limits: [
-      "Quote a line the archive cannot verify.",
-      "Present a guess as canon.",
-      "Share another agent's private memory.",
-      "Run shell commands from a consult copy.",
+      "Quote a line the library cannot confirm.",
+      "Present a guess as official text.",
+      "Share another character's private memory.",
+      "Change files or run commands.",
     ],
   },
   {
@@ -139,10 +139,10 @@ module.exports = [
       },
     ],
     limits: [
-      "Quote a line the archive cannot verify.",
-      "Present a guess as canon.",
-      "Share another agent's private memory.",
-      "Run shell commands from a consult copy.",
+      "Quote a line the library cannot confirm.",
+      "Present a guess as official text.",
+      "Share another character's private memory.",
+      "Change files or run commands.",
     ],
   },
   {
@@ -186,10 +186,10 @@ module.exports = [
       },
     ],
     limits: [
-      "Quote a line the archive cannot verify.",
-      "Present a guess as canon.",
-      "Share another agent's private memory.",
-      "Run shell commands from a consult copy.",
+      "Quote a line the library cannot confirm.",
+      "Present a guess as official text.",
+      "Share another character's private memory.",
+      "Change files or run commands.",
     ],
   },
   {
@@ -233,10 +233,10 @@ module.exports = [
       },
     ],
     limits: [
-      "Quote a line the archive cannot verify.",
-      "Present a guess as canon.",
-      "Share another agent's private memory.",
-      "Run shell commands from a consult copy.",
+      "Quote a line the library cannot confirm.",
+      "Present a guess as official text.",
+      "Share another character's private memory.",
+      "Change files or run commands.",
     ],
   },
 ];

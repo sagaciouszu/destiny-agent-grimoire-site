@@ -1,29 +1,29 @@
 ---
 layout: default
 title: Destiny Agent Grimoire
-description: A searchable Destiny lore archive and character personas that read from it.
+description: A searchable Destiny lore library and character personas that read from it.
 ---
 
 <section class="hero">
   <div class="hero-copy">
-    <p class="kicker">Destiny lore · for people and their agents</p>
+    <p class="kicker">Destiny lore · for readers and their AI</p>
     <h1>Destiny Agent Grimoire</h1>
     <p class="lede">
-      A searchable archive of Destiny's books, dialogue and gear lore, with character
-      personas that read from it. Every quote keeps its source, so you can check a line
-      before you use it. Local-first, no account, no API key.
+      The Grimoire is a searchable library of Destiny's books, dialogue and gear
+      lore. Five characters read from it, and every quote keeps its source so you
+      can check a line before you use it. Everything stays on your computer.
     </p>
     <div class="hero-actions">
-      <a class="button button-primary" href="{{ '/grimoire/install/' | url }}">Get the archive</a>
-      <a class="button" href="{{ '/agents/' | url }}">Meet the personas</a>
+      <a class="button button-primary" href="{{ '/grimoire/install/' | url }}">Get the Grimoire</a>
+      <a class="button" href="{{ '/agents/' | url }}">Meet the characters</a>
     </div>
 
     <nav class="setup-order setup-order--hero" aria-label="Recommended setup order">
       <span class="setup-order-label">Setup order</span>
       <ol>
         <li><a href="{{ '/grimoire/install/' | url }}">1. Grimoire</a></li>
-        <li><a href="{{ '/grimoire/mcp/' | url }}">2. MCP <span class="setup-optional">optional</span></a></li>
-        <li><a href="{{ '/agents/install/' | url }}">3. Personas</a></li>
+        <li><a href="{{ '/grimoire/mcp/' | url }}">2. AI access <span class="setup-optional">optional</span></a></li>
+        <li><a href="{{ '/agents/install/' | url }}">3. Characters</a></li>
       </ol>
     </nav>
   </div>
@@ -53,7 +53,7 @@ description: A searchable Destiny lore archive and character personas that read 
       <button type="button" data-rotator-next aria-label="Next test transcript">›</button>
       <span class="transmission-count" data-rotator-count aria-hidden="true">1 / {{ voices.length }}</span>
     </div>
-    <p class="transmission-note">Short replies from the agent test suites. Random picks from this set — not canon quotes.</p>
+    <p class="transmission-note">Short replies from the character tests. Random picks from this set — not quotes from the games.</p>
   </aside>
 </section>
 
@@ -61,16 +61,20 @@ description: A searchable Destiny lore archive and character personas that read 
   <article class="category">
     <span class="category-index" aria-hidden="true">01</span>
     <div>
+      <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" data-icon-placeholder="true">
+        <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z"/>
+        <path d="M4 5.5v16"/>
+      </svg>
       <h2>The Grimoire</h2>
       <p>
-        One database with 110 books, 1,294 transcripts, 2,889 grimoire cards and
-        58,764 items. Search it in a terminal, or let an AI search it through the
-        MCP server.
+        One searchable library with 110 books, 1,294 transcript conversations,
+        2,889 grimoire cards and 58,764 items. Search it yourself, or let an AI
+        search it for you.
       </p>
       <div class="category-links">
         <a href="{{ '/grimoire/' | url }}">See what's inside</a>
         <a href="{{ '/grimoire/install/' | url }}">Install it</a>
-        <a href="{{ '/grimoire/mcp/' | url }}">Connect an MCP client</a>
+        <a href="{{ '/grimoire/mcp/' | url }}">Connect an AI</a>
       </div>
     </div>
   </article>
@@ -78,14 +82,18 @@ description: A searchable Destiny lore archive and character personas that read 
   <article class="category">
     <span class="category-index" aria-hidden="true">02</span>
     <div>
-      <h2>The personas</h2>
+      <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" data-icon-placeholder="true">
+        <circle cx="12" cy="8" r="3.5"/>
+        <path d="M5 20a7 7 0 0 1 14 0"/>
+      </svg>
+      <h2>The characters</h2>
       <p>
-        The Drifter, Eris Morn, Zavala, Calus and Ghost are separate characters
-        with their own voices, memories and tests. They share the archive and can
-        quietly ask each other for help, without sharing private notes.
+        The Drifter, Eris Morn, Zavala, Calus and Ghost each have their own
+        voice, memory and rules. They share the library and can quietly ask each
+        other for help, without sharing private notes.
       </p>
       <div class="category-links">
-        <a href="{{ '/agents/' | url }}">Overview</a>
+        <a href="{{ '/agents/' | url }}">Meet them</a>
         <a href="{{ '/agents/drifter/' | url }}">The Drifter</a>
         <a href="{{ '/agents/eris/' | url }}">Eris Morn</a>
       </div>
@@ -95,14 +103,19 @@ description: A searchable Destiny lore archive and character personas that read 
   <article class="category">
     <span class="category-index" aria-hidden="true">03</span>
     <div>
-      <h2>Assemble your fireteam</h2>
+      <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" data-icon-placeholder="true">
+        <path d="M9 3v6M15 3v6M6 9h12v3a6 6 0 0 1-12 0z"/>
+        <path d="M12 18v3"/>
+      </svg>
+      <h2>Set up a character</h2>
       <p>
-        Run one persona on its own, or bring the whole crew into OpenCode or OpenClaw.
-        They share the archive; their private memories stay separate.
+        Run one character on its own, or bring the whole crew into an AI app such
+        as OpenCode or OpenClaw. They share the library; their private memories
+        stay separate.
       </p>
       <div class="category-links">
-        <a href="{{ '/agents/install/' | url }}">Install a persona</a>
-        <a href="{{ '/agents/platforms/' | url }}">Integrations</a>
+        <a href="{{ '/agents/install/' | url }}">Install a character</a>
+        <a href="{{ '/agents/platforms/' | url }}">Use another app</a>
       </div>
     </div>
   </article>
@@ -110,11 +123,14 @@ description: A searchable Destiny lore archive and character personas that read 
   <article class="category">
     <span class="category-index" aria-hidden="true">04</span>
     <div>
-      <h2>If something breaks</h2>
+      <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" data-icon-placeholder="true">
+        <path d="M14.5 6.5a4 4 0 0 0-5 5L3 18l3 3 6.5-6.5a4 4 0 0 0 5-5l-2.5 2.5-2-2z"/>
+      </svg>
+      <h2>If something goes wrong</h2>
       <p>
-        Missing database, no tools in your client, a persona that will not appear,
-        or a quote that keeps failing. Start with the symptom and work back to the
-        cause.
+        A missing library file, an AI connection that will not appear, a
+        character that will not show up, or a quote that keeps failing. Start with
+        the symptom and work back to the cause.
       </p>
       <div class="category-links">
         <a href="{{ '/troubleshooting/' | url }}">Fix a problem</a>

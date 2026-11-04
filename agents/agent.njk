@@ -35,7 +35,7 @@ section: personas
 
 <h2 id="words">In their own words <a class="heading-anchor" href="#words" aria-label="Permalink to In their own words">#</a></h2>
 
-<p class="muted">Every line below passes <code>verify --exact</code> against the archive.</p>
+<p class="muted">Every line below has been checked against the library.</p>
 
 <div class="quote-grid">
 {% for sample in agent.samples %}
@@ -56,16 +56,17 @@ section: personas
 
 <h2 id="setup">Eyes up <a class="heading-anchor" href="#setup" aria-label="Permalink to Eyes up">#</a></h2>
 
-<p>Clone the persona, then let its setup script link the Grimoire and get the
-database:</p>
+<p>Download the character, then run its setup script to connect the library. The
+first line downloads the project, the second enters its folder, and the third
+connects the library:</p>
 
 <pre><code>git clone {{ agent.repo }}.git
 cd {{ agent.repoName }}
 ./setup.sh</code></pre>
 
-<p>Use <code>BOOTSTRAP=1 ./setup.sh</code> to download the release database
-without a prompt. For OpenCode or OpenClaw, use the shared sync instead:
-<a href="{{ '/agents/install/' | url }}">Deploy the personas</a>.</p>
+<p>To set it up without questions, run <code>BOOTSTRAP=1 ./setup.sh</code>. If you
+use OpenCode or OpenClaw, the
+<a href="{{ '/agents/install/' | url }}">install page</a> has a one-step setup.</p>
 
 <h2 id="for-experts">For Experts (or enthusiasts) <a class="heading-anchor" href="#for-experts" aria-label="Permalink to For Experts (or enthusiasts)">#</a></h2>
 
@@ -102,7 +103,7 @@ and the shared structure gates. It is the same suite CI runs.</p>
 <h2 id="next">Next <a class="heading-anchor" href="#next" aria-label="Permalink to Next">#</a></h2>
 
 <ul>
-  <li><a href="{{ '/agents/' | url }}">Back to the personas</a></li>
+  <li><a href="{{ '/agents/' | url }}">Back to the characters</a></li>
   {% for other in agents %}{% if other.id != agent.id %}
   <li><a href="{{ ('/agents/' + other.id + '/') | url }}">Meet {{ other.name }}</a></li>
   {% endif %}{% endfor %}

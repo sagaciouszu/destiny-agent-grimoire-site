@@ -1,9 +1,9 @@
 ---
-section: integration
+section: personas
 layout: page
-title: Deploy the Personas
-category: Agents & Integration · Install
-lede: Pick a persona, connect it to the shared archive, and start talking. The common setups are at the top; the file layout and how personas talk to each other are at the bottom.
+title: Install the Characters
+category: Personas · Install
+lede: Pick a character and add it to the AI app you already use. Start with the simple path; the file layout and advanced options are at the bottom.
 setupOrder: true
 setupStep: 3
 ---
@@ -11,41 +11,41 @@ setupStep: 3
 <details class="section" open>
 <summary><span class="section-title" role="heading" aria-level="2" id="quick-start">Start here <a class="heading-anchor" href="#quick-start" aria-label="Permalink to Start here">#</a></span></summary>
 
-<p>Pick the app you already use. You don't need all three. If you already
-installed the Grimoire, skip the clone lines and run the sync from your checkout.</p>
+<p>Pick the app you already use. You don't need all three. The commands go in a
+terminal; copy one block at a time. If you already installed the Grimoire, skip
+the download lines and run the setup from that folder.</p>
 
 <div class="choices">
   <div class="choice">
     <p class="choice-label"><svg class="choice-icon choice-logo" viewBox="0 0 24 36" aria-hidden="true" focusable="false"><path fill="currentColor" opacity="0.55" d="M18 30H6V18H18V30Z"/><path fill="currentColor" d="M18 12H6V30H18V12ZM24 36H0V6H24V36Z"/></svg>OpenCode</p>
-    <h3>Install both personas</h3>
-    <p class="muted choice-desc">One command installs both personas and their read-only consult copies.</p>
+    <h3>Install all characters</h3>
+    <p class="muted choice-desc">One command copies the characters and their read-only helper copies into OpenCode.</p>
     <pre><code>git clone https://github.com/sagaciouszu/destiny-agent-grimoire.git
 cd destiny-agent-grimoire
 bash scripts/sync-live-agents.sh</code></pre>
-    <p class="muted">Restart OpenCode, then pick The Drifter or Eris.</p>
+    <p class="muted">Restart OpenCode, then pick a character.</p>
   </div>
   <div class="choice">
     <p class="choice-label"><span class="choice-icon" aria-hidden="true">🦀</span>OpenClaw</p>
-    <h3>One workspace per persona</h3>
-    <p class="muted choice-desc">One workspace per persona, plus the shared series list.</p>
+    <h3>One workspace per character</h3>
+    <p class="muted choice-desc">One workspace per character, plus the shared list.</p>
     <pre><code>git clone https://github.com/sagaciouszu/destiny-agent-grimoire.git
 cd destiny-agent-grimoire
 bash scripts/sync-live-agents.sh --openclaw</code></pre>
   </div>
   <div class="choice">
     <p class="choice-label"><span class="choice-icon" aria-hidden="true">🧩</span>Anything else</p>
-    <h3>One persona, one folder</h3>
-    <p class="muted choice-desc">One persona in its own folder, for anything that reads <code>AGENTS.md</code>.</p>
+    <h3>One character, one folder</h3>
+    <p class="muted choice-desc">A character in its own folder, for any app that can read an instructions file.</p>
     <pre><code>git clone https://github.com/sagaciouszu/how-to-drift-for-agents.git
 cd how-to-drift-for-agents
 ./setup.sh</code></pre>
-    <p class="muted">Swap in <code>eris-morn</code> for Eris. Load <code>AGENTS.md</code> in your app.</p>
+    <p class="muted">Swap in <code>eris-morn</code> for Eris. Point your app at the instructions file, <code>AGENTS.md</code>.</p>
   </div>
 </div>
 
-<p class="muted">In a script or non-interactive session, use
-<code>BOOTSTRAP=1 ./setup.sh</code> to download the release database without a
-prompt.</p>
+<p class="muted">For unattended setup, use <code>BOOTSTRAP=1 ./setup.sh</code> to
+download the library without questions.</p>
 
 </details>
 
@@ -53,15 +53,15 @@ prompt.</p>
 <summary><span class="section-title" role="heading" aria-level="2" id="what-you-get">What this gives you <a class="heading-anchor" href="#what-you-get" aria-label="Permalink to What this gives you">#</a></span></summary>
 
 <ul class="tile-grid">
-  <li><strong>A character, not a prompt</strong><p>Each persona has a voice, guardrails, memory and a tested way of answering.</p></li>
-  <li><strong>The same archive you have</strong><p>The persona reads the Grimoire, so it can look things up instead of guessing.</p></li>
-  <li><strong>A quote check</strong><p>The material is tied to verified lines, and the archive ships a <code>verify</code> command.</p></li>
-  <li><strong>Optional tools</strong><p>With MCP, the persona can search the archive directly.</p></li>
-  <li><strong>A second opinion</strong><p>The Drifter and Eris can ask each other through read-only consult copies.</p></li>
+  <li><strong>A character, not a prompt</strong><p>Each character has a voice, rules, memory and a tested way of answering.</p></li>
+  <li><strong>The same library you have</strong><p>The character reads the Grimoire, so it can look things up instead of guessing.</p></li>
+  <li><strong>A quote checker</strong><p>The material is tied to verified lines, and the library has a built-in checker.</p></li>
+  <li><strong>Optional AI connection</strong><p>With the connector, the character can search the library directly.</p></li>
+  <li><strong>A second opinion</strong><p>The characters can ask each other through read-only helper copies.</p></li>
 </ul>
 
-You can use one persona without the other. The Grimoire is the shared part, and
-the MCP server is the optional bridge that makes lookup smoother.
+You can use one character without the others. The Grimoire is the shared part,
+and the AI connection is optional.
 
 </details>
 
@@ -69,24 +69,27 @@ the MCP server is the optional bridge that makes lookup smoother.
 <summary><span class="section-title" role="heading" aria-level="2" id="prerequisites">Before you start <a class="heading-anchor" href="#prerequisites" aria-label="Permalink to Before you start">#</a></span></summary>
 
 <ul class="checklist">
-  <li>Git and Bash.</li>
+  <li>Git and a terminal.</li>
   <li>Python 3.8 or newer.</li>
-  <li>A runtime: OpenCode, OpenClaw, or anything that can read <code>AGENTS.md</code>.</li>
-  <li>Network access the first time, so the setup can clone or download the archive.</li>
-  <li>About 260 MB for the Grimoire and database.</li>
+  <li>An AI app: OpenCode, OpenClaw, or another app that can read an instructions file.</li>
+  <li>Internet access the first time, to download the project and library.</li>
+  <li>About 260 MB for the library file.</li>
 </ul>
 
 </details>
 
 <details class="section" open>
-<summary><span class="section-title" role="heading" aria-level="2" id="choose-a-persona">Choose a persona <a class="heading-anchor" href="#choose-a-persona" aria-label="Permalink to Choose a persona">#</a></span></summary>
+<summary><span class="section-title" role="heading" aria-level="2" id="choose-a-persona">Choose a character <a class="heading-anchor" href="#choose-a-persona" aria-label="Permalink to Choose a persona">#</a></span></summary>
 
-<p>The Drifter is loose, funny and guarded. Eris is formal, precise and grim.
-Both read the same archive; neither shares the other's private notes.</p>
+<p>Each character has a different voice and a different corner of the lore. All
+read the same library; none share private notes.</p>
 
 <ul>
-  <li><a href="{{ '/agents/drifter/' | url }}">Meet The Drifter</a></li>
-  <li><a href="{{ '/agents/eris/' | url }}">Meet Eris Morn</a></li>
+  <li><a href="{{ '/agents/drifter/' | url }}">The Drifter</a> — loose, funny and guarded. Gambit, the Nine and the Dark Age.</li>
+  <li><a href="{{ '/agents/eris/' | url }}">Eris Morn</a> — formal, precise and grim. The Hive, the Moon and the Witness.</li>
+  <li><a href="{{ '/agents/zavala/' | url }}">Zavala</a> — measured and steady. The Vanguard, the Last City and the coalition.</li>
+  <li><a href="{{ '/agents/calus/' | url }}">Calus</a> — theatrical, sensual and cruel. The Cabal, the Leviathan and the Witness.</li>
+  <li><a href="{{ '/agents/ghost/' | url }}">Ghost</a> — warm, quick and anxious. The Light, the Traveler and the Guardian.</li>
 </ul>
 
 </details>
@@ -185,12 +188,12 @@ does:</p>
 
 ## If something's off
 
-If a persona does not show up, or a consult call fails, see
+If a character does not show up, or a helper call fails, see
 [Troubleshooting]({{ '/troubleshooting/' | url }}).
 
 ## Next
 
-- [Meet the personas]({{ '/agents/' | url }})
+- [Meet the characters]({{ '/agents/' | url }})
 - [Use another app]({{ '/agents/platforms/' | url }})
-- [Connect the Grimoire with MCP]({{ '/grimoire/mcp/' | url }})
-- [Add another persona]({{ '/agents/build/' | url }})
+- [Connect an AI to the library]({{ '/grimoire/mcp/' | url }})
+- [Build a persona]({{ '/agents/build/' | url }})
