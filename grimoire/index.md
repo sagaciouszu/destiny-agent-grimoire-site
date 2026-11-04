@@ -8,9 +8,17 @@ lede: One searchable place for Destiny lore, built so you and an AI can read the
 
 ## What it is
 
-The Grimoire is one file on your computer. It holds Destiny's books, dialogue,
-grimoire cards, item text, triumphs and a short list of characters with their
-best lines. You can search it from a terminal, or let an AI search it through MCP.
+The Grimoire is one file on your computer. It gathers Destiny's books and their
+entries, dialogue from missions, raids, seasons and events, grimoire cards, item
+lore, triumphs and seals, plus a curated index of characters and the lines they
+speak. The dialogue is not a sampler of famous quotes; it is the conversations
+themselves, with the speaker and source kept alongside.
+
+Because everything sits in one place, a single search can cross all of it at
+once. You can follow a character through a storyline, find the exact exchange
+behind a half-remembered quote, read the lore attached to a weapon or a piece of
+armor, or compare how different factions describe the same event. You can browse
+it yourself, or let an AI query it through the MCP server.
 
 Nothing is downloaded while you search. Once the file is on your computer, every
 lookup is local. No account, no API key, no network.
