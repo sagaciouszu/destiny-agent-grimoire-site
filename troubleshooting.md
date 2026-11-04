@@ -21,36 +21,42 @@ lede: Start with the short list. If your symptom is there, you are probably one 
 
 </details>
 
-<nav class="toc" aria-labelledby="toc-title">
-<p class="toc-title" id="toc-title">On this page</p>
-
-<p class="toc-group">First run</p>
-<ul>
-  <li><a href="#database-missing">The database is missing</a></li>
-  <li><a href="#python-missing">Python is missing or too old</a></li>
-  <li><a href="#checksum">The checksum does not match</a></li>
-  <li><a href="#lore-link">The archive link is broken</a></li>
-</ul>
-
-<p class="toc-group">Agents</p>
-<ul>
-  <li><a href="#agent-missing">An agent is not listed</a></li>
-  <li><a href="#too-many-agents">OpenCode lists hundreds of agents</a></li>
-  <li><a href="#consult">A peer cannot be consulted</a></li>
-</ul>
-
-<p class="toc-group">Lore and tools</p>
-<ul>
-  <li><a href="#mcp-tools">MCP tools do not appear</a></li>
-  <li><a href="#mcp-start">The MCP server will not start</a></li>
-  <li><a href="#verify">A quote does not verify</a></li>
-  <li><a href="#no-lore">The agent has no archive access</a></li>
-</ul>
-
-<p class="toc-group">Maintenance</p>
-<ul>
-  <li><a href="#tests">Tests fail after cloning</a></li>
-</ul>
+<nav class="toc toc-tiles" aria-labelledby="toc-title">
+<p class="toc-title" id="toc-title">Jump to a symptom</p>
+<div class="toc-grid">
+  <div class="toc-card">
+    <p class="toc-group">First run</p>
+    <ul>
+      <li><a href="#database-missing">The database is missing</a></li>
+      <li><a href="#python-missing">Python is missing or too old</a></li>
+      <li><a href="#checksum">The checksum does not match</a></li>
+      <li><a href="#lore-link">The archive link is broken</a></li>
+    </ul>
+  </div>
+  <div class="toc-card">
+    <p class="toc-group">Agents</p>
+    <ul>
+      <li><a href="#agent-missing">An agent is not listed</a></li>
+      <li><a href="#too-many-agents">OpenCode lists hundreds of agents</a></li>
+      <li><a href="#consult">A peer cannot be consulted</a></li>
+    </ul>
+  </div>
+  <div class="toc-card">
+    <p class="toc-group">Lore and tools</p>
+    <ul>
+      <li><a href="#mcp-tools">MCP tools do not appear</a></li>
+      <li><a href="#mcp-start">The MCP server will not start</a></li>
+      <li><a href="#verify">A quote does not verify</a></li>
+      <li><a href="#no-lore">The agent has no archive access</a></li>
+    </ul>
+  </div>
+  <div class="toc-card">
+    <p class="toc-group">Maintenance</p>
+    <ul>
+      <li><a href="#tests">Tests fail after cloning</a></li>
+    </ul>
+  </div>
+</div>
 </nav>
 
 <details class="section" open>

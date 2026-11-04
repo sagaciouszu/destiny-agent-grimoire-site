@@ -30,14 +30,18 @@ every lookup is a local read. No account, no API key, no network.
 
 The current build has:
 
-- 110 books and 1,158 book entries
-- 1,229 transcripts with 71,221 dialogue lines
-- 2,889 Destiny 1 grimoire cards
-- 2,699 short interactions
-- 58,764 items
-- 71 triumphs and seals
-- 20 curated characters with 1,229 quote-ready lines
-- 120,731 rows in the search index
+<div class="stat-grid">
+  <div><strong>110</strong><span>books</span></div>
+  <div><strong>1,158</strong><span>book entries</span></div>
+  <div><strong>1,229</strong><span>transcripts</span></div>
+  <div><strong>71,221</strong><span>dialogue lines</span></div>
+  <div><strong>2,889</strong><span>grimoire cards</span></div>
+  <div><strong>58,764</strong><span>items</span></div>
+  <div><strong>71</strong><span>triumphs and seals</span></div>
+  <div><strong>20</strong><span>curated characters</span></div>
+</div>
+
+<p>The search index covers 120,731 rows.</p>
 
 Those numbers are a map, not a citation. The row you quote is the citation.
 
