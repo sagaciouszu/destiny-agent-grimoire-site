@@ -56,12 +56,17 @@ or ask another agent.
 
 Deployment reads `series/agents.json` in the Grimoire. Add one row:
 
-- `id` — lowercase letters, digits and hyphens;
-- `name` — the display name;
-- `source` — the repository name;
-- `entry` — the entry file name;
-- `summary` — one line for the series list;
-- `consult` — the topics a peer may ask about.
+<table class="field-table">
+  <thead><tr><th>Field</th><th>What it does</th></tr></thead>
+  <tbody>
+    <tr><td>id</td><td>Lowercase letters, digits and hyphens. The stable agent id.</td></tr>
+    <tr><td>name</td><td>Display name.</td></tr>
+    <tr><td>source</td><td>Repository name.</td></tr>
+    <tr><td>entry</td><td>Entry file name.</td></tr>
+    <tr><td>summary</td><td>One line for the series list.</td></tr>
+    <tr><td>consult</td><td>Topics a peer may ask about.</td></tr>
+  </tbody>
+</table>
 
 The `id` is the contract. It becomes the OpenCode agent id, the consult file
 name, the site URL and the nav item. Keep it stable once published.
@@ -77,14 +82,19 @@ it false for a roster entry.
 
 The fields:
 
-- `id`, `name`, `role` — identity and the line under the name;
-- `heading` — the first section heading on the agent page;
-- `short`, `paragraphs` — summary and full profile;
-- `consult`, `repo`, `repoName`, `entry`, `entryUrl` — links and canon surface;
-- `version`, `releaseUrl`, `updated` — the record shown on the page;
-- `audit` — `{ passed, total }` from `tests/master-audit.sh`;
-- `samples` — verified lines with a context label;
-- `limits` — what the agent will not do.
+<table class="field-table">
+  <thead><tr><th>Field</th><th>What it does</th></tr></thead>
+  <tbody>
+    <tr><td>id, name, role</td><td>Identity and the line under the name.</td></tr>
+    <tr><td>heading</td><td>The first section heading on the agent page.</td></tr>
+    <tr><td>short, paragraphs</td><td>Summary and full profile.</td></tr>
+    <tr><td>consult, repo, repoName, entry, entryUrl</td><td>Links and canon surface.</td></tr>
+    <tr><td>version, releaseUrl, updated</td><td>The record shown on the page.</td></tr>
+    <tr><td>audit</td><td><code>{ passed, total }</code> from <code>tests/master-audit.sh</code>.</td></tr>
+    <tr><td>samples</td><td>Verified lines with a context label.</td></tr>
+    <tr><td>limits</td><td>What the agent will not do.</td></tr>
+  </tbody>
+</table>
 
 Every entry in `samples` must pass:
 

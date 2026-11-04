@@ -632,7 +632,8 @@ pre:hover .copy-button,
   border-radius: 0;
 }
 
-.setup-order--inline + .section {
+.setup-order--inline + .section,
+.lore-head + .section {
   border-top: 0;
   padding-top: 0;
 }
@@ -1043,6 +1044,112 @@ pre:hover .copy-button,
 
 @media (min-width: 700px) {
   .agent-portrait img { aspect-ratio: 2 / 1; }
+}
+
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 0.8rem;
+  margin: 1rem 0 1.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.tile-grid li {
+  padding: 0.85rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+.tile-grid code {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--gold);
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.tile-grid strong {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: var(--heading);
+  font-size: 0.95rem;
+}
+
+.tile-grid p {
+  margin: 0.25rem 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.field-table {
+  width: 100%;
+  margin: 1rem 0 1.6rem;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.field-table th {
+  padding: 0.4rem 0.6rem;
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-align: left;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--line);
+}
+
+.field-table td {
+  padding: 0.5rem 0.6rem;
+  vertical-align: top;
+  border-bottom: 1px solid var(--line);
+}
+
+.field-table tr:last-child td { border-bottom: 0; }
+
+.field-table td:first-child {
+  color: var(--heading);
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .field-table thead { display: none; }
+
+  .field-table,
+  .field-table tbody,
+  .field-table tr,
+  .field-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .field-table tr {
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .field-table tr:last-child { border-bottom: 0; }
+
+  .field-table td {
+    padding: 0.1rem 0;
+    border: 0;
+  }
+
+  .field-table td:first-child {
+    color: var(--muted);
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: normal;
+  }
 }
 
 .agent-record {

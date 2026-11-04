@@ -107,12 +107,12 @@ how to run the audit. You can ignore this section if the simple setup worked.</p
 <details class="section">
 <summary><span class="section-title" role="heading" aria-level="2" id="opencode-details">What the OpenCode sync writes <a class="heading-anchor" href="#opencode-details" aria-label="Permalink to What the OpenCode sync writes">#</a></span></summary>
 
-<ul>
-  <li><code>~/.config/opencode/agents/drifter.md</code> and <code>eris.md</code> as the main agents.</li>
-  <li><code>drifter-consult.md</code> and <code>eris-consult.md</code> as read-only helpers.</li>
-  <li>One companion folder per agent, with non-entry files marked inert so OpenCode does not treat every note as another agent.</li>
-  <li><code>~/.config/opencode/series/agents.json</code> as the peer list.</li>
-  <li>The Grimoire linked outside the agents folder, for the same reason.</li>
+<ul class="tile-grid">
+  <li><strong>Main entries</strong><p><code>drifter.md</code> and <code>eris.md</code> in the OpenCode agents folder.</p></li>
+  <li><strong>Consult copies</strong><p><code>drifter-consult.md</code> and <code>eris-consult.md</code>, read-only.</p></li>
+  <li><strong>Companion folders</strong><p>Non-entry files marked inert so they are not treated as agents.</p></li>
+  <li><strong>Series list</strong><p><code>~/.config/opencode/series/agents.json</code> as the peer list.</p></li>
+  <li><strong>Grimoire link</strong><p>The archive linked outside the agents folder.</p></li>
 </ul>
 
 <p>Set <code>default_agent</code> in <code>~/.config/opencode/opencode.json</code>

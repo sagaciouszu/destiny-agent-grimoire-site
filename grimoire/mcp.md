@@ -91,21 +91,20 @@ local bridge in front of the stdio process.
 
 All read-only:
 
-- `search` — full-text search across books, transcripts, cards, interactions,
-  items and records, with an optional source filter.
-- `character` — curated lines for a character, or every transcript line with
-  `all_lines`.
-- `character_info` — aliases, quote count and spoken-line count for a character.
-- `item` — item lore and metadata by slug.
-- `find_item` — find items by a title or slug fragment.
-- `book` — book metadata and its entries.
-- `transcript` — transcript metadata and dialogue lines, optionally filtered by
-  speaker.
-- `record` — a triumph or seal by slug or title.
-- `list_records` — cheap listings of books, characters, speakers or records.
-- `stats` — row counts, top item types and top speakers.
-- `verify` — check one quote, optionally with a speaker and exact mode.
-- `verify_many` — check up to twenty quotes in one call.
+<ul class="tile-grid">
+  <li><code>search</code><p>Full-text search across books, transcripts, cards, interactions, items and records.</p></li>
+  <li><code>character</code><p>Curated lines for a character, or every transcript line with <code>all_lines</code>.</p></li>
+  <li><code>character_info</code><p>Aliases, quote count and spoken-line count for a character.</p></li>
+  <li><code>item</code><p>Item lore and metadata by slug.</p></li>
+  <li><code>find_item</code><p>Find items by a title or slug fragment.</p></li>
+  <li><code>book</code><p>Book metadata and its entries.</p></li>
+  <li><code>transcript</code><p>Transcript metadata and dialogue lines, optionally filtered by speaker.</p></li>
+  <li><code>record</code><p>A triumph or seal by slug or title.</p></li>
+  <li><code>list_records</code><p>Cheap listings of books, characters, speakers or records.</p></li>
+  <li><code>stats</code><p>Row counts, top item types and top speakers.</p></li>
+  <li><code>verify</code><p>Check one quote, optionally with a speaker and exact mode.</p></li>
+  <li><code>verify_many</code><p>Check up to twenty quotes in one call.</p></li>
+</ul>
 
 The two verification tools are the important ones. A line that fails `verify` is
 not canon, even if it sounds right.
