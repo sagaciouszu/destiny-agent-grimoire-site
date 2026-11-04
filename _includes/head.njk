@@ -8,13 +8,21 @@
 <script>
   (function () {
     try {
+      var themes = ["dark", "light", "crucible", "gambit", "braytech"];
+      var colors = {
+        dark: "#080c12",
+        light: "#e7eaee",
+        crucible: "#0b0708",
+        gambit: "#06110b",
+        braytech: "#e9f0f4"
+      };
       var stored = localStorage.getItem("grimoire-theme");
-      var theme = stored === "light" || stored === "dark"
+      var theme = themes.indexOf(stored) !== -1
         ? stored
         : (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
       document.documentElement.dataset.theme = theme;
       var meta = document.querySelector('meta[name="theme-color"]');
-      if (meta) meta.setAttribute("content", theme === "light" ? "#e7eaee" : "#080c12");
+      if (meta) meta.setAttribute("content", colors[theme]);
     } catch (error) {}
   })();
 </script>

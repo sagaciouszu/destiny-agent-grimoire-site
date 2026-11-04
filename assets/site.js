@@ -204,18 +204,39 @@
   if (themeToggle) {
     const root = document.documentElement;
     const themeMeta = document.querySelector('meta[name="theme-color"]');
+    const themeStatus = document.querySelector("[data-theme-status]");
+    const themes = ["light", "dark", "crucible", "gambit", "braytech"];
+    const names = {
+      dark: "Vanguard dark",
+      light: "Vanguard light",
+      crucible: "Crucible",
+      gambit: "Gambit",
+      braytech: "Braytech Europa",
+    };
+    const colors = {
+      dark: "#080c12",
+      light: "#e7eaee",
+      crucible: "#0b0708",
+      gambit: "#06110b",
+      braytech: "#e9f0f4",
+    };
+
+    const currentTheme = () =>
+      themes.includes(root.dataset.theme) ? root.dataset.theme : "dark";
 
     const syncTheme = () => {
-      const light = root.dataset.theme === "light";
-      const label = light ? "Switch to dark theme" : "Switch to light theme";
+      const current = currentTheme();
+      const next = themes[(themes.indexOf(current) + 1) % themes.length];
+      const label = `Theme: ${names[current]}. Switch to ${names[next]}.`;
       themeToggle.setAttribute("aria-label", label);
       themeToggle.setAttribute("title", label);
-      if (themeMeta) themeMeta.setAttribute("content", light ? "#e7eaee" : "#080c12");
+      if (themeMeta) themeMeta.setAttribute("content", colors[current]);
+      if (themeStatus) themeStatus.textContent = `Theme: ${names[current]}`;
     };
 
     syncTheme();
     themeToggle.addEventListener("click", () => {
-      const next = root.dataset.theme === "light" ? "dark" : "light";
+      const next = themes[(themes.indexOf(currentTheme()) + 1) % themes.length];
       root.dataset.theme = next;
       try { localStorage.setItem("grimoire-theme", next); } catch (error) {}
       syncTheme();
