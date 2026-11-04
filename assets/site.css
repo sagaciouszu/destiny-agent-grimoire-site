@@ -1586,6 +1586,25 @@ pre:hover .copy-button,
   .tile-grid--personas { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
+.tile-grid--personas li {
+  display: flex;
+  flex-direction: column;
+}
+
+.tile-grid--personas strong,
+.tile-grid--personas .agent-role {
+  text-wrap: balance;
+}
+
+.tile-grid--personas p {
+  text-wrap: pretty;
+}
+
+.tile-grid--personas .agent-more {
+  margin-top: auto;
+  padding-top: 0.55rem;
+}
+
 .persona-tally {
   display: flex;
   flex-wrap: wrap;
