@@ -18,10 +18,11 @@
         <summary>Agents</summary>
         <ul class="nav-submenu">
           <li><a href="{{ '/agents/' | url }}"{% if page.url == '/agents/' %} aria-current="page"{% endif %}>Overview</a></li>
+          <li><a href="{{ '/agents/build/' | url }}"{% if page.url == '/agents/build/' %} aria-current="page"{% endif %}>Add an Agent</a></li>
+          <li class="nav-sep" aria-hidden="true"></li>
           {% for agent in agents %}
           <li><a href="{{ ('/agents/' + agent.id + '/') | url }}"{% if page.url == ('/agents/' + agent.id + '/') %} aria-current="page"{% endif %}>{{ agent.name }}</a></li>
           {% endfor %}
-          <li><a href="{{ '/agents/build/' | url }}"{% if page.url == '/agents/build/' %} aria-current="page"{% endif %}>Add an agent</a></li>
         </ul>
       </details>
 

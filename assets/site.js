@@ -45,6 +45,31 @@
     }
   });
 
+  const mobileNav = window.matchMedia("(max-width: 720px)");
+  const header = document.querySelector(".site-header");
+  const positionMobileMenu = () => {
+    if (!header) return;
+    document.documentElement.style.setProperty(
+      "--mobile-menu-top",
+      `${Math.round(header.getBoundingClientRect().bottom)}px`,
+    );
+  };
+
+  menus.forEach((menu) => {
+    menu.addEventListener("toggle", () => {
+      if (!mobileNav.matches || !menu.open) return;
+      positionMobileMenu();
+      menus.forEach((other) => {
+        if (other !== menu) other.open = false;
+      });
+    });
+  });
+
+  window.addEventListener("resize", positionMobileMenu);
+  window.addEventListener("scroll", () => {
+    if (mobileNav.matches) positionMobileMenu();
+  }, { passive: true });
+
   document.querySelectorAll(".heading-anchor").forEach((link) => {
     const heading = link.closest("h1, h2, h3, h4, .section-title");
     if (!heading) return;

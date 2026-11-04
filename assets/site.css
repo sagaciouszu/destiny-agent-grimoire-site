@@ -235,6 +235,12 @@ a:hover {
   min-width: 13rem;
 }
 
+.nav-submenu .nav-sep {
+  height: 1px;
+  margin: 0.35rem 0.35rem;
+  background: var(--line);
+}
+
 .nav-submenu a {
   display: block;
   padding: 0.55rem 0.7rem;
@@ -274,7 +280,21 @@ a:hover {
   .site-nav::-webkit-scrollbar { display: none; }
   .site-nav > a,
   .nav-menu { flex: none; white-space: nowrap; }
-  .nav-submenu { position: static; }
+  .nav-submenu {
+    position: fixed;
+    top: var(--mobile-menu-top, 7.2rem);
+    right: 1rem;
+    left: 1rem;
+    z-index: 45;
+    min-width: 0;
+    max-height: calc(100vh - var(--mobile-menu-top, 7.2rem) - 1rem);
+    overflow-y: auto;
+  }
+
+  .nav-menu[open] > summary {
+    background: var(--surface-2);
+    color: var(--heading);
+  }
 }
 
 /* Page and lore typography */
