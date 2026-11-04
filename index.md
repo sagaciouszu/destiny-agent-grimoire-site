@@ -35,7 +35,7 @@ description: A searchable Destiny lore archive and a growing number of character
       <button type="button" data-rotator-next aria-label="Next test transcript">›</button>
       <span class="transmission-count" data-rotator-count aria-hidden="true">1 / {{ voices.size }}</span>
     </div>
-    <p class="transmission-note">Scripted output from the agent test suites.</p>
+    <p class="transmission-note">Scripted test output. Not canon.</p>
   </aside>
 </section>
 
