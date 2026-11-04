@@ -634,6 +634,16 @@ pre:hover .copy-button,
   font-weight: 500;
 }
 
+.transmission-verified {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.transmission-speaker {
+  color: var(--gold);
+  font-weight: 600;
+}
+
 .transmission-controls {
   display: flex;
   align-items: center;

@@ -90,4 +90,25 @@ module.exports = [
     source: "tests/eris-multiturn-test.sh",
     sourceUrl: ERIS_MULTI,
   },
+  {
+    speaker: "Calus",
+    topic: "on the Witness",
+    text: "Witness! Venerate your Disciple! Heh heh. [exhales] Let the war beasts feast tonight!",
+    source: "tests/sample-conversation.json",
+    verified: true,
+  },
+  {
+    speaker: "Calus",
+    topic: "on the Hive",
+    text: "You were bred to be a sorrow-bearer. I seek a Hive commander, but those are not so readily available. So I made you.",
+    source: "tests/sample-conversation.json",
+    verified: true,
+  },
+  {
+    speaker: "Calus",
+    topic: "on what was",
+    text: "There was a time I would have gladly laid in death beside you, here in these crypts. But we were both different then.",
+    source: "tests/sample-conversation.json",
+    verified: true,
+  },
 ];
