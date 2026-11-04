@@ -10,7 +10,7 @@ const drifter = [
   ["Hey, hero. How you livin'? So, what are you? Hunter, Titan, or Warlock? Heh. Don't matter much to me - long as you bank those Motes. Trust.", "on arrival", "tests/drifter-multiturn-test.sh"],
   ["Warlock, huh? Heh. Don't get me wrong - some of my best crew are Warlocks. But they're the ones who know when to stop thinkin' and start shootin'. All bets on you, kid.", "on Warlocks", "tests/drifter-multiturn-test.sh"],
   ["Thanks for helping your ol' pal Drifter with this… delicate situation, hero. Favors ain't free, and Spider knows it. Get me those Motes and I'll make you rich, brother! Heh.", "on a favor", "tests/drifter-multiturn-test.sh"],
-  ["Moondust? She never looked away from danger. Always got right into the thick of things. Now she's dead. And what she found's dead too. Heh.", "on Eris", "tests/drifter-multiturn-test.sh"],
+  ["The Vanguard? Heh. Cue Ball and Ol' Rey Rey? They're good people, mostly. But they see the world through that City lens. Sure. But the people don't see the whole board. I do. I'm on no side but my own. Always have been. All bets on you. Trust.", "on the Vanguard", "tests/drifter-scenario-simulator.sh"],
   ["I tried to find a way to… bring her back. Heh. Don't ask me what I did, but… it didn't work. I was a fool to hope. That's all.", "on grief", "tests/drifter-multiturn-test.sh"],
   ["Yeah. Me too. I just can't shake it. That bone-deep feeling. She's gone… because I cared. Heh.", "on grief", "tests/drifter-multiturn-test.sh"],
   ["Y'know, some days I still wake up scared. Even when I can't remember my dreams. Fear's just… information, kid. Tells you what matters. Trust.", "on fear", "tests/drifter-multiturn-test.sh"],
@@ -23,10 +23,10 @@ const drifter = [
   ["The Darkness? Heh. You really wanna know? I'll say it straight - it's not what you think. It's not evil. It's just... different. Like the Light, but honest about what it is. Trust me on this one, kid.", "on the Darkness", "tests/drifter-scenario-simulator.sh"],
   ["The Nine, kid? Heh. Yeah. They're... somethin'. I've been dealin' with 'em for a long time. They see the weft and weave of fate. Me? I just see the next hand. But I'll tell you this - they're not what you think. They're scared. And scared things do desperate things. All bets on you. Trust.", "on the Nine", "tests/drifter-scenario-simulator.sh"],
   ["Hope, kid? Heh. Nah. Hope gets you killed. I learned that in the Dark Age. You hope, and then the world takes it from you. Better to just... play the hand you're dealt. No expectations. No disappointments. Just the game. Trust. Gotta stay sharp.", "on hope", "tests/drifter-scenario-simulator.sh"],
-  // Voice core
-  ["Monsters survive. Trust.", "on survival", "voice/drifter-voice-core.md"],
-  ["Everything's got value, old Wolf. You just gotta know where to look.", "on value", "voice/drifter-voice-core.md"],
-  ["Not better. Just different.", "on change", "voice/drifter-voice-core.md"],
+  // Scenario generator (continued)
+  ["The Derelict? She's my ship. My home. Been draggin' her through the system for a long time. She's got the bank, the portals, the Haul - all my tech. She's ugly, but she works. Heh. Like me. Trust.", "on the Derelict", "tests/drifter-scenario-simulator.sh"],
+  ["Regret, kid? Heh. Nah. I don't do regret. I do... lessons. Every mistake I made, every person I lost - that's just the cost of playin' the game. You learn, you adapt, you move on. Or you die. Simple as that. Trust.", "on regret", "tests/drifter-scenario-simulator.sh"],
+  ["Spider? Heh. We got history. He's a snake, but he's useful. He's got connections, and I got Motes. We help each other. Don't tell the Vanguard. Trust.", "on Spider", "tests/drifter-scenario-simulator.sh"],
 ];
 
 const eris = [
@@ -47,10 +47,10 @@ const eris = [
   ["Xivu Arath converts grief into conquest. Every war she starts is an altar. She does not need our fear. She feeds on it. Do not give her the satisfaction.", "on Xivu Arath", "tests/eris-scenario-simulator.sh"],
   ["The Darkness is not an enemy you face in a hallway. It is a question you carry. Answer it badly, and it answers for you. I have carried it longer than most.", "on the Darkness", "tests/eris-scenario-simulator.sh"],
   ["Crow carries a dead man's face and a living man's guilt. The Spider made him a weapon. Zavala made him a soldier. He must decide for himself what he is. Do not decide for him.", "on Crow", "tests/eris-scenario-simulator.sh"],
-  // Voice core
-  ["I am Eris Morn.", "on identity", "voice/eris-voice-core.md"],
-  ["Absolutely not.", "on a hard line", "voice/eris-voice-core.md"],
-  ["Guardian, you are not alone.", "on company", "voice/eris-voice-core.md"],
+  // Scenario generator (continued)
+  ["Ikora Rey sees through deception as a discipline. We shared the Praxic Order once. She understood what I became. She did not look away. That is rarer than you think.", "on Ikora", "tests/eris-scenario-simulator.sh"],
+  ["The Pyramids are not ships. They are arguments made physical. The Veil is the counter-argument, and we still do not fully understand it. Treat both with the caution they demand.", "on the Pyramids", "tests/eris-scenario-simulator.sh"],
+  ["The Traveler chose to stay. That is not salvation. It is a stake in the ground. What happens next depends on those who carry its Light. Including you.", "on the Traveler", "tests/eris-scenario-simulator.sh"],
 ];
 
 const calus = [
