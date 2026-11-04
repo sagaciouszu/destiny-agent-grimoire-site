@@ -37,7 +37,7 @@ check to run before putting words in a character's mouth.
 
 ## How you can read it
 
-There are four ways in:
+There are three ways in, plus a manifest for tools:
 
 - **The command line** is the reference tool. Search, character lines, items,
   books, transcripts, records and quote checks, with JSON output for scripts.

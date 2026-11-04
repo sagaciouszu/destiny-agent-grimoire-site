@@ -1,7 +1,13 @@
 {
   "name": "grimoire-site",
   "version": "1.0.0",
+  "description": "Website for the Destiny Agent Grimoire: lore archive, install guides, agent roster and troubleshooting.",
   "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sagaciouszu/grimoire-site.git"
+  },
   "scripts": {
     "build": "eleventy",
     "serve": "eleventy --serve"

@@ -39,6 +39,8 @@ Output goes to `_site/`.
 - `agents/` — roster, install, platform support
 - `troubleshooting.md`
 - `about.md`
+- `404.md`
+- `getting-started.md` — legacy redirect kept for old links
 - `_data/agents.js` — the agent roster; add new agents there
 - `assets/site.css`, `assets/site.js`, `assets/starmap.svg`
 

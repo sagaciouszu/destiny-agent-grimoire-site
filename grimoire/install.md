@@ -18,9 +18,10 @@ Pick one path. You do not need both.
     <p class="muted">Grab the database and its checksum. No build, no waiting.</p>
     <pre><code>git clone https://github.com/sagaciouszu/destiny-agent-grimoire.git
 cd destiny-agent-grimoire
-curl -fsSL https://github.com/sagaciouszu/destiny-agent-grimoire/releases/latest/download/grimoire.db -o db/grimoire.db
+curl -fsSL https://github.com/sagaciouszu/destiny-agent-grimoire/releases/latest/download/grimoire.db -o grimoire.db
 curl -fsSL https://github.com/sagaciouszu/destiny-agent-grimoire/releases/latest/download/SHA256SUMS -o SHA256SUMS
-sha256sum -c SHA256SUMS</code></pre>
+sha256sum -c SHA256SUMS
+mv grimoire.db db/grimoire.db</code></pre>
   </div>
   <div class="choice">
     <p class="choice-label">From scratch</p>
@@ -43,8 +44,8 @@ python3 db/migrate.py</code></pre>
 
 - Python 3.8 or newer. The standard library is enough.
 - Git, to clone the archive.
-- About 260 MB of free space for the database, and roughly the same again while a
-  build runs.
+- About 260 MB of free space for the sources and database (the database itself is
+  about 170 MB), and roughly the same again while a build runs.
 
 The download path needs no build tools at all. The build path is pure Python.
 
@@ -56,9 +57,10 @@ The download path needs no build tools at all. The build path is pure Python.
 The release asset is the official download. `SHA256SUMS` is attached to the same
 release, and the publish pipeline checks the digest before it goes out.
 
-<pre><code>curl -fsSL https://github.com/sagaciouszu/destiny-agent-grimoire/releases/latest/download/grimoire.db -o db/grimoire.db
+<pre><code>curl -fsSL https://github.com/sagaciouszu/destiny-agent-grimoire/releases/latest/download/grimoire.db -o grimoire.db
 curl -fsSL https://github.com/sagaciouszu/destiny-agent-grimoire/releases/latest/download/SHA256SUMS -o SHA256SUMS
-sha256sum -c SHA256SUMS</code></pre>
+sha256sum -c SHA256SUMS
+mv grimoire.db db/grimoire.db</code></pre>
 
 A mismatch means the file was cut short or changed on the way. Delete it and
 download again instead of opening it.

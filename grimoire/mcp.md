@@ -23,7 +23,8 @@ From the Grimoire checkout:
 <pre><code>bash mcp-server/install.sh</code></pre>
 
 The installer creates a small virtual environment, installs the locked
-dependencies, and prints a client configuration snippet. Point your client at the
+dependencies, and prints a client configuration snippet. It needs Python 3.10 or
+newer for the MCP SDK; the query CLI itself still runs on 3.8+. Point your client at the
 `mcp-server/run.sh` path it prints. Use the absolute path if the client starts in
 a different directory.
 

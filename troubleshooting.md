@@ -76,8 +76,10 @@ The download was cut short or changed on the way. Delete it and try again; do no
 open or migrate a file that failed the check.
 
 <pre><code>rm -f db/grimoire.db
-curl -fsSL https://github.com/sagaciouszu/destiny-agent-grimoire/releases/latest/download/grimoire.db -o db/grimoire.db
-sha256sum -c SHA256SUMS</code></pre>
+curl -fsSL https://github.com/sagaciouszu/destiny-agent-grimoire/releases/latest/download/grimoire.db -o grimoire.db
+curl -fsSL https://github.com/sagaciouszu/destiny-agent-grimoire/releases/latest/download/SHA256SUMS -o SHA256SUMS
+sha256sum -c SHA256SUMS
+mv grimoire.db db/grimoire.db</code></pre>
 
 If it keeps failing, check your connection or proxy before assuming the release
 is wrong.
@@ -212,8 +214,8 @@ checks cannot. If the agent suddenly stops citing anything:
 - Check `lore/db/grimoire.db` exists.
 - Check `lore/` points at a real Grimoire checkout.
 - Run `./setup.sh` from the agent repository.
-- Confirm the runtime is starting in the repository folder, or that `WORKSPACE`
-  points there.
+- Confirm the runtime is starting in the repository folder; the helper scripts
+  resolve paths from their own location.
 
 A consult copy has no shell on purpose. It relies on the MCP server for canon; if
 MCP is not connected, expect a shorter, less grounded answer.

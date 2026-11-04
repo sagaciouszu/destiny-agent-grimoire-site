@@ -28,8 +28,8 @@ cd how-to-drift-for-agents
 
 `INDEX.md` is the map, `TOOLS.md` is the query surface, and `core/`, `voice/`,
 `world/` and `reference/` hold the deep material. The `lore/` link supplies the
-archive. Keep the working directory at the repository root, or set `WORKSPACE` to
-that path.
+archive. Keep the working directory at the repository root; the helper scripts
+resolve paths from their own location.
 
 ## MCP-capable clients
 
