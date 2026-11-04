@@ -63,11 +63,33 @@ The numbers show the size of the library. The line you quote is the proof.
 
 ## How the pieces fit
 
-<ul class="tile-grid">
-  <li><strong>The Grimoire</strong><p>The library. It is the part everything else reads.</p></li>
-  <li><strong>The AI connection</strong><p>Optional lookup tools an AI app can use, without giving it a command line.</p></li>
-  <li><strong>The characters</strong><p>Independent voices with their own rules and memory. They read the Grimoire for the official text.</p></li>
-</ul>
+<figure class="fit-map">
+  <figcaption class="visually-hidden">Your AI app runs a character, uses the AI connection, or both. Both paths read the Grimoire library.</figcaption>
+  <div class="fit-node fit-node--client">
+    <p class="fit-kicker">Your app</p>
+    <strong>Your AI app</strong>
+    <p>OpenCode, OpenClaw or another app that can run a character or use a local tool.</p>
+  </div>
+  <div class="fit-split" aria-hidden="true"><span></span><span></span></div>
+  <div class="fit-pair">
+    <div class="fit-node">
+      <p class="fit-kicker">Characters</p>
+      <strong>Characters</strong>
+      <p>Each character reads the library and answers in its own voice.</p>
+    </div>
+    <div class="fit-node">
+      <p class="fit-kicker">Optional</p>
+      <strong>AI connection</strong>
+      <p>Lookup tools that let the app search the same library.</p>
+    </div>
+  </div>
+  <div class="fit-join" aria-hidden="true"><span></span><span></span></div>
+  <div class="fit-node fit-node--archive">
+    <p class="fit-kicker">The library</p>
+    <strong>The Grimoire</strong>
+    <p>Books, dialogue, cards, items and records. The part everything else reads.</p>
+  </div>
+</figure>
 
 You can start with any one piece. Adding the others does not require a second
 copy.
