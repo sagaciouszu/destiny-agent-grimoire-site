@@ -911,6 +911,27 @@ pre:hover .copy-button,
   margin: 0.7rem 0 0;
 }
 
+.agent-portrait {
+  margin: 0 0 2rem;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.agent-portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+@media (min-width: 700px) {
+  .agent-portrait img { aspect-ratio: 2 / 1; }
+}
+
 .agent-record {
   display: grid;
   grid-template-columns: max-content 1fr;

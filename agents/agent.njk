@@ -13,6 +13,12 @@ layout: page
 section: agents
 ---
 
+{% if agent.image %}
+<figure class="agent-portrait">
+  <img src="{{ agent.image | url }}" alt="{{ agent.imageAlt | escape }}" width="{{ agent.imageWidth }}" height="{{ agent.imageHeight }}" decoding="async">
+</figure>
+{% endif %}
+
 <h2 id="who">{{ agent.heading }} <a class="heading-anchor" href="#who" aria-label="Permalink to {{ agent.heading }}">#</a></h2>
 
 {% for paragraph in agent.paragraphs %}
