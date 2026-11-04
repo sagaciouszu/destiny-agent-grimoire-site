@@ -6,7 +6,7 @@ lede: MCP is the bridge that lets an AI client search the Grimoire directly. Ins
 section: grimoire
 ---
 
-<nav class="setup-order" aria-label="Recommended setup order">
+<nav class="setup-order setup-order--inline" aria-label="Recommended setup order">
   <span class="setup-order-label">Setup order</span>
   <ol>
     <li><a href="{{ '/grimoire/install/' | url }}">1. Grimoire</a></li>

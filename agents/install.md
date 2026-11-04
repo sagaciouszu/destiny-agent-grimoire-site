@@ -6,7 +6,7 @@ category: Agents & Integration · Install
 lede: Pick a persona, connect it to the shared archive, and start talking. The common setups are at the top; the file layout and agent-to-agent details are at the bottom.
 ---
 
-<nav class="setup-order" aria-label="Recommended setup order">
+<nav class="setup-order setup-order--inline" aria-label="Recommended setup order">
   <span class="setup-order-label">Setup order</span>
   <ol>
     <li><a href="{{ '/grimoire/install/' | url }}">1. Grimoire</a></li>

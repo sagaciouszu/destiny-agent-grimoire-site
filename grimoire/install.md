@@ -6,7 +6,7 @@ category: The Grimoire · Install
 lede: Get the archive on your machine in a minute or two. The easy path is first; the full command reference is at the bottom.
 ---
 
-<nav class="setup-order" aria-label="Recommended setup order">
+<nav class="setup-order setup-order--inline" aria-label="Recommended setup order">
   <span class="setup-order-label">Setup order</span>
   <ol>
     <li><a href="{{ '/grimoire/install/' | url }}" aria-current="step">1. Grimoire</a></li>

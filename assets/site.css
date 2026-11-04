@@ -624,6 +624,19 @@ pre:hover .copy-button,
 
 .setup-order--hero { margin: 1.3rem 0 0; }
 
+.setup-order--inline {
+  margin: 0 0 0.4rem;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+}
+
+.setup-order--inline + .section {
+  border-top: 0;
+  padding-top: 0;
+}
+
 .setup-order-label {
   color: var(--muted);
   font-size: 0.68rem;
