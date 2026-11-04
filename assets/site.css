@@ -1590,7 +1590,8 @@ pre:hover .copy-button,
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  gap: 0.35rem 0.9rem;
+  justify-content: space-between;
+  gap: 0.35rem 1rem;
   margin: 0 0 1.6rem;
   padding: 0.9rem 1rem;
   color: var(--muted);
@@ -1599,6 +1600,8 @@ pre:hover .copy-button,
   border-radius: 6px;
   font-size: 0.9rem;
 }
+
+.persona-tally span:last-child { margin-left: auto; }
 
 .persona-tally strong {
   color: var(--heading);

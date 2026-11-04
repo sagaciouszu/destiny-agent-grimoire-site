@@ -38,10 +38,7 @@ inventing lore when they answer.</p>
 {% set development = placeholders | byStatus("development") %}
 {% set planned = placeholders | byStatus("planned") %}
 <div class="persona-tally" id="more-personas">
-  {% if development | length %}
   <span><strong>{{ development | length }}</strong> in development</span>
-  <span aria-hidden="true">·</span>
-  {% endif %}
   <span><strong>{{ planned | length }}</strong> planned</span>
 </div>
 
