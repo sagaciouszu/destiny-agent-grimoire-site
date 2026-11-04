@@ -829,7 +829,7 @@ pre:hover .copy-button,
 }
 
 .transmission-prompt::before {
-  content: "You ask: ";
+  content: "You say: ";
   color: var(--muted);
   font-weight: 500;
 }
