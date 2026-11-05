@@ -40,6 +40,7 @@ Output goes to `_site/`.
 - `agents/agent.njk` — generates `/personas/<id>/` pages from the roster
 - `agents/build.md` — how to build a new persona
 - `troubleshooting.md`
+- `troubleshooting/audits.md` — what the site's check scripts do
 - `about.md`
 - `404.md`
 - `getting-started.md` — legacy redirect kept for old links

@@ -13,6 +13,8 @@ layout: default
           <a href="{{ '/grimoire/' | url }}">{{ parts[0] }}</a>
           {% elif section == 'integration' or section == 'personas' %}
           <a href="{{ '/personas/' | url }}">{{ parts[0] }}</a>
+          {% elif section == 'troubleshooting' %}
+          <a href="{{ '/troubleshooting/' | url }}">{{ parts[0] }}</a>
           {% else %}
           <span>{{ parts[0] }}</span>
           {% endif %}

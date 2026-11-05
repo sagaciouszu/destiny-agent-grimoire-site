@@ -62,6 +62,7 @@ optional bridge between them.</p>
     <p class="toc-group">Maintenance</p>
     <ul>
       <li><a href="#tests">The project checks fail after downloading</a></li>
+      <li><a href="{{ '/troubleshooting/audits/' | url }}">What the audit scripts check</a></li>
     </ul>
   </div>
 </div>
@@ -255,7 +256,8 @@ lookup; without it, expect a shorter, less grounded answer.
 
 <h2 id="for-experts">For Experts (or enthusiasts) <a class="heading-anchor" href="#for-experts" aria-label="Permalink to For Experts (or enthusiasts)">#</a></h2>
 
-<p class="muted">Repository-level checks and test failures.</p>
+<p class="muted">Repository-level checks and test failures. This site's own
+checks are explained on <a href="{{ '/troubleshooting/audits/' | url }}">the audit scripts page</a>.</p>
 
 <details class="section">
 <summary><span class="section-title" role="heading" aria-level="2" id="tests">The project checks fail after downloading</span></summary>
