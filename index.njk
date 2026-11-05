@@ -28,14 +28,14 @@ description: A searchable Destiny lore library and character personas that read 
     </nav>
   </div>
 
-  <aside class="transmission" data-rotator aria-label="Test exchanges from the character conversations">
+  <aside class="transmission" id="tapes" data-rotator aria-label="Test exchanges from the character conversations">
     <p class="transmission-label">Test tapes</p>
     <div class="transmission-window">
       {% for voice in voices %}
       <div class="transmission-item{% if loop.first %} is-active{% endif %}" data-voice data-speaker="{{ voice.speaker | escape }}" data-topic="{{ voice.topic | escape }}">
         <p class="transmission-prompt">{{ voice.prompt | escape }}</p>
         <blockquote><p>{{ voice.text | escape }}</p></blockquote>
-        <p class="transmission-caption">{% if voice.url %}<a href="{{ voice.url | url }}">{{ voice.speaker | escape }}</a>{% else %}<span class="transmission-speaker">{{ voice.speaker | escape }}</span>{% endif %} <span class="transmission-topic">· {{ voice.topic | escape }}</span></p>
+        <p class="transmission-caption">{% if voice.url %}<a href="{{ voice.url | url }}">{{ voice.speaker | escape }}</a>{% else %}<span class="transmission-speaker">{{ voice.speaker | escape }}</span>{% endif %} <span class="transmission-topic">· {{ voice.topic | escape }}</span>{% if voice.captured %} <span class="transmission-captured">· captured {{ voice.captured }}</span>{% endif %}</p>
       </div>
       {% endfor %}
     </div>
@@ -64,7 +64,7 @@ description: A searchable Destiny lore library and character personas that read 
       <button type="button" data-rotator-next aria-label="Next test transcript">›</button>
       <span class="transmission-count" data-rotator-count aria-hidden="true">1 / {{ voices.length }}</span>
     </div>
-    <p class="transmission-note">Ten exchanges per character. Random picks from this set — not quotes from the games.</p>
+    <p class="transmission-note">Twelve exchanges per character. Random picks from this set — not quotes from the games.</p>
   </aside>
 </section>
 

@@ -122,10 +122,25 @@
     let timer = null;
     let paused = reduce.matches;
 
+    const topicSelect = rotator.querySelector("[data-rotator-topic]");
+    const speakerSelect = rotator.querySelector("[data-rotator-speaker]");
+    const matchesFilters = (item) =>
+      (!topicSelect?.value || item.dataset.topic === topicSelect.value) &&
+      (!speakerSelect?.value || item.dataset.speaker === speakerSelect.value);
+    const filtered = () => items.filter(matchesFilters);
+
     const show = (nextIndex) => {
       index = (nextIndex + items.length) % items.length;
       items.forEach((item, i) => item.classList.toggle("is-active", i === index));
-      if (counter) counter.textContent = `${index + 1} / ${items.length}`;
+      const list = filtered();
+      const position = list.indexOf(items[index]);
+      const position1 = position < 0 ? 1 : position + 1;
+      if (counter) counter.textContent = `${position1} / ${list.length}`;
+      const query = new URLSearchParams();
+      if (topicSelect?.value) query.set("topic", topicSelect.value);
+      if (speakerSelect?.value) query.set("speaker", speakerSelect.value);
+      query.set("tape", String(position1));
+      window.history.replaceState(null, "", `${window.location.pathname}?${query.toString()}`);
     };
 
     const stop = () => {
@@ -136,24 +151,45 @@
     const start = () => {
       stop();
       if (paused || reduce.matches || document.hidden) return;
-      timer = window.setInterval(() => show(index + 1), interval);
+      timer = window.setInterval(advance, interval);
     };
 
     const updateToggle = () => {
       if (toggle) toggle.textContent = paused ? "Play" : "Pause";
     };
 
-    const shuffle = (list) => {
-      for (let i = list.length - 1; i > 0; i -= 1) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [list[i], list[j]] = [list[j], list[i]];
-      }
-      return list;
+    const advance = () => {
+      const list = filtered();
+      if (list.length < 2) return;
+      const pos = list.indexOf(items[index]);
+      const nextPos = pos === -1 ? 0 : (pos + 1) % list.length;
+      show(items.indexOf(list[nextPos]));
     };
 
-    shuffle(items);
-    items.forEach((item) => item.parentNode.appendChild(item));
-    show(0);
+    const step = (delta) => {
+      const list = filtered();
+      if (!list.length) return;
+      const pos = list.indexOf(items[index]);
+      const base = pos === -1 ? (delta > 0 ? -1 : 0) : pos;
+      const nextPos = (base + delta + list.length) % list.length;
+      show(items.indexOf(list[nextPos]));
+      start();
+    };
+
+    // Data order stays stable so a shared ?tape=N link resolves the same tape.
+    const initialParams = new URLSearchParams(window.location.search);
+    if (topicSelect && [...topicSelect.options].some((option) => option.value === initialParams.get("topic"))) {
+      topicSelect.value = initialParams.get("topic");
+    }
+    if (speakerSelect && [...speakerSelect.options].some((option) => option.value === initialParams.get("speaker"))) {
+      speakerSelect.value = initialParams.get("speaker");
+    }
+    const initialList = filtered();
+    const requested = Number.parseInt(initialParams.get("tape") || "0", 10);
+    const initialIndex = initialList.length
+      ? Math.min(Math.max(Number.isFinite(requested) ? requested : 1, 1), initialList.length) - 1
+      : 0;
+    show(initialList.length ? items.indexOf(initialList[initialIndex]) : 0);
 
     if (controls) controls.hidden = false;
     updateToggle();
@@ -166,15 +202,10 @@
       else start();
     });
 
-    prev?.addEventListener("click", () => { show(index - 1); start(); });
-    next?.addEventListener("click", () => { show(index + 1); start(); });
+    prev?.addEventListener("click", () => step(-1));
+    next?.addEventListener("click", () => step(1));
 
-    const topicSelect = rotator.querySelector("[data-rotator-topic]");
-    const speakerSelect = rotator.querySelector("[data-rotator-speaker]");
     const shuffleButton = rotator.querySelector("[data-rotator-shuffle]");
-    const matchesFilters = (item) =>
-      (!topicSelect?.value || item.dataset.topic === topicSelect.value) &&
-      (!speakerSelect?.value || item.dataset.speaker === speakerSelect.value);
     const randomTape = () => {
       const available = items.filter(matchesFilters);
       if (!available.length) return;

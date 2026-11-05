@@ -35,6 +35,8 @@ jobs:
 
       - run: python3 scripts/check-a11y.py _site
 
+      - run: python3 scripts/check-roster.py _site
+
       - run: npx playwright install --with-deps chromium
 
       - run: node scripts/check-axe.mjs

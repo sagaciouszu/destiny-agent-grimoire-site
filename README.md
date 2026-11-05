@@ -44,7 +44,7 @@ Output goes to `_site/`.
 - `404.md`
 - `getting-started.md` — legacy redirect kept for old links
 - `_data/agents.js` — the agent roster; add new agents there
-- `_data/voices.js` — 50 test dialogues for the home panel
+- `_data/voices.js` — 60 test dialogues for the home panel and persona pages
 - `_data/sitemap.js`, `sitemap.njk`, `robots.txt.njk` — crawler metadata
 - `assets/site.css`, `assets/site.js`, `assets/starmap.svg`
 - `assets/fonts/` — self-hosted Neue Haas Grotesk Display Pro and Geist Mono
@@ -53,6 +53,7 @@ Output goes to `_site/`.
 - `scripts/check-a11y.py` — basic static accessibility gate
 - `scripts/check-external.py` — external-link check
 - `scripts/check-axe.mjs` — full axe-core scan in Chromium
+- `scripts/check-tapes.py` — proves no tape matches a canon line (needs the local Grimoire DB)
 
 ## Deploy
 
@@ -69,8 +70,19 @@ Each entry in `_data/agents.js` produces a persona page at `/personas/<id>/`,
 plus a nav item and a sitemap entry. The same id drives the consult copy name
 (`<id>-consult.md`), so keep it aligned with the deploy registry.
 
-The home-page panel reads from `_data/voices.js`. All 50 tapes are captured
-live from the persona's consult agent. None of them are canon quotations.
+Consult copies (`<id>-consult.md`) are helpers, not personas: they are never
+counted toward any roster, tally or statistic on the site.
+`scripts/check-roster.py` (part of `npm run check` and the deploy workflow)
+fails if a consult id reaches the roster, a consult page gets built, or a
+spelled-out character total stops matching the roster size.
+
+The Test Tapes read from `_data/voices.js`: twelve exchanges per persona,
+captured live from the persona's consult agent and dated in `captured`. None
+of them are canon quotations — `scripts/check-tapes.py` (part of `npm run
+check`) fails if any tape matches a canon line verbatim. The home panel at
+`/#tapes` rotates and filters them; each persona page lists its own twelve.
+Tape links are shareable as `?tape=N`, optionally combined with `speaker` or
+`topic`.
 
 Agent pages carry the release version, audit result, last-updated date, verified
 sample lines and a short limits list. `updated` is set per agent; other pages use

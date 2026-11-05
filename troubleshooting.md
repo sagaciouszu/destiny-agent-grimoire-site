@@ -177,7 +177,7 @@ links and marks companion notes as inactive.
 A character asks another through a read-only helper copy, not through the main
 character. Main characters cannot be started as helpers.
 
-Check that the series list has both agents and that the consult files were
+Check that the series list has both main agents and that the consult files were
 installed. A helper copy is read-only on purpose: it cannot run commands or
 pass the question on. That is expected, not a bug.
 

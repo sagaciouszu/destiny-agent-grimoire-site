@@ -11,7 +11,7 @@
   "scripts": {
     "build": "eleventy",
     "serve": "eleventy --serve",
-    "check": "npm run build && python3 scripts/check-links.py _site && python3 scripts/check-a11y.py _site && node scripts/check-axe.mjs",
+    "check": "npm run build && python3 scripts/check-links.py _site && python3 scripts/check-a11y.py _site && node scripts/check-axe.mjs && python3 scripts/check-tapes.py && python3 scripts/check-roster.py _site",
     "check:external": "python3 scripts/check-external.py _site"
   },
   "devDependencies": {

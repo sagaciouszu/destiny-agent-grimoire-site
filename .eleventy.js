@@ -10,6 +10,10 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("split", (value, separator) => String(value).split(separator));
 
+  eleventyConfig.addFilter("bySpeaker", (voices, speaker) =>
+    voices.filter((voice) => voice.speaker === speaker),
+  );
+
   eleventyConfig.addFilter("uniqueSpeakers", (voices) =>
     [...new Set(voices.map((voice) => voice.speaker))],
   );
