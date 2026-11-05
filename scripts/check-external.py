@@ -6,7 +6,8 @@ Run from the repository root after `npm run build`:
     python3 scripts/check-external.py _site
 
 The deploy workflow does not block on this because some documentation hosts
-rate-limit automated requests. A separate scheduled workflow runs it weekly.
+rate-limit automated requests. A separate workflow runs it after each deploy,
+on pull requests and on manual dispatch.
 """
 import concurrent.futures
 import glob
