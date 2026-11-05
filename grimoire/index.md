@@ -45,8 +45,8 @@ The current build has:
 <div class="stat-grid">
   <div><strong>110</strong><span>books</span></div>
   <div><strong>1,158</strong><span>book entries</span></div>
-  <div><strong>1,294</strong><span>transcripts</span></div>
-  <div><strong>73,012</strong><span>dialogue lines</span></div>
+  <div><strong>1,314</strong><span>transcripts</span></div>
+  <div><strong>69,005</strong><span>dialogue lines</span></div>
   <div><strong>2,889</strong><span>grimoire cards</span></div>
   <div><strong>58,764</strong><span>items</span></div>
   <div><strong>18</strong><span>expansions</span></div>
@@ -57,7 +57,7 @@ The current build has:
   <div><strong>20</strong><span>curated characters</span></div>
 </div>
 
-<p>There are 124,484 searchable entries.</p>
+<p>There are 120,477 searchable entries.</p>
 
 The numbers show the size of the library. The line you quote is the proof.
 
