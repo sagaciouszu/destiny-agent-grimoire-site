@@ -898,11 +898,6 @@ pre:hover .copy-button,
   color: var(--heading);
 }
 
-.transmission-source {
-  color: var(--muted);
-  font-weight: 500;
-}
-
 .transmission-speaker {
   color: var(--gold);
   font-weight: 600;

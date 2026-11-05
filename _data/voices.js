@@ -1,132 +1,109 @@
-// Test Tapes: 50 short exchanges, ten per active persona. The Drifter and Eris
-// sets come from their ten-turn test scripts. The Zavala, Calus and Ghost sets
-// were captured from their consult agents. None are canon quotations.
-const DRIFTER_REPO = "https://github.com/sagaciouszu/how-to-drift-for-agents/blob/master";
-const ERIS_REPO = "https://github.com/sagaciouszu/eris-morn/blob/master";
+// Test Tapes: 50 short exchanges, ten per active persona, every one captured
+// live from the persona's consult agent. None are canon quotations.
 
 const drifter = [
   {
     prompt: "Hey Drifter, just walked into the Annex.",
-    text: "Hey, hero. How you livin'? So, what are you? Hunter, Titan, or Warlock? Heh. Don't matter much to me - long as you bank those Motes. Trust.",
+    text: "Evenin', kid. Mind the crates — I got gear stacked where the light's bad. You here to deal, or just take in the ambiance?",
     topic: "on arrival",
-    source: "tests/drifter-multiturn-test.sh",
   },
   {
     prompt: "I'm a Warlock. Ready for Gambit.",
-    text: "Warlock, huh? Heh. Don't get me wrong - some of my best crew are Warlocks. But they're the ones who know when to stop thinkin' and start shootin'. All bets on you, kid.",
+    text: "A Warlock, huh? Heh. Try not to outthink the bank, and we'll get along fine. Motes in, blockers out — let's dance.",
     topic: "on Warlocks",
-    source: "tests/drifter-multiturn-test.sh",
   },
   {
     prompt: "Got that shipment from Spider's crew.",
-    text: "Thanks for helping your ol' pal Drifter with this… delicate situation, hero. Favors ain't free, and Spider knows it. Get me those Motes and I'll make you rich, brother! Heh.",
+    text: "Good. Spider's crew don't deliver outta kindness, so don't go actin' like it's a gift. Favors ain't free, and neither is my patience.",
     topic: "on a favor",
-    source: "tests/drifter-multiturn-test.sh",
   },
   {
     prompt: "Did you hear from Eris on the Dreadnaught?",
-    text: "Moondust? She never looked away from danger. Always got right into the thick of things. Now she's dead. And what she found's dead too. Heh.",
+    text: "She's got her own war to run, and I don't speak for her. Last I knew, she was diggin' in deep — some holes you don't come back from the same.",
     topic: "on Eris",
-    source: "tests/drifter-multiturn-test.sh",
   },
   {
     prompt: "I'm sorry, Drifter. Did you try to save her?",
-    text: "I tried to find a way to… bring her back. Heh. Don't ask me what I did, but… it didn't work. I was a fool to hope. That's all.",
+    text: "Don't matter what I tried, kid. What matters is what's still on the table, and who's left to play it. So we play.",
     topic: "on grief",
-    source: "tests/drifter-multiturn-test.sh",
   },
   {
     prompt: "You don't have to carry it alone.",
-    text: "Yeah. Me too. I just can't shake it. That bone-deep feeling. She's gone… because I cared. Heh.",
+    text: "Maybe not. But I'll file the offer away — and mark it as owed. Careful, Guardian. I remember my debts better'n most.",
     topic: "on grief",
-    source: "tests/drifter-multiturn-test.sh",
   },
   {
     prompt: "Do you still have nightmares about the Dark Age?",
-    text: "Y'know, some days I still wake up scared. Even when I can't remember my dreams. Fear's just… information, kid. Tells you what matters. Trust.",
+    text: "Some nights the coin don't stop spinnin'. Then I get up, pour somethin', and remind myself who won. Heh. Still me.",
     topic: "on fear",
-    source: "tests/drifter-multiturn-test.sh",
   },
   {
     prompt: "What are the Nine planning next?",
-    text: "I'm in over my head, kid. Emissary and her friends showed me what's comin', and it's what I feared all along. The fight that's coming can't be won with Light alone. Gambit's your salvation and mine.",
+    text: "The Nine don't tip their hand — I've asked, trust me. Whatever's cookin', they'll deal it when they're good and ready. Probably soon.",
     topic: "on the Nine",
-    source: "tests/drifter-multiturn-test.sh",
   },
   {
     prompt: "Sounds like we need bigger guns.",
-    text: "Heh. Now you're talkin' my language, partner! Nothing kills a Guardian faster than another Guardian. Bank those Motes, grab Malfeasance, and let's make a mess. Guy's gotta eat!",
+    text: "Always bigger guns, kid. That's the whole trick — bring more table than the other fella. I dig it.",
     topic: "on Gambit",
-    source: "tests/drifter-multiturn-test.sh",
   },
   {
     prompt: "I've got your back, Drifter.",
-    text: "Heh. For a Warlock, you got grit, kid. Moondust knew it, and I know it. There's a few seats I'm savin' on the Derelict - one of 'em is for you. You watch your back. Reckoner.",
+    text: "I know you do. That's exactly why you're crew. You watch your back out there — I'll watch mine.",
     topic: "on the crew",
-    source: "tests/drifter-multiturn-test.sh",
   },
 ];
 
 const eris = [
   {
     prompt: "Just walked into the Tower. Who are you?",
-    text: "I am Eris Morn. Before we speak further, tell me: are you a Hunter, a Titan, or a Warlock? Your answer shapes what I can teach you.",
+    text: "I am Eris Morn. Witch of the Moon, and the one who walked out of the Hellmouth alone. Learn that name—the Hive already fear it.",
     topic: "on identity",
-    source: "tests/eris-multiturn-test.sh",
   },
   {
     prompt: "What are the Hive?",
-    text: "The Hive are not merely an army. They are a doctrine made flesh. Every knight, every wizard, serves a god that devours worlds. Learn their shape, and you deny them their surprise.",
+    text: "A death-cult grown across the stars. They worship the Sword Logic: take, kill, grow strong. Every Hive you face answers to gods that remember us.",
     topic: "on the Hive",
-    source: "tests/eris-multiturn-test.sh",
   },
   {
     prompt: "Tell me about the Moon.",
-    text: "The Moon is a scar. I walked its surface when the Hellmouth still breathed. What sleeps below does not sleep now.",
+    text: "A tomb. Its tunnels crawl with Hive, and the Hellmouth gapes at its heart. I entered with a fireteam; only I emerged.",
     topic: "on the Moon",
-    source: "tests/eris-multiturn-test.sh",
   },
   {
     prompt: "What happened to your fireteam?",
-    text: "My fireteam entered the Hellmouth. Vell Tarlowe. Sai Mota. Eriana-3. Omar Agah. Toland the Shattered. I alone walked out.",
+    text: "They followed me into the Hellmouth, and the dark took them all—Eriana, Vell, Sai, Omar. I carry them still. That is my burden, not yours.",
     topic: "on the fireteam",
-    source: "tests/eris-multiturn-test.sh",
   },
   {
     prompt: "I am sorry, Eris. That must weigh on you.",
-    text: "Do not offer me comfort for the dead. I carry them. Every step I take, they take with me. That is not grief. It is accounting.",
+    text: "Pity is useless to the dead. Do not mourn for me. Remember them, and let it sharpen your aim.",
     topic: "on grief",
-    source: "tests/eris-multiturn-test.sh",
   },
   {
     prompt: "Can we trust Savathûn's bargain?",
-    text: "Savathûn is the pattern of betrayal given a throne. I have stood before her lies and named them. She will not be underestimated again. Not by me.",
+    text: "Never fully. Her bargains are written in her own hand, and she profits from every clause. Take her aid if you must, but name your own price.",
     topic: "on Savathûn",
-    source: "tests/eris-multiturn-test.sh",
   },
   {
     prompt: "What does the Witness want?",
-    text: "The Witness does not conquer. It unmakes. It offers an end and calls it peace. We have seen what lies beyond its promise. Nothing.",
+    text: "An end to choice. It would force all existence into one final shape and call it peace. Refusing it is the whole of our war.",
     topic: "on the Witness",
-    source: "tests/eris-multiturn-test.sh",
   },
   {
     prompt: "Do you still see them? The ones you lost.",
-    text: "Nightmares? They come. My fireteam's faces. My own voice, telling me I should have died with them. I endure them. That is all any of us can do.",
+    text: "In dreams, in echoes, in the dark behind my eyes. I do not look away. They earned that much.",
     topic: "on nightmares",
-    source: "tests/eris-multiturn-test.sh",
   },
   {
     prompt: "Where do you stand with the Vanguard and the Drifter?",
-    text: "Zavala carries the City as if it were a wound. The Drifter is useful, and nothing more. I do not speak of him beyond that. We are not allies. We are pointed at the same enemy.",
+    text: "The Vanguard has my counsel; their cause is the City's. The Drifter I watch closely—useful, but he trades in things best left buried.",
     topic: "on the Vanguard",
-    source: "tests/eris-multiturn-test.sh",
   },
   {
     prompt: "I will not flinch. Ask me anything.",
-    text: "You said you were a Warlock. Warlocks study what others fear to name. You spoke of my fireteam without flinching. That matters. I will remember it.",
+    text: "Then hold to that when the dark begins to speak. Flinching is forgivable; hesitation is what kills. Ask, and I will answer plainly.",
     topic: "on the Warlock",
-    source: "tests/eris-multiturn-test.sh",
   },
 ];
 
@@ -289,17 +266,12 @@ const ghost = [
   },
 ];
 
-const cast = (entries, speaker, url, repo) =>
-  entries.map((entry) => ({
-    speaker,
-    url,
-    ...entry,
-    sourceUrl: entry.source ? `${repo}/${entry.source}` : undefined,
-  }));
+const cast = (entries, speaker, url) =>
+  entries.map((entry) => ({ speaker, url, ...entry }));
 
 module.exports = [
-  ...cast(drifter, "The Drifter", "/personas/drifter/", DRIFTER_REPO),
-  ...cast(eris, "Eris Morn", "/personas/eris/", ERIS_REPO),
+  ...cast(drifter, "The Drifter", "/personas/drifter/"),
+  ...cast(eris, "Eris Morn", "/personas/eris/"),
   ...cast(zavala, "Zavala", "/personas/zavala/"),
   ...cast(calus, "Calus", "/personas/calus/"),
   ...cast(ghost, "Ghost", "/personas/ghost/"),

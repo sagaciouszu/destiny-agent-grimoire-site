@@ -69,10 +69,8 @@ Each entry in `_data/agents.js` produces a persona page at `/personas/<id>/`,
 plus a nav item and a sitemap entry. The same id drives the consult copy name
 (`<id>-consult.md`), so keep it aligned with the deploy registry.
 
-The home-page panel reads from `_data/voices.js`. Drifter and Eris use their
-ten-turn test scripts; Zavala, Calus and Ghost were captured from their consult
-agents. None of the tapes are canon quotations. Drifter/Eris entries link to
-their source tests.
+The home-page panel reads from `_data/voices.js`. All 50 tapes are captured
+live from the persona's consult agent. None of them are canon quotations.
 
 Agent pages carry the release version, audit result, last-updated date, verified
 sample lines and a short limits list. `updated` is set per agent; other pages use

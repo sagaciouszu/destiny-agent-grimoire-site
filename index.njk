@@ -35,7 +35,7 @@ description: A searchable Destiny lore library and character personas that read 
       <div class="transmission-item{% if loop.first %} is-active{% endif %}" data-voice data-speaker="{{ voice.speaker | escape }}" data-topic="{{ voice.topic | escape }}">
         <p class="transmission-prompt">{{ voice.prompt | escape }}</p>
         <blockquote><p>{{ voice.text | escape }}</p></blockquote>
-        <p class="transmission-caption">{% if voice.url %}<a href="{{ voice.url | url }}">{{ voice.speaker | escape }}</a>{% else %}<span class="transmission-speaker">{{ voice.speaker | escape }}</span>{% endif %} <span class="transmission-topic">· {{ voice.topic | escape }}</span>{% if voice.sourceUrl %} <span aria-hidden="true">·</span> <a class="transmission-source" href="{{ voice.sourceUrl }}">source</a>{% endif %}</p>
+        <p class="transmission-caption">{% if voice.url %}<a href="{{ voice.url | url }}">{{ voice.speaker | escape }}</a>{% else %}<span class="transmission-speaker">{{ voice.speaker | escape }}</span>{% endif %} <span class="transmission-topic">· {{ voice.topic | escape }}</span></p>
       </div>
       {% endfor %}
     </div>
