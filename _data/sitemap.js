@@ -6,7 +6,7 @@ const pages = [
   "/",
   "/about/",
   "/troubleshooting/",
-  "/troubleshooting/audits/",
+  "/troubleshooting/experts/",
   "/grimoire/",
   "/grimoire/install/",
   "/grimoire/mcp/",

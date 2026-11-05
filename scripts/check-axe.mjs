@@ -54,7 +54,7 @@ const pages = [
   ["The Drifter", "/personas/drifter/"],
   ["Zavala", "/personas/zavala/"],
   ["Troubleshooting", "/troubleshooting/"],
-  ["The audit scripts", "/troubleshooting/audits/"],
+  ["For Experts", "/troubleshooting/experts/"],
   ["About", "/about/"],
   ["404", "/404.html"],
 ];
