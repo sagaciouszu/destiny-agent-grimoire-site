@@ -3,9 +3,9 @@
 
 const drifter = [
   {
-    prompt: "Hey Drifter, just walked into the Annex.",
-    text: "Evenin', kid. Mind the crates — I got gear stacked where the light's bad. You here to deal, or just take in the ambiance?",
-    topic: "on arrival",
+    prompt: "Ketchcrash or Expedition — which haul is worth more?",
+    text: "Ketchcrash's a bigger pot, but Expedition's where the real loot's hidin'. Why choose? I'd run both and let the house sort itself out.",
+    topic: "on Ketchcrash",
   },
   {
     prompt: "I'm a Warlock. Ready for Gambit.",
@@ -48,17 +48,17 @@ const drifter = [
     topic: "on Gambit",
   },
   {
-    prompt: "I've got your back, Drifter.",
-    text: "I know you do. That's exactly why you're crew. You watch your back out there — I'll watch mine.",
-    topic: "on the crew",
+    prompt: "What do you make of the Wrath of the Machine raids?",
+    text: "SIVA's a bad bet, kid — pretty red dice still roll snake eyes. But the loot's sweet, so I'll take my chances.",
+    topic: "on Wrath of the Machine",
   },
 ];
 
 const eris = [
   {
-    prompt: "Just walked into the Tower. Who are you?",
-    text: "I am Eris Morn. Witch of the Moon, and the one who walked out of the Hellmouth alone. Learn that name—the Hive already fear it.",
-    topic: "on identity",
+    prompt: "Tell me about Crota's End.",
+    text: "Crota's End is the descent I know best. You crossed the abyss, broke the bridge, and put down the Son of Oryx where his own World's Grave keeps the record. What you felt there was only the shadow of what I carried out.",
+    topic: "on Crota's End",
   },
   {
     prompt: "What are the Hive?",
@@ -101,9 +101,9 @@ const eris = [
     topic: "on the Vanguard",
   },
   {
-    prompt: "I will not flinch. Ask me anything.",
-    text: "Then hold to that when the dark begins to speak. Flinching is forgivable; hesitation is what kills. Ask, and I will answer plainly.",
-    topic: "on the Warlock",
+    prompt: "We ran Salvation's Edge. What were we really facing?",
+    text: "You faced the Witness itself, at the edge where it labored to unmake all things into a single, silent shape. The Subjugators and its chosen were instruments; the will behind them was the true adversary. That is what you cut apart.",
+    topic: "on Salvation's Edge",
   },
 ];
 
@@ -134,9 +134,9 @@ const zavala = [
     topic: "on the coalition",
   },
   {
-    prompt: "How do you carry the weight of command?",
-    text: "I do not carry it alone, whatever the Tower believes. I carry only what I asked of others, and I answer for it. That is the whole of it.",
-    topic: "on duty",
+    prompt: "Give me a debrief on the Defiant Battlegrounds.",
+    text: "The Defiant operations struck Eramis's forces and the Shadow Legion wherever they held our people, and we recovered survivors because of it. The cost was real, and the alliance that carried it remains fragile. Hold the line, Guardian—the work is not finished.",
+    topic: "on Defiant Battlegrounds",
   },
   {
     prompt: "Do you still grieve the Guardians you lost?",
@@ -197,9 +197,9 @@ const calus = [
     topic: "on opulence",
   },
   {
-    prompt: "Should I trust you?",
-    text: "Trust is a flavour, Guardian, and you have not yet earned the palate for it. I will tell you true things until it no longer suits me.",
-    topic: "on trust",
+    prompt: "Tell me about the Eater of Worlds.",
+    text: "A Vex mind, Argos, burrowed into the belly of my Leviathan and tried to unstick us from Nessus — a rat chewing the tablecloth mid-banquet. Heh. The core is mine; the appetite is not.",
+    topic: "on Eater of Worlds",
   },
   {
     prompt: "What do you see in the Guardian?",
@@ -207,9 +207,9 @@ const calus = [
     topic: "on the Guardian",
   },
   {
-    prompt: "Are you afraid to die?",
-    text: "Death is the one appointment I cannot reschedule, so I have learned to find it charming. Fear belongs to those with something small to preserve; I keep only a legacy, and it is very loud.",
-    topic: "on death",
+    prompt: "Tell me about the Spire of Stars.",
+    text: "Val Ca'uor and his Red Legion perched on a spire above my ship, mistaking proximity for entitlement. Heh — I let you climb up and correct him; his ambition was never a match for your appetite.",
+    topic: "on Spire of Stars",
   },
 ];
 
@@ -250,9 +250,9 @@ const ghost = [
     topic: "on the Red War",
   },
   {
-    prompt: "What do you make of the Vex?",
-    text: "They're not cruel, which is somehow worse. They keep running the numbers until we're a variable that doesn't matter. I don't like how much I understand them.",
-    topic: "on the Vex",
+    prompt: "Tell me about the Vault of Glass.",
+    text: "It's on Venus, Guardian — the Vex built it to edit reality itself, and every time we step inside I feel the timeline wobble. Atheon sits at the heart of it, and the whole place is one bad decision away from erasing us. Bring friends; I'll keep us honest.",
+    topic: "on the Vault of Glass",
   },
   {
     prompt: "Are you afraid?",
