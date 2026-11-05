@@ -154,6 +154,14 @@ a:hover {
   text-decoration-color: currentColor;
 }
 
+/* External links: same colour, dashed underline, so they read as links
+   without looking like part of the site. The icon-only GitHub button in
+   the header keeps its plain look. */
+a[href^="http"]:not(.nav-github) {
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+}
+
 :focus-visible {
   outline: 2px solid var(--gold-bright);
   outline-offset: 3px;

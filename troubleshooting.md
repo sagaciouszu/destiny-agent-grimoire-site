@@ -1,5 +1,6 @@
 ---
 layout: page
+section: troubleshooting
 title: Troubleshooting
 category: Help
 lede: Start with the short list. If your symptom is there, the fix is probably one step away. The deeper checks are grouped below.

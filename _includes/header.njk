@@ -27,7 +27,14 @@
         </ul>
       </details>
 
-      <a href="{{ '/troubleshooting/' | url }}"{% if page.url == '/troubleshooting/' %} aria-current="page"{% endif %}>Troubleshooting</a>
+      <details class="nav-menu"{% if section == 'troubleshooting' %} data-active="true"{% endif %}>
+        <summary>Troubleshooting</summary>
+        <ul class="nav-submenu">
+          <li><a href="{{ '/troubleshooting/' | url }}"{% if page.url == '/troubleshooting/' %} aria-current="page"{% endif %}>Symptoms</a></li>
+          <li><a href="{{ '/troubleshooting/experts/' | url }}"{% if page.url == '/troubleshooting/experts/' %} aria-current="page"{% endif %}>For Experts</a></li>
+        </ul>
+      </details>
+
       <a href="{{ '/about/' | url }}"{% if page.url == '/about/' %} aria-current="page"{% endif %}>About</a>
       <a class="nav-github" href="https://github.com/sagaciouszu/destiny-agent-grimoire" aria-label="GitHub repository" title="GitHub repository">
         <svg viewBox="0 0 16 16" width="18" height="18" aria-hidden="true" focusable="false">
