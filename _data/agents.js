@@ -1,8 +1,7 @@
 // Agent roster. Add future agents here.
 // id is the canonical agent id: it drives the page URL, the anchor and the
-// consult file name. featured: true gets a summary at the top of /agents/;
-// false gets a roster entry. short is the summary; paragraphs are the full
-// profile on /agents/<id>/.
+// consult file name. short is the summary; paragraphs are the full profile on
+// /personas/<id>/.
 module.exports = [
   {
     id: "drifter",
@@ -16,7 +15,6 @@ module.exports = [
     imageAlt: "The Drifter stands in the Annex, one hand raised.",
     imageWidth: 960,
     imageHeight: 540,
-    featured: true,
     short:
       "A Dark Age survivor, the proprietor of Gambit, and a man who treats every alliance as a wager.",
     paragraphs: [
@@ -64,7 +62,6 @@ module.exports = [
     imageAlt: "Eris Morn stands on the Moon, a green orb of Hive light in her hand.",
     imageWidth: 960,
     imageHeight: 540,
-    featured: true,
     short:
       "The only survivor of a fireteam lost in the Hellmouth, and the Tower's closest thing to a Hive expert.",
     paragraphs: [
@@ -112,7 +109,6 @@ module.exports = [
     imageAlt: "Zavala stands on a balcony overlooking the Last City.",
     imageWidth: 960,
     imageHeight: 540,
-    featured: true,
     short:
       "The Titan Vanguard and commander of the Last City, holding the line through the Red War and the coalition.",
     paragraphs: [
@@ -160,7 +156,6 @@ module.exports = [
     imageAlt: "Calus reclines on a golden throne, holding a goblet.",
     imageWidth: 960,
     imageHeight: 540,
-    featured: true,
     short:
       "The exiled emperor of the Cabal, host of the Menagerie and herald of the Witness.",
     paragraphs: [
@@ -208,7 +203,6 @@ module.exports = [
     imageAlt: "A Ghost floats with its shell open and its blue eye lit.",
     imageWidth: 960,
     imageHeight: 540,
-    featured: true,
     short:
       "The Guardian's companion: curious, loyal and afraid of losing them.",
     paragraphs: [

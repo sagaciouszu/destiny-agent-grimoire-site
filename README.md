@@ -87,12 +87,13 @@ show the recommended order: Grimoire, then AI access, then personas.
 
 ## Checks
 
-`python3 scripts/check-links.py` validates the built site: internal links,
-fragments, canonical URLs, duplicate titles and descriptions, the sitemap and
-robots.txt. The Pages workflow runs it, the static accessibility check and the
-axe-core scan after every build. A separate daily workflow checks external links
-on PRs and after deploys. `_redirects` holds true 301s for hosts that support
-the Netlify/Cloudflare format; GitHub Pages uses noindex meta-refresh pages.
+`npm run check` runs the whole local gate: build, internal links, fragments,
+canonical URLs, duplicate titles and descriptions, sitemap, robots.txt, the
+static accessibility check and the axe-core scan. `npm run check:external`
+verifies outbound links. The Pages workflow runs the same checks after every
+build, and a separate workflow checks external links on PRs and after deploys.
+`_redirects` holds true 301s for hosts that support the Netlify/Cloudflare
+format; GitHub Pages uses noindex meta-refresh pages.
 
 ## Theme
 

@@ -10,12 +10,22 @@
  */
 import { spawn } from "node:child_process";
 import { existsSync } from "node:fs";
+import { createServer } from "node:net";
 import { chromium } from "playwright";
 import { AxeBuilder } from "@axe-core/playwright";
 
-const PORT = 4173;
-const BASE = `http://127.0.0.1:${PORT}`;
-const server = spawn("python3", ["-m", "http.server", String(PORT), "--directory", "_site"], {
+// Pick a free port so an unrelated server can never satisfy the checks.
+const freePort = await new Promise((resolve, reject) => {
+  const probe = createServer();
+  probe.once("error", reject);
+  probe.listen(0, "127.0.0.1", () => {
+    const { port } = probe.address();
+    probe.close(() => resolve(port));
+  });
+});
+
+const BASE = `http://127.0.0.1:${freePort}`;
+const server = spawn("python3", ["-m", "http.server", String(freePort), "--directory", "_site"], {
   stdio: "ignore",
 });
 
