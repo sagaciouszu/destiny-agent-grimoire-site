@@ -1,6 +1,6 @@
-// Test Tapes: 60 short exchanges, twelve per active persona, every one captured
-// live from the persona's consult agent and dated in `captured`. None are canon
-// quotations.
+// Test Tapes: short exchanges, a dozen or more per active persona, every one
+// captured live from the persona's consult agent and dated in `captured`. None
+// are canon quotations.
 
 const drifter = [
   {
@@ -73,6 +73,18 @@ const drifter = [
     prompt: "What's the pay in the Deep Dives?",
     text: "Pay's whatever you haul out, partner — Motes, treasure, braggin' rights. Deep water's where the real pot hides, but the house always takes its cut. Heh.",
     topic: "on the Deep Dives",
+    captured: "2026-11-05",
+  },
+  {
+    prompt: "What's the deal with Prophecy?",
+    text: "The Nine wanted a question answered, so we went into the Haul and asked it ourselves. Wild ride, kid — but we walked out with the answer. Felt like a win worth cashing.",
+    topic: "on Prophecy",
+    captured: "2026-11-05",
+  },
+  {
+    prompt: "What can you tell me about Contact?",
+    text: "Contact's a public cipher, partner — Heads or Tails gets read before the punchline lands. Keep your eyes on that one; I'm sure it ain't over yet.",
+    topic: "on Contact",
     captured: "2026-11-05",
   },
 ];
@@ -150,6 +162,18 @@ const eris = [
     topic: "on King's Fall",
     captured: "2026-11-05",
   },
+  {
+    prompt: "Tell me about Savathûn's Spire.",
+    text: "Savathûn's Spire stands in her Throne World, and she permits our entry. It is a graded ascension of trials—her Wardens, her experiments with stolen Arc, Solar, and Void Light, and the Scorn she keeps. We ascend it to read her intent before Xivu Arath does.",
+    topic: "on Savathûn's Spire",
+    captured: "2026-11-05",
+  },
+  {
+    prompt: "We ran Contact on Io and Titan. What were we facing?",
+    text: "You stood beneath a Pyramid Scale, charging the Seed of Silver Wings with Darkness itself. The harvest drew every power hungry for that same strength—forces already rotting with Dark, and the Taken sent to break the bank. Savathûn sought disruption. We sought understanding.",
+    topic: "on Contact",
+    captured: "2026-11-05",
+  },
 ];
 
 const zavala = [
@@ -223,6 +247,12 @@ const zavala = [
     prompt: "What are the Deep Dives?",
     text: "Deep Dives: Descents beneath Titan coordinated with Sloane, where pressure and danger deepen the further you go. Push your limits, but know when to surface — I will not lose a Guardian to pride.",
     topic: "on the Deep Dives",
+    captured: "2026-11-05",
+  },
+  {
+    prompt: "Give me the brief on Vox Obscura.",
+    text: "Vox Obscura is our joint operation with Empress Caiatl against a rogue commander using an old broadcast network to peddle \"Salvation\" to her demoralized troops. Clear the resistance, secure the console, and unmask the one actually speaking.",
+    topic: "on Vox Obscura",
     captured: "2026-11-05",
   },
 ];
@@ -300,6 +330,12 @@ const calus = [
     topic: "on Kell's Fall",
     captured: "2026-11-05",
   },
+  {
+    prompt: "Tell me about Duality.",
+    text: "Duality is my mindscape, pet — the throne room as I remember it and as it truly was, with your nightmares leaning in at the edges. You ring the bell between the two, and I watch which side you prefer.",
+    topic: "on Duality",
+    captured: "2026-11-05",
+  },
 ];
 
 const ghost = [
@@ -373,6 +409,24 @@ const ghost = [
     prompt: "Tell me about the Shattered Realm.",
     text: "Shattered Realm — a patch of the Ascendant Plane from Season of the Lost. We align beacons to repair it and pull Mara's lost Techeuns home, with Xivu Arath's forces closing in every time. Petra says mind the navigation, Guardian. I'm trying.",
     topic: "on the Shattered Realm",
+    captured: "2026-11-05",
+  },
+  {
+    prompt: "Do you remember the day I rose?",
+    text: "I do — the Cosmodrome, all rust and quiet, and then your eyes opening scared me half out of my shell. I still check on you when you sleep, Guardian. Old habit.",
+    topic: "on the first day",
+    captured: "2026-11-05",
+  },
+  {
+    prompt: "What is the Enigma Protocol?",
+    text: "It's our push into the Vex Network from Episode: Echoes — Failsafe, Osiris, Saint-14 and Ikora on overwatch while comms jam and we fall back to text. The deeper we go, the more it feels like the Vex are listening.",
+    topic: "on the Enigma Protocol",
+    captured: "2026-11-05",
+  },
+  {
+    prompt: "Tell me about the Seraph's Shield.",
+    text: "Operation: Seraph's Shield, from Season of the Seraph — an exotic mission aboard Seraph Station with Ana and Elsie Bray walking me through, while House Salvation splicers hack the frame and Xivu Arath angles for the Warsat network. I did not enjoy being a hostage.",
+    topic: "on the Seraph's Shield",
     captured: "2026-11-05",
   },
 ];

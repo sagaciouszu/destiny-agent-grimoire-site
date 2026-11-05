@@ -44,7 +44,7 @@ Output goes to `_site/`.
 - `404.md`
 - `getting-started.md` — legacy redirect kept for old links
 - `_data/agents.js` — the agent roster; add new agents there
-- `_data/voices.js` — 60 test dialogues for the home panel and persona pages
+- `_data/voices.js` — the test dialogues for the home panel and persona pages
 - `_data/sitemap.js`, `sitemap.njk`, `robots.txt.njk` — crawler metadata
 - `assets/site.css`, `assets/site.js`, `assets/starmap.svg`
 - `assets/fonts/` — self-hosted Neue Haas Grotesk Display Pro and Geist Mono
@@ -54,6 +54,7 @@ Output goes to `_site/`.
 - `scripts/check-external.py` — external-link check
 - `scripts/check-axe.mjs` — full axe-core scan in Chromium
 - `scripts/check-tapes.py` — proves no tape matches a canon line (needs the local Grimoire DB)
+- `scripts/check-roster.py` — keeps consult copies out of rosters, tallies and character totals
 
 ## Deploy
 
@@ -76,11 +77,11 @@ counted toward any roster, tally or statistic on the site.
 fails if a consult id reaches the roster, a consult page gets built, or a
 spelled-out character total stops matching the roster size.
 
-The Test Tapes read from `_data/voices.js`: twelve exchanges per persona,
+The Test Tapes read from `_data/voices.js`: a dozen or more exchanges per persona,
 captured live from the persona's consult agent and dated in `captured`. None
 of them are canon quotations — `scripts/check-tapes.py` (part of `npm run
 check`) fails if any tape matches a canon line verbatim. The home panel at
-`/#tapes` rotates and filters them; each persona page lists its own twelve.
+`/#tapes` rotates and filters them; each persona page lists its own set.
 Tape links are shareable as `?tape=N`, optionally combined with `speaker` or
 `topic`.
 

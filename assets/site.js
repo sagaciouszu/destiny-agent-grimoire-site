@@ -178,12 +178,19 @@
 
     // Data order stays stable so a shared ?tape=N link resolves the same tape.
     const initialParams = new URLSearchParams(window.location.search);
-    if (topicSelect && [...topicSelect.options].some((option) => option.value === initialParams.get("topic"))) {
-      topicSelect.value = initialParams.get("topic");
-    }
-    if (speakerSelect && [...speakerSelect.options].some((option) => option.value === initialParams.get("speaker"))) {
-      speakerSelect.value = initialParams.get("speaker");
-    }
+    // The topic dropdown only lists the top topics, so a shared link may name a
+    // topic it does not carry. Add it rather than silently dropping the filter.
+    const applyInitialFilter = (select, param, dataKey) => {
+      const requested = initialParams.get(param);
+      if (!select || !requested) return;
+      if (![...select.options].some((option) => option.value === requested)) {
+        if (!items.some((item) => item.dataset[dataKey] === requested)) return;
+        select.add(new Option(requested, requested));
+      }
+      select.value = requested;
+    };
+    applyInitialFilter(topicSelect, "topic", "topic");
+    applyInitialFilter(speakerSelect, "speaker", "speaker");
     const initialList = filtered();
     const requested = Number.parseInt(initialParams.get("tape") || "0", 10);
     const initialIndex = initialList.length
