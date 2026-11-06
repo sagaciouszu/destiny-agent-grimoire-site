@@ -65,7 +65,7 @@ use the search or quote-checking tool directly.
 <details class="section experts">
 <summary><span class="section-title" role="heading" aria-level="2" id="for-experts">For Experts (or enthusiasts)</span></summary>
 
-<p class="muted">The client configuration, all eighteen tools, and the safety limits.</p>
+<p class="muted">The client configuration, all twenty-one tools, and the safety limits.</p>
 
 <h3 id="client-config">Client configuration</h3>
 
@@ -85,7 +85,7 @@ A typical local configuration looks like this:
 The exact shape depends on your client. If it only accepts remote servers, put a
 local bridge in front of the stdio process.
 
-<h3 id="the-tools">The eighteen tools</h3>
+<h3 id="the-tools">The twenty-one tools</h3>
 
 All read-only:
 
@@ -97,7 +97,10 @@ All read-only:
   <li><code>find_item</code><p>Find items by a title or slug fragment.</p></li>
   <li><code>book</code><p>Book metadata and its entries.</p></li>
   <li><code>transcript</code><p>Transcript metadata and dialogue lines, optionally filtered by speaker.</p></li>
-  <li><code>record</code><p>A triumph or seal by slug or title.</p></li>
+  <li><code>record</code><p>A triumph record by slug or title.</p></li>
+  <li><code>seals</code><p>Every manifest seal with its triumph record count.</p></li>
+  <li><code>seal</code><p>A seal and its triumph records, by hash or name.</p></li>
+  <li><code>lore</code><p>A manifest lore entry by hash or title fragment.</p></li>
   <li><code>list_records</code><p>Cheap listings of books, characters, speakers or records.</p></li>
   <li><code>stats</code><p>Row counts, top item types and top speakers.</p></li>
   <li><code>verify</code><p>Check one quote, optionally with a speaker and exact mode.</p></li>
@@ -116,8 +119,8 @@ not canon, even if it sounds right.
 <h3 id="safety">Safety</h3>
 
 The database is opened read-only. There is no SQL tool, no write path and no
-network access. Limits are clamped, long text is trimmed, and queries are capped
-before they reach SQLite.
+network access. Limits are clamped, long text is trimmed, resource reads are
+capped, and queries are capped before they reach SQLite.
 
 That makes the server safe to leave connected while you work. It also means it
 cannot fix or ingest anything; those steps stay in the repository.
