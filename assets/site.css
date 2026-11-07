@@ -31,31 +31,58 @@
 }
 
 :root {
-  /* Vanguard-inspired UI palette: deep navy, bone, Vanguard gold,
-     muted blue. Deliberately no cyan. */
-  --bg: #080c12;
-  --surface: #0f1620;
-  --surface-2: #162231;
-  --text: #e9e6dc;
-  --muted: #a6a6a0;
-  --heading: #fdfbf5;
-  --gold: #c9a94f;
-  --gold-bright: #e8cd83;
-  --gold-dim: #8a7135;
-  --accent: #3d7fb5;
-  --line: rgba(255, 255, 255, 0.12);
-  --line-strong: rgba(255, 255, 255, 0.24);
+  /* Destiny 2 UI palette from ~/Work/destiny-2-ui-standards/tokens.json
+     (measured from 1920x1080 reference sheets; inferred tokens flagged there).
+     --bg/--surface/--text/--muted/--line map to base tokens; --gold maps to the
+     exotic/bossGold tokens as the site's Vanguard accent; --accent maps to Arc.
+     Deliberately no cyan: glimmerCyan is reserved for currency numerals only. */
+  --d2-void: #0A0F12;
+  --d2-ink: #121419;
+  --d2-panel-purple: #2F2D45;
+  --d2-header-purple: #31203F;
+  --d2-tooltip-navy: #2B384B;
+  --d2-steel-blue: #2C4F5B;
+  --d2-text-primary: #F2F2F2;
+  --d2-text-secondary: #A0A0A4;
+  --d2-text-muted: #5C5860;
+  --d2-border-light: #D0CFD2;
+  --d2-arc: #7F9FB0;
+  --d2-solar: #D0713A;
+  --d2-void-purple: #54396F;
+  --d2-crucible-red: #943034;
+  --d2-crucible-red-dark: #5E2528;
+  --d2-launch-green: #367444;
+  --d2-health-red: #BB4F40;
+  --d2-boss-orange: #A24736;
+  --d2-boss-gold: #B08D2E;
+  --d2-gambit-green: #2E7D5B;
+  --d2-glimmer-cyan: #4FC3D9;
+  --d2-rarity-common: #F2F2F2;
+  --d2-rarity-uncommon: #7AC74F;
+  --d2-rarity-superior: #4A90D9;
+  --d2-rarity-exotic: #E8C547;
+  --bg: #0A0F12;
+  --surface: #121419;
+  --surface-2: #2B384B;
+  --text: #F2F2F2;
+  --muted: #A0A0A4;
+  --heading: #F2F2F2;
+  --gold: #B08D2E;
+  --gold-bright: #E8C547;
+  --gold-dim: #8A7135;
+  --accent: #7F9FB0;
+  --line: rgba(208, 207, 210, 0.14);
+  --line-strong: rgba(208, 207, 210, 0.28);
   --code-bg: #070708;
-  --code-text: #ddd8cd;
-  --header-bg: rgba(8, 12, 18, 0.94);
-  --panel-bg: rgba(18, 18, 19, 0.82);
-  --glow: rgba(61, 127, 181, 0.22);
-  --veil-top: rgba(8, 12, 18, 0.68);
-  --veil-mid: rgba(8, 12, 18, 0.9);
-  --shadow: rgba(0, 0, 0, 0.45);
+  --code-text: #D0CFD2;
+  --header-bg: rgba(10, 15, 18, 0.94);
+  --panel-bg: rgba(18, 20, 25, 0.82);
+  --glow: rgba(127, 159, 176, 0.22);
+  --veil-top: rgba(10, 15, 18, 0.68);
+  --veil-mid: rgba(10, 15, 18, 0.9);
   --measure: 68ch;
   --wrap: 72rem;
-  --sans: "Neue Haas Grotesk Display Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --sans: "Neue Haas Grotesk Display Pro", "Neue Haas Grotesk", "Helvetica Neue", "Helvetica Now Display", Helvetica, Arial, sans-serif;
   --mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
   color-scheme: dark;
 }
@@ -124,12 +151,6 @@ body::after {
   will-change: transform;
 }
 
-:root[data-theme="light"] body::after,
-:root[data-theme="braytech"] body::after {
-  background-image: url("starmap-light.svg");
-  opacity: 0.8;
-}
-
 @keyframes starmap-turn {
   to { transform: translate(-50%, -50%) rotate(360deg); }
 }
@@ -165,7 +186,7 @@ a[href^="http"]:not(.nav-github) {
 :focus-visible {
   outline: 2px solid var(--gold-bright);
   outline-offset: 3px;
-  border-radius: 2px;
+  border-radius: 0;
 }
 
 .skip-link {
@@ -174,11 +195,11 @@ a[href^="http"]:not(.nav-github) {
   top: -4rem;
   z-index: 100;
   padding: 0.6rem 1rem;
-  background: var(--gold);
+  background: var(--gold-bright);
   color: var(--bg);
   font-weight: 700;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 0;
 }
 
 .skip-link:focus {
@@ -214,9 +235,10 @@ a[href^="http"]:not(.nav-github) {
 .brand {
   color: var(--heading);
   font-weight: 700;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.18em;
   text-decoration: none;
-  font-size: 1.05rem;
+  font-size: 0.95rem;
+  text-transform: uppercase;
 }
 
 .brand:hover { color: var(--gold-bright); }
@@ -238,7 +260,7 @@ a[href^="http"]:not(.nav-github) {
   color: var(--muted);
   background: transparent;
   border: 1px solid var(--line-strong);
-  border-radius: 4px;
+  border-radius: 0;
   cursor: pointer;
 }
 
@@ -281,7 +303,7 @@ a[href^="http"]:not(.nav-github) {
   font-size: 0.92rem;
   font-weight: 600;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 0;
   cursor: pointer;
 }
 
@@ -306,7 +328,7 @@ a[href^="http"]:not(.nav-github) {
 .nav-menu > summary::after {
   content: " ▾";
   font-size: 0.7em;
-  color: var(--gold);
+  color: var(--gold-bright);
 }
 
 .nav-menu[open] > summary { color: var(--heading); }
@@ -317,7 +339,7 @@ a[href^="http"]:not(.nav-github) {
   list-style: none;
   background: var(--surface);
   border: 1px solid var(--line-strong);
-  border-radius: 6px;
+  border-radius: 0;
   min-width: 13rem;
   max-height: calc(100vh - 5rem);
   overflow-y: auto;
@@ -334,7 +356,7 @@ a[href^="http"]:not(.nav-github) {
   padding: 0.55rem 0.7rem;
   color: var(--text);
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 0;
   font-size: 0.92rem;
 }
 
@@ -350,7 +372,6 @@ a[href^="http"]:not(.nav-github) {
     right: 0;
     top: 100%;
     margin-top: 0;
-    box-shadow: 0 18px 40px var(--shadow);
   }
 }
 
@@ -391,14 +412,15 @@ a[href^="http"]:not(.nav-github) {
   padding-block: clamp(2.1rem, 5.1vw, 4.25rem);
 }
 
-/* Destiny 2 UI weights: 400 Light, 500 Roman, 600 Medium, 700 Bold.
-   Body copy uses 500, labels 600 and headings 700. */
+/* Destiny 2 UI weights (Neue Haas Grotesk = Helvetica): 55 Display Roman (500),
+   56 Italic, 65 Medium (600), 75 Bold (700). Body copy uses 500 (55),
+   section headings use 600 (65), screen titles use 700 (75). */
 .category-icon {
   display: block;
   width: 1.65rem;
   height: 1.65rem;
   margin: 0 0 0.55rem;
-  color: var(--gold);
+  color: var(--gold-bright);
 }
 
 .lore {
@@ -414,7 +436,7 @@ a[href^="http"]:not(.nav-github) {
 
 .kicker {
   margin: 0 0 0.6rem;
-  color: var(--gold);
+  color: var(--gold-bright);
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.16em;
@@ -463,7 +485,7 @@ a[href^="http"]:not(.nav-github) {
   color: var(--heading);
   font-size: 1.5rem;
   line-height: 1.25;
-  font-weight: 700;
+  font-weight: 600;
   scroll-margin-top: 5.5rem;
 }
 
@@ -472,7 +494,7 @@ a[href^="http"]:not(.nav-github) {
   color: var(--heading);
   font-size: 1.15rem;
   line-height: 1.35;
-  font-weight: 700;
+  font-weight: 600;
   scroll-margin-top: 5.5rem;
 }
 
@@ -532,7 +554,7 @@ a[href^="http"]:not(.nav-github) {
 
 .heading-anchor {
   margin-left: 0.4em;
-  color: var(--gold);
+  color: var(--gold-bright);
   text-decoration: none;
   font-size: 0.871em;
   font-weight: 500;
@@ -554,7 +576,7 @@ pre {
   overflow-x: auto;
   background: var(--code-bg);
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: 0;
   line-height: 1.55;
 }
 
@@ -569,7 +591,7 @@ samp {
   padding: 0.12em 0.38em;
   background: color-mix(in srgb, var(--gold) 10%, transparent);
   border: 1px solid color-mix(in srgb, var(--gold) 20%, transparent);
-  border-radius: 4px;
+  border-radius: 0;
   color: var(--gold-bright);
 }
 
@@ -588,7 +610,7 @@ pre code {
   background: var(--surface-2);
   color: var(--muted);
   border: 1px solid var(--line-strong);
-  border-radius: 4px;
+  border-radius: 0;
   font-family: var(--sans);
   font-size: 0.72rem;
   font-weight: 600;
@@ -631,7 +653,7 @@ pre:hover .copy-button,
   content: "+";
   flex: none;
   width: 1.1rem;
-  color: var(--gold);
+  color: var(--gold-bright);
   font-weight: 600;
 }
 
@@ -666,13 +688,13 @@ pre:hover .copy-button,
   padding: 1rem 1.1rem;
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 6px;
+  border-radius: 0;
 }
 
 .choice-icon {
   display: inline-block;
   margin-right: 0.45rem;
-  color: var(--gold);
+  color: var(--gold-bright);
   font-size: 1.15em;
   line-height: 1;
   vertical-align: -0.12em;
@@ -688,7 +710,7 @@ pre:hover .copy-button,
   display: flex;
   align-items: center;
   margin: 0 0 0.35rem;
-  color: var(--gold);
+  color: var(--gold-bright);
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -735,7 +757,7 @@ pre:hover .copy-button,
   padding: 0.55rem 0.8rem;
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 6px;
+  border-radius: 0;
   font-size: 0.84rem;
 }
 
@@ -806,7 +828,7 @@ pre:hover .copy-button,
 }
 
 .setup-order a[aria-current="step"] {
-  color: var(--gold);
+  color: var(--gold-bright);
 }
 
 .setup-optional {
@@ -830,7 +852,7 @@ pre:hover .copy-button,
   background: var(--panel-bg);
   border: 1px solid var(--line);
   border-left: 2px solid var(--gold-dim);
-  border-radius: 0 8px 8px 0;
+  border-radius: 0;
   backdrop-filter: blur(8px);
 }
 
@@ -840,7 +862,7 @@ pre:hover .copy-button,
 
 .transmission-label {
   margin: 0 0 0.8rem;
-  color: var(--gold);
+  color: var(--gold-bright);
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.16em;
@@ -861,7 +883,7 @@ pre:hover .copy-button,
 
 .transmission-prompt {
   margin: 0 0 0.5rem;
-  color: var(--gold);
+  color: var(--gold-bright);
   font-size: 0.82rem;
   font-weight: 600;
   line-height: 1.45;
@@ -907,12 +929,12 @@ pre:hover .copy-button,
   background: var(--surface);
   border: 1px solid var(--line);
   border-left: 2px solid var(--gold-dim);
-  border-radius: 0 6px 6px 0;
+  border-radius: 0;
 }
 
 .tape-prompt {
   margin: 0 0 0.5rem;
-  color: var(--gold);
+  color: var(--gold-bright);
   font-size: 0.82rem;
   font-weight: 600;
   line-height: 1.45;
@@ -946,7 +968,7 @@ pre:hover .copy-button,
 
 .transmission-caption {
   margin-top: 0.9rem;
-  color: var(--gold);
+  color: var(--gold-bright);
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.02em;
@@ -967,7 +989,7 @@ pre:hover .copy-button,
 }
 
 .transmission-speaker {
-  color: var(--gold);
+  color: var(--gold-bright);
   font-weight: 600;
 }
 
@@ -1000,7 +1022,7 @@ pre:hover .copy-button,
   background: var(--bg);
   color: var(--text);
   border: 1px solid var(--line-strong);
-  border-radius: 4px;
+  border-radius: 0;
   font: inherit;
   font-size: 0.82rem;
   letter-spacing: normal;
@@ -1022,7 +1044,7 @@ pre:hover .copy-button,
   background: var(--surface-2);
   color: var(--muted);
   border: 1px solid var(--line-strong);
-  border-radius: 4px;
+  border-radius: 0;
   font: inherit;
   font-size: 0.8rem;
   font-weight: 600;
@@ -1083,26 +1105,29 @@ pre:hover .copy-button,
   display: inline-block;
   padding: 0.7rem 1.1rem;
   border: 1px solid var(--gold);
-  border-radius: 4px;
+  border-radius: 0;
   color: var(--gold-bright);
-  font-size: 0.95rem;
+  font-size: 0.82rem;
   font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
   text-decoration: none;
 }
 
 .button:hover {
-  background: var(--gold);
+  background: var(--gold-bright);
   color: var(--bg);
 }
 
 .button-primary {
-  background: var(--gold);
+  background: var(--gold-bright);
+  border-color: var(--gold-bright);
   color: var(--bg);
 }
 
 .button-primary:hover {
-  background: var(--gold-bright);
-  border-color: var(--gold-bright);
+  background: var(--heading);
+  border-color: var(--heading);
   color: var(--bg);
 }
 
@@ -1121,7 +1146,7 @@ pre:hover .copy-button,
 }
 
 .category-index {
-  color: var(--gold);
+  color: var(--gold-bright);
   font-size: 0.85rem;
   font-weight: 600;
   font-variant-numeric: tabular-nums;
@@ -1133,7 +1158,7 @@ pre:hover .copy-button,
   color: var(--heading);
   font-size: 1.5rem;
   line-height: 1.25;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .category p {
@@ -1182,7 +1207,7 @@ pre:hover .copy-button,
   padding: 0.8rem 0.9rem;
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 6px;
+  border-radius: 0;
 }
 
 .stat-grid strong {
@@ -1220,7 +1245,7 @@ pre:hover .copy-button,
   padding: 0.85rem 1rem;
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 6px;
+  border-radius: 0;
 }
 
 .toc-card .toc-group { margin-top: 0; }
@@ -1231,7 +1256,7 @@ pre:hover .copy-button,
 
 .toc-title {
   margin: 0 0 0.5rem;
-  color: var(--gold);
+  color: var(--gold-bright);
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -1297,7 +1322,7 @@ pre:hover .copy-button,
 
 .agent-role {
   margin: 0 0 0.35rem;
-  color: var(--gold);
+  color: var(--gold-bright);
   font-size: 0.74rem;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -1333,7 +1358,7 @@ pre:hover .copy-button,
   overflow: hidden;
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: 0;
 }
 
 .page-hero img {
@@ -1349,7 +1374,7 @@ pre:hover .copy-button,
   overflow: hidden;
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: 0;
 }
 
 .agent-portrait img {
@@ -1405,7 +1430,7 @@ pre:hover .copy-button,
     padding: 0.8rem 0.9rem;
     background: var(--surface);
     border: 1px solid var(--line);
-    border-radius: 6px;
+    border-radius: 0;
   }
   .integration-table td {
     padding: 0.15rem 0;
@@ -1434,7 +1459,7 @@ pre:hover .copy-button,
   background: var(--bg);
   color: var(--text);
   border: 1px solid var(--line-strong);
-  border-radius: 4px;
+  border-radius: 0;
   font: inherit;
   font-size: 0.9rem;
   letter-spacing: normal;
@@ -1458,7 +1483,7 @@ pre:hover .copy-button,
   padding: 0.65rem 0.8rem;
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 6px;
+  border-radius: 0;
 }
 
 .agent-facts dt {
@@ -1497,7 +1522,7 @@ pre:hover .copy-button,
   position: absolute;
   left: 0;
   top: 0;
-  color: var(--gold);
+  color: var(--gold-bright);
   font-weight: 700;
 }
 
@@ -1507,7 +1532,7 @@ pre:hover .copy-button,
   background: var(--surface);
   border: 1px solid var(--line);
   border-left: 2px solid var(--accent);
-  border-radius: 0 6px 6px 0;
+  border-radius: 0;
 }
 
 .callout > :first-child { margin-top: 0; }
@@ -1526,14 +1551,14 @@ pre:hover .copy-button,
   padding: 0.85rem 1rem;
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 6px;
+  border-radius: 0;
 }
 
 .tile-grid code {
   padding: 0;
   border: 0;
   background: none;
-  color: var(--gold);
+  color: var(--gold-bright);
   font-size: 0.79rem;
   font-weight: 600;
 }
@@ -1568,7 +1593,7 @@ pre:hover .copy-button,
   padding: 1.25rem;
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 10px;
+  border-radius: 0;
 }
 
 .fit-pair {
@@ -1581,7 +1606,7 @@ pre:hover .copy-button,
   padding: 0.9rem 1rem;
   background: var(--bg);
   border: 1px solid var(--line-strong);
-  border-radius: 6px;
+  border-radius: 0;
 }
 
 .fit-node--client,
@@ -1595,7 +1620,7 @@ pre:hover .copy-button,
 
 .fit-kicker {
   margin: 0 0 0.2rem;
-  color: var(--gold);
+  color: var(--gold-bright);
   font-size: 0.66rem;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -1702,7 +1727,7 @@ pre:hover .copy-button,
   overflow: hidden;
   background: var(--surface-2);
   border-bottom: 1px solid var(--line);
-  border-radius: 5px 5px 0 0;
+  border-radius: 0;
 }
 
 .persona-thumb img {
@@ -1752,7 +1777,7 @@ pre:hover .copy-button,
   color: var(--muted);
   background: var(--surface);
   border: 1px dashed var(--line-strong);
-  border-radius: 6px;
+  border-radius: 0;
   font-size: 0.9rem;
   text-align: center;
 }
@@ -1877,7 +1902,7 @@ pre:hover .copy-button,
   position: absolute;
   left: 0;
   top: 0.35rem;
-  color: var(--gold);
+  color: var(--gold-bright);
   font-size: 2rem;
   line-height: 1;
   opacity: 0.65;
@@ -2005,109 +2030,58 @@ pre:hover .copy-button,
   border: 0;
 }
 
-/* Light theme */
-
-:root[data-theme="light"] {
-  color-scheme: light;
-  --bg: #e7eaee;
-  --surface: #f6f7f9;
-  --surface-2: #d9dfe6;
-  --text: #1b232c;
-  --muted: #56616d;
-  --heading: #0e141a;
-  --gold: #7a5f1b;
-  --gold-bright: #5e4810;
-  --gold-dim: #9b803c;
-  --accent: #2f6690;
-  --line: rgba(25, 35, 45, 0.14);
-  --line-strong: rgba(25, 35, 45, 0.28);
-  --code-bg: #dfe4ea;
-  --code-text: #2a251c;
-  --header-bg: rgba(231, 234, 238, 0.94);
-  --panel-bg: rgba(246, 247, 249, 0.88);
-  --glow: rgba(47, 102, 144, 0.22);
-  --veil-top: rgba(231, 234, 238, 0.42);
-  --veil-mid: rgba(231, 234, 238, 0.64);
-  --shadow: rgba(60, 45, 20, 0.18);
-}
-
-
-/* Crucible theme */
+/* Crucible theme — D2 tokens: --gold = crucibleRed #943034,
+   --gold-dim = crucibleRedDark #5E2528. --gold-bright is a derived
+   light tint for small text (token red fails contrast on dark). */
 
 :root[data-theme="crucible"] {
   color-scheme: dark;
   --bg: #0b0708;
   --surface: #170f11;
   --surface-2: #241518;
-  --text: #f0e6e3;
-  --muted: #b09a96;
-  --heading: #fff6f2;
-  --gold: #c0392b;
-  --gold-bright: #ff6f61;
-  --gold-dim: #7d241e;
-  --accent: #b9c0c7;
-  --line: rgba(255, 255, 255, 0.12);
-  --line-strong: rgba(255, 255, 255, 0.24);
+  --text: #F2F2F2;
+  --muted: #B09A96;
+  --heading: #FFF6F2;
+  --gold: #943034;
+  --gold-bright: #FF6F61;
+  --gold-dim: #5E2528;
+  --accent: #B9C0C7;
+  --line: rgba(208, 207, 210, 0.14);
+  --line-strong: rgba(208, 207, 210, 0.28);
   --code-bg: #120b0c;
-  --code-text: #e9dcd8;
+  --code-text: #D0CFD2;
   --header-bg: rgba(11, 7, 8, 0.94);
   --panel-bg: rgba(23, 15, 17, 0.86);
-  --glow: rgba(192, 57, 43, 0.24);
+  --glow: rgba(148, 48, 52, 0.24);
   --veil-top: rgba(11, 7, 8, 0.6);
   --veil-mid: rgba(11, 7, 8, 0.9);
-  --shadow: rgba(0, 0, 0, 0.5);
 }
 
-/* Gambit theme */
+/* Gambit theme — D2 tokens: --gold = gambitGreen #2E7D5B,
+   --accent = bossGold #B08D2E. --gold-bright is a derived light tint
+   (token green fails contrast for small text on dark). */
 
 :root[data-theme="gambit"] {
   color-scheme: dark;
   --bg: #06110b;
   --surface: #0c1d13;
   --surface-2: #122a1c;
-  --text: #e4efe6;
-  --muted: #96ac9e;
-  --heading: #f4fbf5;
-  --gold: #3fae7c;
-  --gold-bright: #7ee2b0;
-  --gold-dim: #206b4a;
-  --accent: #c9a94f;
-  --line: rgba(255, 255, 255, 0.12);
-  --line-strong: rgba(255, 255, 255, 0.24);
+  --text: #F2F2F2;
+  --muted: #96AC9E;
+  --heading: #F4FBF5;
+  --gold: #2E7D5B;
+  --gold-bright: #7EE2B0;
+  --gold-dim: #206B4A;
+  --accent: #B08D2E;
+  --line: rgba(208, 207, 210, 0.14);
+  --line-strong: rgba(208, 207, 210, 0.28);
   --code-bg: #050d08;
-  --code-text: #d7e8da;
+  --code-text: #D0CFD2;
   --header-bg: rgba(6, 17, 11, 0.94);
   --panel-bg: rgba(12, 29, 19, 0.86);
-  --glow: rgba(63, 174, 124, 0.2);
+  --glow: rgba(46, 125, 91, 0.2);
   --veil-top: rgba(6, 17, 11, 0.62);
   --veil-mid: rgba(6, 17, 11, 0.9);
-  --shadow: rgba(0, 0, 0, 0.5);
-}
-
-/* Braytech theme */
-
-:root[data-theme="braytech"] {
-  color-scheme: light;
-  --bg: #e9f0f4;
-  --surface: #f7fafc;
-  --surface-2: #d6e4ed;
-  --text: #172732;
-  --muted: #526a78;
-  --heading: #08161f;
-  --gold: #2e7099;
-  --gold-bright: #17567d;
-  --gold-dim: #7fa9c2;
-  --accent: #6aa6c8;
-  --line: rgba(20, 45, 60, 0.16);
-  --line-strong: rgba(20, 45, 60, 0.3);
-  --code-bg: #dce8ef;
-  --code-text: #142630;
-  --header-bg: rgba(233, 240, 244, 0.94);
-  --panel-bg: rgba(247, 250, 252, 0.9);
-  --glow: rgba(110, 166, 200, 0.28);
-  --veil-top: rgba(233, 240, 244, 0.4);
-  --veil-mid: rgba(233, 240, 244, 0.66);
-  --shadow: rgba(20, 45, 60, 0.16);
 }
 
 

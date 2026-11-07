@@ -3,23 +3,19 @@
 <title>{% if title and title != site.title %}{{ title }} | {% endif %}{{ site.title }}</title>
 {% set pageDescription = description or lede or site.description %}
 <meta name="description" content="{{ pageDescription }}">
-<meta name="color-scheme" content="dark light">
-<meta name="theme-color" content="#080c12">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0A0F12">
 <script>
   (function () {
     try {
-      var themes = ["dark", "light", "crucible", "gambit", "braytech"];
+      var themes = ["dark", "crucible", "gambit"];
       var colors = {
-        dark: "#080c12",
-        light: "#e7eaee",
-        crucible: "#0b0708",
-        gambit: "#06110b",
-        braytech: "#e9f0f4"
+        dark: "#0A0F12",
+        crucible: "#0B0708",
+        gambit: "#06110B"
       };
       var stored = localStorage.getItem("grimoire-theme");
-      var theme = themes.indexOf(stored) !== -1
-        ? stored
-        : (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+      var theme = themes.indexOf(stored) !== -1 ? stored : "dark";
       document.documentElement.dataset.theme = theme;
       var meta = document.querySelector('meta[name="theme-color"]');
       if (meta) meta.setAttribute("content", colors[theme]);

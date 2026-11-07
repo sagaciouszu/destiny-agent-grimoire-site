@@ -110,9 +110,16 @@ format; GitHub Pages uses noindex meta-refresh pages.
 
 ## Theme
 
-The palette is Destiny 2 UI-inspired: charcoal, bone, Vanguard gold and a muted
-ember accent. No cyan. The topbar toggle switches between the dark theme and a
-warm paper light theme.
-The choice is stored in `localStorage`; without a stored choice the site follows
-`prefers-color-scheme`. The theme is applied before paint by the inline script in
-`_includes/head.njk`.
+The palette follows the Destiny 2 UI token system
+(`~/Work/destiny-2-ui-standards/tokens.json`, mirrored as `--d2-*` vars in
+`assets/site.css`): void/ink surfaces, neutral text, Vanguard gold
+(exotic/bossGold tokens) as the site accent, Arc steel for secondary accents.
+UI chrome is square with hairline borders and no drop shadows; type is
+Neue Haas Grotesk (Helvetica) with tracked-uppercase labels. No cyan —
+glimmerCyan is reserved for currency numerals and unused here.
+The topbar toggle switches between three dark themes: Vanguard dark,
+Crucible (crucibleRed tokens) and Gambit (gambitGreen tokens).
+Token hexes are fills/borders; text uses the derived bright tints so
+contrast holds in every theme. The choice is stored in `localStorage`;
+without a stored choice the site defaults to Vanguard dark. The theme is
+applied before paint by the inline script in `_includes/head.njk`.

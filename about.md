@@ -42,7 +42,7 @@ The site aims to be readable and usable without a mouse:
 - clear page regions, a skip link and keyboard-friendly navigation;
 - visible focus outlines and full keyboard access to menus and collapsible
   sections;
-- colours chosen for contrast in both themes;
+- colours chosen for contrast in all three themes;
 - reduced motion respected through the system preference;
 - stable, linkable headings;
 - tables and code blocks that remain readable on narrow screens.

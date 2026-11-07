@@ -310,7 +310,7 @@ unique, and each page has exactly one `h1` and a `lang` attribute.
 ### The axe scan
 
 `scripts/check-axe.mjs` goes further and opens the key pages in a real
-browser, in both dark and light, running axe-core against the WCAG 2.0 and
+browser, in dark, crucible and gambit, running axe-core against the WCAG 2.0 and
 2.1 A and AA rules. It uses a local Chromium when one is installed, otherwise
 Playwright's (`npx playwright install chromium`), and picks a free port so an
 unrelated local server can never satisfy the checks.

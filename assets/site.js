@@ -246,20 +246,16 @@
     const root = document.documentElement;
     const themeMeta = document.querySelector('meta[name="theme-color"]');
     const themeStatus = document.querySelector("[data-theme-status]");
-    const themes = ["light", "dark", "crucible", "gambit", "braytech"];
+    const themes = ["dark", "crucible", "gambit"];
     const names = {
       dark: "Vanguard dark",
-      light: "Vanguard light",
       crucible: "Crucible",
       gambit: "Gambit",
-      braytech: "Braytech Europa",
     };
     const colors = {
-      dark: "#080c12",
-      light: "#e7eaee",
-      crucible: "#0b0708",
-      gambit: "#06110b",
-      braytech: "#e9f0f4",
+      dark: "#0A0F12",
+      crucible: "#0B0708",
+      gambit: "#06110B",
     };
 
     const currentTheme = () =>

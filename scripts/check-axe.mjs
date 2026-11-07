@@ -9,8 +9,10 @@
  * browser is used (install it with `npx playwright install chromium`).
  */
 import { spawn } from "node:child_process";
-import { existsSync } from "node:fs";
+import { existsSync, rmSync, symlinkSync, mkdtempSync } from "node:fs";
 import { createServer } from "node:net";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
 import { chromium } from "playwright";
 import { AxeBuilder } from "@axe-core/playwright";
 
@@ -25,7 +27,12 @@ const freePort = await new Promise((resolve, reject) => {
 });
 
 const BASE = `http://127.0.0.1:${freePort}`;
-const server = spawn("python3", ["-m", "http.server", String(freePort), "--directory", "_site"], {
+// Eleventy emits absolute URLs under the /grimoire-site/ path prefix.
+// Serve a staging root containing that prefix -> _site, as deployed,
+// otherwise CSS/JS 404 and axe scans an unstyled page.
+const serveRoot = mkdtempSync(join(tmpdir(), "grimoire-axe-"));
+symlinkSync(join(process.cwd(), "_site"), join(serveRoot, "grimoire-site"), "dir");
+const server = spawn("python3", ["-m", "http.server", String(freePort), "--directory", serveRoot], {
   stdio: "ignore",
 });
 
@@ -44,19 +51,19 @@ const waitForServer = async () => {
 };
 
 const pages = [
-  ["Home", "/"],
-  ["Grimoire", "/grimoire/"],
-  ["Install the Grimoire", "/grimoire/install/"],
-  ["Connect an AI", "/grimoire/mcp/"],
-  ["Personas", "/personas/"],
-  ["Install the Characters", "/personas/install/"],
-  ["Use Another App", "/personas/platforms/"],
-  ["The Drifter", "/personas/drifter/"],
-  ["Zavala", "/personas/zavala/"],
-  ["Troubleshooting", "/troubleshooting/"],
-  ["For Experts", "/troubleshooting/experts/"],
-  ["About", "/about/"],
-  ["404", "/404.html"],
+  ["Home", "/grimoire-site/"],
+  ["Grimoire", "/grimoire-site/grimoire/"],
+  ["Install the Grimoire", "/grimoire-site/grimoire/install/"],
+  ["Connect an AI", "/grimoire-site/grimoire/mcp/"],
+  ["Personas", "/grimoire-site/personas/"],
+  ["Install the Characters", "/grimoire-site/personas/install/"],
+  ["Use Another App", "/grimoire-site/personas/platforms/"],
+  ["The Drifter", "/grimoire-site/personas/drifter/"],
+  ["Zavala", "/grimoire-site/personas/zavala/"],
+  ["Troubleshooting", "/grimoire-site/troubleshooting/"],
+  ["For Experts", "/grimoire-site/troubleshooting/experts/"],
+  ["About", "/grimoire-site/about/"],
+  ["404", "/grimoire-site/404.html"],
 ];
 
 const executablePath =
@@ -74,7 +81,7 @@ const failures = [];
 try {
   await waitForServer();
 
-  for (const theme of ["dark", "light"]) {
+  for (const theme of ["dark", "crucible", "gambit"]) {
     const context = await browser.newContext({ viewport: { width: 1280, height: 1000 } });
     await context.addInitScript((value) => {
       localStorage.setItem("grimoire-theme", value);
@@ -104,6 +111,7 @@ try {
 } finally {
   await browser.close();
   server.kill("SIGTERM");
+  rmSync(serveRoot, { recursive: true, force: true });
 }
 
 if (failures.length) {
@@ -117,4 +125,4 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log(`OK: ${pages.length * 2} page renders passed axe-core checks`);
+console.log(`OK: ${pages.length * 3} page renders passed axe-core checks`);
