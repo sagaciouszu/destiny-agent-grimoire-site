@@ -77,9 +77,9 @@
   --code-text: #D0CFD2;
   --header-bg: rgba(10, 15, 18, 0.94);
   --panel-bg: rgba(18, 20, 25, 0.82);
-  --glow: rgba(127, 159, 176, 0.22);
+  --glow: rgba(208, 113, 58, 0.22);
   --veil-top: rgba(10, 15, 18, 0.68);
-  --veil-mid: rgba(10, 15, 18, 0.9);
+  --veil-mid: rgba(10, 15, 18, 0.82);
   --measure: 68ch;
   --wrap: 72rem;
   --sans: "Neue Haas Grotesk Display Pro", "Neue Haas Grotesk", "Helvetica Neue", "Helvetica Now Display", Helvetica, Arial, sans-serif;
@@ -145,7 +145,7 @@ body::after {
   z-index: -2;
   pointer-events: none;
   background: url("starmap.svg") center / cover no-repeat;
-  opacity: 0.55;
+  opacity: 0.8;
   transform: translate(-50%, -50%) rotate(0deg);
   animation: starmap-turn 360s linear infinite;
   will-change: transform;

@@ -1,6 +1,6 @@
 {
   "name": "grimoire-site",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Website for the Destiny Agent Grimoire: lore archive, install guides, agent roster and troubleshooting.",
   "private": true,
   "license": "MIT",
