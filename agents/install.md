@@ -39,8 +39,8 @@ bash scripts/sync-live-agents.sh --openclaw</code></pre>
     <p class="choice-label"><span class="choice-icon" aria-hidden="true">🧩</span>Anything else</p>
     <h3>One character, one folder</h3>
     <p class="muted choice-desc">A character in its own folder, for any app that can read an instructions file.</p>
-    <pre><code>git clone https://github.com/sagaciouszu/how-to-drift-for-agents.git
-cd how-to-drift-for-agents
+    <pre><code>git clone https://github.com/sagaciouszu/destiny-agent-drifter.git
+cd destiny-agent-drifter
 ./setup.sh</code></pre>
     <p class="muted">Swap in another character&#39;s project name for a different character. Point your app at the instructions file, <code>AGENTS.md</code>.</p>
   </div>

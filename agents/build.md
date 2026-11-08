@@ -40,8 +40,8 @@ checks to run before publishing.</p>
 <h3 id="the-shape">The shape</h3>
 
 A series persona is its own project, not a folder inside the library. The
-reference implementations are [The Drifter](https://github.com/sagaciouszu/how-to-drift-for-agents)
-and [Eris Morn](https://github.com/sagaciouszu/eris-morn). Together they show
+reference implementations are [The Drifter](https://github.com/sagaciouszu/destiny-agent-drifter)
+and [Eris Morn](https://github.com/sagaciouszu/destiny-agent-eris-morn). Together they show
 what a persona needs:
 
 - an entry file, `<id>.md`, for OpenCode;
