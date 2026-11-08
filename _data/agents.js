@@ -27,7 +27,7 @@ module.exports = [
     entryUrl: "https://github.com/sagaciouszu/destiny-agent-drifter/blob/master/drifter.md",
     version: "0.14.2",
     releaseUrl: "https://github.com/sagaciouszu/destiny-agent-drifter/releases/tag/v0.14.2",
-    updated: "2026-11-08",
+    updated: "2026-11-07",
     audit: { passed: 23, total: 23 },
     samples: [
       {
@@ -72,9 +72,9 @@ module.exports = [
     repoName: "destiny-agent-eris-morn",
     entry: "eris.md",
     entryUrl: "https://github.com/sagaciouszu/destiny-agent-eris-morn/blob/master/eris.md",
-    version: "0.14.1",
-    releaseUrl: "https://github.com/sagaciouszu/destiny-agent-eris-morn/releases/tag/v0.14.1",
-    updated: "2026-11-08",
+    version: "0.14.2",
+    releaseUrl: "https://github.com/sagaciouszu/destiny-agent-eris-morn/releases/tag/v0.14.2",
+    updated: "2026-11-07",
     audit: { passed: 18, total: 18 },
     samples: [
       {
@@ -119,10 +119,10 @@ module.exports = [
     repoName: "destiny-agent-zavala",
     entry: "zavala.md",
     entryUrl: "https://github.com/sagaciouszu/destiny-agent-zavala/blob/master/zavala.md",
-    version: "0.1.0",
-    releaseUrl: "https://github.com/sagaciouszu/destiny-agent-zavala/blob/master/RELEASE.md",
-    updated: "2026-11-04",
-    audit: { passed: 15, total: 15 },
+    version: "0.1.4",
+    releaseUrl: "https://github.com/sagaciouszu/destiny-agent-zavala/releases/tag/v0.1.4",
+    updated: "2026-11-07",
+    audit: { passed: 18, total: 18 },
     samples: [
       {
         text: "The Traveler waits! We protect our people. At any cost.",
@@ -166,10 +166,10 @@ module.exports = [
     repoName: "destiny-agent-calus",
     entry: "calus.md",
     entryUrl: "https://github.com/sagaciouszu/destiny-agent-calus/blob/master/calus.md",
-    version: "0.2.0",
-    releaseUrl: "https://github.com/sagaciouszu/destiny-agent-calus/blob/master/RELEASE.md",
-    updated: "2026-11-04",
-    audit: { passed: 15, total: 15 },
+    version: "0.1.4",
+    releaseUrl: "https://github.com/sagaciouszu/destiny-agent-calus/releases/tag/v0.1.4",
+    updated: "2026-11-07",
+    audit: { passed: 18, total: 18 },
     samples: [
       {
         text: "The Menagerie is the oldest deck on the Leviathan. My home in exile.",
@@ -213,10 +213,10 @@ module.exports = [
     repoName: "destiny-agent-ghost",
     entry: "ghost.md",
     entryUrl: "https://github.com/sagaciouszu/destiny-agent-ghost/blob/master/ghost.md",
-    version: "0.1.0",
-    releaseUrl: "https://github.com/sagaciouszu/destiny-agent-ghost/blob/master/RELEASE.md",
-    updated: "2026-11-04",
-    audit: { passed: 15, total: 15 },
+    version: "0.1.4",
+    releaseUrl: "https://github.com/sagaciouszu/destiny-agent-ghost/releases/tag/v0.1.4",
+    updated: "2026-11-07",
+    audit: { passed: 18, total: 18 },
     samples: [
       {
         text: "I didn’t bring you back just for you to die again, we have to move.",
