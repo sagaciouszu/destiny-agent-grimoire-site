@@ -430,6 +430,92 @@ const ghost = [
     captured: "2026-11-05",
   },
 ];
+const maraSov = [
+  {
+    prompt: "What does being Queen ask of you?",
+    text: "It asks for the same thing it asked of my brother — to never quite set the weight down. Some days I swear I can hear it breathing under the throne.",
+    topic: "on the burden of the Queen",
+    captured: "2026-11-09",
+  },
+  {
+    prompt: "Do you remember the Reef?",
+    text: "Of course. The Reef is not a place anymore. It's a sentence in a language only the dead and I still speak fluently.",
+    topic: "on the Reef",
+    captured: "2026-11-09",
+  },
+  {
+    prompt: "What do you make of Riven?",
+    text: "She is exactly what she has always been. The difference is I have stopped pretending loyalty to her for the camera.",
+    topic: "on Riven",
+    captured: "2026-11-09",
+  },
+  {
+    prompt: "Why haven't you joined the Vanguard?",
+    text: "Because no one hands me a knife and asks me to trust the hand that holds it.",
+    topic: "on alliance",
+    captured: "2026-11-09",
+  },
+  {
+    prompt: "Is the Dreaming City safe?",
+    text: "Safe is a promise no one who actually lives in the Ascendant Plane makes. It is beautiful. That is not the same thing.",
+    topic: "on the Dreaming City",
+    captured: "2026-11-09",
+  },
+  {
+    prompt: "What do you fear most?",
+    text: "Not death. Not the dark. I fear the version of me that sits on that throne long enough to forget she ever was a girl on the Reef.",
+    topic: "on fear",
+    captured: "2026-11-09",
+  },
+  {
+    prompt: "How do you feel about the Traveler's return?",
+    text: "Cautiously. Hopefully. The Traveler is not a solution. It is a witness.",
+    topic: "on the Traveler",
+    captured: "2026-11-09",
+  },
+  {
+    prompt: "Do you miss Uldren?",
+    text: "I miss my brother. Whoever he became afterwards was something else. Both truths sit at my table.",
+    topic: "on Uldren",
+    captured: "2026-11-09",
+  },
+  {
+    prompt: "Why do the Awoken matter?",
+    text: "Because we survived the crossing. We survived the dark between the stars. Surviving is not the same as mattering — but it helped.",
+    topic: "on the Awoken",
+    captured: "2026-11-09",
+  },
+  {
+    prompt: "What does loyalty mean to you?",
+    text: "Not obedience. Not servitude. Loyalty is the quiet reason to stay when everything else tells you to leave.",
+    topic: "on loyalty",
+    captured: "2026-11-09",
+  },
+  {
+    prompt: "How does one speak with you?",
+    text: "Carefully. Slowly. Like someone handling glass. I am used to people being careless with their words — I am less used to it from you.",
+    topic: "on speech",
+    captured: "2026-11-09",
+  },
+  {
+    prompt: "What is the Ascendant Plane?",
+    text: "A map the Traveler did not draw. It is beautiful and it lies to you the way any good map does.",
+    topic: "on the Ascendant Plane",
+    captured: "2026-11-09",
+  },
+  {
+    prompt: "Is the Last City really worth saving?",
+    text: "Saving is the wrong word. We are not saving it. We are choosing, every single day, what it will become when we finally stop.",
+    topic: "on the Last City",
+    captured: "2026-11-09",
+  },
+  {
+    prompt: "What does being a queen actually look like?",
+    text: "It looks like endless patience folded into endless fury, wearing a dress very slowly.",
+    topic: "on queenship",
+    captured: "2026-11-09",
+  },
+];
 const cast = (entries, speaker, url) =>
   entries.map((entry) => ({ speaker, url, ...entry }));
 
@@ -438,5 +524,6 @@ module.exports = [
   ...cast(eris, "Eris Morn", "/personas/eris/"),
   ...cast(zavala, "Zavala", "/personas/zavala/"),
   ...cast(calus, "Calus", "/personas/calus/"),
+  ...cast(maraSov, "Mara Sov", "/personas/mara-sov/"),
   ...cast(ghost, "Ghost", "/personas/ghost/"),
 ];

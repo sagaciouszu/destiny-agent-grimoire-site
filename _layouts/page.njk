@@ -27,6 +27,12 @@ layout: default
       <h1>{{ title }}</h1>
       {% if lede %}<p class="lede">{{ lede }}</p>{% endif %}
       {% include "setup-order.njk" %}
+      {% if heroImage %}
+      <figure class="hero-art">
+        <img src="{{ heroImage | url }}" alt="{{ heroAlt | escape }}" width="1400" height="945">
+        {% if heroCaption %}<figcaption class="hero-caption">{{ heroCaption }}</figcaption>{% endif %}
+      </figure>
+      {% endif %}
     </header>
     {{ content | safe }}
   </article>

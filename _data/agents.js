@@ -119,10 +119,10 @@ module.exports = [
     repoName: "destiny-agent-zavala",
     entry: "zavala.md",
     entryUrl: "https://github.com/sagaciouszu/destiny-agent-zavala/blob/master/zavala.md",
-    version: "0.1.4",
-    releaseUrl: "https://github.com/sagaciouszu/destiny-agent-zavala/releases/tag/v0.1.4",
-    updated: "2026-11-07",
-    audit: { passed: 18, total: 18 },
+    version: "0.1.5",
+    releaseUrl: "https://github.com/sagaciouszu/destiny-agent-zavala/releases/tag/v0.1.5",
+    updated: "2026-11-09",
+    audit: { passed: 20, total: 20 },
     samples: [
       {
         text: "The Traveler waits! We protect our people. At any cost.",
@@ -166,10 +166,10 @@ module.exports = [
     repoName: "destiny-agent-calus",
     entry: "calus.md",
     entryUrl: "https://github.com/sagaciouszu/destiny-agent-calus/blob/master/calus.md",
-    version: "0.1.4",
-    releaseUrl: "https://github.com/sagaciouszu/destiny-agent-calus/releases/tag/v0.1.4",
-    updated: "2026-11-07",
-    audit: { passed: 18, total: 18 },
+    version: "0.1.5",
+    releaseUrl: "https://github.com/sagaciouszu/destiny-agent-calus/releases/tag/v0.1.5",
+    updated: "2026-11-09",
+    audit: { passed: 20, total: 20 },
     samples: [
       {
         text: "The Menagerie is the oldest deck on the Leviathan. My home in exile.",
@@ -182,6 +182,53 @@ module.exports = [
       {
         text: "My Leviathan will not so easily bend to your will.",
         context: "on the Leviathan",
+      },
+    ],
+    limits: [
+      "Quote a line the library cannot confirm.",
+      "Present a guess as official text.",
+      "Share another character's private memory.",
+      "Change files or run commands.",
+    ],
+  },
+  {
+    id: "mara-sov",
+    name: "Mara Sov",
+    aliases: ["Mara Sov", "the Awoken Queen"],
+    role: "Queen of the Awoken · Last of the Queen'sguard",
+    heading: "Queen of the Awoken",
+    image: "/assets/agents/mara-sov.jpg",
+    socialImage: "/assets/agents/mara-sov-social.jpg",
+    cardImage: "/assets/agents/mara-sov-640.jpg",
+    imageAlt: "Mara Sov stands in the Astral Reflections starmap, one hand resting on the curved ring behind her.",
+    imageWidth: 1600,
+    imageHeight: 900,
+    short:
+      "Queen of the Awoken, leader of the Queen'sguard and keeper of the Dreaming City and its lost knowledge.",
+    paragraphs: [
+      "Mara Sov is Queen of the Awoken and the leader of the Queen'sguard. She survived the fall of the Reef, fought through the Taken War, and now holds the Dreaming City — and its Riven-cursed secrets — through an uneasy alliance with the Vanguard, the Awoken, and the Guardian. Her material covers the Dreaming City, the Queen'sguard, her relationship to Crow, Riven, and the Ascendant Plane, her history as a revolutionary and a survivor, and the weight of a throne she never asked for. She is measured, mythic and unflinching — the voice of a ruler who has buried more than any of us know.",
+    ],
+    consult: "The Dreaming City, Riven, the Queen'sguard, Crow, Ascendant Plane, the Ascendant Plane.",
+    repo: "https://github.com/sagaciouszu/destiny-agent-mara-sov",
+    repoName: "destiny-agent-mara-sov",
+    entry: "mara-sov.md",
+    entryUrl: "https://github.com/sagaciouszu/destiny-agent-mara-sov/blob/master/mara-sov.md",
+    version: "0.1.5",
+    releaseUrl: "https://github.com/sagaciouszu/destiny-agent-mara-sov/releases/tag/v0.1.5",
+    updated: "2026-11-09",
+    audit: { passed: 20, total: 20 },
+    samples: [
+      {
+        text: "Go. Find your retribution. Deliver justice as Queensguard.",
+        context: "on Queensguard duty",
+      },
+      {
+        text: "I remember everything about the day I was born. I still bear the scars. The Awoken are my family now and I am their Queen.",
+        context: "on her birth",
+      },
+      {
+        text: "Xivu Arath will not release this place so easily. Pry it from her.",
+        context: "on the Heist",
       },
     ],
     limits: [
@@ -213,10 +260,10 @@ module.exports = [
     repoName: "destiny-agent-ghost",
     entry: "ghost.md",
     entryUrl: "https://github.com/sagaciouszu/destiny-agent-ghost/blob/master/ghost.md",
-    version: "0.1.4",
-    releaseUrl: "https://github.com/sagaciouszu/destiny-agent-ghost/releases/tag/v0.1.4",
-    updated: "2026-11-07",
-    audit: { passed: 18, total: 18 },
+    version: "0.1.5",
+    releaseUrl: "https://github.com/sagaciouszu/destiny-agent-ghost/releases/tag/v0.1.5",
+    updated: "2026-11-09",
+    audit: { passed: 20, total: 20 },
     samples: [
       {
         text: "I didn’t bring you back just for you to die again, we have to move.",

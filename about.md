@@ -3,6 +3,9 @@ layout: page
 title: About
 category: About
 lede: A fan-built lore library and a small cast of Destiny characters, maintained in the open.
+heroImage: /assets/agents/drifter-ace-of-spades.jpg
+heroAlt: The Ace of Spades hand cannon resting on a table alongside a Ghost unit, Cayde-6's Ace of Spades card, a lighter and a gold Ace of Spades coin.
+heroCaption: Artwork by Joseph Biwald · Destiny is © Bungie
 ---
 
 ## What this is
@@ -49,6 +52,12 @@ The site aims to be readable and usable without a mouse:
 
 If something is difficult to read or operate, open an issue with the page and the
 assistive technology or browser you used.
+
+## A note on art
+
+The header art on the personas belongs to Bungie. The image at the top of this
+page is fan work by [Joseph Biwald](https://www.artstation.com/josephbiwald),
+used here with thanks.
 
 ## Who runs it
 

@@ -45,7 +45,7 @@ python3 db/query.py stats</code></pre>
 <ul class="tile-grid">
   <li><strong>One place to look things up</strong><p>Search books, dialogue, cards, items and records without opening a dozen wiki tabs.</p></li>
   <li><strong>A quote checker</strong><p>Paste a line and find out whether it is real Destiny text before you put it in a post, a video or a character's mouth.</p></li>
-  <li><strong>A shared source for characters</strong><p>All five characters read this same library, so they answer from the same material you do.</p></li>
+  <li><strong>A shared source for characters</strong><p>All six characters read this same library, so they answer from the same material you do.</p></li>
   <li><strong>An optional AI connection</strong><p>Connect an AI app and it can search the library directly.</p></li>
 </ul>
 

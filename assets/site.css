@@ -135,30 +135,6 @@ body::before {
   background-repeat: no-repeat;
 }
 
-body::after {
-  content: "";
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  width: 180vmax;
-  height: 180vmax;
-  z-index: -2;
-  pointer-events: none;
-  background: url("starmap.svg") center / cover no-repeat;
-  opacity: 0.8;
-  transform: translate(-50%, -50%) rotate(0deg);
-  animation: starmap-turn 360s linear infinite;
-  will-change: transform;
-}
-
-@keyframes starmap-turn {
-  to { transform: translate(-50%, -50%) rotate(360deg); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  body::after { animation: none; }
-}
-
 ::selection {
   background: color-mix(in srgb, var(--gold) 28%, transparent);
   color: var(--heading);
@@ -478,6 +454,36 @@ a[href^="http"]:not(.nav-github) {
   color: var(--muted);
   font-size: 1.15rem;
   line-height: 1.65;
+}
+
+.hero-art {
+  position: relative;
+  margin: 1.4rem 0 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  background: var(--surface);
+}
+.hero-art img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 32rem;
+}
+.hero-caption {
+  position: absolute;
+  right: 0.6rem;
+  bottom: 0.6rem;
+  padding: 0.35rem 0.55rem;
+  background: rgba(0, 0, 0, 0.62);
+  backdrop-filter: blur(4px);
+  color: #d8c6a3;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  border: 1px solid rgba(216, 198, 163, 0.28);
+  border-radius: 2px;
 }
 
 .lore h2 {
@@ -1375,6 +1381,25 @@ pre:hover .copy-button,
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 0;
+}
+
+.art-credit {
+  margin: 0 0 0.7rem;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 0;
+}
+.art-credit img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.art-credit figcaption {
+  padding: 0.6rem 0.8rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--line);
 }
 
 .agent-portrait img {

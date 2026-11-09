@@ -48,7 +48,7 @@ Output goes to `_site/`.
 - `_data/agents.js` — the agent roster; add new agents there
 - `_data/voices.js` — the test dialogues for the home panel and persona pages
 - `_data/sitemap.js`, `sitemap.njk`, `robots.txt.njk` — crawler metadata
-- `assets/site.css`, `assets/site.js`, `assets/starmap.svg`
+- `assets/site.css`, `assets/site.js`
 - `assets/fonts/` — self-hosted Neue Haas Grotesk Display Pro and Geist Mono
 - `assets/social.svg`, `assets/social.png` — default link preview card
 - `scripts/check-links.py` — build-time link, metadata and sitemap gate
