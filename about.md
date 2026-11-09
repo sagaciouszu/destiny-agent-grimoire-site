@@ -56,7 +56,7 @@ assistive technology or browser you used.
 ## A note on art
 
 The header art on the personas belongs to Bungie. The image at the top of this
-page is fan work by [Joseph Biwald](https://www.artstation.com/josephbiwald),
+page is official Bungie artwork by [Joseph Biwald](https://www.artstation.com/josephbiwald),
 used here with thanks.
 
 ## Who runs it
