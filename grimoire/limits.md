@@ -77,7 +77,7 @@ snapshot; they are not hand-copied.
   live era and for verification; it is never presented as what an earlier
   expansion shipped. Drift is logged, not rewritten inline.
 - Some transcript headers have no `source_url`
-  ({{ grimoire.counts.source_url_missing | commas }} today). That is a recorded
+  ({{ grimoire.counts.source_url_missing | commas }} today). That is a visible
   gap, not a license to invent one. Caption rows carry build and package
   provenance instead.
 - Mechanical copy and item fragments that duplicate an existing entry are

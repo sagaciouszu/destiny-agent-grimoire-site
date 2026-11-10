@@ -116,8 +116,8 @@ rules. Skip this if you only want to read lore.</p>
 <h3 id="how-it-is-built">How it is built</h3>
 
 The database is built from files in the repository, not fetched while you search.
-Every content row carries the source we have; a missing source is recorded as a
-gap, not filled in. Speaker names are cleaned up so one character does not split
+Every content row carries the source we have; where a source is missing, the
+field stays empty rather than being filled in. Speaker names are cleaned up so one character does not split
 across several spellings.
 
 Search uses SQLite FTS5. You get the passage back, not a list of files to open.
