@@ -62,4 +62,4 @@ Troubleshooting.
 
 - [STANDARDS.md](https://github.com/sagaciouszu/destiny-agent-grimoire/blob/master/STANDARDS.md) — the rules; section 10 is the change procedure.
 - [Open an issue](https://github.com/sagaciouszu/destiny-agent-grimoire/issues)
-- [The scripts in this site's repository](https://github.com/sagaciouszu/grimoire-site/tree/master/scripts)
+- [The scripts in this site's repository](https://github.com/sagaciouszu/destiny-agent-grimoire-site/tree/master/scripts)

@@ -1,8 +1,8 @@
-# Grimoire Site
+# Destiny Agent Grimoire Site
 
 <p>
-  <a href="https://sagaciouszu.github.io/grimoire-site/"><img src="https://img.shields.io/badge/site-live-d8b45a?style=flat-square" alt="Live site"></a>
-  <a href="https://github.com/sagaciouszu/grimoire-site/actions/workflows/pages.yml"><img src="https://github.com/sagaciouszu/grimoire-site/actions/workflows/pages.yml/badge.svg" alt="Deploy status"></a>
+  <a href="https://sagaciouszu.github.io/destiny-agent-grimoire-site/"><img src="https://img.shields.io/badge/site-live-d8b45a?style=flat-square" alt="Live site"></a>
+  <a href="https://github.com/sagaciouszu/destiny-agent-grimoire-site/actions/workflows/pages.yml"><img src="https://github.com/sagaciouszu/destiny-agent-grimoire-site/actions/workflows/pages.yml/badge.svg" alt="Deploy status"></a>
   <img src="https://img.shields.io/badge/Eleventy-3.1-d8b45a?style=flat-square" alt="Eleventy 3.1">
   <img src="https://img.shields.io/badge/Node-24-5fa04e?style=flat-square&amp;logo=node.js&amp;logoColor=white" alt="Node 24">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-3da639?style=flat-square" alt="License: MIT"></a>
@@ -12,7 +12,7 @@ The website for the [Destiny Agent Grimoire](https://github.com/sagaciouszu/dest
 lore overviews, install guides, troubleshooting, and the agent roster.
 
 Built with [Eleventy](https://www.11ty.dev/) and plain CSS. The site is deployed
-to GitHub Pages at <https://sagaciouszu.github.io/grimoire-site/>.
+to GitHub Pages at <https://sagaciouszu.github.io/destiny-agent-grimoire-site/>.
 
 ## Local development
 
@@ -21,7 +21,7 @@ npm ci
 npm run serve
 ```
 
-The dev server serves the site under `/grimoire-site/`, matching the deployed
+The dev server serves the site under `/destiny-agent-grimoire-site/`, matching the deployed
 path.
 
 ## Build

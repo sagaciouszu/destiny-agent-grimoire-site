@@ -100,7 +100,7 @@ module.exports = function (eleventyConfig) {
       layouts: "_layouts",
       data: "_data",
     },
-    pathPrefix: "/grimoire-site/",
+    pathPrefix: "/destiny-agent-grimoire-site/",
     templateFormats: ["md", "njk"],
   };
 };

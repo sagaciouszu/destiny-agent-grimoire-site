@@ -6,7 +6,7 @@ import re
 import sys
 
 ROOT = sys.argv[1] if len(sys.argv) > 1 else "_site"
-ORIGIN = "https://sagaciouszu.github.io/grimoire-site"
+ORIGIN = "https://sagaciouszu.github.io/destiny-agent-grimoire-site"
 errors = []
 
 files = sorted(glob.glob(os.path.join(ROOT, "**", "*.html"), recursive=True))
@@ -41,7 +41,7 @@ for path in files:
     if 'http-equiv="refresh"' in text:
         target = re.search(r'url=([^"]+)"', text)
         if target:
-            expected = ORIGIN + target.group(1).replace("/grimoire-site", "")
+            expected = ORIGIN + target.group(1).replace("/destiny-agent-grimoire-site", "")
     if canonical != expected:
         errors.append(f"{rel}: canonical {canonical!r} != {expected!r}")
 
@@ -49,8 +49,8 @@ for path in files:
     if len(ids) != len(set(ids)):
         errors.append(f"{rel}: duplicate ids")
 
-    for href in re.findall(r'href="(/grimoire-site/[^"]*)"', text):
-        target = href.split("#")[0].split("?")[0].replace("/grimoire-site", "")
+    for href in re.findall(r'href="(/destiny-agent-grimoire-site/[^"]*)"', text):
+        target = href.split("#")[0].split("?")[0].replace("/destiny-agent-grimoire-site", "")
         target_path = os.path.join(
             ROOT,
             (target + "index.html").lstrip("/") if target.endswith("/") else target.lstrip("/"),
@@ -69,9 +69,12 @@ for path in files:
         errors.append(f"{rel}: literal backtick")
     if "&amp;amp;" in text:
         errors.append(f"{rel}: double-escaped entity")
+    # Guard against regressions to the pre-rename URL. Note the bare
+    # 'destiny-agent-grimoire' prefix must NOT be flagged: the current origin
+    # 'destiny-agent-grimoire-site' starts with it.
     if (
-        "sagaciouszu.github.io/destiny-agent-grimoire" in text
-        or 'href="/destiny-agent-grimoire/' in text
+        "sagaciouszu.github.io/grimoire-site" in text
+        or 'href="/grimoire-site/' in text
     ) and rel not in ("/404.html", "/getting-started/"):
         errors.append(f"{rel}: old site URL")
 

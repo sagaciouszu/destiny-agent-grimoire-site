@@ -296,7 +296,7 @@ Run it alone:
 A failure names the page and the problem:
 
 <pre><code>FAIL: 1 issue(s)
-  - /personas/ghost/: dead link /grimoire-site/personas/ghosts/
+  - /personas/ghost/: dead link /destiny-agent-grimoire-site/personas/ghosts/
 </code></pre>
 
 ### Basic accessibility

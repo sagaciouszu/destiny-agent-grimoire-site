@@ -67,7 +67,7 @@ standards and release history live in the
 
 ## Links
 
-- [Site source](https://github.com/sagaciouszu/grimoire-site)
+- [Site source](https://github.com/sagaciouszu/destiny-agent-grimoire-site)
 - [Project](https://github.com/sagaciouszu/destiny-agent-grimoire)
 - [Standards](https://github.com/sagaciouszu/destiny-agent-grimoire/blob/master/STANDARDS.md)
 - [Releases](https://github.com/sagaciouszu/destiny-agent-grimoire/releases)

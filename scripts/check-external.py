@@ -18,13 +18,13 @@ import urllib.error
 import urllib.request
 
 ROOT = sys.argv[1] if len(sys.argv) > 1 else "_site"
-USER_AGENT = "grimoire-site-link-check/1.0 (+https://github.com/sagaciouszu/grimoire-site)"
+USER_AGENT = "destiny-agent-grimoire-site-link-check/1.0 (+https://github.com/sagaciouszu/destiny-agent-grimoire-site)"
 
 urls = set()
 for path in glob.glob(os.path.join(ROOT, "**", "*.html"), recursive=True):
     text = open(path, encoding="utf-8").read()
     for url in re.findall(r'(?:href|src)="(https?://[^"]+)"', text):
-        if url.startswith("https://sagaciouszu.github.io/grimoire-site"):
+        if url.startswith("https://sagaciouszu.github.io/destiny-agent-grimoire-site"):
             continue
         urls.add(url)
 
