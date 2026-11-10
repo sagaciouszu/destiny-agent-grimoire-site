@@ -22,8 +22,8 @@ this page, this page wins.
 | Persona-canon speakers | {{ grimoire.counts.canon_speakers | commas }} |
 | Transcripts with no recorded timeline | {{ grimoire.counts.timeline_unknown | commas }} |
 | Transcripts with no `source_url` | {{ grimoire.counts.source_url_missing | commas }} |
-| Activities with no dialogue | {{ grimoire.counts.coverage_no_dialogue | commas }} |
-| Activities with a partial transcript | {{ grimoire.counts.coverage_partial | commas }} |
+| Coverage entries with no dialogue | {{ grimoire.counts.coverage_no_dialogue | commas }} |
+| Coverage entries with a partial transcript | {{ grimoire.counts.coverage_partial | commas }} |
 | Schema | {{ grimoire.schema_version }} |
 | Release | {{ grimoire.release }} |
 
@@ -113,8 +113,10 @@ python3 db/query.py verify "Absolutely not." --speaker "Eris Morn" --exact
 
 ## Known gaps
 
-- {{ grimoire.counts.coverage_no_dialogue | commas }} activities have no dialogue
-  transcript; {{ grimoire.counts.coverage_partial | commas }} have a partial one.
+- {{ grimoire.counts.coverage_no_dialogue | commas }} recorded entries (activities
+  and events) have no dialogue transcript; {{ grimoire.counts.coverage_partial | commas }}
+  (activities and seasons) have a partial one. `coverage_notes` holds the
+  per-entity status.
 - Destiny 1 coverage exists only where verbatim text was captured; it is not a
   complete D1 archive.
 - Audio, localisation beyond the shipped English tier, and removed builds are not

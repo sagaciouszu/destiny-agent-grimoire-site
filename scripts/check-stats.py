@@ -15,7 +15,10 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = json.load(open(os.path.join(ROOT, "_data", "grimoire.json"), encoding="utf-8"))
 SITE = os.path.join(ROOT, "_site")
 STALE = ["2,422", "78,740", "130,210", "170 MB", "260 MB",
-         "Eighteen read-only tools", "23/23", "18/18", "15/15"]
+         "Eighteen read-only tools", "23/23", "15/15",
+         "29 MiB", "56 MiB", "65 checks", "89 checks", "91 checks",
+         "seven scripts", "2024+ client", "tar -xJf", "tar -xzf",
+         "sha256sum -c SHA256SUMS"]
 
 
 def fmt(n):

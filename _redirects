@@ -8,3 +8,5 @@
 /agents/emperor-calus/ /personas/calus/ 301
 /agents/the-ghost/ /personas/ghost/ 301
 /agents/* /personas/:splat 301
+/getting-started/ /grimoire/install/ 301
+/troubleshooting/audits/ /troubleshooting/ 301

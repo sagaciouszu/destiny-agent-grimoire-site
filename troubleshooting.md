@@ -112,7 +112,7 @@ open or migrate a file that failed the check.
 <pre><code>rm -f db/grimoire.db
 curl -fsSL https://github.com/sagaciouszu/destiny-agent-grimoire/releases/latest/download/grimoire.db -o grimoire.db
 curl -fsSL https://github.com/sagaciouszu/destiny-agent-grimoire/releases/latest/download/SHA256SUMS -o SHA256SUMS
-sha256sum -c SHA256SUMS
+grep '  grimoire.db$' SHA256SUMS | sha256sum -c -
 mv grimoire.db db/grimoire.db</code></pre>
 
 If it keeps failing, check your connection or proxy before assuming the release
@@ -257,7 +257,7 @@ lookup; without it, expect a shorter, less grounded answer.
 
 ## The audit scripts
 
-Seven scripts stand between a change and the live site. What each one checks, how
+Nine checks stand between a change and the live site. What each one checks, how
 to run it, and what a failure looks like.
 
 Every push to this site runs the same checks you can run yourself. They live in
@@ -273,7 +273,7 @@ database, and the external-link check needs the network.
 <pre><code>npm run check</code></pre>
 
 builds the site, then runs the checks in order: stats, links, accessibility,
-axe, Test Tapes, roster. The first failure stops the run, so the error you see is
+axe, Test Tapes, samples, roster and roster sync. The first failure stops the run, so the error you see is
 the first thing to fix.
 
 The external-link check has its own command, because it depends on other

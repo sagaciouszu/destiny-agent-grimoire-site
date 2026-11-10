@@ -32,7 +32,7 @@ cd destiny-agent-grimoire
 base=https://github.com/sagaciouszu/destiny-agent-grimoire
 curl -fsSL "$base/releases/latest/download/grimoire.db" -o grimoire.db
 curl -fsSL "$base/releases/latest/download/SHA256SUMS" -o SHA256SUMS
-sha256sum -c SHA256SUMS
+grep '  grimoire.db$' SHA256SUMS | sha256sum -c -
 mv grimoire.db db/grimoire.db
 python3 db/query.py stats</code></pre>
 
@@ -118,8 +118,6 @@ python3 db/migrate.py</code></pre>
 <p>The build reads <code>source/</code> and <code>archive/data/*.jsonl</code> and writes
 <code>db/grimoire.db</code>.</p>
 
-<h3 id="release-details">The release, step by step <a class="heading-anchor" href="#release-details" aria-label="Permalink to The release, step by step">#</a></h3>
-
 <h3 id="command-details">Command details <a class="heading-anchor" href="#command-details" aria-label="Permalink to Command details">#</a></h3>
 
 <p>Every command accepts <code>--json</code> for scripts. Read commands accept
@@ -130,7 +128,7 @@ to the same release, and the publish pipeline checks it before release.</p>
 
 <pre><code>curl -fsSL https://github.com/sagaciouszu/destiny-agent-grimoire/releases/latest/download/grimoire.db -o grimoire.db
 curl -fsSL https://github.com/sagaciouszu/destiny-agent-grimoire/releases/latest/download/SHA256SUMS -o SHA256SUMS
-sha256sum -c SHA256SUMS
+grep '  grimoire.db$' SHA256SUMS | sha256sum -c -
 mv grimoire.db db/grimoire.db</code></pre>
 
 <p>A mismatch means the file was cut short or changed in transit. Delete it and

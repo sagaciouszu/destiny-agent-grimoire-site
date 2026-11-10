@@ -28,7 +28,7 @@ module.exports = [
     version: "0.14.5",
     releaseUrl: "https://github.com/sagaciouszu/destiny-agent-drifter/releases/tag/v0.14.5",
     updated: "2026-11-10",
-    audit: { passed: 25, total: 25 },
+    audit: { passed: 27, total: 27 },
     samples: [
       {
         text: "World's just bones on bones. Been like that forever.",
@@ -75,7 +75,7 @@ module.exports = [
     version: "0.14.5",
     releaseUrl: "https://github.com/sagaciouszu/destiny-agent-eris-morn/releases/tag/v0.14.5",
     updated: "2026-11-10",
-    audit: { passed: 20, total: 20 },
+    audit: { passed: 22, total: 22 },
     samples: [
       {
         text: "Absolutely not.",

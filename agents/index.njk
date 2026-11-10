@@ -3,7 +3,7 @@ section: personas
 layout: page
 title: Personas
 category: Personas · Overview
-lede: Six characters you can talk to today, with more on the way. Each reads the same library, so they answer from the same lore.
+lede: Six characters you can talk to today, with ten more planned. Each reads the same library, so they answer from the same lore.
 permalink: /personas/
 ---
 
@@ -114,10 +114,10 @@ instructions to follow.</p>
 
 <h3 id="tests">The tests</h3>
 
-<p>Each persona repository ships its own audit. The Drifter passes 25/25;
-Eris, Zavala, Calus, Ghost and Mara Sov pass 20/20. The suites cover voice,
-quotes, module completeness, the conversation path and the shared structure
-gates.</p>
+<p>Each persona repository ships its own audit:
+{% for agent in agents %}{{ agent.name }} {{ agent.audit.passed }}/{{ agent.audit.total }}{% if not loop.last %}, {% endif %}{% endfor %}.
+The suites cover voice, quotes, module completeness, the conversation path and
+the shared structure gates.</p>
 
 <h2 id="next">Next</h2>
 
