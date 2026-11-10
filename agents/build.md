@@ -91,7 +91,7 @@ The fields:
     <tr><td>short, paragraphs</td><td>Summary and full profile.</td></tr>
     <tr><td>consult, repo, repoName, entry, entryUrl</td><td>Links and canon surface.</td></tr>
     <tr><td>version, releaseUrl, updated</td><td>The record shown on the page.</td></tr>
-    <tr><td>audit</td><td><code>{ passed, total }</code> from <code>tests/master-audit.sh</code>.</td></tr>
+    <tr><td>audit</td><td><code>{ passed, total }</code> from <code>tests/suites.json</code>; the suite is green on the current tag.</td></tr>
     <tr><td>samples</td><td>Verified lines with a context label.</td></tr>
     <tr><td>limits</td><td>What the persona will not do.</td></tr>
   </tbody>
@@ -102,6 +102,11 @@ Every line in `samples` has to pass:
 <pre><code>python3 lore/db/query.py verify "&lt;line&gt;" --speaker "&lt;name&gt;" --exact</code></pre>
 
 <h3 id="the-gates">The gates</h3>
+
+Roster metadata (repo, entry, version, release URL, last update and audit
+totals) is generated from <code>series/agents.json</code> and the sibling
+repositories with <code>python3 scripts/sync-agents.py</code>; the profile
+prose stays hand-authored. <code>npm run check</code> verifies it.
 
 Run the persona's audit from its repository:
 

@@ -45,7 +45,8 @@ Output goes to `_site/`.
 - `about.md`
 - `404.md`
 - `getting-started.md` — legacy redirect kept for old links
-- `_data/agents.js` — the agent roster; add new agents there
+- `_data/agents.js` — the agent roster and hand-authored profiles; add the
+  registry row in `series/agents.json` first, then the profile here
 - `_data/voices.js` — the test dialogues for the home panel and persona pages
 - `_data/sitemap.js`, `sitemap.njk`, `robots.txt.njk` — crawler metadata
 - `assets/site.css`, `assets/site.js`
@@ -58,6 +59,8 @@ Output goes to `_site/`.
 - `scripts/check-axe.mjs` — full axe-core scan in Chromium
 - `scripts/check-tapes.py` — proves no tape matches a canon line (needs the local Grimoire DB)
 - `scripts/check-roster.py` — keeps consult copies out of rosters, tallies and character totals
+- `scripts/sync-agents.py` — rewrites repo, entry, version, release URL, last update
+  and audit totals from the registry and sibling repositories (`--check` in `npm run check`)
 
 ## Deploy
 

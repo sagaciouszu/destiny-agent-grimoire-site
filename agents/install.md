@@ -47,7 +47,10 @@ cd destiny-agent-drifter
 </div>
 
 <p class="muted">For unattended setup, use <code>BOOTSTRAP=1 ./setup.sh</code> to
-download the library without questions.</p>
+download the library without questions. Preview every link and download with
+<code>./setup.sh --dry-run</code>; use
+<code>GRIMOIRE_DB=/path/to/grimoire.db ./setup.sh</code> to copy an offline
+database instead.</p>
 
 </details>
 
