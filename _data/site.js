@@ -1,7 +1,7 @@
 module.exports = {
   title: "Destiny Agent Grimoire",
-  tagline: "Canonical Destiny lore and agent personas",
-  description: "One canonical Destiny lore archive and the agents born from it.",
+  tagline: "A searchable Destiny lore archive and agent personas",
+  description: "A fan-built, source-labelled Destiny lore archive and the agents that read it.",
   origin: "https://sagaciouszu.github.io",
   url: "https://sagaciouszu.github.io/destiny-agent-grimoire-site/",
 };

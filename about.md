@@ -31,8 +31,10 @@ right but is not real.
 
 This project keeps one searchable copy and one quote policy. The library records
 where each entry came from. The built-in checker tells you whether a line is
-official text. The characters use the same library, so they have something to
-check against instead of guessing.
+text in this library. The characters use the same library, so they have something
+to check against instead of guessing. See
+[Limits and provenance]({{ '/grimoire/limits/' | url }}) for what the corpus does
+not cover.
 
 The code, tests and documentation are MIT licensed. Destiny, its text, characters
 and art belong to Bungie. This project is not affiliated with or endorsed by
@@ -71,4 +73,5 @@ standards and release history live in the
 - [Project](https://github.com/sagaciouszu/destiny-agent-grimoire)
 - [Standards](https://github.com/sagaciouszu/destiny-agent-grimoire/blob/master/STANDARDS.md)
 - [Releases](https://github.com/sagaciouszu/destiny-agent-grimoire/releases)
+- [Facts for ingestion]({{ '/llms.txt' | url }})
 - [Personas]({{ '/personas/' | url }})

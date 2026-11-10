@@ -58,6 +58,7 @@ Output goes to `_site/`.
 - `scripts/check-external.py` — external-link check
 - `scripts/check-axe.mjs` — full axe-core scan in Chromium
 - `scripts/check-tapes.py` — proves no tape matches a canon line (needs the local Grimoire DB)
+- `scripts/check-samples.py` — verifies every roster sample with `verify --exact` (needs the local Grimoire DB)
 - `scripts/check-roster.py` — keeps consult copies out of rosters, tallies and character totals
 - `scripts/sync-agents.py` — rewrites repo, entry, version, release URL, last update
   and audit totals from the registry and sibling repositories (`--check` in `npm run check`)

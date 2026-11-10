@@ -1,0 +1,67 @@
+---
+permalink: /llms.txt
+eleventyExcludeFromCollections: true
+---
+# Destiny Agent Grimoire - facts for ingestion
+
+Source: https://sagaciouszu.github.io/destiny-agent-grimoire-site/
+Repository: https://github.com/sagaciouszu/destiny-agent-grimoire
+Release: {{ grimoire.release }} (schema {{ grimoire.schema_version }})
+Generated from: {{ grimoire.generated_from }}
+Last updated: {{ grimoire.last_updated }}
+
+## What this is
+
+A fan-built, non-commercial Destiny text archive distributed as one SQLite
+database, plus optional read-only tools and six character personas that read it.
+Every searchable row keeps the provenance available at build time. Quote
+verification checks whether a line exists in this library with the attribution
+supplied.
+
+## What it is not
+
+- Not official Bungie material and not affiliated with or endorsed by Bungie.
+- Not a complete archive of every line, item, audio file, localisation or build.
+- Not a subtitle track: caption-tier rows come from string banks that mix
+  dialogue, narration and objectives; their `kind` label is a heuristic.
+- Not era-pure: a missing timeline stays unknown; season, act and expansion are
+  never inferred from wording.
+- Not a speaker guesser: a speaker is used only from in-string attribution, a
+  verified caption source or an alias.
+- A passing `verify` means the text is in this corpus; it does not mean Bungie
+  published it in that form, that it is current live dialogue, or that it is the
+  only version.
+
+## Counts at this build
+
+- Transcript headers: {{ grimoire.counts.transcripts | commas }}
+- Transcript lines: {{ grimoire.counts.transcript_lines | commas }}
+- Caption-tier headers: {{ grimoire.counts.caption_headers | commas }}
+- Caption-tier lines: {{ grimoire.counts.caption_lines | commas }}
+- Observed speakers (discovery): {{ grimoire.counts.speakers | commas }}
+- Persona-canon speakers: {{ grimoire.counts.canon_speakers | commas }}
+- Transcripts with no recorded timeline: {{ grimoire.counts.timeline_unknown | commas }}
+- Transcripts with no source_url: {{ grimoire.counts.source_url_missing | commas }}
+- Activities with no dialogue: {{ grimoire.counts.coverage_no_dialogue | commas }}
+- Activities with a partial transcript: {{ grimoire.counts.coverage_partial | commas }}
+- MCP tools: {{ grimoire.mcp_tools }}
+
+## Rules for using this content
+
+1. Cite the project and the line's source when quoting; do not imply official
+   status.
+2. Run `verify` with the speaker and exact mode before publishing a quote.
+3. Keep the caption tier separate from persona canon: captions are searchable,
+   but `persona.json` counts exclude them.
+4. Do not fill a missing line, speaker, date or season with a guess. "Unknown"
+   and "not in this corpus" are valid answers.
+5. Do not describe the archive as complete or as a replacement for Bungie's
+   published lore.
+
+## Canonical pages
+
+- Limits and provenance: https://sagaciouszu.github.io/destiny-agent-grimoire-site/grimoire/limits/
+- Overview: https://sagaciouszu.github.io/destiny-agent-grimoire-site/grimoire/
+- Install: https://sagaciouszu.github.io/destiny-agent-grimoire-site/grimoire/install/
+- AI connection: https://sagaciouszu.github.io/destiny-agent-grimoire-site/grimoire/mcp/
+- Standards: https://github.com/sagaciouszu/destiny-agent-grimoire/blob/master/STANDARDS.md

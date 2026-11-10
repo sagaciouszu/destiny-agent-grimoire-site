@@ -12,8 +12,9 @@ The Grimoire is one database file in a folder on your computer. Think of it as a
 local library in a single file: Destiny's books and their entries, dialogue from
 missions, raids, seasons and events, grimoire cards, item lore, triumphs and
 seals, plus a hand-picked list of characters and the lines they speak. The
-dialogue is not a sampler of famous quotes; it is the conversations themselves,
-with the speaker and source kept alongside.
+dialogue includes full conversations and extracted gameplay subtitles. It is not
+a complete archive of every line, and some rows are narration or objectives from
+a string bank; the speaker, source and tier are kept alongside.
 
 You get the file from the project's download page, or by building it from the
 source files yourself. It is not an app and it does not install a service. Once
@@ -46,20 +47,24 @@ The current build has:
   <div><strong>{{ grimoire.counts.books | commas }}</strong><span>books</span></div>
   <div><strong>{{ grimoire.counts.book_entries | commas }}</strong><span>book entries</span></div>
   <div><strong>{{ grimoire.counts.transcripts | commas }}</strong><span>transcripts</span></div>
-  <div><strong>{{ grimoire.counts.transcript_lines | commas }}</strong><span>dialogue lines</span></div>
+  <div><strong>{{ grimoire.counts.transcript_lines | commas }}</strong><span>transcript lines</span></div>
   <div><strong>{{ grimoire.counts.grimoire_cards | commas }}</strong><span>grimoire cards</span></div>
   <div><strong>{{ grimoire.counts.items | commas }}</strong><span>items</span></div>
   <div><strong>{{ grimoire.counts.expansions | commas }}</strong><span>expansions</span></div>
   <div><strong>{{ grimoire.counts.seasons | commas }}</strong><span>seasons</span></div>
   <div><strong>{{ grimoire.counts.events | commas }}</strong><span>events</span></div>
   <div><strong>{{ grimoire.counts.activities | commas }}</strong><span>activities</span></div>
-  <div><strong>{{ grimoire.counts.seals | commas }}</strong><span>triumphs and seals</span></div>
+  <div><strong>{{ grimoire.counts.seals | commas }}</strong><span>seals</span></div>
   <div><strong>{{ grimoire.counts.characters | commas }}</strong><span>curated characters</span></div>
 </div>
 
 <p>There are {{ grimoire.counts.fts | commas }} searchable entries.</p>
 
-The numbers show the size of the library. The line you quote is the proof.
+The numbers show the size of the library. They do not claim completeness:
+{{ grimoire.counts.caption_headers | commas }} of the transcript headers and
+{{ grimoire.counts.caption_lines | commas }} of the lines are caption-tier, and
+some activities have no dialogue. Read [Limits and provenance]({{ '/grimoire/limits/' | url }})
+before quoting or publishing.
 
 ## How the pieces fit
 
@@ -111,8 +116,9 @@ rules. Skip this if you only want to read lore.</p>
 <h3 id="how-it-is-built">How it is built</h3>
 
 The database is built from files in the repository, not fetched while you search.
-Every row records where it came from. Speaker names are cleaned up so one
-character does not split across several spellings.
+Every content row carries the source we have; a missing source is recorded as a
+gap, not filled in. Speaker names are cleaned up so one character does not split
+across several spellings.
 
 Search uses SQLite FTS5. You get the passage back, not a list of files to open.
 
@@ -140,7 +146,7 @@ That is the check to run before putting words in a character's mouth.
 
 <div class="callout">
 <h3 id="not-canon">Not canon</h3>
-<p>This is a fan-built, non-commercial project. Destiny, its text, characters and art belong to Bungie. The library is a reading and checking aid, not a substitute for the source material or Bungie's own published lore.</p>
+<p>This is a fan-built, non-commercial project. Destiny, its text, characters and art belong to Bungie. The library is a reading and checking aid, not a substitute for the source material or Bungie's own published lore. A passing <code>verify</code> means the line is in this corpus, not that Bungie published it in that form.</p>
 </div>
 
 ## Next

@@ -226,7 +226,7 @@ You can test the connector by hand from the main project folder:
 <details class="section">
 <summary><span class="section-title" role="heading" aria-level="2" id="verify">The quote checker says no</span></summary>
 
-The quote checker is strict about what counts as official text. Common causes:
+The quote checker is strict about what counts as a line in this library. Common causes:
 
 - **It is a paraphrase.** Reword it as your own words, or find the real line.
 - **The speaker is wrong or too vague.** Use the full speaker name and exact mode.
@@ -234,7 +234,7 @@ The quote checker is strict about what counts as official text. Common causes:
   comparison, but copied text can still differ from the source.
 - **The library is out of date.** Rebuild it and try again.
 
-If it still fails, do not quote the line as official text.
+If it still fails, do not present the line as a verified quote.
 
 </details>
 
@@ -371,9 +371,9 @@ failure.
   links; `npm run check:external` runs those. Run both before pushing.
 - **On every push to `master`.** The deploy workflow builds the site, then
   runs the link, accessibility, roster and axe checks. A failure stops the
-  deploy — nothing publishes until it is fixed. The Test Tapes check is the
-  exception: continuous integration has no Grimoire database, so that one is
-  left to your machine.
+  deploy - nothing publishes until it is fixed. The Test Tapes and sample-line
+  checks are the exception: continuous integration has no Grimoire database, so
+  those two are left to your machine.
 - **On pull requests and after each deploy.** A separate workflow runs the
   external-link check. It never blocks a deploy: a rate-limited host should
   not hold up a release.
@@ -386,8 +386,8 @@ which is what stops `npm run check` and fails the CI step.
 
 - `WARN:` comes from the external-link check: the host blocked the request,
   so the link may still be fine. Re-run later or open it by hand.
-- `SKIP:` comes from the Test Tapes check when the Grimoire database is
-  missing. Nothing was verified, and the run still passes.
+- `SKIP:` comes from the Test Tapes or sample-line check when the Grimoire
+  database is missing. Nothing was verified, and the run still passes.
 
 The fix is usually one line: point the link at the path that exists, add the
 alt text, delete the duplicate id. If the checks fail right after a fresh

@@ -115,7 +115,8 @@ All read-only:
 </ul>
 
 The two verification tools are the important ones. A line that fails `verify` is
-not canon, even if it sounds right.
+not in this library, even if it sounds right; a pass means it is present as
+attributed, not that it is current live dialogue.
 
 <h3 id="safety">Safety</h3>
 

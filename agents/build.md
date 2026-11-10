@@ -25,7 +25,7 @@ permalink: /personas/build/
 <summary><span class="section-title" role="heading" aria-level="2" id="why-add-one">Why add one</span></summary>
 
 <ul class="tile-grid">
-  <li><strong>New characters share one library</strong><p>Every character reads the same Grimoire, so there is nothing new to fill.</p></li>
+  <li><strong>New characters share one library</strong><p>Every character reads the same Grimoire, so a new persona does not need its own lore copy.</p></li>
   <li><strong>The site does the paperwork</strong><p>One site entry produces the page, menu entry, search-engine entry and roster link.</p></li>
   <li><strong>Each character keeps its own pace</strong><p>A character can ship with its own project, tests and release schedule.</p></li>
 </ul>
@@ -97,7 +97,8 @@ The fields:
   </tbody>
 </table>
 
-Every line in `samples` has to pass:
+Every line in `samples` has to pass; `npm run check` runs
+<code>scripts/check-samples.py</code> over every roster sample:
 
 <pre><code>python3 lore/db/query.py verify "&lt;line&gt;" --speaker "&lt;name&gt;" --exact</code></pre>
 

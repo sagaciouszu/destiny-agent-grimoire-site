@@ -10,6 +10,7 @@ const pages = [
   "/grimoire/",
   "/grimoire/install/",
   "/grimoire/mcp/",
+  "/grimoire/limits/",
   "/personas/",
   "/personas/install/",
   "/personas/platforms/",
