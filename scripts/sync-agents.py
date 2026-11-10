@@ -47,7 +47,9 @@ def audit_total(repo):
 
 
 def field(block, name, pattern, value):
-    return re.sub(rf'^(\s*){name}:\s*{pattern}\s*$', rf'\g<1>{name}: "{value}"',
+    # Roster fields are JS object properties and carry a trailing comma.
+    return re.sub(rf'^(\s*){name}:\s*{pattern}(,?)\s*$',
+                  rf'\g<1>{name}: "{value}"\g<2>',
                   block, count=1, flags=re.M)
 
 
@@ -73,8 +75,8 @@ def update_block(block, agent, site_id):
                   f'https://github.com/{owner}/{source}/releases/tag/v{version}')
     block = field(block, 'updated', r'"[^"]*"', updated)
     if total:
-        block = re.sub(r'^(\s*)audit:\s*\{\s*passed:\s*\d+,\s*total:\s*\d+\s*\}',
-                       rf'\g<1>audit: {{ passed: {total}, total: {total} }}',
+        block = re.sub(r'^(\s*)audit:\s*\{[^}]*\},?',
+                       rf'\g<1>audit: {{ passed: {total}, total: {total} }},',
                        block, count=1, flags=re.M)
     return block, None
 
