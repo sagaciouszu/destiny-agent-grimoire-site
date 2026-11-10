@@ -116,8 +116,8 @@ format; GitHub Pages uses noindex meta-refresh pages.
 ## Theme
 
 The palette follows the Destiny 2 UI token system
-(`~/Work/destiny-2-ui-standards/tokens.json`, mirrored as `--d2-*` vars in
-`assets/site.css`): void/ink surfaces, neutral text, Vanguard gold
+(the Destiny 2 UI token standard, mirrored as `--d2-*` vars in
+`assets/site.css`; the reference file is not distributed): void/ink surfaces, neutral text, Vanguard gold
 (exotic/bossGold tokens) as the site accent, Arc steel for secondary accents.
 UI chrome is square with hairline borders and no drop shadows; type is
 Neue Haas Grotesk (Helvetica) with tracked-uppercase labels. No cyan —

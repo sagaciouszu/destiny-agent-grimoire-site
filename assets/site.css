@@ -31,7 +31,7 @@
 }
 
 :root {
-  /* Destiny 2 UI palette from ~/Work/destiny-2-ui-standards/tokens.json
+  /* Destiny 2 UI palette from the Destiny 2 UI token standard
      (measured from 1920x1080 reference sheets; inferred tokens flagged there).
      --bg/--surface/--text/--muted/--line map to base tokens; --gold maps to the
      exotic/bossGold tokens as the site's Vanguard accent; --accent maps to Arc.
