@@ -10,6 +10,10 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("split", (value, separator) => String(value).split(separator));
 
+  eleventyConfig.addFilter("commas", (value) =>
+    Number(value).toLocaleString("en-US"),
+  );
+
   eleventyConfig.addFilter("bySpeaker", (voices, speaker) =>
     voices.filter((voice) => voice.speaker === speaker),
   );

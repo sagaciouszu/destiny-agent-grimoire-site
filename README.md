@@ -51,6 +51,7 @@ Output goes to `_site/`.
 - `assets/site.css`, `assets/site.js`
 - `assets/fonts/` — self-hosted Neue Haas Grotesk Display Pro and Geist Mono
 - `assets/social.svg`, `assets/social.png` — default link preview card
+- `scripts/check-stats.py` — counts and sizes must match `_data/grimoire.json`
 - `scripts/check-links.py` — build-time link, metadata and sitemap gate
 - `scripts/check-a11y.py` — basic static accessibility gate
 - `scripts/check-external.py` — external-link check

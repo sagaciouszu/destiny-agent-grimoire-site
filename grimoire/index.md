@@ -43,21 +43,21 @@ it yourself, or let an AI look things up through the optional connector.
 The current build has:
 
 <div class="stat-grid">
-  <div><strong>110</strong><span>books</span></div>
-  <div><strong>1,158</strong><span>book entries</span></div>
-  <div><strong>2,422</strong><span>transcripts</span></div>
-  <div><strong>78,740</strong><span>dialogue lines</span></div>
-  <div><strong>2,889</strong><span>grimoire cards</span></div>
-  <div><strong>58,764</strong><span>items</span></div>
-  <div><strong>18</strong><span>expansions</span></div>
-  <div><strong>28</strong><span>seasons</span></div>
-  <div><strong>9</strong><span>events</span></div>
-  <div><strong>71</strong><span>activities</span></div>
-  <div><strong>70</strong><span>triumphs and seals</span></div>
-  <div><strong>20</strong><span>curated characters</span></div>
+  <div><strong>{{ grimoire.counts.books | commas }}</strong><span>books</span></div>
+  <div><strong>{{ grimoire.counts.book_entries | commas }}</strong><span>book entries</span></div>
+  <div><strong>{{ grimoire.counts.transcripts | commas }}</strong><span>transcripts</span></div>
+  <div><strong>{{ grimoire.counts.transcript_lines | commas }}</strong><span>dialogue lines</span></div>
+  <div><strong>{{ grimoire.counts.grimoire_cards | commas }}</strong><span>grimoire cards</span></div>
+  <div><strong>{{ grimoire.counts.items | commas }}</strong><span>items</span></div>
+  <div><strong>{{ grimoire.counts.expansions | commas }}</strong><span>expansions</span></div>
+  <div><strong>{{ grimoire.counts.seasons | commas }}</strong><span>seasons</span></div>
+  <div><strong>{{ grimoire.counts.events | commas }}</strong><span>events</span></div>
+  <div><strong>{{ grimoire.counts.activities | commas }}</strong><span>activities</span></div>
+  <div><strong>{{ grimoire.counts.seals | commas }}</strong><span>triumphs and seals</span></div>
+  <div><strong>{{ grimoire.counts.characters | commas }}</strong><span>curated characters</span></div>
 </div>
 
-<p>There are 130,210 searchable entries.</p>
+<p>There are {{ grimoire.counts.fts | commas }} searchable entries.</p>
 
 The numbers show the size of the library. The line you quote is the proof.
 
@@ -120,7 +120,7 @@ Search uses SQLite FTS5. You get the passage back, not a list of files to open.
 
 <ul class="tile-grid">
   <li><strong>Command line</strong><p>Search, character lines, items, books, transcripts, records and quote checks. JSON output for scripts.</p></li>
-  <li><strong>MCP server</strong><p>Eighteen read-only tools over local stdio for AI clients.</p></li>
+  <li><strong>MCP server</strong><p>{{ grimoire.mcp_tools }} read-only tools over local stdio for AI clients.</p></li>
   <li><strong>Skill file</strong><p>A drop-in skill for runtimes that load skills instead of MCP servers.</p></li>
   <li><strong><code>db/capabilities.json</code></strong><p>The machine-readable manifest of tables, views, commands and contracts.</p></li>
 </ul>

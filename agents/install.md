@@ -75,7 +75,7 @@ and the AI connection is optional.
   <li>Python 3.8 or newer.</li>
   <li>An AI app: OpenCode, OpenClaw, or another app that can read an instructions file.</li>
   <li>Internet access the first time, to download the project and library.</li>
-  <li>About 260 MB for the library file.</li>
+  <li>About {{ grimoire.sizes.db_mb }} MB for the library file.</li>
 </ul>
 
 </details>
@@ -92,6 +92,7 @@ read the same library; none share private notes.</p>
   <li><a href="{{ '/personas/zavala/' | url }}">Zavala</a> — measured and steady. The Vanguard, the Last City and the coalition.</li>
   <li><a href="{{ '/personas/calus/' | url }}">Calus</a> — theatrical, sensual and cruel. The Cabal, the Leviathan and the Witness.</li>
   <li><a href="{{ '/personas/ghost/' | url }}">Ghost</a> — warm, quick and anxious. The Light, the Traveler and the Guardian.</li>
+  <li><a href="{{ '/personas/mara-sov/' | url }}">Mara Sov</a> — regal, calculating and patient. The Awoken, the Dreaming City and the line between Light and Dark.</li>
 </ul>
 
 </details>
@@ -105,21 +106,20 @@ how to run the audit. You can ignore this section if the simple setup worked.</p
 <h3 id="opencode-details">What the OpenCode sync writes <a class="heading-anchor" href="#opencode-details" aria-label="Permalink to What the OpenCode sync writes">#</a></h3>
 
 <ul class="tile-grid">
-  <li><strong>Main entries</strong><p><code>drifter.md</code> and <code>eris.md</code> in the OpenCode agents folder.</p></li>
-  <li><strong>Consult copies</strong><p><code>drifter-consult.md</code> and <code>eris-consult.md</code>, read-only.</p></li>
+  <li><strong>Main entries</strong><p>One <code>&lt;id&gt;.md</code> per character in the OpenCode agents folder.</p></li>
+  <li><strong>Consult copies</strong><p>One <code>&lt;id&gt;-consult.md</code> per character, read-only.</p></li>
   <li><strong>Companion folders</strong><p>Non-entry files marked inert so they are not treated as agents.</p></li>
   <li><strong>Series list</strong><p><code>~/.config/opencode/series/agents.json</code> as the peer list.</p></li>
   <li><strong>Grimoire link</strong><p>The archive linked outside the agents folder.</p></li>
 </ul>
 
 <p>Set <code>default_agent</code> in <code>~/.config/opencode/opencode.json</code>
-to <code>drifter</code> or <code>eris</code> if you want one picked at startup.</p>
+to any of the six character ids if you want one picked at startup.</p>
 
 <h3 id="openclaw-details">What the OpenClaw sync writes <a class="heading-anchor" href="#openclaw-details" aria-label="Permalink to What the OpenClaw sync writes">#</a></h3>
 
-<p>The sync writes <code>~/.openclaw/workspace-drifter</code> and
-<code>~/.openclaw/workspace-eris</code>, plus the series list and a collaboration
-block inside each workspace.</p>
+<p>The sync writes <code>~/.openclaw/workspace-&lt;id&gt;</code> for each character,
+plus the series list and a collaboration block inside each workspace.</p>
 
 <p>It does not edit your OpenClaw config for you. Add the consult agents there
 (<code>subagents.allowAgents</code> plus a read-only tools deny list) if you want
@@ -127,12 +127,11 @@ the main agents to call them.</p>
 
 <h3 id="multiple-agents">Running more than one agent <a class="heading-anchor" href="#multiple-agents" aria-label="Permalink to Running more than one agent">#</a></h3>
 
-<h4>Both at once</h4>
+<h4>More than one</h4>
 
-<p>The sync gives you <code>drifter</code> and <code>eris</code> as main agents,
-plus the two consult copies. Each session picks one main agent. Use the agent
-picker when you start a session, or set <code>default_agent</code> to the one you
-want first.</p>
+<p>The sync gives you all six characters as main agents, plus a consult copy for
+each. Each session picks one main agent. Use the agent picker when you start a
+session, or set <code>default_agent</code> to the one you want first.</p>
 
 <p>They are separate agents with separate sessions and separate memories.
 Switching does not blend their notes or their voices.</p>

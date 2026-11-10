@@ -79,9 +79,7 @@ name, the site URL and the nav item. Keep it stable after publishing.
 <h3 id="the-site">The site</h3>
 
 Add the persona to `_data/agents.js` in the site project. One entry builds
-`/agents/<id>/`, the nav entry, the sitemap entry and the roster link. Set
-`featured: true` to show a summary at the top of the Agents page; leave it false
-for a roster entry only.
+`/personas/<id>/`, the nav entry, the sitemap entry and the roster link.
 
 The fields:
 

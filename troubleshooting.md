@@ -142,13 +142,13 @@ Run the sync again and look at what landed:
 <pre><code>cd destiny-agent-grimoire
 bash scripts/sync-live-agents.sh</code></pre>
 
-You should see `drifter.md`, `eris.md`, `drifter-consult.md` and
-`eris-consult.md` in `~/.config/opencode/agents/`. The companion files should be
-inert, and the Grimoire should live outside that folder.
+You should see one `<id>.md` and one `<id>-consult.md` per character in
+`~/.config/opencode/agents/`. The companion files should be inert, and the
+Grimoire should live outside that folder.
 
 If the character appears but cannot be selected, check `default_agent` in
-`~/.config/opencode/opencode.json`. Use the id (`drifter` or `eris`), not the file
-name with `.md`.
+`~/.config/opencode/opencode.json`. Use the character id (for example `drifter` or `mara-sov`), not the file name
+with `.md`.
 
 </details>
 
@@ -257,7 +257,7 @@ lookup; without it, expect a shorter, less grounded answer.
 
 ## The audit scripts
 
-Six scripts stand between a change and the live site. What each one checks, how
+Seven scripts stand between a change and the live site. What each one checks, how
 to run it, and what a failure looks like.
 
 Every push to this site runs the same checks you can run yourself. They live in
@@ -272,8 +272,8 @@ database, and the external-link check needs the network.
 
 <pre><code>npm run check</code></pre>
 
-builds the site, then runs the checks in order: links, accessibility, axe,
-Test Tapes, roster. The first failure stops the run, so the error you see is
+builds the site, then runs the checks in order: stats, links, accessibility,
+axe, Test Tapes, roster. The first failure stops the run, so the error you see is
 the first thing to fix.
 
 The external-link check has its own command, because it depends on other

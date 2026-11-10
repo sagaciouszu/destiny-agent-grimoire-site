@@ -31,6 +31,8 @@ jobs:
 
       - run: npm run build
 
+      - run: python3 scripts/check-stats.py
+
       - run: python3 scripts/check-links.py _site
 
       - run: python3 scripts/check-a11y.py _site

@@ -65,7 +65,7 @@ use the search or quote-checking tool directly.
 <details class="section experts">
 <summary><span class="section-title" role="heading" aria-level="2" id="for-experts">For Experts (or enthusiasts)</span></summary>
 
-<p class="muted">The client configuration, all twenty-two tools, and the safety limits.</p>
+<p class="muted">The client configuration, all {{ grimoire.mcp_tools }} tools, and the safety limits.</p>
 
 <h3 id="client-config">Client configuration</h3>
 
@@ -85,7 +85,7 @@ A typical local configuration looks like this:
 The exact shape depends on your client. If it only accepts remote servers, put a
 local bridge in front of the stdio process.
 
-<h3 id="the-tools">The twenty-two tools</h3>
+<h3 id="the-tools">The tools</h3>
 
 All read-only:
 
@@ -93,6 +93,7 @@ All read-only:
   <li><code>search</code><p>Full-text search across books, transcripts, cards, interactions, items and records.</p></li>
   <li><code>character</code><p>Curated lines for a character, or every transcript line with <code>all_lines</code>.</p></li>
   <li><code>character_info</code><p>Aliases, quote count and spoken-line count for a character.</p></li>
+  <li><code>entity</code><p>Resolve a name to an entity, with aliases, relations and ranked documents.</p></li>
   <li><code>item</code><p>Item lore and metadata by slug.</p></li>
   <li><code>find_item</code><p>Find items by a title or slug fragment.</p></li>
   <li><code>book</code><p>Book metadata and its entries.</p></li>

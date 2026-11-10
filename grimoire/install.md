@@ -20,7 +20,8 @@ lede: Get the library onto your computer in a few minutes. Start with the simple
 
 Open a terminal in the folder where you want to keep the project. You need Git
 (to download the project), Python 3.8 or newer (to run the search
-tool), and about 260 MB of free space. No account, no key, no build tools.
+tool), and about {{ grimoire.sizes.db_mb | plus: 100 }} MB of free space. No
+account, no key, no build tools.
 
 The commands below download the project, download the library file, check the
 download, put the file in the right folder, and print the library counts. Paste
@@ -60,7 +61,8 @@ separate pieces that become more useful together.
 <ul class="checklist">
   <li>Python 3.8 or newer. No extra Python packages are needed.</li>
   <li>Git, to download the project.</li>
-  <li>About 260 MB of free space. The library file itself is about 170 MB.</li>
+  <li>About {{ grimoire.sizes.db_mb | plus: 100 }} MB of free space. The library
+      file itself is about {{ grimoire.sizes.db_mb }} MB.</li>
   <li>Roughly the same space again if you build from source.</li>
 </ul>
 
