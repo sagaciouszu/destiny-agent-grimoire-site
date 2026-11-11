@@ -24,17 +24,15 @@ The locked system. Every Hallmark run reads this first and pages share it. Chang
 The spacing scale, the type scale, the easings and the durations are the scaffold's and live in `assets/tokens.css`. The original D2 tokens remain in `assets/site.css` under `--d2-*` and derived vars.
 
 ## Controls
-- Primary: gold fill, square, 0 radius, 0.82rem bold tracked 0.18em (brand wordmark exception)
+- Primary: gold fill, square, 0 radius
 - Secondary: outlined, same radius and height
 
 ## Motion
 - Character: still; one reveal at most; under reduced motion everything ends at once.
 
 ## Exports
-`assets/tokens.css` in this project. Tailwind, DTCG or shadcn blocks are added here on request, per `export-formats.md`.
+`assets/tokens.css` in this project.
 ```
 
-Need maybe add `## Variants`? No.
-
-Now update .hallmark log? The skill says log entry. We can run theme.mjs log with entry. Let's do to be thorough. Need JSON.<|end|><|start|>start of code block <|constrain|>xml<|message|><rfl:parameter name="command">
-cd /home/sredshaw/destiny/destiny-agent-grimoire-site && node /home/sredshaw/.agents/skills/hallmark/scripts/theme.mjs log --entry '{"mode":"redesign","depth":"full","scope":"site","shape":"Marquee Hero (home); Long Document (docs/personas); Narrative Workflow (installs)","theme":"brand (Destiny 2 UI)","genre":"atmospheric","signature":"live test-tape rotator","waived":["19 em dash in verified quotes","24a spacing tokens (partial)","58 word budget on docs pages"]}' 2>&1 | tail
+Now .gitignore .hallmark.<|end|><|start|><|start|>assistant to=edit<|channel|>analysis <|constrain|>xml<|message|><rfl:parameter name="path">
+/home/sredshaw/destiny/destiny-agent-grimoire-site/.gitignore
