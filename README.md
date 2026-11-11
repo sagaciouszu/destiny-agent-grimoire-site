@@ -113,18 +113,3 @@ build, and a separate workflow checks external links on PRs and after deploys.
 `_redirects` holds true 301s for hosts that support the Netlify/Cloudflare
 format; GitHub Pages uses noindex meta-refresh pages.
 
-## Theme
-
-The palette follows the Destiny 2 UI token system
-(the Destiny 2 UI token standard, mirrored as `--d2-*` vars in
-`assets/site.css`; the reference file is not distributed): void/ink surfaces, neutral text, Vanguard gold
-(exotic/bossGold tokens) as the site accent, Arc steel for secondary accents.
-UI chrome is square with hairline borders and no drop shadows; type is
-Neue Haas Grotesk (Helvetica) with tracked-uppercase labels. No cyan —
-glimmerCyan is reserved for currency numerals and unused here.
-The topbar toggle switches between three dark themes: Vanguard dark,
-Crucible (crucibleRed tokens) and Gambit (gambitGreen tokens).
-Token hexes are fills/borders; text uses the derived bright tints so
-contrast holds in every theme. The choice is stored in `localStorage`;
-without a stored choice the site defaults to Vanguard dark. The theme is
-applied before paint by the inline script in `_includes/head.njk`.
