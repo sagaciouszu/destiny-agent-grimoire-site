@@ -51,11 +51,11 @@
   "verify_many"
  ],
  "mcp_tools": 22,
- "release": "v0.40.3",
- "schema_version": "1.10.0",
+ "release": "v0.41.0",
+ "schema_version": "1.11.0",
  "sizes": {
-  "db_bytes": 316776448,
-  "db_mb": 300,
+  "db_bytes": 284528640,
+  "db_mb": 270,
   "slim_mb": 224
  }
 }
