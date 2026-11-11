@@ -19,8 +19,7 @@ folder.</p>
 
 <div class="choices">
   <div class="choice">
-    <p class="choice-label"><svg class="choice-icon choice-logo" viewBox="0 0 24 36" aria-hidden="true" focusable="false"><path fill="currentColor" opacity="0.55" d="M18 30H6V18H18V30Z"/><path fill="currentColor" d="M18 12H6V30H18V12ZM24 36H0V6H24V36Z"/></svg>OpenCode</p>
-    <h3>Install all characters</h3>
+    <h3 class="choice-label"><svg class="choice-icon choice-logo" viewBox="0 0 24 36" aria-hidden="true" focusable="false"><path fill="currentColor" opacity="0.55" d="M18 30H6V18H18V30Z"/><path fill="currentColor" d="M18 12H6V30H18V12ZM24 36H0V6H24V36Z"/></svg>OpenCode: install all characters</h3>
     <p class="muted choice-desc">One command copies the characters and their read-only helper copies into OpenCode.</p>
     <pre><code>git clone https://github.com/sagaciouszu/destiny-agent-grimoire.git
 cd destiny-agent-grimoire
@@ -28,16 +27,14 @@ bash scripts/sync-live-agents.sh</code></pre>
     <p class="muted">Restart OpenCode, then pick a character.</p>
   </div>
   <div class="choice">
-    <p class="choice-label"><span class="choice-icon" aria-hidden="true">🦀</span>OpenClaw</p>
-    <h3>One workspace per character</h3>
+    <h3 class="choice-label"><span class="choice-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7c0-2 2-3 5-3s5 1 5 3M7 17c0 2 2 3 5 3s5-1 5-3M4 12h16"/></svg></span>OpenClaw: one workspace per character</h3>
     <p class="muted choice-desc">One workspace per character, plus the shared list.</p>
     <pre><code>git clone https://github.com/sagaciouszu/destiny-agent-grimoire.git
 cd destiny-agent-grimoire
 bash scripts/sync-live-agents.sh --openclaw</code></pre>
   </div>
   <div class="choice">
-    <p class="choice-label"><span class="choice-icon" aria-hidden="true">🧩</span>Anything else</p>
-    <h3>One character, one folder</h3>
+    <h3 class="choice-label"><span class="choice-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6v3a3 3 0 0 1 0 6v3H9v-3a3 3 0 0 1 0-6V3z"/></svg></span>Anything else: one character, one folder</h3>
     <p class="muted choice-desc">A character in its own folder, for any app that can read an instructions file.</p>
     <pre><code>git clone https://github.com/sagaciouszu/destiny-agent-drifter.git
 cd destiny-agent-drifter
@@ -90,12 +87,12 @@ and the AI connection is optional.
 read the same library; none share private notes.</p>
 
 <ul>
-  <li><a href="{{ '/personas/drifter/' | url }}">The Drifter</a> — loose, funny and guarded. Gambit, the Nine and the Dark Age.</li>
-  <li><a href="{{ '/personas/eris/' | url }}">Eris Morn</a> — formal, precise and grim. The Hive, the Moon and the Witness.</li>
-  <li><a href="{{ '/personas/zavala/' | url }}">Zavala</a> — measured and steady. The Vanguard, the Last City and the coalition.</li>
-  <li><a href="{{ '/personas/calus/' | url }}">Calus</a> — theatrical, sensual and cruel. The Cabal, the Leviathan and the Witness.</li>
-  <li><a href="{{ '/personas/ghost/' | url }}">Ghost</a> — warm, quick and anxious. The Light, the Traveler and the Guardian.</li>
-  <li><a href="{{ '/personas/mara-sov/' | url }}">Mara Sov</a> — regal, calculating and patient. The Awoken, the Dreaming City and the line between Light and Dark.</li>
+  <li><a href="{{ '/personas/drifter/' | url }}">The Drifter</a> : loose, funny and guarded. Gambit, the Nine and the Dark Age.</li>
+  <li><a href="{{ '/personas/eris/' | url }}">Eris Morn</a> : formal, precise and grim. The Hive, the Moon and the Witness.</li>
+  <li><a href="{{ '/personas/zavala/' | url }}">Zavala</a> : measured and steady. The Vanguard, the Last City and the coalition.</li>
+  <li><a href="{{ '/personas/calus/' | url }}">Calus</a> : theatrical, sensual and cruel. The Cabal, the Leviathan and the Witness.</li>
+  <li><a href="{{ '/personas/ghost/' | url }}">Ghost</a> : warm, quick and anxious. The Light, the Traveler and the Guardian.</li>
+  <li><a href="{{ '/personas/mara-sov/' | url }}">Mara Sov</a> : regal, calculating and patient. The Awoken, the Dreaming City and the line between Light and Dark.</li>
 </ul>
 
 </details>

@@ -7,7 +7,7 @@ module.exports = [
     id: "drifter",
     name: "The Drifter",
     aliases: ["The Drifter"],
-    role: "Rogue Lightbearer · Gambit handler · Dark Age survivor",
+    role: "Rogue Lightbearer, Gambit handler, Dark Age survivor",
     heading: "Rogue Lightbearer",
     image: "/assets/agents/drifter.jpg",
     socialImage: "/assets/agents/drifter-social.jpg",
@@ -27,7 +27,7 @@ module.exports = [
     entryUrl: "https://github.com/sagaciouszu/destiny-agent-drifter/blob/master/drifter.md",
     version: "0.14.6",
     releaseUrl: "https://github.com/sagaciouszu/destiny-agent-drifter/releases/tag/v0.14.6",
-    updated: "2026-11-10",
+    updated: "2026-11-11",
     audit: { passed: 27, total: 27 },
     samples: [
       {
@@ -54,7 +54,7 @@ module.exports = [
     id: "eris",
     name: "Eris Morn",
     aliases: ["Eris Morn"],
-    role: "Hive expert · Survivor of the Hellmouth · The Witch",
+    role: "Hive expert, Survivor of the Hellmouth, The Witch",
     heading: "The Witch",
     image: "/assets/agents/eris.jpg",
     socialImage: "/assets/agents/eris-social.jpg",
@@ -74,7 +74,7 @@ module.exports = [
     entryUrl: "https://github.com/sagaciouszu/destiny-agent-eris-morn/blob/master/eris.md",
     version: "0.14.6",
     releaseUrl: "https://github.com/sagaciouszu/destiny-agent-eris-morn/releases/tag/v0.14.6",
-    updated: "2026-11-10",
+    updated: "2026-11-11",
     audit: { passed: 22, total: 22 },
     samples: [
       {
@@ -101,7 +101,7 @@ module.exports = [
     id: "zavala",
     name: "Zavala",
     aliases: ["Commander Zavala"],
-    role: "Titan Vanguard · Commander of the Last City",
+    role: "Titan Vanguard, Commander of the Last City",
     heading: "Commander of the Last City",
     image: "/assets/agents/zavala.jpg",
     socialImage: "/assets/agents/zavala-social.jpg",
@@ -121,7 +121,7 @@ module.exports = [
     entryUrl: "https://github.com/sagaciouszu/destiny-agent-zavala/blob/master/zavala.md",
     version: "0.1.9",
     releaseUrl: "https://github.com/sagaciouszu/destiny-agent-zavala/releases/tag/v0.1.9",
-    updated: "2026-11-10",
+    updated: "2026-11-11",
     audit: { passed: 20, total: 20 },
     samples: [
       {
@@ -148,7 +148,7 @@ module.exports = [
     id: "calus",
     name: "Calus",
     aliases: ["Emperor Calus"],
-    role: "Emperor of the Cabal · Herald of the Witness",
+    role: "Emperor of the Cabal, Herald of the Witness",
     heading: "The Emperor",
     image: "/assets/agents/calus.jpg",
     socialImage: "/assets/agents/calus-social.jpg",
@@ -168,7 +168,7 @@ module.exports = [
     entryUrl: "https://github.com/sagaciouszu/destiny-agent-calus/blob/master/calus.md",
     version: "0.1.9",
     releaseUrl: "https://github.com/sagaciouszu/destiny-agent-calus/releases/tag/v0.1.9",
-    updated: "2026-11-10",
+    updated: "2026-11-11",
     audit: { passed: 20, total: 20 },
     samples: [
       {
@@ -195,7 +195,7 @@ module.exports = [
     id: "mara-sov",
     name: "Mara Sov",
     aliases: ["Mara Sov", "the Awoken Queen"],
-    role: "Queen of the Awoken · Last of the Queen'sguard",
+    role: "Queen of the Awoken, Last of the Queen'sguard",
     heading: "Queen of the Awoken",
     image: "/assets/agents/mara-sov.jpg",
     socialImage: "/assets/agents/mara-sov-social.jpg",
@@ -215,7 +215,7 @@ module.exports = [
     entryUrl: "https://github.com/sagaciouszu/destiny-agent-mara-sov/blob/master/mara-sov.md",
     version: "0.1.9",
     releaseUrl: "https://github.com/sagaciouszu/destiny-agent-mara-sov/releases/tag/v0.1.9",
-    updated: "2026-11-10",
+    updated: "2026-11-11",
     audit: { passed: 20, total: 20 },
     samples: [
       {
@@ -242,7 +242,7 @@ module.exports = [
     id: "ghost",
     name: "Ghost",
     aliases: ["The Ghost"],
-    role: "The Guardian's companion · Lightbearer",
+    role: "The Guardian's companion, Lightbearer",
     heading: "Little Light",
     image: "/assets/agents/ghost.jpg",
     socialImage: "/assets/agents/ghost-social.jpg",
@@ -262,7 +262,7 @@ module.exports = [
     entryUrl: "https://github.com/sagaciouszu/destiny-agent-ghost/blob/master/ghost.md",
     version: "0.1.9",
     releaseUrl: "https://github.com/sagaciouszu/destiny-agent-ghost/releases/tag/v0.1.9",
-    updated: "2026-11-10",
+    updated: "2026-11-11",
     audit: { passed: 20, total: 20 },
     samples: [
       {

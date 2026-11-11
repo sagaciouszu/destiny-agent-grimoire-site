@@ -6,7 +6,6 @@ description: A searchable Destiny lore library and character personas that read 
 
 <section class="hero">
   <div class="hero-copy">
-    <p class="kicker">Destiny lore · for readers and their AI</p>
     <h1>Destiny Agent Grimoire</h1>
     <p class="lede">
       The Grimoire is a searchable library of Destiny's books, dialogue and gear
@@ -36,7 +35,7 @@ description: A searchable Destiny lore library and character personas that read 
       <div class="transmission-item{% if loop.first %} is-active{% endif %}" data-voice data-speaker="{{ voice.speaker | escape }}" data-topic="{{ voice.topic | escape }}">
         <p class="transmission-prompt">{{ voice.prompt | escape }}</p>
         <blockquote><p>{{ voice.text | escape }}</p></blockquote>
-        <p class="transmission-caption">{% if voice.url %}<a href="{{ voice.url | url }}">{{ voice.speaker | escape }}</a>{% else %}<span class="transmission-speaker">{{ voice.speaker | escape }}</span>{% endif %} <span class="transmission-topic">· {{ voice.topic | escape }}</span>{% if voice.captured %} <span class="transmission-captured">· captured {{ voice.captured }}</span>{% endif %}</p>
+        <p class="transmission-caption">{% if voice.url %}<a href="{{ voice.url | url }}">{{ voice.speaker | escape }}</a>{% else %}<span class="transmission-speaker">{{ voice.speaker | escape }}</span>{% endif %} <span class="transmission-topic">/ {{ voice.topic | escape }}</span>{% if voice.captured %} <span class="transmission-captured">/ captured {{ voice.captured }}</span>{% endif %}</p>
       </div>
       {% endfor %}
     </div>
@@ -60,12 +59,12 @@ description: A searchable Destiny lore library and character personas that read 
     </div>
     <div class="transmission-controls" data-rotator-controls hidden>
       <button type="button" data-rotator-shuffle>Random</button>
-      <button type="button" data-rotator-prev aria-label="Previous test transcript">‹</button>
+      <button type="button" data-rotator-prev aria-label="Previous test transcript"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
       <button type="button" data-rotator-toggle>Pause</button>
-      <button type="button" data-rotator-next aria-label="Next test transcript">›</button>
+      <button type="button" data-rotator-next aria-label="Next test transcript"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button>
       <span class="transmission-count" data-rotator-count aria-hidden="true">1 / {{ voices.length }}</span>
     </div>
-    <p class="transmission-note">{{ voices.length }} exchanges across {{ voices | uniqueSpeakers | length }} characters. Random picks from this set — not quotes from the games.</p>
+    <p class="transmission-note">{{ voices.length }} exchanges across {{ voices | uniqueSpeakers | length }} characters. Random picks from this set, not quotes from the games.</p>
   </aside>
 </section>
 

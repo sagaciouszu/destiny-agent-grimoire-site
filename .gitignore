@@ -1,3 +1,4 @@
 node_modules/
 _site/
+.hallmark/
 .DS_Store
