@@ -53,13 +53,13 @@ lists every suite and what a passing run looks like.
 ## The site's own checks
 
 This site gates itself too: `npm run check` runs the checks over the built
-pages — links, accessibility, axe, Test Tapes and roster — and
+pages : links, accessibility, axe, Test Tapes and roster : and
 `npm run check:external` runs the ninth, the external links. They are explained
 under [The audit scripts]({{ '/troubleshooting/' | url }}#the-audit-scripts) on
 Troubleshooting.
 
 ## Going deeper
 
-- [STANDARDS.md](https://github.com/sagaciouszu/destiny-agent-grimoire/blob/master/STANDARDS.md) — the rules; section 10 is the change procedure.
+- [STANDARDS.md](https://github.com/sagaciouszu/destiny-agent-grimoire/blob/master/STANDARDS.md) : the rules; section 10 is the change procedure.
 - [Open an issue](https://github.com/sagaciouszu/destiny-agent-grimoire/issues)
 - [The scripts in this site's repository](https://github.com/sagaciouszu/destiny-agent-grimoire-site/tree/master/scripts)

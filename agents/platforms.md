@@ -41,7 +41,7 @@ guide for adding a local tool.
     <tr><td><a href="https://docs.roocode.com/features/custom-instructions">Roo Code</a></td><td>Custom instructions</td><td><a href="https://docs.roocode.com/features/mcp/using-mcp-in-roo">AI guide</a></td></tr>
     <tr><td><a href="https://kilocode.ai/docs">Kilo Code</a></td><td>Rules</td><td><a href="https://kilocode.ai/docs/features/mcp/using-mcp-in-kilo-code">AI guide</a></td></tr>
     <tr><td><a href="https://zed.dev/docs/ai/overview">Zed</a></td><td>Rules</td><td><a href="https://zed.dev/docs/ai/mcp">AI guide</a></td></tr>
-    <tr><td><a href="https://aider.chat/docs/usage/conventions.html">Aider</a></td><td><code>CONVENTIONS.md</code></td><td>—</td></tr>
+    <tr><td><a href="https://aider.chat/docs/usage/conventions.html">Aider</a></td><td><code>CONVENTIONS.md</code></td><td>n/a</td></tr>
   </tbody>
 </table>
 

@@ -286,7 +286,7 @@ people's servers:
 `scripts/check-links.py` walks every built page: internal links resolve,
 fragments point at real ids, titles and descriptions are unique, canonical
 URLs match, and the sitemap lists exactly the pages that were built. It also
-catches leftovers — a link to the old site, a double-escaped entity, a
+catches leftovers , a link to the old site, a double-escaped entity, a
 `robots.txt` that forgot the sitemap.
 
 Run it alone:
@@ -320,7 +320,7 @@ unrelated local server can never satisfy the checks.
 Failures name the theme, the page and the rule:
 
 <pre><code>FAIL: 1 accessibility violation(s)
-  - [dark] Home: color-contrast (serious) — Elements must have sufficient color contrast
+  - [dark] Home: color-contrast (serious) , Elements must have sufficient color contrast
 </code></pre>
 
 ### The Test Tapes check
@@ -333,13 +333,13 @@ them are quotes from the games.
 
 It needs the Grimoire checkout next to this one (`../destiny-agent-grimoire`)
 for the database, which is why it runs on your machine but not in the deploy
-workflow. Without the checkout it prints `SKIP:` and verifies nothing — the
+workflow. Without the checkout it prints `SKIP:` and verifies nothing , the
 promise goes unchecked, not proven.
 
 <pre><code>python3 scripts/check-tapes.py</code></pre>
 
 <pre><code>FAIL: 1 tape problem(s)
-  - tape 42 (Eris Morn, on grief): matches canon [transcript:hellmouth (Eris Morn)] — Hold the line...
+  - tape 42 (Eris Morn, on grief): matches canon [transcript:hellmouth (Eris Morn)] , Hold the line...
 </code></pre>
 
 ### The roster check
@@ -359,8 +359,8 @@ workflow runs it too.
 ### External links
 
 `scripts/check-external.py` collects every link that leaves this site and
-requests them eight at a time. A `403` or `429` is a warning — many
-documentation hosts block bots — and anything else that does not answer is a
+requests them eight at a time. A `403` or `429` is a warning , many
+documentation hosts block bots , and anything else that does not answer is a
 failure.
 
 <pre><code>python3 scripts/check-external.py _site</code></pre>
@@ -391,7 +391,7 @@ which is what stops `npm run check` and fails the CI step.
 
 The fix is usually one line: point the link at the path that exists, add the
 alt text, delete the duplicate id. If the checks fail right after a fresh
-download rather than after an edit, the setup is what broke — see
+download rather than after an edit, the setup is what broke , see
 [The project checks fail after downloading]({{ '/troubleshooting/experts/' | url }}#the-project-checks-fail-after-downloading).
 
 ## Still stuck

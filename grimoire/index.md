@@ -75,11 +75,11 @@ copy.
 
 ## Start here
 
-- [Install the Grimoire]({{ '/grimoire/install/' | url }}) — the short version is
+- [Install the Grimoire]({{ '/grimoire/install/' | url }}) : the short version is
   one download and one check.
-- [Connect an AI]({{ '/grimoire/mcp/' | url }}) — useful if you want an assistant
+- [Connect an AI]({{ '/grimoire/mcp/' | url }}) : useful if you want an assistant
   to search for you.
-- [Meet the characters]({{ '/personas/' | url }}) — useful if you want a character to
+- [Meet the characters]({{ '/personas/' | url }}) : useful if you want a character to
   talk to, not just a search box.
 
 <h2 id="for-experts">For Experts (or enthusiasts) <a class="heading-anchor" href="#for-experts" aria-label="Permalink to For Experts (or enthusiasts)">#</a></h2>
