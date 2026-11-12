@@ -7,6 +7,7 @@ const pages = [
   "/about/",
   "/troubleshooting/",
   "/troubleshooting/experts/",
+  "/search/",
   "/grimoire/",
   "/grimoire/install/",
   "/grimoire/mcp/",

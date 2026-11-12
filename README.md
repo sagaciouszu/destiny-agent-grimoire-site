@@ -30,7 +30,16 @@ path.
 npm run build
 ```
 
-Output goes to `_site/`.
+Output goes to `_site/`. The build runs Eleventy first, then
+[Pagefind](https://pagefind.app/) to index the rendered pages.
+
+## Search
+
+`/search/` is a static full-text search over the site documentation —
+install guides, troubleshooting, persona pages, limits and build notes. The
+index is generated at build time into `_site/pagefind/`; no server and no
+external service is involved. It does **not** search the 125,324 lore lines in
+the Grimoire database, which stay local to the CLI and MCP server.
 
 ## Content
 
@@ -42,6 +51,7 @@ Output goes to `_site/`.
 - `troubleshooting.md`
 - `troubleshooting/experts.md` — repository-level checks, plainly written
 - `troubleshooting/audits.md` — old URL kept as a redirect to the audits section
+- `search.md` — Pagefind documentation search
 - `about.md`
 - `404.md`
 - `getting-started.md` — legacy redirect kept for old links
