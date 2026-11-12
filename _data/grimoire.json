@@ -25,7 +25,7 @@
   "transcripts": 9229
  },
  "generated_from": "grimoire.db",
- "last_updated": "2026-11-11",
+ "last_updated": "2026-11-12",
  "mcp_tool_names": [
   "activities",
   "activity",
@@ -51,10 +51,10 @@
   "verify_many"
  ],
  "mcp_tools": 22,
- "release": "v0.41.0",
+ "release": "v0.42.0",
  "schema_version": "1.12.0",
  "sizes": {
-  "db_bytes": 269664256,
+  "db_bytes": 269221888,
   "db_mb": 260,
   "slim_mb": 224
  }
