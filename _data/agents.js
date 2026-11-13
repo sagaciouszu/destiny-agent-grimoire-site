@@ -27,7 +27,7 @@ module.exports = [
     entryUrl: "https://github.com/sagaciouszu/destiny-agent-drifter/blob/master/drifter.md",
     version: "0.14.7",
     releaseUrl: "https://github.com/sagaciouszu/destiny-agent-drifter/releases/tag/v0.14.7",
-    updated: "2026-11-12",
+    updated: "2026-11-13",
     audit: { passed: 27, total: 27 },
     samples: [
       {
@@ -74,7 +74,7 @@ module.exports = [
     entryUrl: "https://github.com/sagaciouszu/destiny-agent-eris-morn/blob/master/eris.md",
     version: "0.14.7",
     releaseUrl: "https://github.com/sagaciouszu/destiny-agent-eris-morn/releases/tag/v0.14.7",
-    updated: "2026-11-12",
+    updated: "2026-11-13",
     audit: { passed: 22, total: 22 },
     samples: [
       {
@@ -121,7 +121,7 @@ module.exports = [
     entryUrl: "https://github.com/sagaciouszu/destiny-agent-zavala/blob/master/zavala.md",
     version: "0.1.10",
     releaseUrl: "https://github.com/sagaciouszu/destiny-agent-zavala/releases/tag/v0.1.10",
-    updated: "2026-11-12",
+    updated: "2026-11-13",
     audit: { passed: 20, total: 20 },
     samples: [
       {
@@ -168,7 +168,7 @@ module.exports = [
     entryUrl: "https://github.com/sagaciouszu/destiny-agent-calus/blob/master/calus.md",
     version: "0.1.10",
     releaseUrl: "https://github.com/sagaciouszu/destiny-agent-calus/releases/tag/v0.1.10",
-    updated: "2026-11-12",
+    updated: "2026-11-13",
     audit: { passed: 20, total: 20 },
     samples: [
       {
@@ -215,7 +215,7 @@ module.exports = [
     entryUrl: "https://github.com/sagaciouszu/destiny-agent-mara-sov/blob/master/mara-sov.md",
     version: "0.1.10",
     releaseUrl: "https://github.com/sagaciouszu/destiny-agent-mara-sov/releases/tag/v0.1.10",
-    updated: "2026-11-12",
+    updated: "2026-11-13",
     audit: { passed: 20, total: 20 },
     samples: [
       {
@@ -262,7 +262,7 @@ module.exports = [
     entryUrl: "https://github.com/sagaciouszu/destiny-agent-ghost/blob/master/ghost.md",
     version: "0.1.10",
     releaseUrl: "https://github.com/sagaciouszu/destiny-agent-ghost/releases/tag/v0.1.10",
-    updated: "2026-11-12",
+    updated: "2026-11-13",
     audit: { passed: 20, total: 20 },
     samples: [
       {
