@@ -55,7 +55,6 @@
  "schema_version": "1.13.0",
  "sizes": {
   "db_bytes": 269221888,
-  "db_mb": 260,
-  "slim_mb": 224
+  "db_mb": 260
  }
 }
