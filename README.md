@@ -72,6 +72,8 @@ the Grimoire database, which stay local to the CLI and MCP server.
 - `scripts/check-roster.py` — keeps consult copies out of rosters, tallies and character totals
 - `scripts/sync-agents.py` — rewrites repo, entry, version, release URL, last update
   and audit totals from the registry and sibling repositories (`--check` in `npm run check`)
+- The roster sync, link and tape check entry points delegate to canonical
+  implementations in `scripts/shared/`; keep changes there rather than in wrappers.
 
 ## Deploy
 
@@ -122,4 +124,3 @@ verifies outbound links. The Pages workflow runs the same checks after every
 build, and a separate workflow checks external links on PRs and after deploys.
 `_redirects` holds true 301s for hosts that support the Netlify/Cloudflare
 format; GitHub Pages uses noindex meta-refresh pages.
-
