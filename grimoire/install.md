@@ -115,7 +115,7 @@ the project files are present.
 cd destiny-agent-grimoire
 python3 db/migrate.py</code></pre>
 
-<p>The build reads <code>source/</code> and <code>archive/data/*.jsonl</code> and writes
+<p>The build reads <code>source/</code> and vault-local <code>archive/data/*.jsonl</code> (operator vault, not committed) and writes
 <code>db/grimoire.db</code>.</p>
 
 <h3 id="command-details">Command details <a class="heading-anchor" href="#command-details" aria-label="Permalink to Command details">#</a></h3>
