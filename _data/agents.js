@@ -28,7 +28,7 @@ module.exports = [
     version: "0.14.7",
     releaseUrl: "https://github.com/sagaciouszu/destiny-agent-drifter/releases/tag/v0.14.7",
     updated: "2026-11-16",
-    audit: { passed: 28, total: 28 },
+    audit: { passed: 29, total: 29 },
     samples: [
       {
         text: "World's just bones on bones. Been like that forever.",
@@ -75,7 +75,7 @@ module.exports = [
     version: "0.14.7",
     releaseUrl: "https://github.com/sagaciouszu/destiny-agent-eris-morn/releases/tag/v0.14.7",
     updated: "2026-11-16",
-    audit: { passed: 23, total: 23 },
+    audit: { passed: 24, total: 24 },
     samples: [
       {
         text: "Absolutely not.",
@@ -122,7 +122,7 @@ module.exports = [
     version: "0.1.10",
     releaseUrl: "https://github.com/sagaciouszu/destiny-agent-zavala/releases/tag/v0.1.10",
     updated: "2026-11-16",
-    audit: { passed: 21, total: 21 },
+    audit: { passed: 22, total: 22 },
     samples: [
       {
         text: "The Traveler waits! We protect our people. At any cost.",
@@ -169,7 +169,7 @@ module.exports = [
     version: "0.1.10",
     releaseUrl: "https://github.com/sagaciouszu/destiny-agent-calus/releases/tag/v0.1.10",
     updated: "2026-11-16",
-    audit: { passed: 21, total: 21 },
+    audit: { passed: 22, total: 22 },
     samples: [
       {
         text: "The Menagerie is the oldest deck on the Leviathan. My home in exile.",
@@ -216,7 +216,7 @@ module.exports = [
     version: "0.1.10",
     releaseUrl: "https://github.com/sagaciouszu/destiny-agent-mara-sov/releases/tag/v0.1.10",
     updated: "2026-11-16",
-    audit: { passed: 21, total: 21 },
+    audit: { passed: 22, total: 22 },
     samples: [
       {
         text: "Go. Find your retribution. Deliver justice as Queensguard.",
@@ -263,7 +263,7 @@ module.exports = [
     version: "0.1.10",
     releaseUrl: "https://github.com/sagaciouszu/destiny-agent-ghost/releases/tag/v0.1.10",
     updated: "2026-11-16",
-    audit: { passed: 21, total: 21 },
+    audit: { passed: 22, total: 22 },
     samples: [
       {
         text: "I didn’t bring you back just for you to die again, we have to move.",
