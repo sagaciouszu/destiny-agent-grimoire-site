@@ -3,3 +3,5 @@ _site
 package.json
 package-lock.json
 README.md
+.superpowers
+docs/superpowers
