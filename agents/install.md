@@ -129,7 +129,7 @@ the main agents to call them.</p>
 
 <h4>More than one</h4>
 
-<p>The sync gives you all six characters as main agents, plus a consult copy for
+<p>The sync gives you all Twelve characters as main agents, plus a consult copy for
 each. Each session picks one main agent. Use the agent picker when you start a
 session, or set <code>default_agent</code> to the one you want first.</p>
 

@@ -29,7 +29,7 @@ app starts it when needed and stops it when you are done.
 <ul class="tile-grid">
   <li><strong>The AI stops guessing</strong><p>It can search the library and read the passage before it answers.</p></li>
   <li><strong>Quotes can be checked</strong><p>The quote checker is one of the tools, so the app can ask whether a line is real.</p></li>
-  <li><strong>Your characters get sharper</strong><p>All six characters use the same library. The connector gives them a direct lookup path.</p></li>
+  <li><strong>Your characters get sharper</strong><p>All Twelve characters use the same library. The connector gives them a direct lookup path.</p></li>
   <li><strong>It is safe to leave on</strong><p>The library is read-only: the connector cannot change it, run commands or reach the network.</p></li>
 </ul>
 

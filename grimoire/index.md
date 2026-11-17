@@ -33,7 +33,7 @@ it yourself, or let an AI look things up through the optional connector.
 - **You stop tab-hopping.** Search one place instead of a dozen wiki pages.
 - **You can check a quote.** A built-in checker tells you whether a line is
   real before you repeat it.
-- **Your AI sees the same text you do.** All six characters read this library.
+- **Your AI sees the same text you do.** All Twelve characters read this library.
   With the optional connector, a compatible AI app can read it too.
 - **The pieces stay separate.** The library is useful on its own. The AI
   connection is optional. The characters are optional. Together they save you
