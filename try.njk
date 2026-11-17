@@ -1,0 +1,20 @@
+---
+layout: page
+section: try
+permalink: "/try/"
+eleventyComputed:
+  title: "Try the Characters"
+  category: "Try"
+  lede: "Play a short scene with The Drifter or Eris Morn. No install, no account — pick your replies and live with them."
+---
+
+<h2 class="try-ghost">Your Ghost reminds you that you needed to go visit Eris or The Drifter. You don&rsquo;t have time for both. Choose one.</h2>
+
+<div class="try-story-grid">
+  {% for story in try.stories %}
+  <a class="try-story-card" href="{{ ('/try/' + story.id + '/' + story.start + '/') | url }}">
+    <h3>{{ story.name }} — {{ story.title }}</h3>
+    <p>{{ story.blurb }}</p>
+  </a>
+  {% endfor %}
+</div>

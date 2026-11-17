@@ -8,21 +8,6 @@ heroAlt: The Ace of Spades hand cannon resting on a table alongside a Ghost unit
 heroCaption: Artwork by Joseph Biwald · Destiny is © Bungie
 ---
 
-## What this is
-
-The Destiny Agent Grimoire is a fan-made, non-commercial project. It has three
-parts:
-
-<ul class="tile-grid">
-  <li><strong>A local library</strong><p>Destiny lore you can search and quote-check.</p></li>
-  <li><strong>An optional AI connection</strong><p>Lets an AI app look things up in the library.</p></li>
-  <li><strong>Characters</strong><p>Read the same library and answer in their own voice.</p></li>
-</ul>
-
-You can use any part on its own. The library is useful without a character. The AI
-connection is useful without a character too. The characters are for when you want
-someone to talk to, not just a search box.
-
 ## Why it exists
 
 Destiny lore is spread across books, transcripts, item text and old grimoire

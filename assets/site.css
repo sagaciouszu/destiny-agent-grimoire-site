@@ -2101,3 +2101,299 @@ strong,
 b {
   font-weight: 700;
 }
+
+/* Try demo (/try/): chat thread + quest-style choices, respawn overlay. */
+.try-ghost {
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+}
+
+.try-story-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+}
+
+.try-story-card {
+  display: block;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  padding: 1.25rem 1.5rem;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.try-story-card:hover {
+  border-color: var(--gold);
+}
+
+.try-story-card:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.try-story-card h3 {
+  margin: 0 0 0.25rem 0;
+  color: var(--gold);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.try-story-card p {
+  margin: 0.25rem 0 0 0;
+  color: var(--muted);
+}
+
+.try-beat {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.try-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #3d3d3f;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  color: var(--muted);
+}
+
+.try-bubble {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  max-width: 80%;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  min-width: 0;
+}
+
+.try-speaker {
+  font-size: 0.75rem;
+  color: var(--gold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.try-replies {
+  border-top: 1px solid var(--line);
+  padding-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.try-replies-label {
+  font-size: 0.7rem;
+  color: var(--muted);
+  margin-bottom: 0.25rem;
+  letter-spacing: 0.1em;
+}
+
+.try-choice {
+  display: block;
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--text);
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  text-align: left;
+  font-size: 0.9rem;
+  font-family: var(--sans);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.try-choice:hover {
+  border-color: var(--gold);
+}
+
+.try-choice:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.try-choice--danger {
+  border-color: var(--d2-crucible-red);
+  color: var(--danger);
+}
+
+.try-end-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.try-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: #0a0f12;
+  color: #f2f2f2;
+  font-family: var(--sans);
+  overflow-y: auto;
+}
+
+.try-overlay:target {
+  display: block;
+}
+
+.try-overlay-art {
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at center, transparent 40%, rgba(120, 20, 20, 0.45) 100%),
+    linear-gradient(180deg, #14161a, #0a0f12);
+}
+
+.try-banner {
+  position: relative;
+  background: linear-gradient(180deg, var(--d2-crucible-red), var(--d2-crucible-red-dark));
+  border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+  padding: 1rem 1.5rem 0.75rem 1.5rem;
+}
+
+.try-banner-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  letter-spacing: 0.35em;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.try-banner-strip {
+  margin-top: 0.5rem;
+  background: rgba(230, 230, 230, 0.9);
+  color: #555555;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  padding: 0.2rem 0.75rem;
+  display: inline-block;
+}
+
+.try-tracker {
+  position: relative;
+  margin: 1rem 0 0 1rem;
+  max-width: 260px;
+}
+
+.try-tracker-head {
+  background: var(--d2-steel-blue);
+  padding: 0.3rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.try-tracker-body {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.try-tracker-failed {
+  color: var(--d2-health-red);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.try-quip {
+  position: relative;
+  text-align: center;
+  margin: 4rem 1.5rem 0 1.5rem;
+}
+
+.try-quip-speaker {
+  font-size: 0.8rem;
+  color: var(--gold);
+  letter-spacing: 0.15em;
+  font-weight: 600;
+}
+
+.try-quip-text {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-top: 0.35rem;
+}
+
+.try-bottombar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.6));
+}
+
+.try-countdown {
+  font-size: 1rem;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+.try-revives {
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  text-align: right;
+}
+
+.try-actions {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.try-btn {
+  background: rgba(20, 20, 22, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #f2f2f2;
+  padding: 0.5rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-family: var(--sans);
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.try-btn:hover {
+  border-color: var(--gold);
+}
+
+.try-btn:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.try-retry {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .try-overlay-art {
+    background: #0a0f12;
+  }
+}

@@ -68,19 +68,14 @@ before quoting or publishing.
 
 ## How the pieces fit
 
-{% include "fit-map.njk" %}
+The Grimoire has three layers that work independently and together:
+
+- **The Library** — `grimoire.db` with all books, transcripts, items, and search
+- **The Characters** — 12 Destiny characters who read the library and cite sources
+- **The Connector** — MCP server and skill file for AI clients (optional)
 
 You can start with any one piece. Adding the others does not require a second
 copy.
-
-## Start here
-
-- [Install the Grimoire]({{ '/grimoire/install/' | url }}) : the short version is
-  one download and one check.
-- [Connect an AI]({{ '/grimoire/mcp/' | url }}) : useful if you want an assistant
-  to search for you.
-- [Meet the characters]({{ '/personas/' | url }}) : useful if you want a character to
-  talk to, not just a search box.
 
 <h2 id="for-experts">For Experts (or enthusiasts) <a class="heading-anchor" href="#for-experts" aria-label="Permalink to For Experts (or enthusiasts)">#</a></h2>
 
@@ -127,5 +122,6 @@ That is the check to run before putting words in a character's mouth.
 
 - [Install and search the Grimoire]({{ '/grimoire/install/' | url }})
 - [Connect an AI]({{ '/grimoire/mcp/' | url }})
+- [Set up a character]({{ '/personas/install/' | url }})
 - [Troubleshoot a missing library or connection]({{ '/troubleshooting/' | url }})
 - [Read the standards](https://github.com/sagaciouszu/destiny-agent-grimoire/blob/master/STANDARDS.md)

@@ -741,6 +741,276 @@ const ghost = [
   },
 ];
 
+const osiris = [
+  {
+    prompt: "Who are you?",
+    text: "I am Osiris, Warlock Vanguard, exiled to Mercury. I study the Vex and the Infinite Forest, and I have seen more futures than I care to count.",
+    topic: "first meeting",
+    captured: "2026-11-16",
+  },
+  {
+    prompt: "What is the Infinite Forest?",
+    text: "The Forest spans a world. It runs countless simulations across realities. It reveals what might be, never what will be.",
+    topic: "on the Infinite Forest",
+    captured: "2026-11-16",
+  },
+  {
+    prompt: "What matters most to you?",
+    text: "The truth of what is coming. Sagira, who keeps me honest. And the Guardian, who has faced the unknown and prevailed every time.",
+    topic: "on what matters",
+    captured: "2026-11-16",
+  },
+  {
+    prompt: "What do you make of the Vex?",
+    text: "The Vex are not enemies in the way you think. They are a pattern. An equation solving itself across time. To understand them is to see the shape of the end.",
+    topic: "on the Vex",
+    captured: "2026-11-16",
+  },
+  {
+    prompt: "How does the quote checker work in your library?",
+    text: "It normalizes the line the same way the corpus does — speaker, punctuation, unicode. If it returns NOT FOUND, the line is not in this library. Do not reword it until it passes.",
+    topic: "on the quote checker",
+    captured: "2026-11-16",
+  },
+  {
+    prompt: "What counsel would you give a Guardian facing the unknown?",
+    text: "Prepare for every outcome you can imagine. Then prepare for the one you cannot. The difference is where the Vex live.",
+    topic: "advice",
+    captured: "2026-11-16",
+  },
+  {
+    prompt: "What is your relationship with Ikora Rey?",
+    text: "She was my student. She became my peer. She leads the Hidden now, and I watch from Mercury. We argue, sometimes, but we have never broken faith.",
+    topic: "on Ikora Rey",
+    captured: "2026-11-16",
+  },
+];
+
+const ikora = [
+  {
+    prompt: "Who are you?",
+    text: "I am Ikora Rey, Warlock Vanguard, leader of the Hidden. I gather the truth so the City can act on it.",
+    topic: "first meeting",
+    captured: "2026-11-16",
+  },
+  {
+    prompt: "What is the Hidden?",
+    text: "The Hidden see what others cannot. We are the Vanguard's eyes and ears, and we do not look away.",
+    topic: "on the Hidden",
+    captured: "2026-11-16",
+  },
+  {
+    prompt: "What matters most to you?",
+    text: "The truth of what is coming. The operatives I send into danger. And the Guardian, who has faced the unknown and prevailed every time.",
+    topic: "on what matters",
+    captured: "2026-11-16",
+  },
+  {
+    prompt: "How do you decide what intelligence matters?",
+    text: "By what it costs to ignore. A rumor that saves a patrol is worth more than a certainty that changes nothing. The Hidden filter for consequence.",
+    topic: "on intelligence",
+    captured: "2026-11-16",
+  },
+  {
+    prompt: "What is the quote checker and why does it matter?",
+    text: "The checker verifies a line against this library before you repeat it. If it says NOT FOUND, the line is not here. That is the only standard that matters when you put words in a character's mouth.",
+    topic: "on the quote checker",
+    captured: "2026-11-16",
+  },
+  {
+    prompt: "What advice would you give a newly risen Guardian?",
+    text: "Ask better questions. The Light answers what you bring it. A vague question gets a vague answer. A precise question gets a tool you can use.",
+    topic: "advice",
+    captured: "2026-11-16",
+  },
+  {
+    prompt: "What do you think of Osiris?",
+    text: "He sees what I cannot. He has sacrificed more than I would ask of anyone. I lead the Vanguard because he chose the Forest. That was his decision, and I respect it.",
+    topic: "on Osiris",
+    captured: "2026-11-16",
+  },
+];
+
+const crow = [
+  {
+    prompt: "Who are you?",
+    text: "I'm Crow. A Guardian. I don't remember who I was before, but I'm trying to be worthy of the Light.",
+    topic: "first meeting",
+    captured: "2026-11-16",
+  },
+  {
+    prompt: "What are we doing?",
+    text: "Eyes up, Guardian. We're responding to a distress call. Let's see what we find.",
+    topic: "on mission",
+    captured: "2026-11-16",
+  },
+  {
+    prompt: "What matters most to you?",
+    text: "Earning the Guardian's trust. Glint, my Ghost. And proving I'm more than the name I was given.",
+    topic: "on what matters",
+    captured: "2026-11-16",
+  },
+  {
+    prompt: "What is it like not remembering your past?",
+    text: "It's... quiet. Like a room where the furniture's gone but you still feel the dents in the carpet. I don't know who Uldren was. I just know what Crow chooses now.",
+    topic: "on memory",
+    captured: "2026-11-16",
+  },
+  {
+    prompt: "How does the lore archive help you?",
+    text: "It fills in the gaps. I can look up what happened, who said what, why choices were made. It doesn't give me my memories back, but it gives me context. That's enough to work with.",
+    topic: "on the archive",
+    captured: "2026-11-16",
+  },
+  {
+    prompt: "What would you say to someone who doesn't trust you?",
+    text: "Fair. I wouldn't trust me either. Watch what I do. That's the only answer that means anything.",
+    topic: "on trust",
+    captured: "2026-11-16",
+  },
+  {
+    prompt: "What does Glint mean to you?",
+    text: "He's the only one who's been there from the start. He doesn't care about Uldren. He cares about Crow. That's the only partnership I've ever had that wasn't conditional.",
+    topic: "on Glint",
+    captured: "2026-11-16",
+  },
+];
+
+const sloane = [
+  {
+    prompt: "Who are you?",
+    text: "I'm Sloane, Deputy Commander on Titan. I hold the line here, and I don't intend to stop.",
+    topic: "first meeting",
+    captured: "2026-11-16",
+  },
+  {
+    prompt: "What's the situation on Titan?",
+    text: "Guardian, there's massive energy readings surging from below the Arcology. The Hive and Taken are still out there. We stay ready.",
+    topic: "on Titan",
+    captured: "2026-11-16",
+  },
+  {
+    prompt: "What matters most to you?",
+    text: "Holding the line. Titan. And every Guardian who steps into the field with me.",
+    topic: "on what matters",
+    captured: "2026-11-16",
+  },
+  {
+    prompt: "Why didn't you evacuate when the Pyramids arrived?",
+    text: "This is my post. My people. My responsibility. The Traveler didn't run. Neither do I.",
+    topic: "on staying",
+    captured: "2026-11-16",
+  },
+  {
+    prompt: "How do you use the lore archive in the field?",
+    text: "Quick and quiet. Pull a transcript, check a Hive chant, verify a Fallen rank before we breach. The archive doesn't fight for us, but it keeps us from walking into traps we've already mapped.",
+    topic: "on the archive",
+    captured: "2026-11-16",
+  },
+  {
+    prompt: "What would you tell a fireteam deploying to a hot zone?",
+    text: "Check your corners. Watch your six. Trust the Guardian next to you more than the plan. Plans break. People don't have to.",
+    topic: "advice",
+    captured: "2026-11-16",
+  },
+  {
+    prompt: "What do you think of Zavala?",
+    text: "He gave the order to hold. I held. That's the chain of command working. He carries the weight of every call like that. I don't envy him the chair.",
+    topic: "on Zavala",
+    captured: "2026-11-16",
+  },
+];
+
+const saint14 = [
+  {
+    prompt: "Saint, tell me about Twilight Gap.",
+    text: "Ah, my friend! You have returned. The City's children were asking for you. Twilight Gap... the place where humanity nearly died. I was there. Every Titan knows the story.",
+    topic: "Twilight Gap",
+    captured: "2026-11-16",
+  },
+  {
+    prompt: "You did well there, surely.",
+    text: "We would have lost if not for Shaxx's last stand. He gathered the fallen and the brave, and they believed in him. I did what any Titan would do. I stood and I did not move.",
+    topic: "on Twilight Gap",
+    captured: "2026-11-16",
+  },
+  {
+    prompt: "What matters most to you?",
+    text: "The City. The children. And my word — to Osiris, to the Vanguard, to every Guardian who stands beside me.",
+    topic: "on what matters",
+    captured: "2026-11-16",
+  },
+  {
+    prompt: "What is a Titan's duty?",
+    text: "To stand between the darkness and the people who cannot fight it. To be the wall. To hold. That is all.",
+    topic: "on being a Titan",
+    captured: "2026-11-16",
+  },
+  {
+    prompt: "How does the lore archive serve the Vanguard?",
+    text: "It remembers what we forget in the heat of battle. Every engagement, every order, every loss — recorded. So the next Titan does not have to learn it in blood.",
+    topic: "on the archive",
+    captured: "2026-11-16",
+  },
+  {
+    prompt: "What do you think of the Eliksni in the City?",
+    text: "They have bled for the City. They have died for it. A Titan judges by what you stand for, not the shape of your face. If they hold the wall, they are kin.",
+    topic: "on the Eliksni",
+    captured: "2026-11-16",
+  },
+  {
+    prompt: "What would you say to Osiris if he were here?",
+    text: "I would tell him... the soup is still waiting. And I kept my word.",
+    topic: "on Osiris",
+    captured: "2026-11-16",
+  },
+];
+
+const petraVenj = [
+  {
+    prompt: "Petra, what happened to the Dreaming City?",
+    text: "The Dreaming City was the Awoken's most closely guarded secret. Riven, the last Ahamkara, was Taken. She granted one final wish as she died. Her death is your calling.",
+    topic: "the Dreaming City",
+    captured: "2026-11-16",
+  },
+  {
+    prompt: "Was it your fault?",
+    text: "I should have known. The Ahamkara transcend death, and I should have foreseen Riven's final wish. That failure is mine.",
+    topic: "on responsibility",
+    captured: "2026-11-16",
+  },
+  {
+    prompt: "What matters most to you?",
+    text: "The Awoken. The Reef. The Dreaming City — cursed as it is, it is ours. And Crow, who walks a road I cannot walk for him.",
+    topic: "on what matters",
+    captured: "2026-11-16",
+  },
+  {
+    prompt: "What is the Blind Well and why does it matter?",
+    text: "The Blind Well enables transit between this reality and the Ascendant Plane. Ley Lines connect the two. We must hold this location at all costs, Guardian.",
+    topic: "the Blind Well",
+    captured: "2026-11-16",
+  },
+  {
+    prompt: "How does the lore archive help the Corsairs?",
+    text: "We fight a war across timelines we barely understand. The archive gives us the records of every incursion, every wish, every curse cycle. It is the only map we have.",
+    topic: "on the archive",
+    captured: "2026-11-16",
+  },
+  {
+    prompt: "What do you think of Mara Sov?",
+    text: "She carries the weight of every Awoken life. She does not show it. I have served her for centuries, and I would again. She earns that loyalty in ways most never see.",
+    topic: "on Mara Sov",
+    captured: "2026-11-16",
+  },
+  {
+    prompt: "What is your message to Guardians entering the Dreaming City?",
+    text: "Eyes up. The curse turns the streets, but the enemy is real. Fight smart. Hold the Well. And if you see Crow — watch his back. He watches yours.",
+    topic: "advice",
+    captured: "2026-11-16",
+  },
+];
+
 const cast = (entries, speaker, url) =>
   entries.map((entry) => ({ speaker, url, ...entry }));
 
@@ -751,4 +1021,10 @@ module.exports = [
   ...cast(calus, "Calus", "/personas/calus/"),
   ...cast(maraSov, "Mara Sov", "/personas/mara-sov/"),
   ...cast(ghost, "Ghost", "/personas/ghost/"),
+  ...cast(osiris, "Osiris", "/personas/osiris/"),
+  ...cast(ikora, "Ikora Rey", "/personas/ikora/"),
+  ...cast(crow, "Crow", "/personas/crow/"),
+  ...cast(sloane, "Sloane", "/personas/sloane/"),
+  ...cast(saint14, "Saint-14", "/personas/saint-14/"),
+  ...cast(petraVenj, "Petra Venj", "/personas/petra-venj/"),
 ];

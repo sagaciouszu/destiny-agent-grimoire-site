@@ -6,15 +6,6 @@ category: The Grimoire · Install
 lede: Get the library onto your computer in a few minutes. Start with the simple download; the full command reference is at the bottom.
 ---
 
-<nav class="setup-order setup-order--inline" aria-label="Recommended setup order">
-  <span class="setup-order-label">Setup order</span>
-  <ol>
-    <li><a href="{{ '/grimoire/install/' | url }}" aria-current="step">1. Grimoire</a></li>
-    <li><a href="{{ '/grimoire/mcp/' | url }}">2. AI access <span class="setup-optional">optional</span></a></li>
-    <li><a href="{{ '/personas/install/' | url }}">3. Characters</a></li>
-  </ol>
-</nav>
-
 <details class="section" open>
 <summary><span class="section-title" role="heading" aria-level="2" id="quick-start">Start here</span></summary>
 
@@ -40,20 +31,7 @@ python3 db/query.py stats</code></pre>
 
 </details>
 
-<details class="section" open>
-<summary><span class="section-title" role="heading" aria-level="2" id="what-you-get">What this gives you</span></summary>
-
-<ul class="tile-grid">
-  <li><strong>One place to look things up</strong><p>Search books, dialogue, cards, items and records without opening a dozen wiki tabs.</p></li>
-  <li><strong>A quote checker</strong><p>Paste a line and find out whether it is real Destiny text before you put it in a post, a video or a character's mouth.</p></li>
-  <li><strong>A shared source for characters</strong><p>All Twelve characters read this same library, so they answer from the same material you do.</p></li>
-  <li><strong>An optional AI connection</strong><p>Connect an AI app and it can search the library directly.</p></li>
-</ul>
-
-You don't need the characters or the AI connection to use the library. They are
-separate pieces that become more useful together.
-
-</details>
+See [what the Grimoire offers]({{ '/grimoire/' | url }}) for the library overview.
 
 <details class="section" open>
 <summary><span class="section-title" role="heading" aria-level="2" id="prerequisites">Before you start</span></summary>
@@ -97,65 +75,6 @@ it once:
 <code>mcp-server/run.sh</code>. It runs on your computer and only reads the
 library. See <a href="{{ '/grimoire/mcp/' | url }}">Connect an AI</a> for the app
 setup and the full tool list.</p>
-
-</details>
-
-<details class="section experts">
-<summary><span class="section-title" role="heading" aria-level="2" id="for-experts">For Experts (or enthusiasts)</span></summary>
-
-<p class="muted">The release details, rebuild path and test gates. You can ignore
-this section if the short version worked.</p>
-
-<h3 id="build-it">Build it yourself <a class="heading-anchor" href="#build-it" aria-label="Permalink to Build it yourself">#</a></h3>
-
-This is slower and uses more disk, but it is repeatable and works offline once
-the project files are present.
-
-<pre><code>git clone https://github.com/sagaciouszu/destiny-agent-grimoire.git
-cd destiny-agent-grimoire
-python3 db/migrate.py</code></pre>
-
-<p>The build reads <code>source/</code> and vault-local <code>archive/data/*.jsonl</code> (operator vault, not committed) and writes
-<code>db/grimoire.db</code>.</p>
-
-<h3 id="command-details">Command details <a class="heading-anchor" href="#command-details" aria-label="Permalink to Command details">#</a></h3>
-
-<p>Every command accepts <code>--json</code> for scripts. Read commands accept
-<code>--limit</code> and <code>--offset</code>.</p>
-
-<p>The release file is the official download. <code>SHA256SUMS</code> is attached
-to the same release, and the publish pipeline checks it before release.</p>
-
-<pre><code>curl -fsSL https://github.com/sagaciouszu/destiny-agent-grimoire/releases/latest/download/grimoire.db -o grimoire.db
-curl -fsSL https://github.com/sagaciouszu/destiny-agent-grimoire/releases/latest/download/SHA256SUMS -o SHA256SUMS
-grep '  grimoire.db$' SHA256SUMS | sha256sum -c -
-mv grimoire.db db/grimoire.db</code></pre>
-
-<p>A mismatch means the file was cut short or changed in transit. Delete it and
-download again instead of opening it.</p>
-
-<h3 id="rebuild-and-ingest">Rebuild and add lore <a class="heading-anchor" href="#rebuild-and-ingest" aria-label="Permalink to Rebuild and add lore">#</a></h3>
-
-<p>Rebuild after changing sources or scraper output. The migration is the only
-step that writes the database.</p>
-
-<pre><code>python3 db/migrate.py
-python3 tests/sync-doc-counts.py</code></pre>
-
-<p>The helpers under <code>archive/</code> and <code>scripts/</code> collect and
-format the inputs.</p>
-
-<h3 id="run-the-gates">Run the checks <a class="heading-anchor" href="#run-the-gates" aria-label="Permalink to Run the checks">#</a></h3>
-
-<p>The archive audit covers database integrity, source conformance, retrieval,
-documentation and the MCP surface.</p>
-
-<pre><code>bash grimoire-master-audit.sh
-bash tests/query-interface-test.sh
-python3 tests/conformance.py</code></pre>
-
-<p>Persona checks live in each persona repository and pull the shared gates
-through <code>lore/tests/</code>.</p>
 
 </details>
 

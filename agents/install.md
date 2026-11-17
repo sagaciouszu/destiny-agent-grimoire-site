@@ -52,22 +52,6 @@ database instead.</p>
 </details>
 
 <details class="section" open>
-<summary><span class="section-title" role="heading" aria-level="2" id="what-you-get">What this gives you</span></summary>
-
-<ul class="tile-grid">
-  <li><strong>A character, not a one-liner</strong><p>Each character has a voice, rules, memory and a tested way of answering.</p></li>
-  <li><strong>The same library you have</strong><p>The character reads the Grimoire, so it can look things up instead of guessing.</p></li>
-  <li><strong>A quote checker</strong><p>The material is tied to verified lines, and the library has a built-in checker.</p></li>
-  <li><strong>Optional AI connection</strong><p>With the connector, the character can search the library directly.</p></li>
-  <li><strong>A second opinion</strong><p>The characters can ask each other through read-only helper copies.</p></li>
-</ul>
-
-You can use one character without the others. The Grimoire is the shared part,
-and the AI connection is optional.
-
-</details>
-
-<details class="section" open>
 <summary><span class="section-title" role="heading" aria-level="2" id="prerequisites">Before you start</span></summary>
 
 <ul class="checklist">
@@ -80,22 +64,8 @@ and the AI connection is optional.
 
 </details>
 
-<details class="section" open>
-<summary><span class="section-title" role="heading" aria-level="2" id="choose-a-persona">Choose a character</span></summary>
-
-<p>Each character has a different voice and a different corner of the lore. All
-read the same library; none share private notes.</p>
-
-<ul>
-  <li><a href="{{ '/personas/drifter/' | url }}">The Drifter</a> : loose, funny and guarded. Gambit, the Nine and the Dark Age.</li>
-  <li><a href="{{ '/personas/eris/' | url }}">Eris Morn</a> : formal, precise and grim. The Hive, the Moon and the Witness.</li>
-  <li><a href="{{ '/personas/zavala/' | url }}">Zavala</a> : measured and steady. The Vanguard, the Last City and the coalition.</li>
-  <li><a href="{{ '/personas/calus/' | url }}">Calus</a> : theatrical, sensual and cruel. The Cabal, the Leviathan and the Witness.</li>
-  <li><a href="{{ '/personas/ghost/' | url }}">Ghost</a> : warm, quick and anxious. The Light, the Traveler and the Guardian.</li>
-  <li><a href="{{ '/personas/mara-sov/' | url }}">Mara Sov</a> : regal, calculating and patient. The Awoken, the Dreaming City and the line between Light and Dark.</li>
-</ul>
-
-</details>
+<p>To compare voices and areas of lore, browse the
+<a href="{{ '/personas/' | url }}">full character roster</a>.</p>
 
 <details class="section experts">
 <summary><span class="section-title" role="heading" aria-level="2" id="for-experts">For Experts (or enthusiasts)</span></summary>
@@ -114,7 +84,7 @@ how to run the audit. You can ignore this section if the simple setup worked.</p
 </ul>
 
 <p>Set <code>default_agent</code> in <code>~/.config/opencode/opencode.json</code>
-to any of the six character ids if you want one picked at startup.</p>
+to any of the twelve character ids if you want one picked at startup.</p>
 
 <h3 id="openclaw-details">What the OpenClaw sync writes <a class="heading-anchor" href="#openclaw-details" aria-label="Permalink to What the OpenClaw sync writes">#</a></h3>
 

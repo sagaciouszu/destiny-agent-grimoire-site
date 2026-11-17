@@ -6,15 +6,6 @@ lede: MCP is a small connector that lets an AI app look things up in the Grimoir
 section: grimoire
 ---
 
-<nav class="setup-order setup-order--inline" aria-label="Recommended setup order">
-  <span class="setup-order-label">Setup order</span>
-  <ol>
-    <li><a href="{{ '/grimoire/install/' | url }}">1. Grimoire</a></li>
-    <li><a href="{{ '/grimoire/mcp/' | url }}" aria-current="step">2. AI access <span class="setup-optional">optional</span></a></li>
-    <li><a href="{{ '/personas/install/' | url }}">3. Characters</a></li>
-  </ol>
-</nav>
-
 ## What it does
 
 The connector gives an AI app a handful of lookup tools: search the library,

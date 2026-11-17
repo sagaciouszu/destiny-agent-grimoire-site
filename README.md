@@ -54,7 +54,6 @@ the Grimoire database, which stay local to the CLI and MCP server.
 - `search.md` — Pagefind documentation search
 - `about.md`
 - `404.md`
-- `getting-started.md` — legacy redirect kept for old links
 - `_data/agents.js` — the agent roster and hand-authored profiles; add the
   registry row in `series/agents.json` first, then the profile here
 - `_data/voices.js` — the test dialogues for the home panel and persona pages

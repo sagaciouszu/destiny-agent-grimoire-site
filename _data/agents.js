@@ -27,7 +27,7 @@ module.exports = [
     entryUrl: "https://github.com/sagaciouszu/destiny-agent-drifter/blob/master/drifter.md",
     version: "0.14.7",
     releaseUrl: "https://github.com/sagaciouszu/destiny-agent-drifter/releases/tag/v0.14.7",
-    updated: "2026-11-16",
+    updated: "2026-11-17",
     audit: { passed: 29, total: 29 },
     samples: [
       {
@@ -74,7 +74,7 @@ module.exports = [
     entryUrl: "https://github.com/sagaciouszu/destiny-agent-eris-morn/blob/master/eris.md",
     version: "0.14.7",
     releaseUrl: "https://github.com/sagaciouszu/destiny-agent-eris-morn/releases/tag/v0.14.7",
-    updated: "2026-11-16",
+    updated: "2026-11-17",
     audit: { passed: 24, total: 24 },
     samples: [
       {
@@ -121,7 +121,7 @@ module.exports = [
     entryUrl: "https://github.com/sagaciouszu/destiny-agent-zavala/blob/master/zavala.md",
     version: "0.1.10",
     releaseUrl: "https://github.com/sagaciouszu/destiny-agent-zavala/releases/tag/v0.1.10",
-    updated: "2026-11-16",
+    updated: "2026-11-17",
     audit: { passed: 22, total: 22 },
     samples: [
       {
@@ -168,7 +168,7 @@ module.exports = [
     entryUrl: "https://github.com/sagaciouszu/destiny-agent-calus/blob/master/calus.md",
     version: "0.1.10",
     releaseUrl: "https://github.com/sagaciouszu/destiny-agent-calus/releases/tag/v0.1.10",
-    updated: "2026-11-16",
+    updated: "2026-11-17",
     audit: { passed: 22, total: 22 },
     samples: [
       {
@@ -215,7 +215,7 @@ module.exports = [
     entryUrl: "https://github.com/sagaciouszu/destiny-agent-mara-sov/blob/master/mara-sov.md",
     version: "0.1.10",
     releaseUrl: "https://github.com/sagaciouszu/destiny-agent-mara-sov/releases/tag/v0.1.10",
-    updated: "2026-11-16",
+    updated: "2026-11-17",
     audit: { passed: 22, total: 22 },
     samples: [
       {
@@ -262,11 +262,11 @@ module.exports = [
     entryUrl: "https://github.com/sagaciouszu/destiny-agent-ghost/blob/master/ghost.md",
     version: "0.1.10",
     releaseUrl: "https://github.com/sagaciouszu/destiny-agent-ghost/releases/tag/v0.1.10",
-    updated: "2026-11-16",
+    updated: "2026-11-17",
     audit: { passed: 22, total: 22 },
     samples: [
       {
-        text: "I didn’t bring you back just for you to die again, we have to move.",
+        text: "I didn't bring you back just for you to die again, we have to move.",
         context: "on the Light",
       },
       {
@@ -310,11 +310,11 @@ module.exports = [
     entryUrl: "https://github.com/sagaciouszu/destiny-agent-osiris/blob/master/osiris.md",
     version: "0.1.0",
     releaseUrl: "https://github.com/sagaciouszu/destiny-agent-osiris/releases/tag/v0.1.0",
-    updated: "2026-11-16",
+    updated: "2026-11-17",
     audit: { passed: 22, total: 22 },
     samples: [
-      { text: "Behold - the Infinite Forest!", context: "on the Forest" },
-      { text: "The Guardian has faced the unknown and prevailed every time.", context: "on the Guardian" },
+      { text: "Guardian? There are no Crucible matches scheduled for the Gap today.", context: "on Crucible matches" },
+      { text: "I saw the Guardian arrive.", context: "on the Guardian" },
     ],
     limits: [
       "Quote a line the library cannot confirm.",
@@ -347,11 +347,11 @@ module.exports = [
     entryUrl: "https://github.com/sagaciouszu/destiny-agent-ikora/blob/master/ikora.md",
     version: "0.1.0",
     releaseUrl: "https://github.com/sagaciouszu/destiny-agent-ikora/releases/tag/v0.1.0",
-    updated: "2026-11-16",
+    updated: "2026-11-17",
     audit: { passed: 22, total: 22 },
     samples: [
-      { text: "Well done, Guardian.", context: "on success" },
-      { text: "The Hidden see what others cannot.", context: "on the Hidden" },
+      { text: "This is it, Guardian. Payback for the Dreaming City. For our city. For everyone.", context: "on the Dreaming City" },
+      { text: "Vex are leaving the Garden by the dozens. We don't know why. Report to Eris if you can spare the time, Guardian. We'll need your help with this.", context: "on the Vex" },
     ],
     limits: [
       "Quote a line the library cannot confirm.",
@@ -384,11 +384,11 @@ module.exports = [
     entryUrl: "https://github.com/sagaciouszu/destiny-agent-crow/blob/master/crow.md",
     version: "0.1.0",
     releaseUrl: "https://github.com/sagaciouszu/destiny-agent-crow/releases/tag/v0.1.0",
-    updated: "2026-11-16",
+    updated: "2026-11-17",
     audit: { passed: 22, total: 22 },
     samples: [
-      { text: "Eyes up, Guardian. We're responding to a distress call.", context: "on the mission" },
-      { text: "I don't know... maybe? I want to.", context: "on uncertainty" },
+      { text: "I've patrolled this range dozens of times. I'd have noticed a dragon.", context: "on dragons" },
+      { text: "I don't know... maybe? I want to. I don't suppose you've tried beating his location out of her?", context: "on uncertainty" },
     ],
     limits: [
       "Quote a line the library cannot confirm.",
@@ -421,11 +421,11 @@ module.exports = [
     entryUrl: "https://github.com/sagaciouszu/destiny-agent-sloane/blob/master/sloane.md",
     version: "0.1.0",
     releaseUrl: "https://github.com/sagaciouszu/destiny-agent-sloane/releases/tag/v0.1.0",
-    updated: "2026-11-16",
+    updated: "2026-11-17",
     audit: { passed: 22, total: 22 },
     samples: [
-      { text: "Guardian, there's massive energy readings surging from below the Arcology.", context: "on Titan" },
-      { text: "There are heavy tanks near your position. Get out of there before they come online.", context: "on danger" },
+      { text: "Guardian, the Drifter's recon dredged up some intel.", context: "on the Drifter's intel" },
+      { text: "Deploying drill. Let's get loud, Guardian.", context: "on the drill" },
     ],
     limits: [
       "Quote a line the library cannot confirm.",
@@ -458,11 +458,11 @@ module.exports = [
     entryUrl: "https://github.com/sagaciouszu/destiny-agent-saint-14/blob/master/saint-14.md",
     version: "0.1.0",
     releaseUrl: "https://github.com/sagaciouszu/destiny-agent-saint-14/releases/tag/v0.1.0",
-    updated: "2026-11-16",
+    updated: "2026-11-17",
     audit: { passed: 22, total: 22 },
     samples: [
-      { text: "A Titan is only as good as his word.", context: "on duty" },
-      { text: "I did what any Titan would do. I stood and I did not move.", context: "on Twilight Gap" },
+      { text: "Welcome to Twilight Gap. The place where humanity nearly died.", context: "on Twilight Gap" },
+      { text: "Osiris? How did you know we were here?", context: "on Osiris" },
     ],
     limits: [
       "Quote a line the library cannot confirm.",
@@ -495,11 +495,11 @@ module.exports = [
     entryUrl: "https://github.com/sagaciouszu/destiny-agent-petra-venj/blob/master/petra-venj.md",
     version: "0.1.0",
     releaseUrl: "https://github.com/sagaciouszu/destiny-agent-petra-venj/releases/tag/v0.1.0",
-    updated: "2026-11-16",
+    updated: "2026-11-17",
     audit: { passed: 22, total: 22 },
     samples: [
-      { text: "That's not my secret to tell, Guardian. It's the Reef's.", context: "on secrets" },
-      { text: "I opened the gates. I ordered the attack. I should have known.", context: "on the Dreaming City" },
+      { text: "Not exactly. Riven tells us an Ahamkara claims territory in this region.", context: "on Riven" },
+      { text: "We must hold this location at all costs. Glad to have you along, Guardian.", context: "on holding the location" },
     ],
     limits: [
       "Quote a line the library cannot confirm.",

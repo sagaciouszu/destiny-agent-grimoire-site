@@ -1,6 +1,7 @@
 // Canonical page list for sitemap.xml. Add new top-level pages here; agent
 // pages are appended from the roster automatically.
 const agents = require("./agents.js");
+const demo = require("./try.js");
 
 const pages = [
   "/",
@@ -18,4 +19,7 @@ const pages = [
   "/personas/build/",
 ];
 
-module.exports = pages.concat(agents.map((agent) => `/personas/${agent.id}/`));
+module.exports = pages
+  .concat(agents.map((agent) => `/personas/${agent.id}/`))
+  .concat(["/try/"])
+  .concat(demo.beats.map((beat) => `/try/${beat.story}/${beat.id}/`));

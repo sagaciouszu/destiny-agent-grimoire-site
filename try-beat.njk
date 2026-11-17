@@ -1,0 +1,80 @@
+---
+pagination:
+  data: try.beats
+  size: 1
+  alias: beat
+permalink: "/try/{{ beat.story }}/{{ beat.id }}/"
+layout: page
+section: try
+eleventyComputed:
+  title: "{{ beat.name }} · {{ beat.storyTitle }}"
+  category: "Try · {{ beat.storyName }}"
+  lede: "{{ beat.storyName }} — beat {{ beat.id }}"
+---
+
+<h2 class="try-ghost">Your Ghost reminds you that you needed to go visit Eris or The Drifter. You don&rsquo;t have time for both. {% if beat.type == "ending" %}You finished with {{ beat.storyName }}.{% else %}You chose {{ beat.storyName }}.{% endif %}</h2>
+
+<div class="try-beat">
+  <div class="try-avatar" aria-hidden="true">{% if beat.story == "drifter" %}DR{% else %}ER{% endif %}</div>
+  <div class="try-bubble">
+    <div class="try-speaker" translate="no">{{ beat.storyName }}</div>
+    <div>{{ beat.text }}</div>
+  </div>
+</div>
+
+{% if beat.type == "ending" %}
+<div class="try-end-links">
+  <a class="try-choice" href="{{ ('/try/' + beat.story + '/' + beat.storyStart + '/') | url }}">&#9656; Play it again</a>
+  <a class="try-choice" href="{{ ('/try/' + beat.otherId + '/' + beat.otherStart + '/') | url }}">&#9656; Try {{ beat.otherName }} instead</a>
+</div>
+{% else %}
+<div class="try-replies">
+  <div class="try-replies-label" aria-hidden="true">REPLY</div>
+  {% for choice in beat.choices %}
+    {% if choice.death %}
+    <a class="try-choice try-choice--danger" href="#respawn-{{ loop.index }}"><span aria-hidden="true">&#9656;</span> {{ choice.label }}</a>
+    {% else %}
+    <a class="try-choice" href="{{ ('/try/' + beat.story + '/' + choice.next + '/') | url }}"><span aria-hidden="true">&#9656;</span> {{ choice.label }}</a>
+    {% endif %}
+  {% endfor %}
+</div>
+{% endif %}
+
+{% for choice in beat.choices %}
+  {% if choice.death %}
+  <div class="try-overlay" id="respawn-{{ loop.index }}" role="dialog" aria-modal="true" aria-labelledby="respawn-title-{{ loop.index }}">
+    <div class="try-overlay-art" aria-hidden="true"></div>
+    <div class="try-banner">
+      <div class="try-banner-title"><span aria-hidden="true">&#9670;</span> <span id="respawn-title-{{ loop.index }}" translate="no">GUARDIAN DOWN</span></div>
+      <div class="try-banner-strip" translate="no">WAITING TO REVIVE</div>
+    </div>
+    <div class="try-tracker">
+      <div class="try-tracker-head" translate="no">{{ beat.storyTitle | upper }}</div>
+      <div class="try-tracker-body">
+        <div class="try-tracker-failed" translate="no">QUEST FAILED</div>
+        <div>{{ beat.storyName }} — {{ beat.id }}</div>
+      </div>
+    </div>
+    <div class="try-quip">
+      <div class="try-quip-speaker" translate="no">{{ beat.storyName }}</div>
+      <div class="try-quip-text">{{ choice.death }}</div>
+    </div>
+    <div class="try-bottombar">
+      <div class="try-countdown" aria-live="polite" data-countdown>Respawn in 5 — waiting</div>
+      <div>
+        <div class="try-revives">REVIVES | &infin;</div>
+        <div class="try-actions" data-actions hidden>
+          <a class="try-retry" href="{{ page.url }}">Face it again</a>
+          <a class="try-btn" href="{{ ('/try/' + beat.story + '/' + beat.storyStart + '/') | url }}">Return to Start</a>
+        </div>
+        <noscript><div class="try-actions">
+          <a class="try-retry" href="{{ page.url }}">Face it again</a>
+          <a class="try-btn" href="{{ ('/try/' + beat.story + '/' + beat.storyStart + '/') | url }}">Return to Start</a>
+        </div></noscript>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+{% endfor %}
+
+<script src="{{ '/assets/try.js' | url }}?v={{ '/assets/try.js' | assetHash }}" defer></script>

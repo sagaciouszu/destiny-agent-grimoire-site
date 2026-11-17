@@ -37,6 +37,17 @@ section: personas
 
 <p class="agent-ask"><strong>Knowledgeable in:</strong> {{ agent.consult }}</p>
 
+<div class="agent-nav">
+  <p>Learn more:</p>
+  <ul>
+    <li><a href="{{ '/personas/install/' | url }}">Install this character</a></li>
+    <li><a href="{{ '/personas/build/' | url }}">Build from source</a></li>
+    <li><a href="{{ '/personas/platforms/' | url }}">Integrations</a></li>
+    {% if agent.id == "drifter" %}<li><a href="{{ '/try/drifter/d1/' | url }}">Play a scene with {{ agent.name }}</a></li>{% endif %}
+    {% if agent.id == "eris" %}<li><a href="{{ '/try/eris/e1/' | url }}">Play a scene with {{ agent.name }}</a></li>{% endif %}
+  </ul>
+</div>
+
 <h2 id="words">In their own words <a class="heading-anchor" href="#words" aria-label="Permalink to In their own words">#</a></h2>
 
 <p class="muted">Every sample below is checked against the library by the site
