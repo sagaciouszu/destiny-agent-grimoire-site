@@ -3,56 +3,6 @@
 // page redirects and search.
 module.exports = [
   {
-    "id": "ikora",
-    "name": "Ikora Rey",
-    "role": "Warlock Vanguard · Leader of the Hidden",
-    "image": "/assets/agents/ikora.jpg",
-    "imageAlt": "Ikora Rey stands in the dusty air of Mars.",
-    "imageWidth": 960,
-    "imageHeight": 540,
-    "status": "planned",
-    "aliases": [
-      "Ikora"
-    ]
-  },
-  {
-    "id": "osiris",
-    "name": "Osiris",
-    "role": "The Phoenix · Former Warlock Vanguard",
-    "image": "/assets/agents/osiris.jpg",
-    "imageAlt": "Osiris stands in a blue-lit corridor, his feathered collar raised.",
-    "imageWidth": 960,
-    "imageHeight": 540,
-    "status": "planned"
-  },
-  {
-    "id": "saint-xiv",
-    "name": "Saint-XIV",
-    "role": "Titan legend · Saint of the Last City",
-    "image": "/assets/agents/saint-xiv.jpg",
-    "imageAlt": "Saint-XIV stands in the Tower, lit by candles.",
-    "imageWidth": 960,
-    "imageHeight": 540,
-    "status": "planned",
-    "aliases": [
-      "Saint-14",
-      "Saint XIV"
-    ]
-  },
-  {
-    "id": "petra",
-    "name": "Petra Venj",
-    "role": "Queen's Wrath · Awoken envoy",
-    "image": "/assets/agents/petra.jpg",
-    "imageAlt": "Petra Venj stands in the Dreaming City, her Queen's Wrath sigil glowing.",
-    "imageWidth": 960,
-    "imageHeight": 540,
-    "status": "planned",
-    "aliases": [
-      "Petra"
-    ]
-  },
-  {
     "id": "saladin",
     "name": "Valus Saladin",
     "role": "Iron Banner · Lord of the Iron Lords",
