@@ -27,7 +27,7 @@ module.exports = [
     entryUrl: "https://github.com/sagaciouszu/destiny-agent-drifter/blob/master/drifter.md",
     version: "0.14.7",
     releaseUrl: "https://github.com/sagaciouszu/destiny-agent-drifter/releases/tag/v0.14.7",
-    updated: "2026-11-17",
+    updated: "2026-11-18",
     audit: { passed: 29, total: 29 },
     samples: [
       {
@@ -74,7 +74,7 @@ module.exports = [
     entryUrl: "https://github.com/sagaciouszu/destiny-agent-eris-morn/blob/master/eris.md",
     version: "0.14.7",
     releaseUrl: "https://github.com/sagaciouszu/destiny-agent-eris-morn/releases/tag/v0.14.7",
-    updated: "2026-11-17",
+    updated: "2026-11-18",
     audit: { passed: 24, total: 24 },
     samples: [
       {
@@ -121,7 +121,7 @@ module.exports = [
     entryUrl: "https://github.com/sagaciouszu/destiny-agent-zavala/blob/master/zavala.md",
     version: "0.1.10",
     releaseUrl: "https://github.com/sagaciouszu/destiny-agent-zavala/releases/tag/v0.1.10",
-    updated: "2026-11-17",
+    updated: "2026-11-18",
     audit: { passed: 22, total: 22 },
     samples: [
       {
@@ -168,7 +168,7 @@ module.exports = [
     entryUrl: "https://github.com/sagaciouszu/destiny-agent-calus/blob/master/calus.md",
     version: "0.1.10",
     releaseUrl: "https://github.com/sagaciouszu/destiny-agent-calus/releases/tag/v0.1.10",
-    updated: "2026-11-17",
+    updated: "2026-11-18",
     audit: { passed: 22, total: 22 },
     samples: [
       {
@@ -215,7 +215,7 @@ module.exports = [
     entryUrl: "https://github.com/sagaciouszu/destiny-agent-mara-sov/blob/master/mara-sov.md",
     version: "0.1.10",
     releaseUrl: "https://github.com/sagaciouszu/destiny-agent-mara-sov/releases/tag/v0.1.10",
-    updated: "2026-11-17",
+    updated: "2026-11-18",
     audit: { passed: 22, total: 22 },
     samples: [
       {
@@ -262,7 +262,7 @@ module.exports = [
     entryUrl: "https://github.com/sagaciouszu/destiny-agent-ghost/blob/master/ghost.md",
     version: "0.1.10",
     releaseUrl: "https://github.com/sagaciouszu/destiny-agent-ghost/releases/tag/v0.1.10",
-    updated: "2026-11-17",
+    updated: "2026-11-18",
     audit: { passed: 22, total: 22 },
     samples: [
       {
@@ -310,7 +310,7 @@ module.exports = [
     entryUrl: "https://github.com/sagaciouszu/destiny-agent-osiris/blob/master/osiris.md",
     version: "0.1.0",
     releaseUrl: "https://github.com/sagaciouszu/destiny-agent-osiris/releases/tag/v0.1.0",
-    updated: "2026-11-17",
+    updated: "2026-11-18",
     audit: { passed: 22, total: 22 },
     samples: [
       { text: "Guardian? There are no Crucible matches scheduled for the Gap today.", context: "on Crucible matches" },
@@ -347,7 +347,7 @@ module.exports = [
     entryUrl: "https://github.com/sagaciouszu/destiny-agent-ikora/blob/master/ikora.md",
     version: "0.1.0",
     releaseUrl: "https://github.com/sagaciouszu/destiny-agent-ikora/releases/tag/v0.1.0",
-    updated: "2026-11-17",
+    updated: "2026-11-18",
     audit: { passed: 22, total: 22 },
     samples: [
       { text: "This is it, Guardian. Payback for the Dreaming City. For our city. For everyone.", context: "on the Dreaming City" },
@@ -384,7 +384,7 @@ module.exports = [
     entryUrl: "https://github.com/sagaciouszu/destiny-agent-crow/blob/master/crow.md",
     version: "0.1.0",
     releaseUrl: "https://github.com/sagaciouszu/destiny-agent-crow/releases/tag/v0.1.0",
-    updated: "2026-11-17",
+    updated: "2026-11-18",
     audit: { passed: 22, total: 22 },
     samples: [
       { text: "I've patrolled this range dozens of times. I'd have noticed a dragon.", context: "on dragons" },
@@ -421,7 +421,7 @@ module.exports = [
     entryUrl: "https://github.com/sagaciouszu/destiny-agent-sloane/blob/master/sloane.md",
     version: "0.1.0",
     releaseUrl: "https://github.com/sagaciouszu/destiny-agent-sloane/releases/tag/v0.1.0",
-    updated: "2026-11-17",
+    updated: "2026-11-18",
     audit: { passed: 22, total: 22 },
     samples: [
       { text: "Guardian, the Drifter's recon dredged up some intel.", context: "on the Drifter's intel" },
@@ -458,7 +458,7 @@ module.exports = [
     entryUrl: "https://github.com/sagaciouszu/destiny-agent-saint-14/blob/master/saint-14.md",
     version: "0.1.0",
     releaseUrl: "https://github.com/sagaciouszu/destiny-agent-saint-14/releases/tag/v0.1.0",
-    updated: "2026-11-17",
+    updated: "2026-11-18",
     audit: { passed: 22, total: 22 },
     samples: [
       { text: "Welcome to Twilight Gap. The place where humanity nearly died.", context: "on Twilight Gap" },
@@ -495,7 +495,7 @@ module.exports = [
     entryUrl: "https://github.com/sagaciouszu/destiny-agent-petra-venj/blob/master/petra-venj.md",
     version: "0.1.0",
     releaseUrl: "https://github.com/sagaciouszu/destiny-agent-petra-venj/releases/tag/v0.1.0",
-    updated: "2026-11-17",
+    updated: "2026-11-18",
     audit: { passed: 22, total: 22 },
     samples: [
       { text: "Not exactly. Riven tells us an Ahamkara claims territory in this region.", context: "on Riven" },
