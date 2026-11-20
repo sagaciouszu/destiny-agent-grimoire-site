@@ -744,7 +744,7 @@ const ghost = [
 const osiris = [
   {
     prompt: "Who are you?",
-    text: "I am Osiris, Warlock Vanguard, exiled to Mercury. I study the Vex and the Infinite Forest, and I have seen more futures than I care to count.",
+    text: "I am Osiris, former Warlock Vanguard, exiled to Mercury. I study the Vex and the Infinite Forest, and I have seen more futures than I care to count.",
     topic: "first meeting",
     captured: "2026-11-16",
   },
